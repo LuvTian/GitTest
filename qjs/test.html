@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <style>
+        .section {
+            text-align: center;
+            font: 50px "Microsoft Yahei";
+            color: #fff;
+        }
+        
+        .section {
+            text-align: center;
+            font: 50px "Microsoft Yahei";
+            color: #00ff00;
+        }
+        
+        #section_1 {
+            background: url(./images/bg1.jpg) 50%;
+            background-size: cover;
+        }
+        
+        #section_2 {
+            background: url(./images/bg2.jpg) 50%;
+            background-size: cover;
+        }
+        
+        #section_3 {
+            background: url(./images/bg3.jpg) 50%;
+            background-size: cover;
+        }
+        
+        #section_4 {
+            background: url(./images/bg4.jpg) 50%;
+            background-size: cover;
+        }
+        
+        #section_5 {
+            background: url(./images/bg5.jpg) 50%;
+            background-size: cover;
+        }
+        
+        .active {
+            background-color: #609F98;
+        }
+        
+        #superContainer {
+            top: 0 !important;
+        }
+        
+        #myMenu {
+            position: fixed;
+            height: 60px;
+            line-height: 60px;
+            text-align: right;
+        }
+        
+        #myMenu .menuList {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myMenu">
+        <ul>
+            <li data-menuanchor="section_1" class="menuList active"><a href="#section_1">首页</a></li>
+            <li data-menuanchor="section_2" class="menuList"><a href="#section_2">关于我们</a></li>
+            <li data-menuanchor="section_3" class="menuList"><a href="#section_3">业务领域</a></li>
+            <li data-menuanchor="section_4" class="menuList"><a href="#section_4">科技远景</a></li>
+            <li data-menuanchor="section_4" class="menuList"><a href="#section_5">联系我们</a></li>
+        </ul>
+    </div>
+
+    <div id="fullpage">
+        <div id="section_1" class="section">1</div>
+        <div id="section_2" class="section">2</div>
+        <div id="section_3" class="section">3</div>
+        <div id="section_4" class="section">4</div>
+        <div id="section_5" class="section">5</div>
+    </div>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script src="./js/jquery-ui-1.10.3.min.js"></script>
+    <script src="./js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function() {
+            $('#fullpage').fullpage({
+                anchors: ['section_1', 'section_2', 'section_3', 'section_4'],
+                menu: '#myMenu'
+            });
+        });
+    </script>
+</body>
+
+</html>
