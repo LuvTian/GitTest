@@ -10,6 +10,10 @@
         * {
             margin: 0;
             padding: 0;
+            -webkit-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
         }
         
         ul {
@@ -60,13 +64,22 @@
             line-height: 60px;
             text-align: center;
             vertical-align: middle;
-            font-size: 13px;
             position: relative;
         }
         
-        .nav li.active a {
-            font-size: 17px;
+        .nav li a {
+            font-size: 14px;
+            color: #c2dce7;
             display: block;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .nav li.active a {
+            font-size: 18px;
+            color: #fff;
         }
         
         .nav .active:after {
@@ -83,16 +96,9 @@
             margin: 0 auto;
         }
         
-        .nav a {
-            display: inline-block;
-            height: 60px;
-            line-height: 60px;
-            color: #fff;
-            text-decoration: none;
-        }
-        
         .nav a:hover {
-            font-size: 17px;
+            font-size: 18px;
+            color: #fff;
         }
         
         .section {
@@ -132,6 +138,23 @@
             width: 27px;
             height: 14px;
             margin-left: -14px;
+            font-size: 13px;
+        }
+        
+        .godown:after {
+            content: "滚动";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            width: 50px;
+            margin-left: -25px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .gotop:after {
+            content: "返回";
         }
         
         .godown span {
@@ -141,21 +164,46 @@
             position: relative;
             background: url(./images/godown.png) center center no-repeat;
             -webkit-animation: moveDown 1.5s infinite ease-in-out;
+            -o-animation: moveDown 1.5s infinite ease-in-out;
+            -ms-animation: moveDown 1.5s infinite ease-in-out;
             animation: moveDown 1.5s infinite ease-in-out;
+        }
+        
+        .gotop span {
+            background: url(./images/gotop.png) center center no-repeat;
+            -webkit-animation: moveTop 1.5s infinite ease-in-out;
+            -o-animation: moveTop 1.5s infinite ease-in-out;
+            -ms-animation: moveTop 1.5s infinite ease-in-out;
+            animation: moveTop 1.5s infinite ease-in-out;
+        }
+        
+        .share {
+            position: absolute;
+            right: 64px;
+            bottom: 20px;
+            z-index: 100;
+        }
+        
+        .share li {
+            display: inline-block;
+            margin-left: 10px;
         }
         
         @-webkit-keyframes moveDown {
             0%,
             30% {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(-8px)
             }
             60% {
                 opacity: 1;
+                filter: Alpha(opacity=100);
                 -webkit-transform: translate(0)
             }
             to {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(10px)
             }
         }
@@ -164,14 +212,17 @@
             0%,
             30% {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(-8px)
             }
             60% {
                 opacity: 1;
+                filter: Alpha(opacity=100);
                 -webkit-transform: translate(0)
             }
             to {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(10px)
             }
         }
@@ -180,14 +231,17 @@
             0%,
             30% {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(-8px)
             }
             60% {
                 opacity: 1;
+                filter: Alpha(opacity=100);
                 -webkit-transform: translate(0)
             }
             to {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(10px)
             }
         }
@@ -196,20 +250,104 @@
             0%,
             30% {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(-8px)
             }
             60% {
                 opacity: 1;
+                filter: Alpha(opacity=100);
                 -webkit-transform: translate(0)
             }
             to {
                 opacity: 0;
+                filter: Alpha(opacity=0);
                 -webkit-transform: translateY(10px)
+            }
+        }
+        
+        @-webkit-keyframes moveTop {
+            0%,
+            30% {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(10px)
+            }
+            60% {
+                opacity: 1;
+                filter: Alpha(opacity=100);
+                -webkit-transform: translate(0)
+            }
+            to {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(-8px)
+            }
+        }
+        
+        @-moz-keyframes moveTop {
+            0%,
+            30% {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(10px)
+            }
+            60% {
+                opacity: 1;
+                filter: Alpha(opacity=100);
+                -webkit-transform: translate(0)
+            }
+            to {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(-8px)
+            }
+        }
+        
+        @-ms-keyframes moveTop {
+            0%,
+            30% {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(10px)
+            }
+            60% {
+                opacity: 1;
+                filter: Alpha(opacity=100);
+                -webkit-transform: translate(0)
+            }
+            to {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(-8px)
+            }
+        }
+        
+        @keyframes moveTop {
+            0%,
+            30% {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(10px)
+            }
+            60% {
+                opacity: 1;
+                filter: Alpha(opacity=100);
+                -webkit-transform: translate(0)
+            }
+            to {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+                -webkit-transform: translateY(-8px)
             }
         }
         
         .active .bg1_1 {
             opacity: 1;
+            filter: Alpha(opacity=100);
+            -webkit-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
             transition-delay: 0.5s;
         }
         
@@ -217,18 +355,18 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 380px;
-            height: 462px;
-            margin-left: -190px;
-            margin-top: -231px;
+            width: 284px;
+            height: 360px;
+            margin-left: -142px;
+            margin-top: -180px;
             background-image: url(./images/logo_s1.png);
             opacity: 0;
+            filter: Alpha(opacity=0);
+            -webkit-transform: scale(0.2);
+            -o-transform: scale(0.2);
+            -ms-transform: scale(0.2);
+            transform: scale(0.2);
             transition: all 1s;
-        }
-        
-        #section_1.active .s1 {
-            opacity: 1;
-            transition-delay: 1s;
         }
         
         .s1 {
@@ -236,29 +374,11 @@
         }
         
         .s1 strong {
-            font-size: 38px;
+            font-size: 40px;
         }
         
         .s1 h3 {
-            font-size: 16px;
-        }
-        
-        #section_1 .s1,
-        #section_1 .s2 {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 570px;
-            margin-left: -275px;
-        }
-        
-        #section_1 .s1 {
-            text-align: center;
-            margin-top: -150px;
-        }
-        
-        #section_1 .s2 {
-            margin-top: 20px;
+            font-size: 18px;
         }
         
         #section_2 .s1,
@@ -270,19 +390,20 @@
         
         #section_2 .s1,
         #section_5 .s1 {
-            top: 200px;
-            left: 440px;
-        }
-        
-        #section_5 .s1 {
-            left: 300px;
+            top: 20%;
+            left: 20%;
         }
         
         #section_2 .s2,
         #section_5 .s2 {
-            top: 310px;
-            left: 300px;
+            top: 30%;
+            left: 20%;
             width: 570px;
+            margin-top: 30px;
+        }
+        
+        #section_5 .s2 p {
+            margin-top: 30px;
         }
         
         #section_3 .s1,
@@ -295,26 +416,159 @@
         }
         
         #section_3 .s1 {
-            margin-top: -300px;
+            margin-top: -220px;
             text-align: center;
+        }
+        
+        .s2 p {
+            font-size: 12px;
+            line-height: 24px;
         }
         
         #section_3 .s2 {
-            margin-top: -50px;
+            margin-top: -120px;
         }
         
-        #section_3 .s2 ul {
+        #section_3 .s2 .items {
             font-size: 0;
+            text-align: center;
         }
         
-        #section_3 .s2 li {
+        #section_3 .s2 .items>li {
+            position: relative;
             display: inline-block;
             width: 180px;
             height: 180px;
-            background: cadetblue;
             font-size: 14px;
             margin: 5px;
             text-align: center;
+            padding-top: 80px;
+        }
+        
+        #section_3 .s2 .items>li:hover {
+            opacity: 0.9;
+        }
+        
+        #section_3 .s2 .items p {
+            color: #e9eff3;
+        }
+        
+        #section_3 .img_box,
+        .cpDetail {
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #section_3 .img_box {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #section_3 .bg3_1 {
+            background: url("./images/bg3_1.jpg") center no-repeat;
+            transform: translateX(190px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_1 {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 3s;
+        }
+        
+        #section_3 .bg3_2 {
+            transform: translateX(-250px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_2 {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 2s;
+        }
+        
+        #section_3 .bg3_2,
+        .cpDetail {
+            background-color: #319fd2;
+        }
+        
+        #section_3 .bg3_3 {
+            background: url("./images/bg3_2.jpg") center no-repeat;
+            transform: translateX(-250px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_3 {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 3s;
+        }
+        
+        #section_3 .bg3_4 {
+            background: url("./images/bg3_3.jpg") center no-repeat;
+            transform: translateY(250px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_4 {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 2s;
+        }
+        
+        #section_3 .bg3_6 {
+            background: url("./images/bg3_4.jpg") center no-repeat;
+            transform: translateY(250px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_6 {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 2s;
+        }
+        
+        .cpDetail {
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+            text-align: left;
+            padding: 56px 10px 0 26px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            z-index: -1;
+        }
+        
+        .cpDetail li {
+            list-style-type: circle;
+        }
+        
+        .bg3_6:hover .cpDetail {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            z-index: 1;
+        }
+        
+        #section_3 .bg3_5 {
+            background-color: #2c5ea6;
+            transform: translateY(-250px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        #section_3.active .bg3_5 {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 3s;
         }
         
         #section_4 .s1,
@@ -322,32 +576,236 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 720px;
-            margin-left: -360px;
+            width: 740px;
+            margin-left: -370px;
         }
         
         #section_4 .s1 {
             margin-top: -150px;
+            text-align: center;
         }
         
-        #section_4 .s2 ul {
-            font-size: 0;
+        #section_4 .s1 h3 {
+            text-align: left;
+            padding-left: 5px;
         }
         
-        #section_4 .s2 li {
+        #section_4 .s2 .bg4_1,
+        #section_4 .s2 .bg4_2 {
             width: 334px;
             height: 180px;
-            font-size: 14px;
-            background: #224c94;
+            background: rgba(44, 94, 166, 0.9);
             display: inline-block;
             text-align: left;
-            padding: 70px;
+            padding: 66px 76px 0 68px;
             box-sizing: border-box;
             overflow: hidden;
+            position: absolute;
+            left: 50%;
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+        }
+        
+        #section_4 .s2 .bg4_3,
+        #section_4 .s2 .bg4_4 {
+            position: absolute;
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+        }
+        
+        #section_4 .s2 .bg4_3 {
+            top: 50px;
+            left: -500px;
+        }
+        
+        #section_4 .s2 .bg4_4 {
+            top: -120px;
+            right: -500px;
+        }
+        
+        #section_4.active .bg4_1 {
+            margin-left: -362px;
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 0.5s;
+        }
+        
+        #section_4.active .bg4_2 {
+            margin-left: 26px;
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.2s;
+        }
+        
+        #section_4.active .bg4_3 {
+            left: -170px;
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 2s;
+        }
+        
+        #section_4.active .bg4_4 {
+            right: -170px;
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 2s;
+        }
+        
+        #section_4 .s2 p {
+            font-size: 15px;
+        }
+        
+        #section_4 .s2 .bg4_2 {
+            padding-top: 76px;
+            padding-right: 60px;
         }
         
         #section_4 .s2 li p {
+            display: inline-table;
             vertical-align: middle;
+        }
+        /* 动画效果部分 */
+        
+        .section.active strong,
+        .section.active h3 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            transition-delay: 0.7s;
+        }
+        
+        .section.active h3 {
+            transition-delay: 1.2s;
+        }
+        
+        .section strong,
+        .section h3 {
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+            transition: all 1s;
+        }
+        
+        .section h3 {
+            margin-top: 3px;
+        }
+        
+        #section_1.active .s2,
+        #section_2.active .s2,
+        #section_5.active .s2 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.7s;
+        }
+        
+        #section_1 .s2,
+        #section_2 .s2,
+        #section_5 .s2 {
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+        }
+        
+        .bg2_1,
+        .bg2_2,
+        .bg3_7,
+        .bg3_8 {
+            position: absolute;
+            width: 111px;
+            height: 177px;
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+        }
+        
+        .bg2_1,
+        .bg3_7 {
+            background-image: url("./images/left.png");
+            top: 20px;
+            left: -430px;
+        }
+        
+        .bg3_7 {
+            top: 130px;
+        }
+        
+        .bg2_2,
+        .bg3_8 {
+            background-image: url("./images/right.png");
+            bottom: 0;
+            right: -430px;
+        }
+        
+        .bg3_8 {
+            bottom: 260px;
+        }
+        
+        #section_2.active .bg2_1 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.7s;
+            left: -180px;
+        }
+        
+        #section_3.active .bg3_7 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 3.7s;
+            left: -180px;
+        }
+        
+        #section_2.active .bg2_2 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.7s;
+            right: -180px;
+        }
+        
+        #section_3.active .bg3_8 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 3.7s;
+            right: -180px;
+        }
+        
+        .bg5_1,
+        .bg5_2 {
+            position: absolute;
+            width: 177px;
+            height: 111px;
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            transition: all 1s;
+        }
+        
+        .bg5_1 {
+            background-image: url("./images/top.png");
+            right: -270px;
+            bottom: 500px;
+        }
+        
+        .bg5_2 {
+            background-image: url("./images/down.png");
+            left: 0;
+            top: 680px;
+        }
+        
+        #section_5.active .bg5_1 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.7s;
+            bottom: 0;
+        }
+        
+        #section_5.active .bg5_2 {
+            opacity: 1;
+            filter: Alpha(opacity=100);
+            transition-delay: 1.7s;
+            top: 180px;
         }
     </style>
 </head>
@@ -373,29 +831,40 @@
             <div class="bg"><img src="./images/bg1.jpg" alt=""></div>
             <div class="mask"></div>
             <div class="bg1_1"></div>
-            <div class="s1">
-                <strong>core culture</strong>
-                <h3>核心文化</h3>
+            <a class="godown" href="javascript:;"><span></span></a>
+            <div class="share">
+                <div>
+                    <ul>
+                        <li><img src="./images/sh.png" alt=""></li>
+                        <li><img src="./images/code.png" alt=""></li>
+                    </ul>
+                </div>
             </div>
-            <div class="s2">
-                <p>以科技金融服务为核心竞争力，践行国家重大发展战略，践行企业公民的社会责任，为个人用户提供涵盖现金管理、财富管理、消费、生活服务等全方位的科技金融服务，为企业用户提供涵盖资金结算、账期管理、财务需求、财富管理等定制化金融服务，为与“一带一路”建设相关的大型核心企业供应链和广大中小微企业提供资金融通服务。</p>
-            </div>
-            <a class="godown" href="#section_2"><span></span></a>
         </div>
         <div class="section" id="section_2">
             <div class="bg"><img src="./images/bg2.jpg" alt=""></div>
             <div class="mask"></div>
             <div class="s1">
-                <strong>about us</strong>
+                <strong>ABOUT US</strong>
                 <h3>关于我们</h3>
+                <div class="bg2_1"></div>
             </div>
             <div class="s2">
                 <p>资邦深圳网络科技有限公司是一家综合性科技金融公司，致力于运用云计算、大数据等互联网前沿技术，创新平台管理模式和风险控制，联合国内外知名金融机构，为现金管理、财富管理、消费金融、供应链金融、生活服务、投资顾问等全天候、一站式的智能金融服务提供技术外包支持，从而在金融服务商和终端消费者之间搭建起安全、便捷、共赢的桥梁。
                 </p>
                 <p style="margin-top: 15px;">公司拥有强劲的技术团队，内部管理人员大多来自知名企业，拥有丰富的金融管理经验与互联网合作资源。资邦曾成功承接广东某金融资产交易中心交易系统的搭建项目，主导了该金融资产交易中心交易系统从无到有的完整过程，优化升级了交易中心与互联网金融平台之间的运维体系，疏通交易结构中各分支机构之间的对接与合作。母公司资邦集团是配套一带一路战略的亚洲金融合作协会创始会员单位，立足金融服务、金融科技、金融平台三大方向，通过联合金融机构、大中型企业，致力于服务国家金融改革战略。
                 </p>
+                <div class="bg2_2"></div>
             </div>
-            <a class="godown" href="#section_3"><span></span></a>
+            <a class="godown" href="javascript:;"><span></span></a>
+            <div class="share">
+                <div>
+                    <ul>
+                        <li><img src="./images/sh.png" alt=""></li>
+                        <li><img src="./images/code.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="section" id="section_3">
             <div class="bg"><img src="./images/bg3.jpg" alt=""></div>
@@ -404,60 +873,84 @@
                 <strong>BUSINESS</strong>
                 <h3>业务领域</h3>
             </div>
-            <div class="s2 businsess">
+            <div class="s2">
                 <div>
-                    <ul>
+                    <ul class="items">
                         <li class="bg3_1">
                             <h4>个性化解决方案提供商</h4>
-                            <p>individuation</p>
+                            <p>INDIVIDUATION</p>
                         </li>
                         <li class="bg3_2">
                             <h4>供应链金融服务</h4>
-                            <p>Supply chain finance</p>
+                            <p>SUPPLY CHAIN FINANCE</p>
                         </li>
                         <li class="bg3_3">
                             <h4>撮合通道业务</h4>
-                            <p>Match channel</p>
+                            <p>MATCH CHANNEL</p>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <ul>
-                        <li class="bg3_1">
+                    <ul class="items">
+                        <li class="bg3_4">
                             <h4>经纪业务</h4>
-                            <p> business</p>
+                            <p>BUSINESS</p>
                         </li>
-                        <li class="bg3_2">
+                        <li class="bg3_5">
                             <h4>成功案例</h4>
-                            <p>Success case</p>
+                            <p>SUCCESS CASE</p>
                         </li>
-                        <li class="bg3_3">
+                        <li class="bg3_6">
                             <h4>合作机构</h4>
-                            <p>Cooperation</p>
+                            <p>COOPERATION</p>
+                            <div class="cpDetail">
+                                <ul>
+                                    <li>唐小僧互联网金融台</li>
+                                    <li style="margin-top:10px;">广东省华侨金融资产交易中心股份有限公司</li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
+                <div class="bg3_7"></div>
+                <div class="bg3_8"></div>
             </div>
-            <a class="godown" href="#section_4"><span></span></a>
+            <a class="godown" href="javascript:;"><span></span></a>
+            <div class="share">
+                <div>
+                    <ul>
+                        <li><img src="./images/sh.png" alt=""></li>
+                        <li><img src="./images/code.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="section" id="section_4">
             <div class="bg"><img src="./images/bg4.jpg" alt=""></div>
             <div class="mask"></div>
             <div class="s1">
-                <strong>Science and technology vision</strong>
+                <strong>SCIENCE AND TECHNOLOGY VISION</strong>
                 <h3>科技愿景</h3>
             </div>
             <div class="s2">
-                <ul>
-                    <li>
-                        <p>服务于实体经济的金融科技解决方案提供商</p>
-                    </li>
-                    <li style="margin-left:48px;">
-                        <p>领头开辟金交中心市场新格局</p>
-                    </li>
-                </ul>
+                <div class="bg4_1">
+                    <p>服务于实体经济的金融科技解决方案提供商</p>
+                </div>
+                <div class="bg4_2">
+                    <p>领头开辟金交中心市场新格局</p>
+                </div>
+                <div class="bg4_3"><img src="./images/left.png" alt=""></div>
+                <div class="bg4_4"><img src="./images/right.png" alt=""></div>
             </div>
-            <a class="godown" href="#section_5"><span></span></a>
+            <a class="godown" href="javascript:;"><span></span></a>
+            <div class="share">
+                <div>
+                    <ul>
+                        <li><img src="./images/sh.png" alt=""></li>
+                        <li><img src="./images/code.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="section" id="section_5">
             <div class="bg"><img src="./images/bg5.jpg" alt=""></div>
@@ -465,11 +958,22 @@
             <div class="s1">
                 <strong>CONTACT US</strong>
                 <h3>联系我们</h3>
+                <div class="bg5_1"></div>
             </div>
             <div class="s2">
                 <p>资邦（深圳）网络科技有限公司是集合通道撮合，供应链金融解决方案，金融机构表外业务，经纪业务，等金融科技业务为一体的个性化金融科技解决方案提供商。
                 </p>
                 <p>期待与您的合作。合作请致电。</p>
+                <div class="bg5_2"></div>
+            </div>
+            <a class="godown gotop" href="javascript:;"><span></span></a>
+            <div class="share">
+                <div>
+                    <ul>
+                        <li><img src="./images/sh.png" alt=""></li>
+                        <li><img src="./images/code.png" alt=""></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
