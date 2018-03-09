@@ -1,0 +1,24 @@
+1、文件在工作区的修改全部撤销（让这个文件回到最近一次git commit或git add）：git checkout -- file
+2、可以把暂存区的修改撤销掉（unstage），重新放回工作区：git reset HEAD file
+3、版本库信息单行显示：git log --pretty=oneline
+4、历史操作命令，常用于查找版本库信息回退：git reflog
+5、版本库HEAD指针指向：git reset --head HEAD^(将HEAD指针指向上一个版本&HEAD~100)
+6、通过commit_id,快速将HEAD指针指向该版本：git reset --hard commit_id
+7、比较工作区文件与版本库文件的区别：git diff HEAD -- file
+8、本地git仓库提交到远程：git remote add origin 远程git的url
+9、第一次推送master分支的所有内容；git push -u origin master ; 此后，每次本地提交后，只要有必要，就可以使用命令:git push origin master
+10、删除分支：git branch -d 分支名
+11、查看分支的合并情况：$ git log --graph --pretty=oneline --abbrev-commit
+12、禁用Fast forward，本次合并要创建一个新的commit，加-m ：git merge --no-ff -m "提交信息"  分支名
+13、把当前工作现场“储藏”起来，等以后恢复现场后继续工作：git stash
+14、查看stash：git stash list
+15、恢复：git stash apply   删除stash：git stash drop
+16、恢复的同时把stash的内容也删除： git stash pop
+17、分支未被合并，强行删除： git branch -D 分支名
+18、查看远程仓库的信息： git remote
+19、查看抓取和推送origin的地址,如果没有推送权限,就看不到push的地址： git remote -v
+20、像远程推送分支： git push origin 分支名
+21、创建远程origin的dev分支到本地：git checkout -b dev origin/dev
+22、向远程分支推送提交，遇到冲突时：先用git pull把最新的提交从远程分支抓下来，然后在本地合并，解决冲突，再推送
+23、git pull失败的原因：可能为 没有指定本地dev分支与远程origin/dev分支的链接，可以根据提示设置dev&origin/dev的链接:git branch --set-upstream dev origin/dev
+24、被.gitignore忽略的文件可以通过-f强制添加到git；查看所写的规则用git checkout-ignore -v App.class
