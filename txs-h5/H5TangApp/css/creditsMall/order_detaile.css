@@ -1,0 +1,382 @@
+            .cls:after {
+                display: inline-block;
+                content: '';
+                height: 0;
+                overflow: hidden;
+                clear: both;
+            }
+            
+            .view {
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                position: relative;
+            }
+            
+            .take_delivery {
+                background: #fff;
+                padding: .64rem .768rem;
+                position: relative;
+            }
+            
+            .receive_address {
+                padding-right: .493333rem;
+                padding-left: 1.194667rem;
+            }
+            
+            .add_adress {
+                color: #999;
+                font-size: .597333rem;
+            }
+            
+            .no_address {
+                padding-top: .256rem;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+            }
+            
+            .no_address span {
+                font-size: .597333rem;
+            }
+            
+            .location_icon {
+                position: absolute;
+                top: 38%;
+                left: .768rem;
+                width: .554667rem;
+                height: .768rem;
+            }
+            
+            .location_icon img {
+                width: 100%;
+            }
+            
+            .arrow_icon {
+                position: absolute;
+                right: .64rem;
+                top: 35%;
+            }
+            
+            .arrow_icon i {
+                display: inline-block;
+                width: .4rem;
+                height: .4rem;
+                border-top: 1px solid #999;
+                border-right: 1px solid #999;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+            
+            .receive_people {
+                display: inline-block;
+                margin-right: 1.024rem;
+            }
+            
+            .receive {
+                font-size: .682667rem;
+                color: #333;
+                margin-bottom: .512rem;
+            }
+            
+            .receive_tel,
+            .address {
+                font-size: .512rem;
+                color: #333;
+            }
+            
+            .receive_tel {
+                float: right;
+            }
+            
+            .product_info {
+                background-color: #fff;
+                padding-top: .64rem;
+                margin-top: .512rem;
+                /*margin-bottom: 4.266667rem;*/
+            }
+            
+            .product_content {
+                padding-bottom: .64rem;
+                position: relative;
+                padding-left: .64rem;
+            }
+            
+            .product_img {
+                width: 3.413333rem;
+                height: 3.413333rem;
+            }
+            
+            .info_list {
+                display: inline-block;
+                margin-left: .512rem;
+                width: 10.410667rem;
+            }
+            
+            .info_list p {
+                line-height: 1.5;
+                margin-bottom: .213333rem;
+            }
+            
+            .product_title,
+            .candy {
+                font-size: .512rem;
+                color: #333;
+            }
+            
+            .candy_num {
+                font-size: .768rem;
+                color: #ff4949;
+            }
+            
+            .product_price {
+                font-size: .512rem;
+                color: #999;
+                position: relative;
+            }
+            
+            .pro_num {
+                position: absolute;
+                right: 0;
+                font-size: .597333rem;
+                color: #333;
+            }
+            
+            .pro_list {
+                padding-left: .64rem;
+            }
+            
+            .pro_list li {
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                padding-right: .64rem;
+                position: relative;
+                font-size: .597333rem;
+                color: #333;
+                padding: .64rem 0.64rem .64rem 0;
+            }
+            
+            .product_content:after,
+            .pro_list li:after {
+                display: block;
+                content: '';
+                height: 1px;
+                width: 100%;
+                border-bottom: 1px solid #eee;
+                transform: scaleY(.5);
+                -webkit-transform: scaleY(.5);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            
+            .bottom_exchange {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                height: 2.133333rem;
+                line-height: 2.133333rem;
+                padding-left: .64rem;
+            }
+            
+            .exchange_candy {
+                font-size: .597333rem;
+                color: #333;
+            }
+            
+            .exchange_candy span {
+                font-size: .768rem;
+                color: #ff4949;
+            }
+            
+            .conform_btn {
+                font-size: .682667rem;
+                color: #fff;
+                background-color: #ff3f3f;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 5.546667rem;
+                text-align: center;
+                height: 2.133333rem;
+                line-height: 2.133333rem;
+            }
+            
+            .gray_btn {
+                color: #999;
+                background-color: #e7e7e7;
+            }
+            
+            .prefer_candy {
+                position: relative;
+            }
+            
+            .prefer_candy input {
+                width: .768rem;
+                height: .768rem;
+            }
+            
+            .no_gift {
+                color: #999;
+            }
+            
+            .check_box {
+                display: inline-block;
+                width: .768rem;
+                height: .768rem;
+                border: 1px solid #b9b9b9;
+                position: absolute;
+                top: .097333rem;
+                right: .108rem;
+                background: #fff;
+                border-radius: 2px;
+            }
+            
+            .choose_check {
+                background: #fff url("../img2.0/pointImg/choose.png") no-repeat center center;
+            }
+            
+            .border_b12 {
+                border-bottom: .512rem solid #f6f6f6;
+            }
+            
+            .tags_style {
+                display: inline-block;
+                font-size: .853333rem;
+                color: #ff7a04;
+                border: 1px solid #ff7a04;
+                border-radius: 2px;
+                /*width: 4.693333rem;*/
+                height: 1.109333rem;
+                line-height: 1.109333rem;
+                transform: scale(.5);
+                -webkit-transform: scale(.5);
+                -moz-transform: scale(.5);
+                -o-transform: scale(.5);
+                text-align: center;
+                /* position: absolute;
+                top: -.17rem;
+                left: 1.5rem; */
+                padding: 0 .170667rem;
+                transform-origin: left center;
+                -webkit-transform-origin: left center;
+                margin-left: .2rem;
+            }
+            
+            .buy_num {
+                position: relative;
+            }
+            
+            .buy_num span:first-child {
+                position: absolute;
+                top: .2rem;
+                right: 2.5rem;
+            }
+            
+            .vartur_img {
+                height: 2.176rem;
+                width: 3.413333rem;
+                max-width: 26%;
+                color: #fff;
+                font-size: 0.384rem;
+                display: block;
+                float: left;
+            }
+            
+            .vartur_img span.ii-first {
+                padding-bottom: .2rem;
+                padding-top: .75rem;
+            }
+            
+            .vartur_img i.amount {
+                font-size: 0.5973333333333334rem;
+            }
+            
+            .vartur_img span {
+                display: block;
+                line-height: 100%;
+                padding-left: .5rem;
+                font-size: .384rem;
+            }
+            /*理财金*/
+            
+            .financial {
+                background-image: url(/css/img2.0/pointImg/licaijin.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            
+            /*加息券*/
+            .interest {
+                background-image: url(/css/img2.0/pointImg/jiaxiquan.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            /*电影票*/
+            
+            .cinema_ticket {
+                background-image: url(/css/img2.0/pointImg/ticket.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            /*流量*/
+            
+            .phone_traffic {
+                background-image: url(/css/img2.0/pointImg/liuliangquan.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            
+            /*代金券*/
+            .coupon {
+                background-image: url(/css/img2.0/pointImg/daijinquan.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            /*加油卡*/
+            
+            .refueling_card {
+                background-image: url(/css/img2.0/pointImg/jiayouka.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            /*其他券*/
+            
+            .other_coupon {
+                background-image: url(/css/img2.0/pointImg/others.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .az-showmasker-Text .successWin_title{
+                font-size: .682667rem;
+                font-weight: 600;
+                line-height: .682667rem;
+                padding: .2rem;
+                margin-bottom: .3rem;
+              }
+            .success_pic{
+                width: 40%;
+              }
+              .no_mask {
+                display: none;
+              }
+              .no_scroll{
+                overflow: hidden;
+              }
+              .share_remind{
+                z-index: 9999;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: none;
+              }
+              .successWin_content{
+                padding: 0 .5rem;
+                width: 100%;
+                box-sizing: border-box;
+                display: block;
+              }

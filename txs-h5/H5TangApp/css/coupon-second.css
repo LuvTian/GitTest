@@ -1,0 +1,33 @@
+﻿.licaijin .header{padding:1.25rem; font-size: 1.33rem;color: #fff;text-align: center;background-color: #DC493D;  }
+.licaijin .header i{float: right;font-size: 1.39rem;font-family: -webkit-body;}
+.licaijin .header span{color: #FFF0B4;}
+.licaijin .nav{background-color: #CF3629;padding:1.25rem;}
+.licaijin .nav p{font-size: 1.39rem;color: #EDC0BD;}
+.licaijin .nav .balance{font-size:4.35rem;color: #F7F7F7; }
+.licaijin .nav>div{margin-top: 4rem;overflow: hidden;}
+.licaijin .nav>div .small-6:first-child{border-right: 1px solid #ddd;}
+.licaijin .nav>div .small-6:last-child{padding-left:1.25rem;}
+.licaijin .nav>div span{font-size: 1.73rem;color: #F7F7F7;}
+.licaijin .income{padding: 1.75rem 1.25rem;font-size: 1.39rem;color: #828282;background-color: #F7F7F7;margin-bottom: .5rem;}
+.licaijin .income span{color: #C64946;font-size: 1.39rem;}
+.licaijin .income i{float: right;color: #828282;font-size: 1.39rem; font-family: -webkit-body;opacity: .6;}
+.licaijin .detail-licai{background-color: #F7F7F7;padding: 1.75rem 1.25rem;font-size: 1.39rem;color: #444;}
+.licaijin #couponlist{display: block;margin-top: 1rem;text-align:center;}
+.ticket{text-align:left;}
+.licaijin .status1 {background: url(/css/img2.0/bonus-activate.png) no-repeat;background-size: 100% 100%;color: #FA8F00;}
+.licaijin .status2 {background: url(/css/img2.0/bonus-availablety.png) no-repeat;background-size: 100% 100%;color: #FF645A;}
+.licaijin .status3 {background: url(/css/img2.0/bonus-usedd.png) no-repeat;background-size: 100% 100%;color: #979797;}
+.licaijin .status4 {background: url(/css/img2.0/ticket-used.png) no-repeat;background-size: 100% 100%;}
+a.usage-rules{color: #fff;background-color: #CF3629;}
+.col-cac1{color: #FA8F00;}
+.b-col-cac1 {   border-color: #FA8F00!important;}
+.col-cac2{color: #FF645A;}
+.col-cac22{color: #9B9B9B;}
+.col-cac33{color: #999999;}
+.b-col-cac33{ border-color: #999999!important;}
+.b-col-cac2{ border-color: #FF645A!important;}	
+.ticket-content p:last-child{margin-top: 1rem;}
+.licaijin .ticket-content p:nth-child(4){text-overflow: ellipsis;overflow: hidden;-webkit-line-clamp: 1;-webkit-box-orient: vertical;display: -webkit-box;}
+.percentage{top:28%;font-size:3.5rem;}
+.none-any{color: #444;text-align: center;margin-top: 5rem;font-size: 1.39rem;}
+.none-bg{width:40%;margin-top:1rem;margin-bottom:5.5rem;}

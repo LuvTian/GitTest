@@ -1,0 +1,305 @@
+.fr{
+    float: right;
+}
+.visib-hide{
+    /* display: none; */
+    visibility: hidden;
+}
+#mainBody{
+    padding-bottom: 3rem;
+}
+.info-head{
+    /* background-image: url(/css/img2.0/sengcaibao/regular-pre-banner.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+    
+    font-size: 0.512rem;
+    margin: 0 auto;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    padding:0.854rem 0.64rem 0.64rem;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .product-base-info{
+    background-color: #f25d50;
+    position: relative;
+  }
+  .product-timeline-info{
+    color: #333;
+    background-color: #fff;
+  }
+
+  .info-head .pro-title{
+      font-size: 0.68267rem;
+      margin-bottom: 0.2rem;
+  }
+
+  .info-head  .received{
+    position: absolute;
+    float: right;
+    border: 1px solid #fff;
+    padding: 0 0.4rem;
+    border-radius: 0.768rem;
+    font-size: 0.512rem;
+    top: 41%;
+    right: 0.64rem;
+  }
+
+  .info-head .pro-rate{
+    line-height: 100%;
+  }
+  .info-head .pro-rate .rate{
+    font-size: 0.768rem;
+    padding: 0 2px;
+    line-height: 100%;
+  }
+
+  .info-head .pro-rate .active-rate{
+    font-size: 0.384rem;
+    color: #F8AC9F;
+    width: 1.4933333333333334rem;
+    height: 0.5546666666666666rem;
+    border: 1px solid #F8AC9F;
+    border-radius: 2px;
+    padding: 0 1px;
+    vertical-align: super;
+  }
+  .info-head .pro-progress{
+    font-size: 0;
+    list-style: none;  
+  }
+
+  .info-head .pro-progress .point{
+    position: absolute;
+    bottom: 0.14rem;
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: #e7e7e7;
+    border-radius: 10rem;
+    z-index: 3;
+  }
+  .info-head .pro-progress .point.p1{
+    left: 0;
+  }
+  .info-head .pro-progress .point.p2{
+    left: 50%;
+    transform:translateX(-0.15rem);
+    -ms-transform:translateX(-0.15rem);
+    -moz-transform:translateX(-0.15rem);
+    -webkit-transform:translateX(-0.15rem);
+    -o-transform:translateX(-0.15rem);
+  }
+  .info-head .pro-progress .point.p3{
+    right: 0;
+  }
+
+  .info-head .pro-progress .point.white{
+    background-color: #f25d50;
+  }
+
+
+
+  .info-head .pro-progress .overall-progress{
+    background-color:#e7e7e7;
+    border-radius: 0.0854rem;
+    position: absolute;
+    left: 0;
+    bottom: 0.256rem;
+    height: 0.0853rem;
+    width: 100%;
+    z-index: 1;
+  }
+.info-head .pro-progress .cur-progress{
+    position: absolute;
+    bottom: 0.256rem;
+    background-color: #f25d50;
+    height: 0.0853rem;
+    border-radius: 0.0854rem;
+    z-index: 2;
+    left: 0;
+    width: 0px;
+    transition: width 500ms;
+}
+.info-head .pro-progress .progress-tip{
+    position: absolute;
+    top:0;
+    color: #FF3F3F;
+    width: 66%;
+    text-align: center;
+    left: -4rem;
+    transition: left 500ms;
+}
+/* .info-head .pro-progress .progress-tip::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0.128rem solid transparent;
+    border-right: 0.128rem solid transparent;
+    border-top: 0.256rem solid #fff;
+    position: absolute;
+    top: 0.6826666666666666rem;
+    left: 48%;
+} */
+.info-head .pro-progress .progress-tip span{
+    background-color: #f25d50;
+    color: #fff;
+    border-radius: 0.15rem;
+    height: .7rem;
+    line-height: .7rem;
+    padding: 0 3px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 0.384rem;
+}
+.info-head .pro-progress  .triangle{
+    
+}
+  .info-head .pro-progress .item{
+    font-size: 0.512rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    
+    float: left;
+  }
+
+  .info-head .pro-progress .progress{
+    /* float: right; */
+    width: 100%;
+    padding-top: .8rem;
+    position: relative;
+  }
+  .info-head .progress-desc{
+    width: 100%;
+    padding-top: 0.25rem;
+  }
+
+  .info-head .progress-desc > div{
+    float: left;
+    width: 33.33%;
+    font-size: 0;
+    text-align: center;
+  }
+
+  .info-head .progress-desc > div span{
+      display: block;
+      font-size: 0.512rem;
+      color: #333;
+  }
+  .info-head .progress-desc > div span:first-of-type{
+    color: #999;
+  }
+  .info-head .progress-desc .tl{
+    text-align: left;
+ }
+ .info-head .progress-desc .tr{
+    text-align: right;
+ }
+
+
+
+  
+
+.info-head .pro-timeline{
+    margin-top: 0.2rem;
+}
+
+.pro-introduce{
+    padding: 0 0 0 .64rem;
+    margin-top: 0.512rem;
+    font-size: 0.5973333333333334rem;
+    color: #333;
+    background-color: #fff;
+}
+.pro-introduce li{
+    padding:.64rem .64rem .64rem 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.pro-introduce li:last-of-type{
+    border-bottom: none;
+}
+
+.pro-introduce li .copy-dom{
+    background: transparent;
+    color: #4A90E2;
+    padding: 0;
+    padding-left: 0.342rem;
+    font-size: 0.59734rem!important;
+}
+.pro-introduce li input{
+    background-color: transparent;
+    text-align: right;
+    height: .8rem;
+    font-size: 0.5974rem!important;
+}
+
+.pro-introduce li.arrow{
+    position: relative;
+    padding-right: 0.64rem;
+    /* display: inline-block; */
+}
+.pro-introduce li.arrow span{
+    margin-right: 0.64rem;
+}
+.pro-introduce li.arrow::after{
+    position: absolute;
+    content: ' ';
+    display: block;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    right:0.64rem;
+    top:0;
+    bottom: 0;
+    height: 0.384rem;
+    line-height: 0.3413333333333333rem;
+    margin-top: 0.89rem;
+    width: 0.384rem;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+
+.pro-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.6827rem;
+    color: #fff;
+    background-color: #FF3F3F;
+    text-align: center;
+    padding: 0.512rem 0 0.5974rem;
+}
+
+.pro-btn-disabled{
+    background-color: #b9b9b9;
+}
+.pro-btn-warning{
+    background-color: #ff8c8c;
+}
+
+.toast{
+    position: fixed;
+    bottom:45%;
+    left: 25%;
+    right: 25%;
+    height: 2.13rem;
+    line-height: 2.13rem;
+    border-radius: 0.1706rem;
+    color: #fff;
+    background-color: #333;
+    font-size: 0.5974rem;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+.toast-active{
+    display: block;
+    opacity: 0.8;
+}

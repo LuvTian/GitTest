@@ -1,0 +1,139 @@
+body {
+    background: #f3f3f3;
+    position: relative;
+}
+
+header {
+    position: relative;
+    background: url(/css/img2.0/in_title.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 6.4rem;
+    color: #ffffff;
+}
+
+.title_income {
+    text-align: center;
+}
+
+.title_w {
+    font-size: .682667rem;
+    padding-top: 1.706667rem;
+    color: #333333;
+}
+
+.title_p {
+    margin-top: .213333rem;
+    font-size: .512rem;
+    height: .64rem;
+    color: #999999;
+}
+
+.income_m {
+    padding: .426667rem 1.706667rem .426667rem 2.133333rem;
+    position: relative;
+    height: 1.962667rem;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.lable_income {
+    font-size: .512rem;
+    color: #999999;
+}
+
+.lable_money {
+    font-size: .682667rem;
+    text-align: center;
+    color: #f25d50;
+}
+
+.jiantou {
+    position: absolute;
+    left: 7.04rem;
+    top: .853333rem;
+    background: url(/css/img2.0/jiantou.png) no-repeat;
+    background-size: 100% 100%;
+    width: 1.706667rem;
+    height: 1.066667rem;
+}
+
+section {
+    background: #ffffff;
+    margin-top: .512rem;
+}
+
+.list {
+    border-bottom: .042667rem solid #f3f3f3;
+    height: 2.133333rem;
+    font-size: .597333rem;
+    color: #333333;
+    line-height: 2.133333rem;
+    width: 92%;
+    padding: 0 .64rem;
+}
+
+.list_add {
+    border-bottom: .042667rem solid #f3f3f3;
+    height: 2.133333rem;
+    font-size: .597333rem;
+    color: #333333;
+    line-height: 2.133333rem;
+    width: 92%;
+    padding: 0 .64rem;
+}
+.interest_add{
+    width: 25%;
+    display: block;
+    text-align: left;
+    float: left;
+}
+.interest {
+    width: 33.333%;
+    display: block;
+    text-align: center;
+    float: left;
+}
+
+.t_l {
+    text-align: left;
+}
+
+.t_c {
+    text-align: center;
+}
+
+.t_r {
+    text-align: right;
+}
+
+.interest_list {
+    background: #ffffff;
+    padding-left: .64rem;
+}
+
+.interest_list li {
+    border-bottom: .042667rem solid #f3f3f3;
+    height: 2.133333rem;
+    font-size: .512rem;
+    color: #999999;
+    line-height: 2.133333rem;
+    padding-right: .64rem;
+}
+.interest_list_add li{
+    border-bottom: .042667rem solid #f3f3f3;
+    height: 2.133333rem;
+    font-size: .512rem;
+    color: #999999;
+    line-height: 2.133333rem;
+    padding-right: .64rem;
+}
+.interest_list_add{
+    padding-left: .64rem;
+}

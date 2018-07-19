@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>享多期拼团商城</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <style>
+        #mainBody {
+            background: url('https://txsres.txslicai.com/css/img2.0/xdq_truestedLogin.png') center top no-repeat #fff;
+            background-size: 100%;
+            height: 100%;
+        }
+
+        .tip {
+            font-size: .682667rem;
+            color: #333;
+            padding-top: 11.818667rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="">
+        <div class="tip">正在进入享多期拼团商城</div>
+        <!--主体部分-->
+
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/phoneProxy.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+<script>
+    // if(sessionStorage){
+    //     if(sessionStorage["xdq_trustedLogin"]){
+    //         sessionStorage.removeItem("xdq_trustedLogin");
+    //     }else{
+    //         phoneProxy.getPhoneType();
+    //         phoneProxy.closePage();
+    //     }
+    // }
+    var pageSource = $.getQueryStringByName("pagesource");
+    var pageUrl = decodeURIComponent($.getQueryStringByName("pageurl"));
+    var jumpUrl = "";
+    var token = "";
+    var from = "txs_h5";
+    var appKey = "";
+
+    // var apiUrl_prefix = "http://192.168.3.30:8991";
+
+    //获得跳转地址
+    if (pageSource) {
+        var d1 = $.AkmiiAjaxPost(apiUrl_prefix + "/account/xdq/get_destination_url", {
+            destinationPage: pageSource
+        }, true).then(function (d) {
+            if (d.code == 200) {
+                jumpUrl = d.data.url;
+                // alert("d1-->" + window.PhoneMode);
+            }
+        })
+    }
+
+
+
+    //查询token
+    if ($.getCookie("MadisonToken") || (appKey != "null" && appKey != "")) {
+        var d2 = $.AkmiiAjaxPost(apiUrl_prefix + "/account/user/token", {
+            tokenVersion: "1.0"
+        }, true).then(function (d) {
+            token = d.data.token;
+            // alert("d2-->" + window.PhoneMode);
+        })
+    }
+    var d3 = $.Deferred();
+    setTimeout(function () {
+        try {
+            if (window.PhoneMode) {
+                from = "txs_app";
+            }
+        } catch (error) {
+            // alert('PhoneMode没定义');
+        }
+        // alert(from);
+        d3.resolve();
+    }, 1000);
+    $.when(d1, d2, d3).done(function () {
+        if (pageUrl != "") {
+            if (token) {
+                pageUrl = pageUrl + (pageUrl.indexOf("?") >= 0 ? "&" : "?") + "token=" + encodeURIComponent(token) + "&from=" + from + "&tokenVersion=1.0";
+            } else {
+                pageUrl = pageUrl + (pageUrl.indexOf("?") >= 0 ? "&" : "?") + "token=&from=" + from + "&tokenVersion=1.0";
+            }
+            window.location.replace(pageUrl);
+        }
+        if (jumpUrl != "") {
+            if (token) {
+                jumpUrl = jumpUrl + (jumpUrl.indexOf("?") >= 0 ? "&" : "?") + "token=" + encodeURIComponent(token) + "&from=" + from + "&tokenVersion=1.0";
+            } else {
+                jumpUrl = jumpUrl + (jumpUrl.indexOf("?") >= 0 ? "&" : "?") + "token=&from=" + from + "&tokenVersion=1.0";
+            }
+            window.location.replace(jumpUrl);
+        }
+    }).fail(function (v1) {
+
+    })
+</script>
+
+</html>

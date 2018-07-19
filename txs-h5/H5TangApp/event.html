@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>唐小僧迎新年送豪礼</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <style type="text/css">
+
+.page-link { position: absolute; width: 15rem; height: 3rem; left: 3rem; bottom: 12rem; }
+.phone_mod { }
+.phone_mod .phone_code { background: #ffe888; }
+.phone_mod .phone_code p { color: #8b4e00; font-size: 1.6rem; }
+.phone_mod .phone_row { padding: 0 0 1.2rem; position: relative; width: 92%; margin: 0 auto; }
+.phone_mod .phone_row div { overflow: hidden; position: relative; border-radius: 3px; background: #fff; border: 1px solid #d28f0a; }
+.phone_mod .phone_row .error { display: none; font-size: 1.6rem; position: absolute; width: 100%; line-height: 2.5rem; height: 2.5rem; background: #fff0ee; color: #f72d4a; border: 1px solid #f72d4a; }
+.phone_mod .phone_row input { height: 3.4rem; width: 50%; font-size: 1.5rem; border: 0 none; background: transparent; box-shadow: none; padding: 0 3px; margin: 0; line-height: 3.4rem; }
+.phone_mod .phone_row button { padding:0;margin: 1px; color: #ffffff; width: 40%; font-size: 1.5rem; border-radius: 4px; height: 3.4rem; line-height: 3.4rem; text-align: center; background: #ffaf00; display: block; float: right; }
+
+.phone_mod .phone_row button[disabled="disabled"] { background: #c0c0c0; }
+.phone_mod .get_hongbao { padding: 1rem 0; width: 100%; background: #fff; height: 5.5rem; }
+.phone_mod .get_hongbao .get_hongbao_btn { border-radius: 3rem; width: 92%; font-size: 2rem; line-height: 3.5rem; margin: 0 auto; display: block; background: #ff6b54; color: #fff; text-align: center; height: 3.5rem; }
+.text_ul { padding: 1rem; background: #ffe889; color: #5b4813; }
+.text_ul li { text-align: left; padding: 0 0 0 5rem; font-size: 1.6rem; background: #ffe889; color: #5b4813; margin: 1rem 0; }
+.text_ul li span { display: inline-block; margin: 0 1rem 0 -3rem; color: #fff; text-align: center; line-height: 2rem; border-radius: 2rem; width: 2rem; height: 2rem; background: #ff8400; }
+.text_ul li a { color: #0038d4; }
+.taxi_pop { width: 23.8rem; }
+.taxi_pop .taxi_mod { background: #fff; border-radius: 0 0 5px 5px; text-align: center; }
+.taxi_pop .taxi_mod .tit { padding: 1.5rem 0; font-weight: bold; color: #626262; text-align: center; font-size: 2rem; }
+.taxi_pop .taxi_mod .txt { color: #626262; display: inline-block; padding: 0 1.5rem 1.5rem; text-align: left; font-size: 1.4rem; }
+.taxi_pop .taxi_mod .txt span { color: #ee7f13; }
+.taxi_pop .taxi_mod .txt b { font-weight: bold; }
+
+.taxi_pop .taxi_mod .btn_mod { padding: 2rem 0; border-top: 1px solid #cfcfcf; }
+.taxi_pop .taxi_mod .btn_a { border-radius: 3rem; width: 70%; font-size: 2rem; line-height: 3.5rem; margin: 0 auto; display: block; background: #f72d4a; color: #fff; text-align: center; height: 3.5rem; }
+.taxi_pop_content { position: fixed; top: 2rem; margin: 0 auto; z-index: 999; }
+
+.phone_code .re_phone_mod { height: 3.6rem; position: relative; width: 92%; margin: 0 auto; border-radius: 3px; background: #fff; border: 1px solid #d28f0a; font-size: 1.5rem; margin-bottom: 0.8rem; }
+.phone_code .re_phone_mod:focus { border: 1px solid #d28f0a; }
+</style>
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport text-center">
+            <div style="position:relative">
+                <img class="img-responsive" src="/css/didiimages/taxi_pic1.jpg" />
+                <div class="phone_mod">
+                    <div class="phone_code">
+                        <p>您的手机号：<span id="spmobile"></span></p>
+                        <input style="display:none;" id="txtmobile" class="re_phone_mod" type="tel" placeholder="请输入手机号码" maxlength="11" />
+                        <div class="phone_row">
+                            <div>
+                                <button id="getYZM">获取动态码</button>
+                                <input id="txtsmscode" type="tel" maxlength="6" placeholder="短信验证码" />
+                            </div>
+                            <div class="error">您输入的动态码不正确，请重新输入</div>
+                        </div>
+                    </div>
+                    <div class="get_hongbao">
+                        <a href="javascript:void(0);" id="invite-button" class="get_hongbao_btn">马上领红包</a>
+                    </div>
+                </div>
+                <img class="img-responsive" src="/css/didiimages/taxi_pic2.jpg" />
+                <img class="img-responsive" src="/css/didiimages/taxi_pic3.jpg" />
+                <img class="img-responsive" src="/css/didiimages/taxi_pic4.jpg" />
+                <ul class="text_ul">
+                    <li><span>1</span>领取大礼包， 意味着您同意唐小僧<br /><a href="/Html/Anonymous/register-protocol.html">用户服务协议</a></li>
+                    <li><span>2</span>本活动仅限“唐小僧理财”新用户参加</li>
+                    <li><span>3</span>最终解释权归唐小僧理财所有</li>
+                </ul>
+            </div>
+        </article>
+
+        <div class="tipswrap">
+            <div class="bg-black">
+            </div>
+            <div class="taxi_pop_content" style="">
+                <div class="taxi_pop">
+                    <img src="/css/didiimages/taxi_pop_pic.png" />
+                    <div class="taxi_mod">
+                        <div class="tit">恭喜你注册成功</div>
+                        <p class="txt">
+                            <span>100元专车券</span> 已在您的账户中，<br />
+                            平台奖励中还有 <span>加息券和红包</span>，<br />
+                            更多活动请关注<b>“唐小僧理财”</b><br />
+                            微信号
+                        </p>
+                        <div class="btn_mod">
+                            <a class="btn_a" href="javascript:void(0);">确定</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/anonymous/event.js"></script>
+</body>
+
+</html>

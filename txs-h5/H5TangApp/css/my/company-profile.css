@@ -1,0 +1,373 @@
+#top {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background: #fff;
+    padding: 0 3px;
+}
+
+#nav .swiper-slide {
+    width: auto !important;
+}
+
+#nav .swiper-slide span {
+    padding: 0 .512rem;
+    text-align: center;
+    display: block;
+    line-height: 1.877333rem;
+    font-size: .682667rem;
+    color: #999;
+}
+
+#nav .bar {
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#nav .bar .color {
+    width: .725333rem;
+    margin: 0 auto;
+    height: .085333rem;
+    background: #F25D50;
+}
+
+#page {
+    height: 100%;
+}
+
+#page .slidepage {
+    height: 100%;
+}
+
+.slidepage-wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.scrollHigh .swiper-wrapper {
+    height: auto;
+}
+
+.slidescroll {
+    height: auto;
+}
+
+.mt56 {
+    margin-top: 2.389333rem !important;
+}
+
+.pl15 {
+    padding-left: .64rem;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.structureBox {
+    text-align: center;
+}
+
+.structureBox img {
+    width: 80%;
+    height: auto;
+    margin-top: 2.304rem;
+}
+
+.business-info-box li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: .682667rem 0;
+}
+
+.business-info-box li .left {
+    -webkit-box-flex: 0 0 5.290667rem;
+    -moz-box-flex: 0 0 5.290667rem;
+    -webkit-flex: 0 0 5.290667rem;
+    -ms-flex: 0 0 5.290667rem;
+    flex: 0 0 5.290667rem;
+    width: 5.290667rem;
+    font-size: .597333rem;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.business-info-box li .right {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: .597333rem;
+    color: #999999;
+    line-height: .896rem;
+    padding-right: .64rem;
+}
+
+.table-box {
+    padding: 1.28rem .682667rem;
+}
+
+.info-table {
+    border: 1px solid #E7E7E7;
+    width: 100%;
+}
+
+.info-table>tbody>tr {
+    border: 1px solid #E7E7E7;
+    text-align: left;
+}
+
+.info-table .pd2 {
+    vertical-align: middle;
+}
+
+.info-table>tbody>tr>td,
+.info-table>tbody>tr>th {
+    border: 1px solid #E7E7E7;
+    font-size: .597333rem;
+    color: #333333;
+    line-height: .896rem;
+    padding: .597333rem .682667rem;
+}
+
+.branch-wrapper {
+    position: relative;
+}
+
+.no-branch-box {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: .597333rem;
+    color: #999;
+}
+
+.user-agreement-wrapper {
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2.730667rem .768rem 1.749333rem;
+}
+
+.user-agreement-box {
+    width: 100%;
+    height: 100%;
+    padding: .426667rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 .085333rem .341333rem 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 .085333rem .341333rem 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 .085333rem .341333rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.user-agreement-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: .042667rem solid #f3f3f3;
+}
+
+.user-agreement-box-inner h2,
+.user-agreement-box-inner .text-wrapper,
+.user-agreement-box-inner .user-agreement {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.user-agreement-box-inner h2 {
+    font-size: .853333rem;
+    color: #333333;
+    margin-top: -6.186667rem;
+}
+
+.user-agreement-box-inner .text-wrapper {
+    margin-top: -.938667rem;
+}
+
+.user-agreement-box-inner .text-box {
+    display: inline-block;
+    text-align: left;
+}
+
+.user-agreement-box-inner .text {
+    font-size: 0;
+}
+
+.user-agreement-box-inner .text2 {
+    margin-top: .853333rem;
+}
+
+.user-agreement-box-inner span,
+.user-agreement-box-inner .right {
+    display: inline-block;
+    font-size: .426667rem;
+    color: #333333;
+    text-align: left;
+    vertical-align: top;
+    line-height: .725333rem;
+}
+
+.user-agreement-box-inner .right p {
+    position: relative;
+}
+
+.user-agreement-box-inner .right p.border-1px:after {
+    border-top: 1px solid #333;
+    bottom: .042667rem
+}
+
+.user-agreement-box-inner .right .p1 {
+    margin-bottom: .170667rem;
+}
+
+.user-agreement {
+    margin-top: 6.4rem;
+}
+
+.user-agreement-link {
+    font-size: .597333rem;
+    color: #2A83F8;
+}
+
+.stock-right-table th {
+    font-weight: normal;
+}
+
+.stock-right-table .pd2 {
+    padding: 0;
+    width: 2.176rem;
+    text-align: center;
+}
+
+.bg-line-56 {
+    width: 100%;
+    height: 2.389333rem;
+    background-color: #f7f7f7;
+}
+
+.bg-line-12 {
+    width: 100%;
+    height: .512rem;
+    background-color: #f7f7f7;
+}
+
+.min-h100 {
+    min-height: 100% !important;
+}
+
+.employee-echart-box .title {
+    height: 2.133333rem;
+    line-height: .682667rem;
+    padding: .725333rem 1.024rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.employee-echart-box .title span {
+    position: relative;
+    display: inline-block;
+    font-size: .682667rem;
+    color: #333333;
+    height: .682667rem;
+    line-height: .682667rem;
+}
+
+.employee-echart-box .title span::after {
+    position: absolute;
+    content: ' ';
+    width: .128rem;
+    height: .597333rem;
+    background-color: #F25D50;
+    left: -.384rem;
+    top: 0;
+}
+
+
+/* .educationPartBox,
+.agePartBox {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+#educationPart,
+#agePart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+#educationPart,
+#agePart {
+    padding: 1.28rem 1.493333rem 0;
+}
+
+#educationPart img,
+#agePart img {
+    width: 100%;
+    height: auto;
+}
+
+.colorShow {
+    font-size: 0;
+    color: #333;
+    padding: 1.109333rem .64rem;
+}
+
+.colorShow ul {
+    width: 100%;
+}
+
+.colorShow .bottom {
+    margin-top: .682667rem;
+}
+
+.colorShow li {
+    display: inline-block;
+    width: 33.33%;
+    font-size: .512rem;
+    line-height: .554667rem;
+}
+
+.colorShow li:first-child {
+    margin-left: 0;
+}
+
+.colorShow span {
+    display: inline-block;
+    width: .853333rem;
+    height: .554667rem;
+    border-radius: .085333rem;
+    vertical-align: top;
+    margin-right: .426667rem;
+}
+
+.totalDes {
+    font-size: .597333rem;
+    color: #999;
+    padding: 0 .64rem 1.024rem;
+    line-height: .853333rem;
+}

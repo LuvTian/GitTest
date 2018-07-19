@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="browsermode" content="application">
+	<meta name="x5-page-mode" content="app">
+    <meta name="format-detection" content="telephone=no">
+	<script src="/js/vendor/fontsize.js"></script>
+	<title>福利</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/index.css">
+</head>
+
+<body>
+	<div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+	<div id="mainBody">
+		<section id="headConatiner">
+			<div id="headBannerContainer">
+				<ul id="headBannerPanel"></ul>
+				<div class="headsp"></div>
+			</div>
+			<div class="tangguoInfoContainer">
+				<div class="tangguoNum" onclick="jumpUrlWithLogin('/Html/store/myCredits.html')">唐果 <span>--</span></div>
+				<div class="link_exchangeOrder" onclick="jumpUrlWithLogin('/Html/store/convert_record.html?category=physical')">兑换记录</div>
+			</div>
+			<div class="linkBarContainer">
+				<!-- <div onclick="jumpUrlWithOutLogin('/Html/store/activityarea.html')">
+					<img src="/css/img2.0/pointImg/welfare-icon1@2X.png" alt="">
+					<p>活动专区</p>
+				</div> -->
+				<div onclick="jumpUrlWithLogin('/Html/store/welfare_center.html?category=physical')">
+					<img src="/css/img2.0/pointImg/welfare-icon1@2X.png" alt="">
+					<p>兑换中心</p>
+				</div>
+				<div onclick="jumpUrlWithLogin('/html/store/gamecenter.html')">
+					<img src="/css/img2.0/pointImg/welfare-icon2@2X.png" alt="">
+					<p>游戏专区</p>
+				</div>
+				<div onclick="jumpUrlWithLogin('/html/my/user-sign.html')">
+					<img src="/css/img2.0/pointImg/welfare-icon3@2X.png" alt="">
+					<p>签到有礼</p>
+				</div>
+				<!-- <div onclick="jumpUrlWithOutLogin('/Html/store/memberarea.html')">
+					<img src="/css/img2.0/pointImg/welfare-icon4@2X.png" alt="">
+					<p>会员专区</p>
+				</div> -->
+				<div onclick="jumpUrlWithLogin('/Html/My/member_level/member_center.html')">
+					<img src="/css/img2.0/pointImg/welfare-icon4@2X.png" alt="">
+					<p>会员中心</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="selectedContainer">
+			<div class="title">小僧精选 <a href="/Html/store/welfare_center.html?category=physical" class="more">更多<i class="leftArrow"></i></a></div>
+			<ul id="selectedItems" class="listContainer">
+			</ul>
+			<div class="clear"></div>
+		</section>
+		<section id="welfareContainer">
+			<div class="title">小僧礼券 <a href="/Html/store/welfare_center.html?category=virtual" class="more">更多<i class="leftArrow"></i></a></div>
+			<ul id="welfareList" class="listContainer">
+			</ul>
+			<div class="clear"></div>
+		</section>
+		<section id="bottomBanner">
+			
+		</section>
+	</div>
+	<div style="height: 3.6rem;"></div>
+	<script type="text/javascript" src="/js/appendButtonBar.js"></script>
+	<script type="text/javascript" src="/js/vendor/jquery.js"></script>
+	<script src="/js/vendor/flipsnap.js"></script>
+	<script src="/js/jweixin-1.0.0.js"></script>
+	<script src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/pagejs/creditsMall/index.js"></script>
+</body>
+
+</html>

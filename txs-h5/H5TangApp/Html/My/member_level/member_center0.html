@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>会员中心</title>
+    <link rel="stylesheet" href="/css/newbase.css">
+    <link rel="stylesheet" href="/css/member_center.css">
+    <script src="/js/pagejs/my/member_level/fastclick.js"></script>
+    <script>
+        ;
+        (function (doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    var fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+            recalc();
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div class="view">
+        <header>
+            <div class="member_rule"><img src="/css/img2.0/img/question_icon.png"></div>
+            <div class="member_bg">
+                <div class="member_vip">
+                    <div class="member_level"><img src="/css/img2.0/img/Level0.png" /></div>
+                    <div class="contribution">
+                        <div class="contribution_bar"><i class="progress_bar"></i></div>
+                        <div class="contribution_value">贡献值 <span class="current_value">180</span>/<span class="all_value">220</span></div>
+                    </div>
+                    <div class="mark_words">打败了<span class="scale">80%</span>普通等级的会员</div>
+                    <!--<div class="member_tel">贡献值<span class="red_num" id="offer" style="    margin-left: 0.446667rem;color:#fff;">30</span></div>-->
+                </div>
+            </div>
+            <div class="bg_shadow"><img src="/css/img2.0/img/shadow.png"></div>
+        </header>
+        <div class="qujin_grade">
+            <ul>
+                <li id="qujin"><img src="/css/img2.0/img/v4.png"><span>齐天大圣</span><small style="font-size:.56rem;margin-left:.2rem;">(取金活动等级)</small></li>
+                <!-- <li>贡献值<span class="red_num" id="offer">30</span></li> -->
+            </ul>
+        </div>
+        <section>
+            <div class="my_privilege cls">
+                <div class="privilege_title">
+                    <div>我的特权</div>
+                    <div class="all_privilege">全部会员特权<i class="arrow_icon"></i></div>
+                </div>
+                <ul class="privilege_list cls">
+                    <!--<li><img src="/css/img2.0/img/gold_icon1.png"><span>首升礼</span></li>
+					<li><img src="/css/img2.0/img/gold_icon2.png"><span>投资礼包</span></li>
+					<li><img src="/css/img2.0/img/gold_icon3.png"><span>积分</span></li>
+					<li><img src="/css/img2.0/img/gold_icon4.png"><span>债券转让</span></li>
+					<li><img src="/css/img2.0/img/gold_icon5.png"><span>至尊宝预约</span></li>
+					<li><img src="/css/img2.0/img/gold_icon6.png"><span>快速提现<small>5次/天</small></span></li>
+					<li><img src="/css/img2.0/img/gold_icon7.png"><span>快速赎回<small>3次/天</small></span></li>
+					<li><img src="/css/img2.0/img/gold_icon8.png"><span>补签特权<small>2次/月</small></span></li>
+					<li><img src="/css/img2.0/img/gold_icon9.png"><span>转让服务费<small>8折</small></span></li>
+					<li><img src="/css/img2.0/img/gold_icon10.png"><span>专属投资项目</span></li>-->
+                </ul>
+                <script type="text/html" id="privilege_list">
+                    <% if(list.length > 0){%>
+                        <%for(var i = 0; i < list.length; i++){
+                    var item = list[i];%>
+                            <li>
+                                <% if (item.showDisableImg == true) {%>
+                                    <img src=<%=item.disableImgPrivilege2d%>>
+                                    <%} else {%>
+                                        <img src=<%=item.imgPrivilege2d%>>
+                                        <%}%>
+                                            <span><%=item.name%></span>
+                                            <!-- <%if(item.count){%>
+                        <small><%=item.count%><%=item.countUnitName%></small>
+                    <%}%> -->
+                                            <%if(item.privilegeType==5 || item.privilegeType==6 || item.privilegeType==7 || item.privilegeType==8){%>
+                                                <small><%=item.privilegeTail%></small>
+                                                <%}%>
+                            </li>
+                            <%}%>
+                                <% if(list.length%2!=0){%>
+                                    <li></li>
+                                    <%}%>
+                                        <%}%>
+                </script>
+            </div>
+        </section>
+        <footer>
+            <div class="member_bottom to_rush">冲刺会员</div>
+        </footer>
+        <!--<div class="mask"></div>
+        <div class="rule modal">
+            <div class="close">
+                <img src="/css/img2.0/img/close.png" alt="">
+            </div>
+            <h2 class="rule_title">会员规则</h2>
+            <div class="content_box">
+                <p class="rule_text">会员等级是根据会员贡献值进行划分和评定。</p>
+                <p class="rule_text">贡献值为您在唐小僧持有投资项目最近30天的收益平均值计算，收益1元=100贡献值。</p>
+                <p class="rule_text">新注册用户如不满30天，根据注册日起计算贡献值。</p>
+                <p class="rule_text">会员等级会在次日凌晨根据您的贡献值进行调整。</p>
+            </div>
+            <div class="to_rush">立即冲刺</div>
+        </div>-->
+        <div class="guide_layer">
+        </div>
+        <div class="tip_img"><img src="/css/img2.0/img/tips.png" /></div>
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/template.js"></script>
+    <script src="/js/pagejs/my/member_level/common_level.js"></script>
+    <script src="/js/pagejs/my/member_level/member_center.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+</body>
+
+</html>

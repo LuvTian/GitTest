@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>数据处理</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="format-detection" content="telephone=no">
+  <script src="/js/vendor/fontsize.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+  <link rel="stylesheet" type="text/css" href="/css/sys-wh.css">
+</head>
+
+<body>
+  <div class="sys-maintenanct">
+    <img src="/css/img2.0/wh.png" alt="">
+  </div>
+  <div class="sys_content">
+    <p class="data_word">尊敬的客户：</p>
+    <p class="data_time">小僧正忙于日常系统核算,<br>于<span id="start"></span>~<span id="end"></span>期间暂停投资、赎回服务，<br>请联系客服为您服务!</p>
+  </div>
+  <a href="tel:4006078587" class="tel">客服电话400-607-8587</a>
+  <script src="/js/vendor/jquery.js"></script>
+
+</body>
+<script>
+  $(function () {
+    $.ajax('/StoreServices.svc/system/maintenancetime', {
+      type: "POST",
+      data: "{}",
+      contentType: 'application/json',
+      dataType: "json",
+      success: function (data) {
+        if (data.result) {
+          $('#start').text(data.starttime);
+          $('#end').text(data.endtime);
+        } else {
+          $.alertF('网络不给力');
+        }
+      }
+    });
+  });
+</script>
+
+</html>

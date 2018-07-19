@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="font-size: 38.3333px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>现金好礼</title>
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/e/20161206/css/active.css">
+</head>
+
+<body>
+    <header>
+        <div id="form">
+            <div>
+                <input type="tel" maxlength="11" placeholder="手机号码" id="txtmobile">
+            </div>
+            <div class="codes">
+                <input type="tel" maxlength="4" placeholder="图形验证码" id="txtimgyzm"> <img src="" alt="" id="imgYZM">
+            </div>
+            <div class="codes">
+                <input type="tel" maxlength="6" placeholder="手机验证码" id="txtsmsyzm">
+                <button id="getYZM" class="sms-codes text-center">获取验证码</button>
+            </div>
+        </div>
+    </header>
+    <p class="safe-tel">唐小僧不会在任何地方泄露您的手机号码</p>
+    <div id="luckydrawregister">
+        <img src="/e/20161206/css/img/btn.png" class="img-responsive">
+    </div>
+    <div class="tip_box">
+        <img src="/e/20161206/css/img/tips_safe.jpg" alt="">
+    </div>
+    <ul class="clearfix list01" id="tab">
+        <li class="on">活动规则</li>
+        <li class="">关于唐小僧</li>
+        <!--<li>红包排名</li>-->
+    </ul>
+    <div class="tab_box">
+        <div class="content_01 content" style="display: block;">
+            <div class="tab_content_1 clearfix bb">
+                <div class="small-6 left">
+                    <img src="/e/20161206/css/img/tab01_text1.png" alt="" class="tab01_text1">
+                </div>
+                <div class="small-6 left">
+                    <img src="/e/20161206/css/img/tab01_pci1.png" alt="" class="tab01_pci1">
+                </div>
+            </div>
+            <div class="tab_content_2 clearfix">
+                <div class="small-6 left">
+                    <img src="/e/20161206/css/img/tab01_text2.png" alt="" class="tab01_text2">
+                </div>
+                <div class="small-6 left">
+                    <img src="/e/20161206/css/img/tab01_pic2.png" alt="" class="tab01_pic2">
+                </div>
+            </div>
+            <footer>
+                <p class="txt1">资邦元达(上海)互联网金融信息服务有限公司（版权所有 侵权必究）</p>
+                <p class="txt1" style="color:#babbbc">投资有风险，本项目非保本产品、不保证收益</p>
+                <!--<p class="txt2">投资有风险，本项目非保本产品、不保证收益</p>-->
+            </footer>
+        </div>
+        <div class="content_02 content" style="display: none;">
+            <div class="about_us">
+                <ul>
+                    <li class="bb">
+                        <img src="/e/20161206/css/img/tab_1.png">
+                    </li>
+                    <li class="bb">
+                        <img src="/e/20161206/css/img/tab_2.png">
+                    </li>
+                    <li>
+                        <img src="/e/20161206/css/img/tab_3.png">
+                    </li>
+                </ul>
+            </div>
+            <p class="txt1">资邦元达(上海)互联网金融信息服务有限公司（版权所有 侵权必究）</p>
+            <p class="txt1" style="color:#babbbc">网贷有风险 出借需谨慎</p>
+        </div>
+        <!--<div class="content_03 content" style="display: none">23</div>-->
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/rewards_fz.js"></script>
+    <script>
+        window.onload = function () {
+            var deviceWidth = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = deviceWidth / 10.8 + 'px';
+            if (deviceWidth > 1080) {
+                deviceWidth = 1080;
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + 'px';
+            };
+            $("#tab li").click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('.content').eq($(this).index()).show().siblings().hide();
+            })
+
+            $("#luckydrawregister").newUserReg({
+                phone: '#txtmobile', // 手机号编辑框
+                txtimgyzm: '#txtimgyzm', // 图形验证码编辑框
+                phoneyzm: '#txtsmsyzm', // 手机验证码编辑框
+                getyzm: '#getYZM', // 获取手机验证码
+                imgyzm: '#imgYZM', // 获取图形验证码
+                register: '#luckydrawregister', // 点击立即注册
+                InvitedBy: $.getQueryStringByName("c") || '', // 渠道号
+                regCallback: function (json) {
+                    if (json.result) {
+                        $.alertF("恭喜,注册成功!", "确定", function () {
+                            $.CheckAccountCustomStatusRedirect("");
+                        });
+                    } else {
+                        $.alertF(json.errormsg);
+                    }
+                    //window.location.replace("/html/product/index.html");
+                } // 点击注册之后的callback
+
+            });
+        }
+    </script>
+</body>
+
+</html>

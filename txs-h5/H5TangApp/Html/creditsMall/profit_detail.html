@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/points.css">
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="view productDetail" id="move_up">
+	    <!-- <div class="profit_bgcolor">
+	    	<div class="product_pic profit_pic">
+			    <img class="profit_pic_small" src="/css/img2.0/pointImg/product.png">
+			    <p class="profit_price">20元</p>
+			    <p class="detail_title">蜘蛛网20元电影抵扣券</p>
+		    </div>
+	    </div>
+		
+		<div class="exchange_note profit_rule">
+		    <strong>使用规则</strong>
+			<div><span>1.</span> <p>仅限投资定期产品风火轮、金刚B、如意棒、筋斗云、宝葫  
+   芦、金刚C、风火轮、金刚B、如意棒、筋斗云、宝葫芦、金刚 
+   A使用
+</p></div>
+			<div><span>2.</span> <p>投资定期产品1500起可用</p></div>
+			<div><span>3.</span> <p>不可与其他代金券叠加使用</p></div>
+			<span class="border"></span>
+		</div>
+		<div class="exchange_note profit_note">
+			<strong>兑换说明</strong>
+			<div><span>1.</span> <p>在“我的福利”中查看兑换情况</p></div>
+			<div><span>2.</span> <p>本商品为电子券兑换成功后发送至您的账户</p></div>
+			<div><span>3.</span> <p>本商品易唐果兑换，不开具发票</p></div>
+			<div><span>4.</span> <p>相同手机号、身份证视为同一用户，如发现违规行为（如恶意
+    注册大量账号使用作弊程序等），唐小僧将取消该用户的兑换
+    资格
+</p></div>
+			<div><span>5.</span> <p>所有商品已经兑换唐果不退还</p></div>
+			<div><span>6.</span> <p>如有问题请拨打客服电话400-607-8587</p></div>
+			<div><span>7.</span> <p>本次商品最终解释权归唐小僧所有</p></div>
+		</div>
+
+		<div class="exchange_point">
+			<span>单价：<b>3000</b> 唐果</span>
+			<span class="exchange_btn">售罄</span>
+		</div> -->
+		<script type="text/html" id="productDetail">
+			<div class="profit_bgcolor">
+	    	<div class="product_pic profit_pic">
+			    <img class="profit_pic_small" src="/css/img2.0/pointImg/product.png">
+			    <p class="profit_price"><%=productDetail.virtualAmount + productDetail.unit%></p>
+			    <p class="detail_title"><%=productDetail.name%></p>
+		    </div>
+	    </div>
+		
+		<div class="exchange_note profit_rule">
+		    <strong>使用规则</strong>
+		    <% 
+              var specification = productDetail.useRule;
+              specification="上拉查看图文详情\r\n\r建议WiFi环境下查看";
+              var specificationArray = [];
+              specificationArray = specification?specification.split("\r") || specification.split("\n") || specification.split("\r\n"):"";
+              for (var i = 0;i < specificationArray.length; i++){
+			%>
+			  <div class="cls"><span><%=i+1%>.</span> <p><%=specificationArray[i]%></p></div>
+			<%}%>
+			<span class="border"></span>
+		</div>
+		<div class="exchange_note profit_note">
+			<strong>兑换说明</strong>
+			<% 
+              var specification = productDetail.exchangeDesc;
+              specification="上拉查看图文详情\r\n\r建议WiFi环境下查看";
+              var specificationArray = [];
+              specificationArray = specification?specification.split("\r") || specification.split("\n") || specification.split("\r\n"):"";
+              for (var i = 0;i < specificationArray.length; i++){
+			%>
+			  <div class="cls"><span><%=i+1%>.</span> <p><%=specificationArray[i]%></p></div>
+			<%}%>
+		</div>
+
+		<div class="exchange_point">
+			<span>单价：<b><%=productDetail.pointPayAmount%></b> 唐果</span>
+			<% if (productDetail.inventory >0) {%>
+			  <span class="exchange_btn" onClick="exchange('<%=productDetail.name%>','<%=productDetail.pointPayAmount%>','<%=productDetail.id%>','<%=productDetail.marketPrice
+%>','<%=productDetail.itemType%>')">我要兑换</span>
+			<%}else{%>
+              <span class="sellOut_btn">售罄</span>
+            <%}%>
+		</div>
+
+		</script>
+	</div>
+	<script src="/js/vendor/jquery.js" type="text/javascript"></script>
+	<script src="/js/vendor/template.js" type="text/javascript"></script>
+	<script src="/js/common.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/choice_detail.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/exchange.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			
+		})
+	</script>
+</body>
+</html>

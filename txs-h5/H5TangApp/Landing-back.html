@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160321010">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="home">
+
+
+        <!--未登录-->
+        <article class="viewport" id="nologin" style="display: none;">
+            <ul id="divbanner" data-orbit data-options="timer_speed:3000;"></ul>
+            <article class="tongji bg-white text-center">
+                <div class="small-6 left">
+                    <p id="totalinvestamount"></p>
+                    累计投资额（元）
+                </div>
+                <div class="small-6 left">
+                    <p class="pr"><i class="dline">|</i><z id="totalregisteredcount"></z></p>
+                    注册人数
+                </div>
+            </article>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red " id="demand-rate-nologin">0.00%</span>
+                    <p class="gray fls">期限灵活&nbsp;&nbsp;灵活赎回</p>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/Product/productfixedlist.html">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate-nologin">10.05%</span>
+                    <p class="gray fls">产品丰富&nbsp;&nbsp;自由选择</p>
+                </div>
+            </a>
+            <article class="ensure" onclick="window.location.href = '/html/anonymous/about-index.html'">
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-01"></span>严格甄选<br>
+                    优质产品
+                </div>
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-02"></span>十层风控<br>
+                    十道审核
+                </div>
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-03"></span>贴心服务<br>
+                    便捷操作
+                </div>
+            </article>
+            <article class="safety text-center" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</article>
+        </article>
+
+        <!--已登录-->
+        <article class="viewport personal" id="is-login" style="display: none;">
+            <!--标签备注
+            个人账户显示<article class="viewport personal">
+            商家账户显示<article class="viewport">
+            -->
+            <!--个人信息-->
+            <article class="money-top pr">
+                <div class="vip-photo">
+                    <a href="/Html/My/UserInfo.html">
+                        <img src="/css/img2.0/icon-tang.png"></a>
+                </div>
+                <div class="money-nav">
+                    <a href="javascript:void(0);" class="qian">
+                        <img src="/css/img2.0/icon-sign.png"></a>
+                    <a href="/html/Anonymous/description-earnings.html">
+                        <img src="/css/img2.0/icon-about.png"></a>
+                </div>
+                <div class="money-count oh">
+                    <p class="text-center">昨日收益(元)<span><img src="/css/img2.0/isopeneye.png" class="img_eye" id="eyes" /></span></p>
+
+                    <p class="text-center yesterday-income display-none" id="yesterday-income"><span class="timer " id="count-number" data-to="88725" data-speed="1200"></span></p>
+                    <p class="text-center yesterday-income noincome " id="no-income"><span>暂无收益</span></p>
+                    <div class="total-assetsoh oh">
+                        <div class="small-6 left text-right">总资产(元)<span class="timer " data-to="30000" id="sumamout" data-speed="1200">0.00</span></div>
+                        <div class="small-6 right text-left bl">昨日收益率<span><i class="timer " id="yesterdayrate" data-to="1521" data-speed="1200">0.00</i></span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-white total-amount">
+                <div class="left"><span class="wxicon icon-coins"></span></div>
+                <div class="left tat">投资金额：</div>
+                <div class="left" id="sumbalance">0.00</div>
+            </article>
+            <article id="storeInfo" class="bg-white bt gray aerchant-account">
+                <div class="small-7 left">商户账户：<span id="stroeTotoalProfit">225,000.00</span></div>
+                <div class="small-5 left">昨日收益：<span id="storeYesterdayProfit">124.00</span></div>
+            </article>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html" id="demandlist" style="display: none;">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red" id="demand-rate">0.00%</span>
+                    <p class="gray">
+                        <z id="demand-balance">0.00</z>
+                        <span class="demand-img_2" style="display: none;"></span>
+                        <!--<img id="demand-img" class="pic-pre" style="display:none;" />-->
+                    </p>
+                </div>
+                <div class="small-4 right gray text-right">
+                    <p>昨日收益</p>
+                    <span>
+                        <z id="demand-profit">0.00</z>
+                    </span>
+                </div>
+            </a>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html" id="nodemandlist" style="display: none;">
+                <div class="small-12 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red" id="demand-rate-noinvert">0.00%</span>
+                    <p class="gray fls">您还未申购 <span class="flsb right">期限灵活 灵活赎回</span></p>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/my/my-regular-index.html" id="fixedlist" style="display: none;">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate">0.00%</span>
+                    <p class="gray" id="fixed-balance">0.00</p>
+                </div>
+                <div class="small-4 right gray text-right">
+                    <p>昨日收益</p>
+                    <span>
+                        <z id="fixed-yesterday-profit">0.00</z>
+                    </span>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/Product/productfixedlist.html" id="nofixedlist" style="display: none;">
+                <div class="small-12 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate-noinvert">0.00%</span>
+                    <p class="gray fls">您还未申购<span class="flsb right">产品丰富 自由选择</span></p>
+                </div>
+            </a>
+            <article class="ensure" onclick="window.location.href = '/html/anonymous/about-index.html'">
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-01"></span>严格甄选<br>
+                    优质产品
+                </div>
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-02"></span>十层风控<br>
+                    十道审核
+                </div>
+                <div class="small-4 left pr">
+                    <span class="wxicon icon-ensure-03"></span>贴心服务<br>
+                    便捷操作
+                </div>
+            </article>
+            <article class="safety text-center" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</article>
+
+
+        </article>
+
+    </section>
+    <nav class="navbar navqujin">
+        <article class="viewport">
+            <a href="javascript:void(0);" class="on"><i class="wxicon icon-nav-home"></i><span>首页</span></a>
+            <a href="/html/product/" class=""><i class="wxicon icon-nav-list"></i><span>理财</span></a>
+            <a href="/html/my/qujin.html" class="qujin-nav">&nbsp;<img src="/css/img2.0/qujin-bg.png" class="img-qujin-bg"><img src="/css/img2.0/qujin-icon-money.png" class="img-qujin-money mymove2"></a>
+            <a href="/html/Store/" class=""><i class="wxicon icon-nav-welfare"></i><span>福利</span></a>
+            <a href="/html/my/" class="usercenter"><i class="wxicon icon-nav-account"></i><span>我的</span></a>
+        </article>
+    </nav>
+    <div class="data-box" id="announcementmessage" style="display: none">
+        <div class="data-box1">
+            <h1 id="messagetitle"></h1>
+            <z id="MessageContent"></z>
+            <ul>
+                <li>唐小僧</li>
+                <li id="created"></li>
+            </ul>
+        </div>
+        <div class="data-box2" id="readmessage">我知道了</div>
+    </div>
+    <div class="reveal-modal" id="mt" style="display: none">
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/foundation/foundation.orbit.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script><!---->
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/anonymous/welcome.js"></script><!---->
+</body>
+</html>

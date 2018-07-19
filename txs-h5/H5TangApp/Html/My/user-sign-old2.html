@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>签到</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <link rel="stylesheet" type="text/css" href="/css/signed.css">
+</head>
+
+<body class="bg-f0eff5">
+    <div id="all-body-div-preloader" style="display: none;">
+        <div id="all-body-div-status" style="display: none;"></div>
+    </div>
+    <section>
+        <article class="viewport">
+            <header>
+                <div class="row bg-cd3830 font-col-fff font-size-14rem">
+                    <div class="small-4 columns az-text-left prev-week last-week">上一周</div>
+                    <div class="small-4 columns az-text-center font-size-18rem mounth"></div>
+                    <div class="small-4 columns az-text-right next-week font-col-b9b9b9">下一周</div>
+                </div>
+            </header>
+            <div class="content-box">
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <span class="num1"></span>
+                            <span class="num2">周一</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖 <i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <!-- 已签 logen -->
+                            <span class="num1"></span>
+                            <span class="num2">周二</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖 <i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <!-- 漏签miss-logen -->
+                            <span class="num1"></span>
+                            <span class="num2">周三</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖 <i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <span class="num1"></span>
+                            <span class="num2">周四</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖 <i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <span class="num1"></span>
+                            <span class="num2">周五</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖 <i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row bb signlista signa">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <span class="num1"></span>
+                            <span class="num2">周六</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips rewardnamehtml">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <!-- 补签 -->
+                        <p class="re-tips leaksignreward" style="display:none">补签抽大奖</p>
+                    </div>
+                </div>
+                <div href="javascript:void(0)" class="row signlista signa" id="week">
+                    <div class="small-3 columns az-padding0">
+                        <div class="roll-box font-size-12rem font-col-fff signcss">
+                            <span class="num1"></span>
+                            <span class="num2">周日</span>
+                        </div>
+                    </div>
+                    <div class="small-9 columns az-padding0">
+                        <p class="re-tips weekdrawhtml" style="display:none">
+                            <z class="rewardname"></z><i class="wxicon icon-right margin-l-1rem right-4"></i></p>
+                        <p class="re-tips font-col-cd3830" id="weekhtml">
+                            <i class="wxicon icon-present margin-r-1rem " id="weekicon"></i> 签满1周，赢大奖
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="miss" id="leaksignhtml" style="visibility:hidden;">本周漏签<span id="leaksignday">&nbsp;</span>天，分享朋友圈获得1次免费补签机会>></p>
+            <div class="fill-btn usersigndiv" style="display:none;">
+                <span href="javascript:void(0);" id="user-sign">签到</span>
+            </div>
+            <div class="content-box bg-trans margin-t-2rem">
+                <p id="rule-switch" class="rule">签到规则<i class="wxicon icon-down" id="rule-arrow"></i></p>
+                <p id="lookreward" class="lookre">查看奖励</p>
+            </div>
+            <ol class="content-box bg-trans margin-t-2rem" id="rule-content" style="display:none;">
+                <li>每投资1000元的任一定期产品即可补签一天。（除变现专区产品）</li>
+                <li>点击补签按钮，当日24点前进行了定期投资，满足金额即可补签成功。</li>
+                <li>补签天数=单笔定期投资金额/1000，该值大于当周的漏签天数时，只补签该周当时的漏签天数；小于当周的漏签天数时，系统自动补签相应的天数。</li>
+                <li>新用户可补签注册当周的天数，如用户周三注册，可补签周一周二。</li>
+                <li>分享至朋友圈可获得一次补签的机会，当周仅限补签一天。</li>
+                <li>加息券、代金券、理财金只能在适用范围内使用，具体可查看使用说明。</li>
+                <li>网贷有风险，出借需谨慎。</li>
+            </ol>
+            <br><br>
+            <div class="mask sharemask" style="display:none">
+                <div class="share_icon"><img src="/css/img2.0/tips.png"></div>
+            </div>
+        </article>
+        <div class="miss-tip" style="display:none" id="nosign">
+            <h3 class="az-text-center">本周漏签
+                <z id="leaksignz"></z>天</h3>
+            <p class="az-text-center bb">今天单笔投资定期理财产品达
+                <z id="buymoney"></z>元<br />即可补完本周漏签！参加周日赢大奖！</p>
+            <a href="javascript:void(0)" class="az-text-center" id="gobuyproduct">去投资</a>
+            <i class="wxicon icon-cancle"></i>
+        </div>
+
+        <div class="miss-tip" style="display:none" id="signsuccess">
+            <h3 class="az-text-center"></h3>
+            <p class="az-text-center bb">今日签到成功<br />恭喜获得
+                <z id="getrewardname"></z><br />
+                <z id="tipdesc"></z>
+            </p>
+            <a href="javascript:void(0)" class="az-text-center" id="lookinfo">查看详情</a>
+            <i class="wxicon icon-cancle"></i>
+        </div>
+
+        <div class="miss-tip" style="display:none" id="weekdiv">
+            <h3 class="az-text-center"></h3>
+            <p class="az-text-center bb">签满1周，赢大奖，一周每日签到，可在周日参与大转盘赢大奖活动！</p>
+            <a href="javascript:void(0)" class="az-text-center" id="close">关闭</a>
+            <i class="wxicon icon-cancle"></i>
+        </div>
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/user-sign.js"></script>
+
+</body>
+
+</html>

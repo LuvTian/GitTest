@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>唐小僧理财</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray">
+    <div class="warp">
+        <div class="inputyzmpage bg-gray">
+            <div class="logimgbox az-center">
+                <img src="/css/img2.0/logo1.png" alt="">
+            </div>
+            <p class="tips">理财安全无忧<br> 更稳！更快！更活！</p>
+        </div>
+        <div class="bg-white az-center inputyzmpage">
+            <h4 class="az-margin0 mb">微信公众号(txslicai) 或 扫描二维码</h4>
+            <img src="/css/img2.0/txsfollow.jpg" alt="" class="mt width-50 mb">
+            <p class="tips mt mb">手机下载app</p>
+            <div class="fillet-btn margin-b0 ios"><a href="javascript:;" class="button expand line-h-wrap-btn" style="line-height:normal;">IOS版 APP下载</a></div>
+            <div class="fillet-btn margin-b0 android"><a href="javascript:;" class="button expand line-h-wrap-btn" style="line-height:normal;">Andriod版 APP下载</a></div>
+            <h6 class="fs8 mt mb">资邦元达（上海）互联网金融信息服务有限公司出品</h6>
+        </div>
+    </div>
+    <div class="mask" style="display:none;"></div>
+    <img src="/css/img2.0/share-ios.png" class="share-ios" style="position:fixed;top: 0;left:0;z-index: 20;display:none">
+    <img src="/css/img2.0/share-andriod.png" class="share-android" style="position:fixed;top: 0;left:0;z-index: 20;display:none">
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation()
+    </script>
+    <script type="text/javascript">
+    window.onload = function(){
+        if(isWeiXin()){
+            $(".ios").click(function(){
+                $(".mask").show();
+                $(".share-ios").show();
+            })
+            $(".android").click(function(){
+                $(".mask").show();
+                $(".share-android").show();
+            })
+            $(".mask").click(function(){
+                $(this).hide();
+                $(".share-android").hide();
+                $(".share-ios").hide();
+            })
+        }else{
+            $(".ios a").click(function(){
+                $(this).attr("href","https://itunes.apple.com/us/app/id1048830006");
+            })
+           
+            $(".android a").click(function(){
+                $(this).attr("href", "http://txsapp.oss-cn-hangzhou.aliyuncs.com/txslicai.apk");
+            })
+        }
+    
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

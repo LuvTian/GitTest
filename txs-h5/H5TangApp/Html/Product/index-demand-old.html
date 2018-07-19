@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>至尊宝</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="current">
+        <article class="viewport current-user">
+            <!--银行通知 -->
+            <div class="notice-wrap" id="notice-wrap">
+                <div class="notice-horn">
+                    <i class="n-horn-icon"></i>
+                </div>
+                <div class="close">
+                    <i class="n-horn-close"></i>
+                </div>
+                <div class="content" id="content">
+                </div>
+            </div>
+            <!--未登录 -->
+            <article id="status-unlogin-img" class="regular-banner display-none"></article>
+            <article class="cit display-none" id="user-account-info">
+                <!--至尊宝账户信息-->
+                <p class="text-center gray">在投金额（元）<span class="timer display-block red" id="user-demandbalance">0.00</span></p>
+                <div class="row text-center gray">
+                    <!--三列显示-->
+                    <div class="left text-right small-5" id="user-yesterdayprofit-tag">
+                        昨日收益<br>
+                        <span class="red">+<span class="timer red" id="user-demandyesterdayprofit">0.00</span></span>
+                    </div>
+                    <div class="left text-left bl small-5" id="user-demandprofitcount-tag">
+                        累计收益
+                        <br><span class="red">+<span class="timer red" id="user-demandprofitcount">0.00</span></span>
+                    </div>
+                    <div class="left text-left bl" style=" display:none;" id="user-freezeamount-tag">
+                        冻结金额
+                        <br><span><span class="timer red" id="user-freezeamount">0.00</span></span>
+                    </div>
+                </div>
+            </article>
+            <article class="tabs bg-white current-tabs mt8" data-tab>
+                <li class="small-6 left tab-title active" id="char-pronumber"><a href="javascript:void(0);" aria-controls="panel2-1">七日年化<span id="char-avgpronumber">0.00%</span></a></li>
+                <li class="small-6 left tab-title" id="char-millionproceeds"><a href="javascript:void(0);" aria-controls="panel2-2">万份收益<span id="char-avgmillionproceeds">0.0000</span></a></li>
+            </article>
+            <div class="tabs-content bg-white">
+                <section class="content active" id="panel2-1">
+
+                    <div class="current-line"><canvas id="chart1" width="450" height="210" /></div>
+                </section>
+                <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+
+                    <div class="current-line"><canvas id="chart2" width="450" height="210" /></div>
+                </section>
+            </div>
+            <a class="bg-white mt8 cilist" href="/Html/Product/asset-allocation.html">
+                <div class="small-6 left gray">至尊宝资产配置</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+            <a class="bg-white bt mb8 cilist dnl display-none " id="user-autoswitchdemand" href="javascript:void(0);">
+                <div class="small-6 left gray">资金自动转入至尊宝</div>
+                <div class="small-6 left text-right gray f160"><z id="autoswitchdemand">持续享受收益，随时取现</z><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+            <a style="display: block;width: 100%;text-align: center;color: #b9b9b9;font-size: 1.2rem; margin: 1rem 0;">网贷有风险，出借需谨慎</a>
+            <!--<a class="bg-white bt mb8 cilist" id="zzb-contract" href="/html/product/contract/zzb-legal-document.html">
+                <div class="small-6 left gray">查看投资合同</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a>-->
+        </article>
+    </section>
+
+    <nav class="navbar status-nav">
+        <article id="status-unlogin" class="viewport text-center navbtn display-none unlogin">
+            <!--根据状态显示 display-none-->
+            <div class="small-6 left ">注册</div>
+            <div class="small-6 left bl">登录</div>
+        </article>
+        <article class="viewport text-center navbtn display-none">
+            <!--根据状态显示 display-none-->
+            <div class="small-6 left  redeem">赎回</div>
+            <div id="status-remind" class="small-6 left bl">开售提醒</div>
+        </article>
+        <article class="viewport text-center navbtn display-none">
+            <!--根据状态显示 display-none-->
+            <div class="small-6 left  redeem">赎回</div>
+            <div id="status-invest" class="small-6 left bl">投资</div>
+        </article>
+        <article class="viewport text-center navbtn display-none">
+            <div class="small-6 left  redeem">赎回</div>
+            <div id="status-sold" class="small-6 left bl">已售罄</div>
+        </article>
+    </nav>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <!--<script src="/js/chart-non-compressed.js"></script>-->
+    <script src="/js/chart.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/product/index.js"></script>
+
+</body>
+</html>

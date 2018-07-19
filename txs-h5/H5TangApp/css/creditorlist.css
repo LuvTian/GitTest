@@ -1,0 +1,118 @@
+body {}
+
+.bondbg {
+    background: #ffffff;
+}
+
+
+/*.bb {
+    border-bottom: 1px #e4e4e4 solid;
+}*/
+
+.bg-white {
+    /*height: 2.176rem;*/
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+    display: block
+}
+
+.fl {
+    float: left;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype')
+}
+
+.wxicon {
+    position: absolute;
+    right: .6rem;
+    top: 50%;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: iconfont;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.icon-right-arrow:before {
+    content: "\e615";
+    color: #b9b9b9;
+}
+
+.icon-right-arrow:before {
+    content: "\e615";
+}
+
+.width-1 {
+    width: 80%;
+}
+
+.width-2 {
+    width: 20%;
+}
+
+.ggcss {
+    padding: 0.5973333333333334rem;
+}
+
+.addtimeDeposit-list {
+    display: block;
+    color: #b9b9b9!important;
+    text-align: center;
+    padding: 0.64rem 0;
+    font-size: 0.5973333333333334rem;
+    background: #ffffff;
+}
+
+.clearfloat:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.tr {
+    text-align: right!important;
+}
+
+.width-3 {
+    width: 38%;
+}
+
+.width-4 {
+    width: 62%;
+}
+
+.ctitle {
+    font-size: 0.5973333333333334rem;
+    color: #999999;
+}
+
+.cdata {
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+}
+
+.padd {
+    padding: 0.64rem 0.6826666666666666rem;
+}
+
+.bb {
+    overflow: hidden;
+    position: relative;
+}
+
+.bb::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #E7E7E7;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}

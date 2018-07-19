@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>确认投资</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/newfinances.css">
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <!-- <link rel="stylesheet" href="/css/coupon.css" /> -->
+    <link rel="stylesheet" href="/css/bank-notice.css" />
+    <link rel="stylesheet" href="/css/productpay.css">
+</head>
+
+<body>
+
+    <div id="pay-body-div-preloader" style="display: none;" class="pay-loading">
+        <div id="pay-body-div-status" style="display: none;" class="pay-loading"></div>
+    </div>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div class="producthtml" id="mainBody">
+        <div class="ivbg borb">
+            <p class="ivpname ivpadd" id="product-title">金刚C234期</p>
+            <p class="surprised display-none" id="surprised"></p>
+            <p class="ivsymm">
+                <span class="ivsykk">剩余金额：
+                    <span id="product-remainingamount">0.00</span>元</span>
+                <span class="allbuy">全部购买</span>
+            </p>
+            <!--<div class="clearfix ivpadd2">
+                <div class="ivrate dis">
+                    <z id="product-rate">0.00</z><span class="ivr">%</span>
+                    <span class="income_fixed" id="product-rateactivite" style="display:none;">+0.00%</span>
+                </div>
+                <div class="ivdays dis" id="product-duration">0天</div>
+            </div>-->
+            <!--<div class="clearfix ivpadd2 box-sizing">
+                <div class="ivtitle dis wid60 box-sizing">期望年化收益</div>
+                <div class="ivtitle dis wid40 box-sizing" id="amountmin">0.00元起投</div>
+            </div>-->
+        </div>
+        <div class="ivtishibg " style="display:none">
+            <p class="ivti">一次性购买剩余金额可获得300000元理财金</p>
+            <p class="ivtino" style="display:none">您的参与机会已用完</p>
+            <div>
+                <p class="ivtino">您还有3次参与机会</p>
+                <div class="ivinjh">参与惊喜单</div>
+            </div>
+        </div>
+        <div>
+            <!--<span class="ivi bg sykt borb">
+                剩余可投：<span id="product-remainingamount">0.00</span>元
+            </span>-->
+            <div class="bg ivmarl9 ">
+                <span class="ivpm">￥</span>
+                <input type="tel" id="product-buy-amount" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace('.', '').replace(/^[0]/g, '');"
+                    value="" class="ivnumred" placeholder="输入投资金额，00.00起投，100递增，最多20万" maxlength="10">
+            </div>
+            <p class="ivi ivqq">
+                <span id="ivprotext">预计起息日：</span>
+                <span id="profitstartday">0000-00-00</span>
+            </p>
+            <div class="bg ivmarl6 hongbao">
+                <span class="ivpti">优惠券</span>
+                <span class="ivnum arrow_icon">
+                    <z id="iscan" class="margin-right">暂无可用</z>
+                    <span class=" ivzwky " id="fulinumspan" style="display:none">
+                        <z id="fulinum">0</z>张可用</span>
+                    <i id="i"></i>
+                </span>
+            </div>
+            <!--<p class="ivsf ivqq">
+                实付：<span id="money" class="ivmon">0.00</span>元
+            </p>-->
+        </div>
+
+        <div class="ivbtn ivbtnnoclick" id="product-buy-div">
+            <a class="ivbtnclick maintenanct global-maintenanct " id="product-buy" href="javascript:void(0); ">立即投资</a>
+        </div>
+        <div>
+            <p class="ivxieyi">
+                <z id="buy-agreement">
+                    <input id="ck-buy-agreement" type="checkbox" value="checkbox " checked=" " style="display:none ">
+                    <span class="ivcheckbox checkbox " checkbox=" " id="cbspan"></span>
+                    <span class="ivyd" id="isreservationtext">我已阅读并同意</span>
+                </z>
+                <span class="ivcol1" style="display:none" id="fixedbuyxy">
+                    <a href="/html/product/contract/txsp2ptipcontract.html" class="a">《网络借贷风险和禁止性行为提示书》</a>
+                    <a href="/html/product/contract/txsp2ppromisebook.html" class="a">《资金来源合法承诺书》</a>
+                    <a href="javascript:void(0);" class="a dingxiangweituoxieyilink">《借款合同》</a>
+                </span>
+                <span class="ivzk" id="zkall" style="display:none">展开所有协议</span>
+                <p class="ivxieyipp appiontxy" style="display:none">
+                    <a href="/html/product/contract/txsp2ptipcontract.html" class="a">《网络借贷风险和禁止性行为提示书》</a>
+                </p>
+                <p class="ivxieyipp appiontxy" style="display:none">
+                    <a href="/html/product/contract/txsp2ppromisebook.html" class="a">《资金来源合法承诺书》</a>
+                </p>
+                <p class="ivxieyipp appiontxy" style="display:none">
+                    <a href="javascript:void(0);" class="a dingxiangweituoxieyilink">《借款合同》</a>
+                </p>
+                <p class="ivxieyipp appiontxy" style="display:none">
+                    <a href="/html/product/contract/productinappoint.html" class="a">《唐小僧预约规则》</a>
+                </p>
+            </p>
+            <p class="renz" style="display: none;" id="user-investmentcertification">完成风险评测后方可投资</p>
+        </div>
+        <p class="highrisk" id="user-highrisk" style="display: none;">
+            投资本项目所需风险承受能力为
+            <span id="product-risk-desc"></span>，已超出您的风险承受能力
+            <span id="user-risk-desc">平衡型</span>，若您想继续投资，需重新评测您的风险等级。
+        </p>
+        <!--<div class="wel_btm_com pfixed">
+            <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html' ">账户资金防盗安全由新浪支付和太平财险共同保障</span>
+            <p class=" ptc ">网贷有风险 出借需谨慎</p>
+        </div>-->
+    </div>
+    <!--底部通用说明-->
+    <div class="wel_btm_com" id="bottom">
+        <!-- <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+            账户资金防盗安全由新浪支付和太平财险共同保障
+            </span> -->
+        <p>网贷有风险 出借需谨慎</p>
+    </div>
+    <section id="choicepay" class="margin-center" style="display:none">
+        <article>
+            <div class="plist borb" id="basicdiv">
+                <div class="pbd">
+                    <div class="scbpayicon">
+                    </div>
+                </div>
+                <div class="pbi">
+                    <p class="pt">
+                        <span id="basic" class="scb">账户余额</span>
+                        <span class="ptag" id="scbpaytag" style="display:none"></span>
+                    </p>
+                    <span class="pi scb">可用余额
+                        <span id="basicbalance">0.00</span>元</span>
+                </div>
+                <div class="clearfix ">
+                    <img src="/css/img2.0/checkpay.png " alt=" " class="payc floatr basicimg active" style="display:none">
+                </div>
+            </div>
+            <div class="plist borb" id="bankdiv">
+                <div class="pbd">
+                    <img class="pbank" src="" />
+                </div>
+                <div class="pbi">
+                    <p class="pt">
+                        <span id="bankname" class="bank">招商银行储蓄卡</span>
+                        <span class="ptag" id="bankpaytag" style="display:none"></span>
+                    </p>
+                    <span class="pi bank">单笔限额
+                        <span id="depositsinglemax">0.00</span>元，单日限额
+                        <span id="dailymaxlimit">0.00</span>元</span>
+                </div>
+                <div class="clearfix">
+                    <img src="/css/img2.0/checkpay.png " alt=" " class="payc floatr bankimg active" style="display:none">
+                </div>
+            </div>
+            <div class="plist" id="zzbdiv">
+                <div class="pbd">
+                    <div class="zzbpayicon">
+                    </div>
+                </div>
+                <div class="pbi">
+                    <p class="pt">
+                        <span id="demand" class="zzb">至尊宝</span>
+                        <span class="ptag" id="zzbpaytag" style="display:none"></span>
+                    </p>
+                    <span class="pi zzb">可用余额
+                        <span id="demandbalance">0.00</span>元</span>
+                </div>
+                <div class="clearfix">
+                    <img src="/css/img2.0/checkpay.png" alt=" " class="payc floatr demandimg active" style="display:none">
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div class="bonus_ticket display-none">
+        <div class="bt_header">
+            <div class="row title_header ">
+                <div class="bt_bonus_title small-6 columns bon_t_on">代金券</div>
+                <input type="hidden" id="current-coupon-value" value="0">
+                <input type="hidden" id="current-coupon-minamount" value="0">
+                <input type="hidden" id="current-coupon-id" value="0 ">
+                <div class="bt-tickets_title small-6 columns">加息券</div>
+                <input type="hidden" id="current-interest-id" value="0 ">
+            </div>
+        </div>
+        <div class="bt_bonus">
+            <div class="bt_tips bb nousecoupon paddingtop ">不使用代金券</div>
+            <div id="couponlist">
+            </div>
+            <!--<p class="bt_nomore ">没有更多代金券</p><br /><br /><br />-->
+            <div class="bt_tip2">
+                <p class="col-fcc">
+                    <i class="wxicon icon-light col-fcc "></i>温馨提示:</p>
+                <p class="col-fcc">代金券不可重复使用，不可累加使用</p>
+                <p class="col-fcc">代金券投资到期后，可
+                    <span class="withdrawtext ">提现</span>
+                </p>
+            </div>
+        </div>
+        <div class="bt_tickets display-none">
+            <div class="bt_tips bb nouseticket paddingtop">不使用加息券</div>
+            <div id="ticketlist">
+            </div>
+            <div class="bt_tip2">
+                <p class="col-fcc">
+                    <i class="wxicon icon-light col-fcc"></i>温馨提示:</p>
+                <p class="col-fcc">加息券不可重复使用，不可累加使用</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="rule-tip rule1" style="display:none ">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100 ">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0 ">保守型</h2>
+                <p class="statement az-textindet text-col-42-2 ">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2 ">风险承受能力：极低
+                    <br> 获利期待：本金保值
+                    <br> 对应风险类型：保守型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444 ">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 btnok ">去看看别的产品</a>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 tran-btn ">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule2 " style="display: none ">
+        <div class="question ">
+            <div class="bb ">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100 ">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0 ">稳健型</h2>
+                <p class="statement az-textindet text-col-42-2 ">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                <span class="statement resulet-qs text-col-42-2 ">风险承受能力：极低
+                    <br> 获利期待：本金平稳增值
+                    <br> 对应风险类型：稳健型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444 ">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 btnok ">去看看别的产品</a>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 tran-btn ">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule3 " style="display: none ">
+        <div class="question ">
+            <div class="bb ">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100 ">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0 ">平衡型</h2>
+                <p class="statement az-textindet text-col-42-2 ">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                <span class="statement resulet-qs text-col-42-2 ">风险承受能力：中
+                    <br> 获利期待：稳定收益
+                    <br> 对应风险类型：平衡型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444 ">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 btnok ">去看看别的产品</a>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 tran-btn ">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule4 " style="display: none ">
+        <div class="question ">
+            <div class="bb ">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100 ">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0 ">成长型</h2>
+                <p class="statement az-textindet text-col-42-2 ">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                <span class="statement resulet-qs text-col-42-2 ">风险承受能力：较高
+                    <br> 获利期待：高收益
+                    <br> 对应风险类型：成长型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444 ">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 btnok ">去看看别的产品</a>
+            <a href="javascript:void(0) " class="btn2 az-center width-90 tran-btn ">重新测评</a>
+            <br />
+        </div>
+    </div>
+
+    <div class="mask" style="display: none"></div>
+
+    <script src="/js/vendor/jquery.js "></script>
+    <script src="/js/vendor/fastclick.js "></script>
+    <script type="text/javascript " src="/js/common.js "></script>
+    <script type="text/javascript " src="/js/utils/notice.js "></script>
+    <script type="text/javascript " src="/js/pagejs/product/productfixedbuy-new.js "></script>
+</body>
+
+</html>

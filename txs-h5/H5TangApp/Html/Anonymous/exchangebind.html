@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>券绑定兑换</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="/css/foundation.min.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/exchangebind.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader" style="display: none;">
+        <div id="all-body-div-status" style="display: none;"></div>
+    </div>
+    <div class="input_box" id="form" style="display:none;">
+			<p class="logReg">请注册/登录唐小僧</p>
+			<div class="block_center">
+				 <input type="tel" maxlength="11" placeholder="手机号码" id="txtmobile">
+			</div>
+			<div class="codes block_center">
+	            <input type="tel" maxlength="5" placeholder="图形验证码" id="txtimgyzm" class="w_50">
+	            <img src="" alt="" id="imgYZM">
+	        </div>
+	        <div class="codes block_center">
+	            <input type="tel" maxlength="6" placeholder="短信验证码" id="txtsmsyzm" class="w_50">
+	            <button id="getYZM" class="sms-codes text-center">获取验证码</button>
+	        </div>
+	        
+	        <div id="luckydrawregister">
+	            <button>立即注册</button>
+	        </div>
+           <p>唐小僧不会在任何地方泄露您的信息</p>
+        </div>
+        <div class="mask" style="display:none;"></div>
+    <div id="mainBody" class="nominheight">
+        <div class="imgs">
+            <img src="/css/img2.0/dh.png" alt="">
+        </div>
+        <div class="coupon_box">
+            <div class="coupon">
+                <span>券码</span>
+                <input type="text" name="" value="" placeholder="请输入券码" id="voucherno">
+            </div>
+        </div>
+        <div class="identifying_box">
+            <div class="identifying">
+                <span>验证码</span>
+
+                <input type="text" name="" value="" placeholder="请输入图形验证码" id="verificationcode">
+                <img id="imgYZM2" class="bgc" />
+            </div>
+            <p class="colorRed disp_none" id="errortext">请输入正确的券码</p>
+        </div>
+        <div class="but">
+            <button class="but_1" type="" id="btn-change">立即绑定兑换</button>
+        </div>
+        <div class="press">
+            <div class="press_ex">
+                <span>1</span>
+                <p>输入券码</p>
+            </div>
+            <div class="press_ex">
+                <span>2</span>
+                <p>验证绑定成功</p>
+            </div>
+            <div class="press_ex">
+                <span>3</span>
+                <p>立即使用</p>
+            </div>
+        </div>
+        <div class="pop_box" style="display:none" id="ecalert">
+            <div class="pop_title">
+                温馨提示
+            </div>
+            <div class="content">
+                <p>
+                    恭喜您，已获得<span class="popRed" id="reward">10元代金券</span>！<br> 您可在个人中心查看已获得券码。
+                </p>
+            </div>
+            <div class="exchange">
+                <a class="exchangeBut" href="#" id="continueec">继续兑换</a>
+                <a class="exchangeBut popRed" href="#" id="look">立即查看</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <!--<script src="/js/foundation.min.js"></script>-->
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- <script src="/js/vendor/comActivityReg.js"></script>  -->
+    <script src="/js/pagejs/anonymous/exchangebind.js"></script>
+</body>
+
+</html>

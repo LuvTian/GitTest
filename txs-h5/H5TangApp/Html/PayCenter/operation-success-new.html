@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>支付结果</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/productpay.css">
+</head>
+
+<body>
+    <div class="main" id="mainBody">
+        <div class="bg ">
+            <div class="clearfix bg  borbm">
+                <div class="wth">
+                    <img src="/css/img2.0/ps-img.png" alt="" class="pay-mg">
+                </div>
+                <div class="wth2">
+                    <div class="hg">
+                        <div class="pay-color"><span id="amount">00.00</span></div>
+                        <div id="createtime" class="pay-text">0000-00-00</div>
+                    </div>
+                    <div class="hg" id="isreservation" style="display:none">
+                        <div class="pay-title">成交</div>
+                        <div id="dealtime" class="pay-text">0000-00-00</div>
+                    </div>
+                    <div class="hg">
+                        <div class="pay-title">预计起息</div>
+                        <div id="profitstartday" class="pay-text">0000-00-00</div>
+                    </div>
+                    <div class="hg">
+                        <div class="pay-title">本息返还至<span id="accounttext">账户余额</span></div>
+                        <div id="repaytime" class="pay-text">0000-00-00</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="btn clearfix">
+                <div class="btn-color bbred floatl" id="lookdetail">查看详情</div>
+                <div class="btn-color bbred floatr" id="productlist">继续投资</div>
+            </div>-->
+            <div class="opbtn">
+                <a class="opld" id="lookdetail" href="javascript:void(0); ">查看详情</a>
+            </div>
+            <div class="p2p_wb" style="display:none">
+                <!--<img src="/css/zdimg/p2p_wb.png" alt="">-->
+                <div class="p2p_wbsize"><span class="p2p_wbtext">恭喜您获得</span><span class="p2p_wbcol">50000元理财金！</span></div>
+                <div class="p2p_wblook" id="p2p_flook" style="display:none">点击查看</div>
+            </div>
+            <div class="p2p_white"></div>
+        </div>
+        <div class="banner" style="display:none;height: auto;">
+            <img id="activity-img" style="width:100%;" src="" />
+        </div>
+    </div>
+    <!--底部通用说明-->
+    <div class="wel_btm_com" id="bottom">
+        <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+            账户资金防盗安全由新浪支付和太平财险共同保障
+            </span>
+        <p>网贷有风险 出借需谨慎</p>
+    </div>
+    <script src="/js/vendor/jquery.js "></script>
+    <script src="/js/common.js "></script>
+    <script src="/js/pagejs/paycenter/operation-success-new.js "></script>
+</body>
+
+</html>

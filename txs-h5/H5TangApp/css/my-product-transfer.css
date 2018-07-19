@@ -1,0 +1,685 @@
+body {}
+
+@font-face {
+    font-family: iconfont;
+    src: url(/css/iconfont.ttf) format('truetype')
+}
+
+.icon-right-arrow:before {
+    content: "\e615"
+}
+
+.icon-right-arrow {
+    position: absolute;
+    right: 0.5rem !important;
+    top: 5vw !important;
+}
+
+.highchat_box p {
+    position: absolute;
+    font-size: 0.4693333333333333rem;
+}
+
+.highchat_box p.old-product {
+    left: 37vw;
+    color: #f7a414;
+    bottom: 0;
+}
+
+.highchat_box p.new-product {
+    left: 58vw;
+    color: #e36769;
+    bottom: 85%;
+}
+
+.highchat_box span {
+    position: absolute;
+    right: 2%;
+    top: 85%;
+    color: #B9B9B9;
+    font-size: 0.384rem;
+}
+
+.bg_title {
+    background-image: url(/css/img2.0/jiejieseng-detail-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7.5rem;
+    text-align: center;
+}
+
+.qw_bg {
+    padding: 0.8rem 0 .2rem 0;
+    font-size: 0.4266666666666667rem;
+    color: #666666;
+}
+
+.tf_rate {
+    font-size: 1.536rem;
+    color: #f43f3f;
+    letter-spacing: 0;
+    /*padding: 0.6rem 0 1.12rem 0;*/
+}
+
+.tf_transferlockday {
+    font-size: 0.4266666666666667rem;
+    color: #b9b9b9;
+}
+
+.tf_titlecss {
+    font-size: 0.512rem;
+    color: #999999;
+}
+
+.tf_textcss {
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+}
+
+.tf_small3 {
+    text-align: center;
+    float: left;
+    width: 33%;
+    padding: 0.2rem 0 0.4rem 0;
+    position: relative;
+}
+
+.tf_small3::after {
+    position: absolute;
+    content: " ";
+    top: 0.3413333333333333rem;
+    right: 0;
+    width: 1px;
+    height: 1.3653333333333333rem;
+    background-color: #e7e7e7;
+}
+
+.tf_small3:last-of-type::after {
+    display: none;
+}
+
+.tf_small2 {
+    text-align: center;
+    float: left;
+    width: 50%;
+    position: relative;
+    /*padding: 0.375rem 0 0.4rem 0;*/
+}
+
+.tf_small2::after {
+    position: absolute;
+    content: " ";
+    top: 0.3413333333333333rem;
+    right: 0;
+    width: 1px;
+    height: 1.3653333333333333rem;
+    background-color: #e7e7e7;
+}
+
+.tf_small2:last-of-type::after {
+    display: none;
+}
+
+.tf_background {
+    background: #ffffff;
+}
+
+.margin-top {
+    margin-top: 1.5rem;
+}
+
+.nopadding-top {
+    padding-top: 0;
+}
+
+
+/*.br2 {
+    border-right: 1px #e7e7e7 solid;
+}*/
+
+.bb {
+    border-bottom: 1px #e4e4e4 solid;
+}
+
+.acc-investing-strong {
+    display: inline-block;
+    height: 0.810667rem;
+    width: 3.626667rem;
+    background-image: url(/css/img2.0/sengcaibao/artboard.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 0.426667rem;
+}
+
+.rateCanvasInit {
+    background: #ffffff;
+    margin-top: 0.6rem;
+    min-height: 10rem;
+}
+
+.left {
+    float: left;
+}
+
+.font-size {
+    font-size: 0.512rem;
+}
+
+.tcss {
+    color: #666666;
+    width: 50%;
+    text-align: center;
+}
+
+.tcss2 {
+    font-size: 0.512rem;
+    color: #999999;
+    width: 50%;
+    text-align: center;
+}
+
+.box-b {
+    border: 1px solid #b9b9b9;
+    border-radius: 0.256rem;
+    height: 1.9rem;
+    text-align: center;
+    margin: 0 0.6826666666666666rem;
+}
+
+.box-b::after {
+    position: absolute;
+    content: " ";
+    width: 1px;
+    height: 100%;
+    background-color: #b9b9b9;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.change_p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.64rem;
+    height: 0.512rem;
+    margin-top: -0.32rem;
+    margin-left: -0.32rem;
+    z-index: 1;
+    background-color: white;
+    padding: 2px;
+}
+
+input[type="text"] {
+    -webkit-appearance: none;
+}
+
+input[type="tel"] {
+    -webkit-appearance: none;
+}
+
+.input_css {
+    width: 6rem;
+    height: 1.7rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.tt {
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+}
+
+.margin-top {
+    margin-top: 0.512rem;
+}
+
+.tttext {
+    font-size: 0.35rem;
+    color: #999999;
+}
+
+.right {
+    float: right;
+}
+
+.xy {
+    /*font-size: 0.3rem;*/
+    color: #4a9cf0;
+}
+
+.check-box {
+    width: 0.512rem;
+    height: 0.512rem;
+    /*border: 1px solid #c7c7c7;*/
+    display: inline-block;
+    /*position: relative;*/
+    /*top: 0.1rem;*/
+    margin-right: 0.075rem;
+    border-radius: 0.075rem;
+    background-color: #97c3f2;
+    background-image: url("/css/img2.0/criterion-choose.jpg");
+    margin-left: 0.45rem;
+    margin-top: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.no-check-box {
+    width: 0.512rem;
+    height: 0.512rem;
+    display: inline-block;
+    margin-right: 0.075rem;
+    border-radius: 0.075rem;
+    background-color: #97c3f2;
+    margin-left: 0.45rem;
+    margin-top: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.yes {
+    font-size: 0.512rem;
+    /*padding: 0 .5rem;*/
+    vertical-align: text-bottom;
+}
+
+.statement {
+    margin-bottom: 2.5rem;
+}
+
+.tf_btn {
+    width: 100%;
+    text-align: center;
+    /*height: 2rem;
+    line-height: 2rem;*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.6826666666666666rem;
+    background: #f43f3f;
+    color: #ffffff;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0.6826666666666666rem 0;
+    z-index: 2;
+}
+
+.tf_btn_gray {
+    width: 100%;
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.4rem;
+    background: #979797;
+    color: #ffffff;
+}
+
+.r_css {
+    font-size: 0.4266666666666667rem;
+    color: #999999;
+    position: absolute;
+    top: .8rem;
+    left: 6rem;
+}
+
+.y_css {
+    font-size: 0.4266666666666667rem;
+    color: #999999;
+    position: absolute;
+    top: .8rem;
+    left: 13rem;
+}
+
+.colorff7a04 {
+    color: #ff7a04;
+}
+
+.color666666 {
+    color: #666666;
+}
+
+.investment .password-pop {
+    background: #fff;
+    color: #888;
+}
+
+.password-pop .fund-poplayer {
+    bottom: 48%;
+    left: 10%;
+    position: fixed;
+    z-index: 989;
+}
+
+.fund-poplayer {
+    background: #fff;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.investment .password-pop .tit {
+    padding: 1rem;
+    color: #444;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.password-value span {
+    font-size: 1rem;
+    float: left;
+    line-height: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background: #f6f6f6;
+}
+
+.password-pop .pasipt input,
+.password-value span {
+    box-sizing: border-box;
+    margin-bottom: 0;
+    height: 2rem;
+    width: 16.6666%;
+    box-shadow: none;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+}
+
+.row,
+select {
+    width: 100%;
+}
+
+.small-12 {
+    width: 100%;
+}
+
+.left {
+    float: left!important;
+}
+
+.fund-poplayer .fpbutton {
+    font-size: 1.7rem;
+    color: #c34949;
+    display: inline-block;
+    padding: 1.3rem 0;
+}
+
+.keyboard {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.chart,
+.finances-nav,
+.finances-nav a,
+.keyboard,
+.password-text,
+.svg,
+.topic11 .myrating {
+    overflow: hidden;
+}
+
+.keyboard a {
+    text-align: center;
+}
+
+
+/*.keyboard a {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    background: #f7f7f7;
+    font-size: 3.2rem;
+    color: #444;
+    font-weight: 300;
+    padding: .5rem 0;
+}*/
+
+.bt {
+    border-top: 1px #e4e4e4 solid;
+}
+
+.br,
+.br1 {
+    border-right: 1px #e4e4e4 solid;
+}
+
+.bg-black {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    -moz-opacity: .7;
+    -khtml-opacity: .7;
+    z-index: 998;
+}
+
+.keyboard {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.keyboard a {
+    box-sizing: border-box;
+    /* box-shadow: none; */
+    overflow: hidden;
+    display: block;
+    float: left;
+    width: 33.333%;
+    background: #f7f7f7;
+    font-size: 1.5rem;
+    color: #444;
+    font-weight: 300;
+    padding: .3rem 0;
+}
+
+.keyboard .wxbg {
+    background: #e2e7ed;
+    color: #444;
+}
+
+.fund-poplayer {
+    background: #fff;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.fund-poplayer .poplayer-content {
+    border-bottom: 1px #e4e4e4 solid;
+    font-size: 0.8rem;
+    padding: 1.375rem;
+}
+
+.fund-poplayer .fpbutton {
+    font-size: 0.8rem;
+    color: #c34949;
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.fund-poplayer .icon-my-sigh {
+    color: #fd8635;
+    display: block;
+    font-size: 4rem;
+    line-height: 7rem;
+}
+
+.fund-poplayer .icon-my-sigh-ok {
+    color: green;
+    display: block;
+    font-size: 4rem;
+    line-height: 7rem;
+}
+
+.fund-poplayer .limit-icon-bar {
+    color: green;
+    display: block;
+    font-size: 4rem;
+    line-height: 7rem;
+}
+
+.password-pop .fund-poplayer {
+    bottom: 48%;
+    left: 10%;
+    position: fixed;
+    z-index: 989;
+}
+
+.wxicon {
+    font-family: 'iconfont';
+    position: relative;
+    top: 0;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-refresh:before {
+    content: "\e649";
+}
+
+.icon-revocat:before {
+    content: "\e62b";
+}
+
+.investment .pay_btn {
+    display: block;
+    margin: 0 1.5rem;
+    text-align: center;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    background: #cd3830;
+    color: #fff;
+}
+
+.investment a.top {
+    margin-top: 2rem;
+}
+
+.investment .limit-pop {
+    text-align: center;
+    background: #FFF;
+    padding: 1rem 0;
+}
+
+.investment .limit-pop .limit-icon-bar {
+    padding: 1rem 0;
+    line-height: 3rem;
+    width: 100px;
+    height: 5rem;
+    color: #fd8635;
+    font-size: 3rem;
+}
+
+.investment .limit-pop .limit-icon-bar:before {
+    content: "\e66c";
+}
+
+.investment .limit-pop .txt {
+    color: #979797;
+}
+
+.investment .password-pop {
+    background: #fff;
+    color: #888888;
+}
+
+.investment .password-pop .tit {
+    padding: 0.6rem;
+    color: #444444;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.investment .password-pop .paslist {
+    padding: 0 0.5rem!important;
+    color: #979797;
+}
+
+.investment .password-pop .paslist li {
+    overflow: hidden;
+    padding: 0.4rem 0;
+    font-size: 0.6rem;
+    border-top: 1px solid #e4e4e4;
+}
+
+.investment .password-pop .paslist li .l {
+    float: left;
+}
+
+.investment .password-pop .paslist li .col1 {
+    color: #469af3;
+}
+
+.investment .password-pop .paslist li .r {
+    color: #c34949;
+    float: right;
+    position: relative;
+    font-size: 0.6rem;
+}
+
+.investment .password-pop .pasipt {
+    display: -webkit-box;
+    color: #888888;
+    border: 1px solid #e8e8e8;
+    border-width: 1px 1px 0 0;
+}
+
+.investment .password-pop .pasipt input {
+    margin-bottom: 0;
+    height: 4rem;
+    width: 16.666%;
+    box-shadow: none;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    border-width: 0 0 1px 1px;
+    background: #f6f6f6;
+}
+
+.investment .pay_btn_op {
+    opacity: 0.3;
+}
+
+.sml {
+    font-size: .5rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 10rem;
+    background: #fd6260;
+    color: #fff;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0 .2rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    margin: 0 0 0 .5rem;
+}

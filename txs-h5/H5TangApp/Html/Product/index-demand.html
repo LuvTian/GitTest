@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>至尊宝</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/account-balance.css">
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <!--银行通知 -->
+    <div class="notice-wrap" id="notice-wrap">
+        <div class="notice-horn">
+            <i class="n-horn-icon"></i>
+        </div>
+        <div class="close">
+            <i class="n-horn-close"></i>
+        </div>
+        <div class="content" id="content">
+        </div>
+    </div>
+    <div id="mainBody" class="nominheight product-info">
+
+        <!-- 未投资/未登录 -->
+
+        <div class="info-head hide nolog">
+            <div class="line1">
+                <p>历史七日年化</p>
+                <p class="info-num info-rate col-highlight-1"><z id="info-rate-value">0.00</z><i>%</i></p>
+            </div>
+            <div class="line2">
+                <p>万份收益(元)</p>
+                <p class="info-num col-highlight-2"><z id="info-profit-value">0.00</z></p>
+            </div>
+        </div>
+        <div class="info-head hide logged">
+            <div class="line1">
+                <p>投资金额(元)</p>
+                <p class="info-num col-highlight-1">0.00</p>
+            </div>
+            <div class="line4">
+                <ul>
+                    <li class="br">
+                        <p>昨日收益(元)</p>
+                        <p class="col-highlight-2">0.00</p>
+                    </li>
+                    <li class="br">
+                        <p>累计收益(元)</p>
+                        <p class="col-highlight-2">0.00</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-rule">
+            <div>
+                <h3>收益规则</h3>
+                <p>资金当日转入当日计息，收益每日计提</p>
+            </div>
+            <div>
+                <h3>回款规则</h3>
+                <p>赎回收益按日计算，赎回当天不计算收益</p>
+            </div>
+        </div>
+        <div class="product-recom automatic">
+            <div class="line">
+                <div class="col col1">
+                    <h3 id="automatic-text">余额自动转入至尊宝</h3>
+                </div>
+                <div class="col col2 item1">
+                    <p>未开通</p>
+                </div>
+            </div>
+        </div>
+        <div class="ac-chart">
+            <div class="chart-title">
+                <ul class="page-nav">
+                    <li data-translatex="2.2" data-linkage="" class="active" id="chart1-title" data-chart="chart1">
+                        <span class="text">历史七日年化(%)</span>
+                        <span class="value" id="char-avgpronumber">4.01</span>
+                    </li>
+                    <li data-translatex="9.5" data-linkage="" id="chart2-title" data-chart="chart2">
+                        <span class="text">万份收益(元)</span>
+                        <span class="value" id="char-avgmillionproceeds">1.1000</span>
+                    </li>
+                    <p></p>
+                </ul>
+            </div>
+            <div class="tabs-content bg-white">
+                <section class="content active" id="chart1-cont">
+                    <div class="current-line">
+                        <canvas id="chart1" style="width: 345px; height: 198px;" width="690" height="396"></canvas>
+                    </div>
+                </section>
+                <section role="tabpanel" aria-hidden="true" class="content abs-hide" id="chart2-cont">
+                    <div class="current-line">
+                        <canvas id="chart2" style="width: 345px; height: 198px;" width="690" height="396"></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="product-recom hide" id="product-recom">
+            <!-- <h2>收益升级</h2>
+            <div class="line bb">
+                <div class="col col1">
+                    <h3>6.40<i>%</i>~7.30<i>%</i></h3>
+                    <p>期望年化收益</p>
+                </div>
+                <div class="col col2 item2">
+                    <p>短期理财新选解释说明</p>
+                    <p>短期理财新选解释说明</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col col1">
+                    <h3>6.40<i>%</i>~7.30<i>%</i></h3>
+                    <p>期望年化收益</p>
+                </div>
+                <div class="col col2 item1">
+                    <p>短期理财新选解释说明</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="pull-refresh">
+            <svg t="1502875835649" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4465" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M139.7376 547.9552l356.3776 356.032c10.688 10.6752 28.0384 10.6752 38.7008 0 2.0736-2.0736 3.6224-4.4416 4.9024-6.9184l350.9504-350.6048c10.6944-10.688 10.6944-28.0128 0-38.6752-10.6752-10.6688-28.0128-10.6688-38.7008 0l-309.4016 309.0944L542.5664 145.8048c0-15.0976-12.2368-27.3408-27.36-27.3408s-27.3728 12.2432-27.3728 27.3408l0 672.544-309.376-309.0688c-10.6944-10.688-28.0448-10.688-38.7072 0C129.0432 519.9424 129.0432 537.2608 139.7376 547.9552z"
+                    p-id="4466" fill="#C7C7C7">
+                </path>
+            </svg>
+            点击查看详情
+        </div>
+        <div class="paddbottom"></div>
+    </div>
+    <div class="product-info maxwidth720 hide h100" id="product-intro-warp">
+        <div class="product-intro  minh100-1">
+            <ul class="page-nav" id="product-intro-tab">
+                <li data-translatex="0.65" data-linkage=".con1" class="active">至尊宝介绍</li>
+                <li data-translatex="6" data-linkage=".con2">收益计算</li>
+                <li data-translatex="11.4" data-linkage=".con3">免责声明</li>
+                <p></p>
+            </ul>
+            <div class="content con1">
+                <h4>1、什么是至尊宝?</h4>
+                <p>
+                    “至尊宝”是唐小僧为定向委托投资关系的投资人及受托人提供的信息居间服务产品，即经过唐小僧平台审核认证的资产管理机构作为受托人，并依据投资人指令对合作机构推荐的理财产品（包括但不限于合作机构推荐的应收账款类项目、抵押/信用借款类项目、银行承兑汇票项目、以及银行、证券公司、支付公司等发行的现金管理类金融产品，证券公司、基金公司等发行的固定收益的短期或开放式理财产品，以及其他法律法规允许投资的流动性良好的短期金融工具等）进行筛选、分散投资/出借、发起转让/赎回并获取投资收益。投资人加入的资金及其收益，在满足唐小僧产品规则的前提下，可部分或全部赎回。
+                    <img src="/css/img2.0/azzb2.png" class="img-responsive">
+                    <p class="shuoming"><a href="/Html/Product/contract/zzb-productrul.html">查看投资规则说明</a></p>
+                    <p class="yellow">温馨提示：至尊宝转入及转出均无需手续费。</p>
+                </p>
+                <h4>2、至尊宝的资金投到那里了?</h4>
+                <p>
+                    根据您的授权，受托的资产管理公司将会将您的资金投资于合作机构推荐的收益波动幅度低、信用风险小且流动性良好的金融产品，并以上述产品的组合降低会员的投资风险，各类产品匹配参照如下：
+                    <ol class="deputy">
+                        <li>应收账款类（如供应链保理、融资租赁、消费金融类产品）</li>
+                        <li>抵押/信用借款类（如车辆抵押贷款、经营贷款、个人信用借款等产品）</li>
+                        <li>银行、证券公司、支付公司等发行的现金管理类金融产品</lip>
+                            <li>证券公司、基金公司等发行的固定收益的短期或开放式理财产品（如资产管理计划、银行理财产品、券商收益凭证等产品）</li>
+                            <li>其他法律法规允许投资的流动性良好的短期金融工具</li>
+                    </ol>
+                    <article class="bg-white  text-center aatypes">
+                        <span class="left at1">应收<br>账款类</span>
+                        <span class="left at2">抵押/信用<br>借款类</span>
+                        <span class="left at3">现金<br>管理类</span>
+                        <span class="left at4">固定<br>收益类</span>
+                        <span class="left at5">其他</span>
+                    </article>
+                </p>
+            </div>
+            <div class="content con2 hide">
+                <h4>1、至尊宝收益如何计算?</h4>
+                <p>
+                    至尊宝的当日收益=（至尊宝计息的份额/10000）*至尊宝万份收益；假设您计息的资金为9000元，当天的每万份收益为1.25元，代入计算公式，您当日的收益为：1.12元。
+                </p>
+                <h4>2、什么时候能看到收益?</h4>
+                <p>
+                    您的资金当日转入，当日计息，投资收益每日计提。你可以在第二个自然日早上8点查看收益。如您投资当日将资金转出的，不会产生收益。
+                    <p class="yellow">温馨提示：至尊宝转入及转出均无需手续费。</p>
+                </p>
+                <h4>3、提现</h4>
+                <p>
+                    投资会员提现的金额可以任意，但是提现的单笔最低金额5元起，每日提现总限额为10万元。
+                </p>
+            </div>
+            <div class="content con3 hide">
+                <p>
+                    唐小僧作为交易服务平台进行信息发布，不对任何会员及/或任何交易提供任何担保，无论是明示、默示或法定的。唐小僧平台提供的各种信息及资料仅供参考，会员应依其独立判断做出决策。会员据此进行投资交易的，产生的投资风险由会员自行承担，唐小僧不承担任何责任。
+
+                </p>
+
+            </div>
+        </div>
+        <div class="wel_btm_com hide minh100-2">
+            <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">账户资金防盗安全由新浪支付和太平财险共同保障</span>
+            <p>网贷有风险 出借需谨慎</p>
+        </div>
+    </div>
+    <div class="navbar hide" id="btn-invert-redeem">
+        <div style="font-size:1rem" class="footerBar_shadow"></div>
+        <span class="column-5 left redeem">赎回</span>
+        <span class="column-5 left hl-btn" id="btn-invest">投资</span>
+    </div>
+    <div class="navbar hide" id="btn-login-out">
+        <div style="font-size:1rem" class="footerBar_shadow"></div>
+        <span class="column-5 left" id="">注册</span>
+        <span class="column-5 left hl-btn" id="">登录</span>
+    </div>
+    <div class="navbar hide" id="btn-remind-redeem">
+        <div style="font-size:1rem" class="footerBar_shadow"></div>
+        <span class="column-5 left redeem">赎回</span>
+        <span class="column-5 left hl-btn" id="btn-remind">开售提醒</span>
+    </div>
+    <div class="navbar hide" id="btn-sold-redeem">
+        <div style="font-size:1rem" class="footerBar_shadow"></div>
+        <span class="column-5 left redeem">赎回</span>
+        <span class="column-5 left hl-btn btn-noclick" id="btn-sold">已售罄</span>
+    </div>
+    <!-- <div class="paddbottom"></div> -->
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <div class="mask" style="z-index:999999;display:none;"></div>
+    <div class="q_fax">
+        <div class="q_content"> </div>
+        <div class="q_btn JS_qbtn">知道了，去看看</div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/chart-non-compressed.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/product/index-demand.js"></script>
+</body>

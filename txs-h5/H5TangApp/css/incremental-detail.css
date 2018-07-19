@@ -1,0 +1,39 @@
+.jiejieseng-detail-top{background: url(/css/img2.0/jiejieseng-detail-top.png) no-repeat;background-size: cover;min-height: 7.466666666666667rem;}
+.viewport{padding-top:0.525rem; }
+.principal{padding-top: 1.28rem;text-align: center;font-size: 0.4266666666666667rem;color: #9B9B9B;}
+.principal-amout{font-size: 1.536rem;color: #F43F3F;text-align: center;}
+.sy_mod{overflow: hidden;padding: 0.6rem 0;}
+.sy_mod .t1{color: #333;font-size: 0.768rem;}
+.tr,.tl{float: left;width: 50%;text-align: center;}
+.tr p,.tl p{color: #9B9B9B;font-size: 0.512rem;}
+.head_arrow{text-align: center;}
+.head_arrow img{width:2.56rem; }
+.list-header{border-bottom: .06rem solid #f2f2f2;;background: #fff;height: 1.706667rem;display: flex;}
+.list-header li{flex:1;color: #333;font-size: 0.682667rem;float: left;height: 1.706667rem;line-height:  1.706667rem;padding: 0 .2rem;text-align: center;}
+.list-header li.on{border-bottom: 0.05rem solid #F43F3F ;color: #F43F3F;}
+.option li{margin-left: 0.682667rem;}
+.option{display: none;}
+.option.on{display: block;}
+.padd-left{padding:0.6rem 0;/*border-bottom: 0.5px solid #d8d8d8;*/overflow: hidden;position: relative;}
+.padd-left::after{
+	content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #E7E7E7;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+.option .name{font-size: 0.682667rem;color: #333;padding-bottom: 0.3rem;}
+.option .name span{color: #9B9B9B ;font-size: 0.512rem;margin-left: 0.426667rem;}
+.amout-left{color: #333;font-size: 0.682667rem;width: 50%;float: left;}
+.amout-right{color: #999999;font-size: 0.512rem;width: 50%;float: left;}
+.amout-right span{color: #151515;font-size: 0.853333rem;}
+.state,.state-amout{float: left;width: 50%;color: #9B9B9B;font-size: 0.512rem;/*padding-bottom: 0.512rem;*/}
+.state-amout span{color: #151515 ;font-size:0.682667rem; }
+.ondata{    font-size: .58rem;padding: .8rem 0 .4rem;color: #9c9c9c;}
+.text-center{text-align: center!important;}
+.fix_top{position: fixed;top: 0;width: 100%;z-index: 99;max-width: 720px;}
+.bidlist{background-color: #fff;}

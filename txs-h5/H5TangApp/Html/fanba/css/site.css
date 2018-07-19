@@ -1,0 +1,252 @@
+.header {
+    text-align: center;
+}
+
+.header img {
+    width: 8.618667rem;
+}
+
+.progress {
+    margin-top: 1.28rem;
+    text-align: center;
+}
+
+.pro {
+    width: 6.826667rem;
+    background-color: #DCDCDC;
+    height: .256rem;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.pro>b {
+    background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0%, #fe8579), color-stop(100%, #ff2f3b));
+    width: 0%;
+    height: .256rem;
+    display: block;
+    border-radius: 4px;
+    opacity: .8;
+    -webkit-opacity: .8;
+}
+
+.progress-icon {
+    position: relative;
+    left: -21%;
+    padding-bottom: .256rem;
+}
+
+.progress-icon img {
+    width: 1.621333rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.progress-icon span {
+    position: absolute;
+    left: 44.8%;
+    top: 15%;
+    color: #fff;
+    width: 1.621333rem;
+    font-size: .512rem;
+}
+
+.progresstext {
+    color: #666666;
+    margin-top: .64rem;
+    text-align: center;
+    font-size: .6432rem;
+}
+
+input {
+    border: none;
+    color: #C7C7C7;
+    text-indent: 1.3rem;
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.form_input {
+    text-align: center;
+    position: relative;
+    margin-top: 1.28rem;
+    display: none;
+    font-size: initial;
+}
+
+#register_btn {
+    background: -webkit-linear-gradient(left, #fe8579, #ff2f3b);
+    border-radius: 4px;
+    color: #fff;
+    padding: .6rem 0;
+    text-decoration: none;
+    position: absolute;
+    left: 8%;
+    width: 84%;
+    margin-top: 8%;
+    opacity: .8;
+}
+
+.phone,
+.code,
+.yzm {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 2rem;
+}
+
+.phone img {
+    position: absolute;
+    width: 6%;
+    left: 0;
+    bottom: .341333rem;
+    z-index: 10;
+}
+
+.code img {
+    position: absolute;
+    width: 6%;
+    left: 0%;
+    z-index: 10;
+    bottom: .341333rem;
+}
+
+.yzm .xian,
+.code .xian {
+    width: 147%;
+}
+
+.xian {
+    width: 200%;
+    height: 1px;
+    background: #ddd;
+    transform: scale(0.5);
+    transform-origin: left;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.code input {
+    width: 9.813333rem;
+    position: absolute;
+    left: 0%;
+}
+
+#register-warp {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -50%;
+}
+
+#getYZM {
+    position: absolute;
+    right: 0;
+    width: 2.986667rem;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #666666;
+    font-size: .597333rem;
+    padding: 0;
+    text-align: center;
+    line-height: 1.28rem;
+    bottom: 0;
+}
+
+v
+}
+.weui_toast_content {
+    margin: 0 0 15px;
+    margin-top: 64%;
+    font-size: 14px
+}
+input::-webkit-input-placeholder {
+    color: #C7C7C7;
+}
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+input:hover,
+button:hover {
+    outline: none;
+}
+#txtImgYZM {
+    width: 9.813333rem;
+    position: absolute;
+    left: 0%;
+}
+.yzimg {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    width: 2.986667rem;
+    border-radius: .170667rem;
+    margin: 0;
+    top: .682667rem;
+    line-height: 1.28rem;
+}
+.yzimg img {
+    border-radius: 4px;
+    width: 100%;
+}
+.yzm>img {
+    position: absolute;
+    width: 6%;
+    left: 0%;
+    z-index: 10;
+    bottom: .341333rem;
+}
+.dotting {
+    display: inline-block;
+    min-width: 2px;
+    min-height: 2px;
+    border-radius: 50%;
+    box-shadow: 4px 0 currentColor, 10px 0 currentColor, 16px 0 currentColor;
+    /* for IE9+, ..., 3个点 */
+    
+    animation: dot 4s infinite step-start both;
+    /* for IE10+, ... */
+    
+    *zoom: expression(this.innerHTML='...');
+    /*  for IE7. 若无需兼容IE7, 此行删除 */
+}
+.dotting:before {
+    content: '...';
+}
+
+/* for IE8. 若无需兼容IE8, 此行以及下一行删除*/
+.dotting::before {
+    content: '';
+}
+
+/* for IE9+ 覆盖 IE8 */
+:root .dotting {
+    margin-right: 8px;
+}
+
+/* for IE9+,FF,CH,OP,SF 占据空间*/
+@keyframes dot {
+    25% {
+        box-shadow: none;
+    }
+    /* 0个点 */
+    
+    50% {
+        box-shadow: 4px 0 currentColor;
+    }
+    /* 1个点 */
+    
+    75% {
+        box-shadow: 4px 0 currentColor, 10px 0 currentColor;
+        /* 2个点 */
+    }
+}

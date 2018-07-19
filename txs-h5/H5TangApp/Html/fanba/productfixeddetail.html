@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--产品名称-->
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link href="/css/timedeposit.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/exchange.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+
+</head>
+<body class="timeDeposit-info">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport">
+            <!--银行通知 -->
+            <div class="notice-wrap" id="notice-wrap">
+                <div class="notice-horn">
+                    <i class="n-horn-icon"></i>
+                </div>
+                <div class="close">
+                    <i class="n-horn-close"></i>
+                </div>
+                <div class="content" id="content">
+                </div>
+            </div>
+            <div class="mtk2" style="display:none">
+                <i style="right:5.5vw"></i>
+                <div style="width:5vw">点这里分享哦</div>
+            </div>
+            <div class="top-mod">
+                <!--<a href="javascript:void(0);"><img style="width: 60%;" src="/css/img2.0/sharefixed.png"></a>-->
+                <div class="row1">
+                    历史年化收益
+                </div>
+                <div class="row4">
+                    <z id="product-rate"></z><span class="s">% <span class="sml" id="product-rate-rateactivite" style="display:none;"></span></span>
+                </div>
+                <div class="row2">
+                    <div class="da">投资期限</div>
+                    <div class="ar"></div>
+                    <div class="da">已投资</div>
+                </div>
+                <div class="row3">
+                    <div id="product-duration"></div>
+                    <div id="product-bidcount"></div>
+                </div>
+            </div>
+            <!-- <div class="info_list_jl" id="product-activity" style="">
+                <span class="m1" id="product-activity-title"></span>
+            </div> -->
+            <div class="info_list qixi">
+                <div class="small-6 left">
+                    起息<p id="product-profitstartday"></p>
+                </div>
+                <div class="small-3 left">
+                    到期结息<p id="product-profitendday"></p>
+                </div>
+                <div class="small-3 left text-right">
+                    回款<p>T+1</p>
+                </div>
+                <img src="/css/img2.0/btn.png">
+            </div>
+            <ul class="info_list">
+                <li><a  href="javascript:void(0);"><span>回款方式</span><span class="m1" id="product-typetext"></span></a></li>
+                <li><a  href="javascript:void(0);" id="producttransferlink"><span>转让条件</span><span class="m1" id="product-transferlockday"></span></a></li>
+                <li class="mar-top"><a id="product-detail" href="javascript:void(0);"><span class="m2">产品详情</span><span class="m1"><z>&nbsp;</z><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-xiangmuinfo" href="javascript:void(0);"><span class="m2">项目介绍</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-active" href="javascript:void(0);"><span class="m2">相关文件</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="arepayplan" href="javascript:void(0);"><span class="m2">回款计划</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                
+            </ul>
+            <div class="timeDeposit_txt po-init">
+
+                <p class="btmpro line-het12" onclick="window.location.href='/Html/picc.html'">
+                <span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障
+                
+                </p>
+                <p style="margin-top: -5rem;margin-bottom: 5rem;color: #b9b9b9;font-size:1.2rem;">网贷有风险，出借需谨慎</p>
+            </div>
+        </article>
+    </section>
+    <a class="timeDeposit_sh_btn1 buying" id="product-soldout" href="javascript:;" style="display:none;background: rgb(212, 212, 212);">已售罄</a>
+    <a class="timeDeposit_sh_btn_s1 buying" id="product-buy" href="javascript:;" style="display: none; background-color: #e94a3d;">
+        <span class="icn calculator"><img src="/css/img2.0/btn-ic10.png"></span>
+        <span class="txt">
+            <p class="p1" id="product-buy-link">立即抢购</p>
+            <p class="p2" id="product-countdown-timer-amount"></p>
+        </span>
+    </a>
+    <div class="mask" style="display:none"></div>
+    <div class="rule-tip rule1" style="display:none">
+        <div class="question q1result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。预期报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule2" style="display:none">
+        <div class="question q2result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule3" style="display:none">
+        <div class="question q3result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule4" style="display:none">
+        <div class="question q4result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益预期相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule5" style="display:none">
+        <div class="question q5result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script type="text/javascript" src="/js/pagejs/fanba/productfixeddetail.js?v=v1"></script>
+</body>
+</html>

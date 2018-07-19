@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邀请好友</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="invite">
+        <div class="banner"></div>
+        <p class="tips az-clearfix">
+            <span class="line-l az-left">已成功邀请 <span class="red InvitationRegister"></span> 位好友</span>
+            <span class="line-r az-right"><a href="/Html/My/myreward-money.html"> 查看奖励记录 <i class="wxicon icon-right-arrow"></i></a></span>
+        </p>
+        <div class="yard">
+            <p id="referralcodeimg" style="width: 208px;margin: auto;"></p>
+            <p class="yardtips">与好友一起分享小僧理财吧！</p>
+            <p class="in-yard az-center">
+                邀请码：<span id="referralcode"></span>
+                <!--<button class="copy">复制</button>-->
+            </p>
+
+            <a href="javascript:void(0);" id="share" class="btn2 az-center">分享</a>
+        </div>
+    </div>
+    <div class="mask" style=" display:none"></div>
+    <!-- 分享 -->
+    <div class="showshare" style=" display:none">
+        <img src="/css/img2.0/share.png" alt="">
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+
+    <script src="/js/jquery.qrcode.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/invite.js"></script>
+
+</body>
+</html>

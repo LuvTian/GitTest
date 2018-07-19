@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title></title>
+</head>
+
+
+<body>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        var mt = $.getCookie("MadisonToken");
+        var tourl = $.getQueryStringByName("tourl");
+        if (mt.length > 0) {
+            //同步登录子站
+            // $.AkmiiAjaxPost("/StoreServices.svc/sso/logindomains", {}, true).then(function (d) {
+            //     if (d.result) {
+            //         $.each(d.ssodomain, function (k, v) {
+            //             $.ajax(v.Domain, {
+            //                 dataType: "JSONP",
+            //                 success: function (d) {
+            //                     console.log(d)
+            //                 }
+            //             });
+            //         })
+            //         if(returnurl.length>0){
+            //             window.location.replace(decodeURIComponent(returnurl));
+            //         }
+            //     } else {
+            //         $.alertF(d.errormsg);
+            //     }
+            // })
+            window.location.replace(P2P_MSD_URL_prefix + "/zdhtml/p2p_transfer_page.html?token="+mt+"&tourl=" + tourl);
+        } else {
+            window.location.replace("/html/anonymous/login.html?returnurl=/html/anonymous/sso.html?tourl=" + tourl);
+        }
+    </script>
+</body>
+
+</html>

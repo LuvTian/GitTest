@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>还款计划</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+    <style>
+        .hk_table .hk_tab li {
+            padding: 1.5rem;
+        }
+
+            .hk_table .hk_tab li:first-child {
+                font-weight: 600;
+            }
+
+        .useinterest:first-child {
+            text-align: left;
+        }
+
+        .nouseinterest:first-child {
+            text-align: left;
+        }
+
+        .bgf5 {
+            font-weight: 600;
+        }
+
+        .cls:after {
+            content: '';
+            height: 0;
+            clear: both;
+            display: block;
+            overflow: hidden;
+        }
+
+        .mask {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: .8;
+            z-index: 100;
+        }
+
+        .win {
+            width: 90%;
+            z-index: 101;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -45%;
+            margin-top: -65%;
+            text-align: center;
+            font-family: "微软雅黑",sans-serif;
+        }
+
+        .win_img {
+        }
+
+            .win_img img {
+                height: 10rem;
+            }
+
+        .win_close {
+            position: absolute;
+            right: .2rem;
+            top: 3rem;
+        }
+
+            .win_close img {
+                width: 2.4rem;
+            }
+
+        .win_main {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: -3.8rem;
+            padding-bottom: 1rem;
+        }
+
+            .win_main > p {
+                padding-top: 4.0rem;
+                font-size: 1.6rem;
+                color: #979797;
+                margin: 0;
+                padding-bottom: .5rem;
+            }
+
+                .win_main > p.margin_b {
+                    margin-bottom: 2.5rem;
+                }
+
+            .win_main > span {
+                display: block;
+                margin: 0 auto 0;
+                background-color: #cd3830;
+                width: 90%;
+                border-radius: 10px;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #fff;
+                font-size: 1.4rem;
+            }
+
+        .win_quan {
+            background: url("/css/img2.0/win_bg.png") no-repeat;
+            background-size: 100% 100%;
+            width: 92%;
+            margin: 0 auto 1rem;
+            padding-bottom: .2rem;
+        }
+
+        .interest {
+            float: left;
+            width: 35%;
+            padding-top: 3.6rem;
+            color: #979797;
+            font-size: 2.5rem;
+        }
+
+        .quan_content {
+            float: left;
+            width: 65%;
+            padding: 0 1.2rem;
+            box-sizing: border-box;
+            color: #999999;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        .quan_title {
+            padding-top: .5rem;
+            margin-bottom: .1rem;
+        }
+
+            .quan_title span:first-child {
+                font-size: 1.8rem;
+                float: left;
+            }
+
+            .quan_title span:last-child {
+                font-size: 1.2rem;
+                padding: .1rem .4rem;
+                border-radius: 5px;
+                border: 1px solid #a8a8a8;
+                float: right;
+            }
+
+        .quan_content p {
+            margin: 0 0 .2rem 0;
+            padding: 0;
+            line-height: 1.3;
+        }
+
+        .quan_content ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quan_content li {
+            line-height: 1.3;
+        }
+
+        .bluehight {
+            color: rgb(59,152,248);
+        }
+    </style>
+</head>
+<body class="hk_table">
+
+    <section class="content">
+        <article class="viewport">
+            <div class="row bgf5">
+                <div class="small-5 columns br retext4 retext" style="padding-left:1.5rem;">待收总本金（元）<br /><span class="col-97" id="totalprincipae"></span></div>
+                <div class="small-7 columns retext4 retext" style="padding-left:2.8rem;">待收总收益（元）<br /><span class="col-97" id="totalinterest"></span></div>
+            </div>
+
+            <ul id="recordPlanList" class="hk_tab" style="padding:0;margin-top:0.75rem;">
+                <li class="col-444 bb" id="useinterest">
+                    <span class="useinterest">还款时间</span>
+                    <span class="useinterest">月还本金</span>
+                    <span class="useinterest">月还利息</span>
+                    <span class="useinterest">加息券收益</span>
+                </li>
+
+            </ul>
+            <p id="totalMsg" class="txt2"></p>
+            <div class="mask display-none"></div>
+            <div class="win display-none">
+                <div class="win_img"><img src="/css/img2.0/win_pic2.png"></div>
+                <div class="win_close"><img src="/css/img2.0/close_icon.png"></div>
+                <div class="win_main">
+                    <p>最大加息限额<z>0</z>元，超出部分不加息</p>
+                    <div class="win_quan cls">
+                        <div class="interest">+1%</div>
+                        <div class="quan_content">
+                            <div class="quan_title cls"><span class="quan_name">定期加息券</span><span class="quan_status">已使用</span></div>
+                            <p class="quan_mark">定期理财<span class="sp1">0</span>元起，加息<span class="sp2">0</span>天</p>
+                            <p class="quan_maxlimit">最大加息限额0元</p>
+                            <ul>
+                                <li>生效日期：<z class="z_start"></z></li>
+                                <li>结束日期：<z class="z_end"></z></li>
+                            </ul>
+                            <p class="quan_use">用于金刚D105期</p>
+                        </div>
+                    </div>
+                    <span class="quan_ok">确定</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/regular-recordplan.js"></script>
+</body>
+</html>

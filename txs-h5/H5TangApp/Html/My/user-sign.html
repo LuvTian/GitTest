@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>每日签到</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/newsign.css">
+</head>
+
+<body class="signbodybg">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <header class="sign_header">
+        <div class="clearfix pdtop">
+            <div class="rewardsname">我的奖励</div>
+            <div class="rule">签到规则</div>
+        </div>
+    </header>
+    <div id="leaksignhtml">分享</div>
+    <div class="signcontent_bg">
+        <div class="content-box">
+            <div class="clearfix">
+                <div class="percent_4 bor_bottom bor_right signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周一</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_4 bor_bottom bor_right signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周二</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_4 bor_bottom bor_right signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周三</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_4 bor_bottom signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周四</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_4 bor_bottom bor_right signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周五</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_4 bor_bottom bor_right signlista">
+                    <div class="num1"></div>
+                    <div class="num2">周六</div>
+                    <img src="/css/signed/readysigned.png" class="signedshow" />
+                </div>
+                <div class="percent_2 bor_bottom signlista" id="week">
+                    <img src="/css/signed/gift01.png" alt="">
+                    <div class="gift_tip">七日大礼包</div>
+                </div>
+            </div>
+
+            <div class="getgift">
+                <p>每天签到，周日即可抽取大奖</p>
+            </div>
+            <div class="fill-btn usersigndiv">
+                <span id="user-sign">签到</span>
+            </div>
+            <div class="share_banner">
+                <div class="flt-l">
+                    <p class="t-tipshare">
+                        邀请好友<span>领唐果</span>
+                        <span class="cz">(每周日重置)</span>
+                    </p>
+                    <p class="t-tipsmount">每周随机获得5~50个唐果,请至“我的唐果”查看</p>
+                </div>
+                <div class="flt-r">
+                    <button>立即分享</button>
+                </div>
+            </div>
+        </div>
+        <div class="to_act">
+            <a href="/e/invite_win_cash_h/index.html">
+                <img src="/css/signed/act_banner.png" alt="" />
+            </a>
+        </div>
+        <div class="ranking-box">
+            <div class="rankheader">
+                今日邀请奖励排行榜
+            </div>
+            <div class="ranktop">
+                <div class="pre3">
+                    <img src="/css/signed/first.png" alt="">
+                    <div class="tel"></div>
+                    <div class="start"></div>
+                    <div class="tip-rewards">累计奖励</div>
+                    <div class="moneyrewards"></div>
+                </div>
+                <div class="pre3">
+                    <div class="line"></div>
+                    <img src="/css/signed/sec.png" alt="">
+                    <div class="tel"></div>
+                    <div class="start"></div>
+                    <div class="tip-rewards">累计奖励</div>
+                    <div class="moneyrewards"></div>
+                </div>
+                <div class="pre3">
+                    <div class="line"></div>
+                    <img src="/css/signed/third.png" alt="">
+                    <div class="tel"></div>
+                    <div class="start"></div>
+                    <div class="tip-rewards">累计奖励</div>
+                    <div class="moneyrewards"></div>
+                </div>
+            </div>
+            <div class="rankbody">
+                <script type="text/template" id="showlist">
+                    <div class="relist">
+                        <div class="ranking fl">{0}</div>
+                        <div class="retel fl">{1}</div>
+                        <div class="restart fl">{2}星</div>
+                        <div class="reget fl">累计奖励 <span>{3}</span> 元</div>
+                    </div>
+                </script>
+               
+            </div>
+        </div>
+        <!--奖品弹窗-->
+        <div class="medium-box">
+            <h2>您获得以下奖励</h2>
+            <div class="med_con_show">
+                <div class="getsignrd" id="gettangsweetsreward">
+                    <div class="getredcount" id="tgcount">
+                        <i></i>
+                        <span></span>
+                    </div>
+                    <div class="getredname">唐果</div>
+                    <img src="" class="sc_tips" id="member_level_sc">
+                    <img src="/css/signed/tg.png" alt="" class="waty">
+                </div>
+                <div class="getsignrd" id="signrwardsaward">
+                    <div class="getredcount" id="sign_rew_count">
+                        <i></i>
+                        <span></span>
+                    </div>
+                    <div class="getredname"></div>
+                    <!--<img src="/css/signed/sc_hj.png" alt="" class="sc_tips">-->
+                    <img src="/css/signed/lcj.png" alt="" class="waty">
+                </div>
+            </div>
+            <div class="btn_getward">查看奖励</div>
+            <img src="/css/signed/close.png" alt="" class="sign-close">
+        </div>
+    </div>
+    <div class="miss-tip" id="nosign" style="display:none">
+        <h3 class="txt_center">本周漏签
+            <span id="leaksignz"></span>天</h3>
+        <p class="txt_center">今日单笔投资定期理财产品达
+            <span id="buymoney"></span>元
+            <br>即可补完本周所有漏签！</p>
+        <a href="javascript:void(0)" class="txt_center" id="gobuyproduct">去投资</a>
+        <img src="/css/signed/close.png" alt="" class="sign-close">
+    </div>
+    <div class="miss-tip" style="display:none">
+        <p class="txt_center">
+            签到满一周，才能在周日参与抽奖哦！
+        </p>
+        <a href="javascript:void(0)" class="txt_center" class="cancle_sure">确定</a>
+    </div>
+    <div class="mask" style="display:none"></div>
+    <div class="sharemask" style="display:none">
+        <div class="share_icon">
+            <img src="/css/img2.0/tips.png">
+        </div>
+    </div>
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/user-sign.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>联合登录</title>
+    <link rel="stylesheet" type="text/css" href="/html/fanba/css/base.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/html/fanba/css/middlebase.css"> -->
+    <link rel="stylesheet" type="text/css" href="/html/fanba/css/site.css">
+    <script type="text/javascript">
+        ;
+        (function(doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    var fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loading_status"></div>
+    </div>
+    <div id="app">
+        <section id="register-warp">
+            <div class="header">
+                <img src="/html/fanba/img/register1.png" alt="">
+            </div>
+            <div class="progress" style="">
+                <div class="progress-icon">
+                    <img src="/html/fanba/img/progress.png" alt="">
+                    <span>0%</span>
+                </div>
+                <div class="pro">
+                    <b></b>
+                </div>
+                <div class="progresstext">
+                    联合登录中<span class="dotting"></span>
+                </div>
+            </div>
+            <div class="form_input">
+                <div class="phone">
+                    <img src="/html/fanba/img/phone.png" alt="">
+                    <input type="tel" placeholder="手机号码" id="PhoneNo" maxlength="11" readonly="value">
+                    <div class="xian"></div>
+                </div>
+                <div class="yzm">
+                    <img src="/html/fanba/img/txtimg.png" alt="">
+                    <input id="txtImgYZM" type="tel" pattern="[a-zA-Z0-9]{4}" maxlength="4" placeholder="输入图形验证码" class="">
+                    <span class="yzimg">
+                        <img id="imgYZM" src="" alt="">
+                    </span>
+                    <div class="xian"></div>
+                </div>
+                <div class="code">
+                    <img src="/html/fanba/img/smscode.png" alt="">
+                    <input type="text" id="code" placeholder="输入手机验证码" maxlength="6"><button id="getYZM">获取</button>
+                    <div class="xian"></div>
+                </div>
+                <a href="javascript:void(0);" id="register_btn">联合登录</a>
+            </div>
+        </section>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/pagejs/fanba/middlepage.js"></script>
+    <!-- <script src="/js/comActivityReg.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>摇一摇</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta http-equiv="Expires" content="0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/rock_new.css">
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+	<script>
+		;
+		(function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+
+<body>
+	<div id="mainBody">
+		<section id="rockMain">
+			<img src="/css/img2.0/pointImg/rockBG.jpg" alt="" style="width:100%">
+			<img src="/css/img2.0/pointImg/rockHand.png" alt="" id="rockHand">
+			<div class="rockTimesDescContainer">
+				<div style="float:left;width:50%;text-align:center">100唐果摇1次</div>
+				<div class="descContainer">唐果<span class="feef35">---</span><i class="questionMark"></i></div>
+			</div>
+			<i class="musicB musicOn"></i>
+			<a href="javascript:;" id="link_rules">查看规则</a>
+			<div class="appleTips">解释权归唐小僧所有，本活动与苹果公司（Apple Inc.）无关</div>
+			<div id="list_of_winners">
+				<ul class="ul_list_of_winners">
+				</ul>
+			</div>
+			<a href="/html/store/winnersDetail.html?activitytype=6" id="link_winnerDetail">查看获奖详情<i class="mth"></i></a>
+		</section>
+		<div class="prizesListContainer">
+			<div class="title">开心摇一摇奖品<a href="javascript:;" style="display:none">查看全部</a></div>
+			<ul class="prizesList">
+			</ul>
+		</div>
+	</div>
+
+     <div class="rule-tip rule_pop">
+        <h3>活动规则</h3>
+        <ol id="yaojuhuirule">
+            <li>用户每次抽奖消耗100唐果（每日5次机会）</li>
+            <li>参与摇一摇活动，即有机会获得奖池内提供的任一奖品</li>
+            <li>所获奖品可在“获奖详情”页面中查看</li>
+            <li>奖品使用规则依各项奖品说明为准</li>
+            <li>解释权归唐小僧所有，本活动与苹果公司（Apple Inc.)无关</li>
+        </ol><i class="az-icon icon-turnoff2"></i>
+    </div>
+
+    <div class="tangguo-tip rule_pop">
+        <h3>唐果说明</h3>
+        <ol id="yaojuhuirule">
+            <li>什么是唐果?<br/>唐果是指唐小僧平台为答谢广大客户发放的奖励。</li>
+            <li>唐果如何使用？<br/>唐果可进行累计使用，用于兑换“福利”频道所提供的丰富礼品和参与唐小僧的相关活动。</li>
+            <li>唐果如何获得？<br/>根据会员等级，每日发放对应数量的唐果奖励：<br/>青铜会员：1唐果/日<br/>白银会员：30唐果/日<br/>黄金会员：80唐果/日<br/>铂金会员：200唐果/日</li>
+        </ol><i class="az-icon icon-turnoff2"></i>
+    </div>
+    <div style=" display:none;">
+        <audio style=" display:none;" id="musicBox" preload="metadata" controls src="https://txsres.txslicai.com/css/audio/rockmp3.mp3"></audio>
+    </div>
+    <!--<div class="shareContainer coverMark_dark">
+        <img src="/css/img2.0/share.png" alt="">
+    </div>-->
+    <button id="sound" style="display:none"></button>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+	<script src="/js/vendor/phoneProxy.js"></script>
+	<script src="/js/pagejs/store/rock_new.js"></script>
+</body>
+
+</html>

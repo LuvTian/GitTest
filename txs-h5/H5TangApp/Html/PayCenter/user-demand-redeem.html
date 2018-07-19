@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赎回</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+
+</head>
+<body class="investment sh_success ">
+    <section class="content">
+        <article class="viewport">
+            <div class="po-re-h100">
+                <content id="panel1" class=" display-none">
+
+                    <div class="sh-val">
+                        <span class="t">至尊宝</span>
+                    </div>
+                    <div class="sh-val">
+                        <span class="t col-9c">在投总金额：</span>
+                        <div><z id="user-demand-balance"></z></div>
+                    </div>
+                    <div class="sh-val st-top">
+                        <span class="t">赎回金额</span>
+                        <div>
+                            <input placeholder="" value="" id="user-demand-amount" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace(/^\./g, '').replace(/\.{2,}/g, '.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.').replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3').replace(/^[0]*([1-9])/, '$1').replace(/^[0]*(\.)/, '0$1').replace(/^([0-9]{1,7})([0-9]*)/, '$1');" />
+                        </div>
+                        <a class="all" href="javascript:void(0);">全部</a>
+                    </div>
+                    <a class="pay_btn top" href="javascript:checkiswithholdauthoity()">立即赎回</a>
+                    <p class="sy_time tc">每日赎回限额<z id="maxlimit"></z>万，今日已赎回<z id="currentwithdraw"></z>元</p>
+            </div>
+            <div class="btmpro-ab po-re-m-3P" style="margin-top: -5.5rem!important" >
+                <p class="btmpro" onclick="window.location.href='/html/picc.html'"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</p>
+                <p style="display: block;width: 100%;text-align: center;color: #b9b9b9;font-size: 1.2rem; margin: 1rem 0;">网贷有风险，出借需谨慎</p>
+            </div>
+            </content>
+        </article>
+    </section>
+    <!---背景框--->
+    <div class="reveal-modal" id="mt" style="display:none"></div>
+        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/vendor/fastclick.js"></script>
+        <script src="/js/common.js"></script>
+        <script src="/js/pagejs/paycenter/user-demand-redeem.js"></script>
+</body>
+</html>

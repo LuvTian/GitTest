@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的周周僧</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/newbase.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/incremental-detail.css">
+</head>
+
+<body class="timeDeposit-index">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section id="mainBody" class="nominheight">
+        <div class="jiejieseng-detail-top">
+            <p class="principal">持有本金</p>
+            <p class="principal-amout" id="totalbidamount">0.00</p>
+            <!--<div class="head_arrow">
+                <img src="/css/img2.0/head_arrow.png" alt="">
+            </div>-->
+            <div class="sy_mod">
+                <div class="tr">
+                    <p>已计收益</p>
+                    <p class="t1" id="incomeinterest">0.00</p>
+                    <span class="bor"></span>
+                </div>
+                <div class="tl">
+                    <p>累计收益</p>
+                    <p class="t1 " id="totalarrivalinterest">0.00</p>
+                </div>
+            </div>
+        </div>
+        <div id="nouserfixedlist" style="display:none">
+            <div class="wsg-ico">
+            </div>
+            <p class="wsg-txt">您还未申购</p>
+        </div>
+        <ul class="list-header">
+            <li class="on">持有中</li>
+            <li>转出中</li>
+            <li>已转出</li>
+        </ul>
+        <div class="bidlist">
+            <!-- 持有中 -->
+            <ul class="option on c">
+                <!--  <li>
+                    <div class="padd-left" data-id=''>
+                        <p class="name">拉开对方<span>到期日:2017-07-10</span></p>
+                        <p class="amout-left">10,000.00</p>
+                        <p class="amout-right"><span>190</span></p>
+                        <p class="state">持有中</p>
+                        <p class="state-amout">已计收益</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="padd-left" data-id=''>
+                        <p class="name">拉开对方<span>最近开放日:2017-07-10</span></p>
+                        <p class="amout-left">10,000.00</p>
+                        <p class="amout-right"><span>190</span></p>
+                        <p class="state">持有中</p>
+                        <p class="state-amout">已计收益</p>
+                    </div>
+                </li> -->
+            </ul>
+            <!-- 赎回中 -->
+            <ul class="option c">
+                <!-- <li>
+                    <div class="padd-left" data-id=' + item.id + '>
+                        <p class="name">拉开对方<span>退出申请日:2014-09-10</span></p>
+                        <p class="amout-left">10,900.00</p>
+                        <p class="amout-right">持有&nbsp;<span>67</span>&nbsp;天</p>
+                        <p class="state">退出中</p>
+                        <p class="state-amout">&nbsp;已计收益 <span>45</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="padd-left" data-id=' + item.id + '>
+                        <p class="name">拉开对方<span>退出申请日:2014-09-10</span></p>
+                        <p class="amout-left">10,900.00</p>
+                        <p class="amout-right">持有&nbsp;<span>67</span>&nbsp;天</p>
+                        <p class="state">退出中</p>
+                        <p class="state-amout">&nbsp;已计收益 <span>45</span></p>
+                    </div>
+                </li> -->
+            </ul>
+            <!-- 已赎回 -->
+            <ul class="option c">
+                <!-- <li>
+                    <div class="padd-left" data-id=' + item.id + '>
+                        <p class="name">拉开对方<span>退出申请日:2014-09-10</span></p>
+                        <p class="amout-left">10,900.00</p>
+                        <p class="amout-right">持有&nbsp;<span>67</span>&nbsp;天</p>
+                        <p class="state">已退出</p>
+                        <p class="state-amout">到账收益&nbsp;<span>45</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="padd-left" data-id=' + item.id + '>
+                        <p class="name">拉开对方<span>退出申请日:2014-09-10</span></p>
+                        <p class="amout-left">10,900.00</p>
+                        <p class="amout-right">持有&nbsp;<span>67</span>&nbsp;天</p>
+                        <p class="state">已退出</p>
+                        <p class="state-amout">到账收益&nbsp;<span>45</span></p>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+        <!-- <a class="addtimeDeposit-list" href="javascript:;" id="loadmoreProject" style="margin-bottom:80px;">点击加载更多</a> -->
+
+        <!-- <a class="buytimeDeposit-list" href="/Html/Product/index.html">购买其他项目</a> -->
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/my-incremental-detail.js"></script>
+</body>
+
+</html>

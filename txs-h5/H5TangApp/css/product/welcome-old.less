@@ -1,0 +1,364 @@
+@import "_values";
+
+.com_bg{
+    background-color: white;
+}
+.headheight{
+    max-height: 10.24rem;
+    min-height: 9.472rem!important;
+    overflow: hidden;
+    position: relative;
+}
+.wel_head{
+    max-height: 9.472rem!important;
+    float: left;
+    img{
+        width: 100%;
+    }
+}
+.headsp{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    .headspitem{
+        width: .25rem;
+        height: .25rem;
+        background-color: @sptcolor;
+        border-radius: 1rem;
+        margin: 0 .05rem;
+        display: inline-block;
+        transition: all .4s ease-in;
+        -webkit-transition: all .4s ease-in;
+        -moz-transition: all .4s ease-in;
+        &.cur{
+            border-radius: 1rem;
+            background-color: @clickcolor;
+            width: .8rem;
+        }
+    }
+}
+// .wel_head_li{
+//     max-height: 11.1rem!important;
+// }
+.wel_head_login{
+    background-image:radial-gradient(46% 113%, #ff734e 4%, rgb(246,74,66) 100%);
+    height: 10.24rem;
+    position: relative;
+    text-align: center;
+    .wel_head_circle{
+        position: absolute;
+        border-radius: 50%;
+        width: .8rem;
+        height: .8rem;
+        font-size: 0.6rem;
+        color: white;
+        border: .05rem solid rgba(255,255,255,.6);
+        text-align: center;
+        line-height: .8rem;
+        padding: .05rem;
+        &.wel_head_qd{
+            margin-top: .6rem;
+            margin-left: .8rem;
+        }
+        &.wel_head_yq{
+            top: .6rem;
+            right: .8rem;
+        }
+    }
+    .wel_head_cont{
+        color: @bgcolorw;
+        padding-top: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        .wel_head_title{
+            opacity: .6;
+            font-size: 0.69rem;
+        }
+    }
+    .wel_head_eye{
+        height: .8rem;
+        width: 1rem;
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url("/css/img2.0/eyenormal.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.welpsw{
+            background-image: url("/css/img2.0/eyepassword.png");
+        }
+    }
+    .wel_head_money{
+        font-size: 1.536rem;
+        line-height: 2.5rem;
+    }
+    .wel_head_arrow{
+        height: 0.6rem;
+        width: 3rem;
+        margin: 0 auto;
+        margin-top: -.1rem;
+        display: block;
+        background-image: url("/css/img2.0/arrow.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-position: 1rem 0;
+    }
+    .wel_head_ul{
+        font-size: .6rem;
+        margin-top: .6rem;
+        overflow: hidden;
+        .wel_head_line{
+            width: 1px;
+            opacity: .6;
+            background-color: #ffffff;
+            // display: inline-block;
+            margin: 0 1rem;
+            margin-top: .2rem;
+            height: 1.62rem;
+            vertical-align: top;
+            float: left;
+            display: table-cell;
+            transform: scale(.5, 1);
+            transform-origin: center center;
+            -webkit-transform: scale(.5, 1);
+            -webkit-transform-origin: center center;
+        }
+        .wel_head_item{
+            // opacity: .6;
+            text-align: right;
+            display: block;
+            float: left;
+            width: 41%;
+            display: table-cell;
+            span{
+                opacity: .6;
+                font-size: 0.512rem;
+            }
+            &:last-of-type{
+                text-align: left;
+            }
+            .wel_syl,.wel_zc{
+                font-size: 0.69rem;
+            }
+        }
+    }
+}
+.wel_invested{
+    padding: 0.69rem;
+    font-size: 0.6rem;
+    background: @bgcolorw;
+    margin-bottom: 0.512rem;
+}
+.wel_ul{
+    box-sizing: border-box;
+    // padding-top: 0.512rem;
+    overflow: hidden;
+    .wel_nli{
+        background-color: @bgcolorw;
+        margin-bottom: 0.4266666666666667rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .wel_nhead{
+            position: relative;
+            padding: 0.512rem 0.64rem;
+            font-size: 0.6826666666666666rem;
+            &::after{
+                transform: scaleY(.5);
+                -webkit-transform: scaleY(.5);
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 100%;
+                border-bottom: 1px solid #e5e5e5;
+                bottom: 0;
+                left: 0;
+            }
+            .wel_nlogo{
+                position: absolute;
+                width: 1.45rem;
+                height: 0.64rem;
+                background-image: url("/css/img2.0/newlogo.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+                margin-left: 0.17066666666666666rem;
+            }
+        }
+        .wel_ncont{
+            padding: 0.512rem 1.28rem;
+            display: table;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.5973333333333334rem;
+            position: relative;
+            &.wel_sarrow{
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    width: .5rem;
+                    height: .5rem;
+                    border-top: 1px solid #999;
+                    border-right: 1px solid #999;
+                    -webkit-transform: translateY(-50%) rotate(45deg);
+                    transform: translateY(-50%) rotate(45deg);
+                    top: 50%;
+                }
+            }
+            .wel_nitem{
+                display: table-cell;
+                vertical-align: middle;
+                width: 50%;
+            }
+            .wel_numrate{
+                font-size: 0.6826666666666666rem;
+                color: @clickcolor;
+                // margin-top: 0.22rem;
+            }
+            .wel_ntips{
+                color: @newcolor;
+                // text-align: center;
+            }
+            .wel_nytz.w_hide{display: none;}
+            .wel_ndq_sp{color:#4a90e2;padding: 0 .1rem;}
+            .wel_ndq_pay{display: none;}
+            .wel_pwd_color{color: #333333}
+            .wel_ititle{width: 6.4rem;display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+        }
+    }
+}
+// .wel_ul{
+//     box-sizing: border-box;
+//     padding-top: 0.512rem;
+//     overflow: hidden;
+//     .wel_li{
+//         // width: 90%;
+//         // margin: 0 auto;
+//         margin: 0 0.68rem;
+//         border: .05rem solid @linecolor;
+//         background-image: url("/css/img2.0/cloud.png");
+//         background-repeat: no-repeat;
+//         background-size: 3.1rem;
+//         background-position: 7rem 1.2rem;
+//         margin-bottom: 0.47rem;
+//         padding-left: 0.512rem;
+//         padding-top: 1.024rem;
+//         padding-bottom: 1.024rem;
+//         .wel_title{
+//             font-size: 0.682rem;
+//             position: relative;
+//             .wel_noinvated{
+//                 font-size: 0.512rem;
+//                 color: @graycolor;
+//                 float: right;
+//                 margin-right: .6rem;
+//             }
+//         }
+//         .wel_rate{
+//             margin-left: .3rem;
+//             color: @clickcolor;
+//         }
+//         .wel_smdesc{
+//             position: relative;
+//             margin-top: 0.6rem;
+//             color: @graycolor;
+//             font-size: 0.512rem;
+//             &.wel_payed{
+//                 font-size: 0.688rem;
+//             }
+//             .wel_tmr_add{
+//                 float: right;
+//                 margin-right: .6rem;
+//             }
+
+//         }
+//         // &:last-of-type{
+//         //     margin-bottom: 0;
+//         // }
+//         &.wel_zzb{
+//             background-position: 7rem 1.9rem;
+//         }
+//         &.wel_dq{
+//             background-position: 8.4rem 1.7rem;
+//         }
+//         &.wel_scb{
+//             background-position: 8.4rem 1rem;
+//         }
+//     }
+// }
+.wel_more{
+    padding: 0.68rem;
+    padding-top: .4rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: @graycolor;
+    font-size: 0.512rem;
+    .wel_more_span{
+        position: relative;
+        &:after{
+            content: ' ';
+            position: absolute;
+            top:.11rem;
+            // margin-left:.1rem; 
+            width: .3rem;
+            height: .3rem;
+            border-bottom: .05rem solid @graycolor;
+            border-right: .05rem solid @graycolor;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+    }
+}
+.wel_btm_info{
+    margin: 0 auto;
+    margin-top:0.768rem;
+    color: @graycolor;
+    font-size: 0.47rem;
+    overflow: hidden;
+    max-width: 720px;
+    ul{
+        width: 90%;
+        margin: 0 auto;
+        li{
+            float: left;
+            width: 33.333%;
+            text-align: center;
+        }
+        .wel_btm_xp{
+            width: 1.024rem;
+            height: 1.024rem;
+            background-image: url("/css/img2.0/xinpi-1.png");
+            background-size: 100% 100%;
+            &.xp2{
+                // height: 1.5rem;
+                background-image: url("/css/img2.0/xinpi-2.png");
+            }
+            &.xp3{
+                // height: 1.5rem;
+                background-image: url("/css/img2.0/xinpi-3.png");
+            }
+        }
+    }
+}
+// .wel_btm_com{
+//     text-align: center;
+//     font-size: 0.512rem;
+//     color: @graycolor;
+//     margin-top: 0.768rem;
+//     .wel_btm_comspan{
+//         position: relative;
+//         &:after{
+//             content: ' ';
+//             position: absolute;
+//             background-image: url("/css/img2.0/btmcomm.png");
+//             background-repeat: no-repeat;
+//             background-size: 100% 100%;
+//             width: .5rem;
+//             height: .6rem;
+//             left: -0.6rem;
+//             top: .01rem;
+//         }
+//     }
+// }

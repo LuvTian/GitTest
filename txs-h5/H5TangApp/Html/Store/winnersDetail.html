@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>获奖详情</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/creditsMall/winnersDetail.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+    <script>
+        ;
+        (function (doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            recalc();
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+
+</head>
+
+<body>
+    <div id="mainBody">
+        <ul id="tab_winners_menu">
+            <li><span>我的奖励</span></li>
+            <li><span>获奖名单</span></li>
+        </ul>
+        <div class="myPrizeContainer tab_contents">
+            <ul>
+            </ul>
+            <div class="loadMore" onclick="loadMoreData(1)">点击加载更多</div>
+        </div>
+        <div class="winnersContainer tab_contents">
+            <ul>
+            </ul>
+            <div class="loadMore" onclick="loadMoreData(0)">点击加载更多</div>
+        </div>
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/winnersDetail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更换管理员</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/commercial.css">
+</head>
+<body class="bg-f0">
+    <article class="mar-tb15 bg-white padd-15">
+        <p class="col-3">更换原因：</p>
+        <textarea id="reason" placeholder="填写合适的原因可以加快审核进度(内容不超过50字)。" class="changereason" maxlength="50"></textarea>
+    </article>
+    <article class="mar-t15 bg-white padd-15 fz-15">
+        <div class="row bb padd-b15">
+            <div class="small-5 columns az-padding0 mragin-t06">继任管理员手机：</div>
+            <div class="small-7 columns">
+                <input id="successorphone" type="tel" class="fz-15" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace('.', '').replace(/^[0]/g, '');" maxlength="11" value="" placeholder="继任者手机号">
+            </div>
+        </div>
+        <div class="row padd-t15">
+            <div class="small-5 columns az-padding0 mragin-t06">申请人手机：</div>
+            <div class="small-7 columns">
+                <input id="applicantphone" type="tel" class="fz-15" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace('.', '').replace(/^[0]/g, '');" maxlength="11" value="" placeholder="请保持电话畅通">
+            </div>
+        </div>
+    </article>
+    <article class="padd-15 padding-t0">
+        <p class="col-9 padd-tb07">友情提示：</p>
+        <ol>
+            <li>申请提交后管理员账户将被冻结，审核完成前可以查看但不能进行任何操作。</li>
+            <li>更换申请无法撤销，如需撤销请联系唐小僧商务。</li>
+            <li>继任管理员必须是唐小僧用户。</li>
+            <li>更换管理员不会影响商户的推广和僧财宝。</li>
+        </ol>
+        <a id="submitapplication" href="javascript:void(0);" class="commercial-btn">提交申请</a>
+    </article>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/modify-admin.js"></script>
+</body>
+</html>

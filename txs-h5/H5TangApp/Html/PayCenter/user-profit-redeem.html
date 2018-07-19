@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立即赎回</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+
+</head>
+<body class="investment sh_success ">
+    <section class="content">
+        <article class="viewport">
+            <content id="panel2">
+                <div class="sh-val row">
+                    <span class="t small-6 columns">可赎回收益</span>
+                    <div class="small-6 columns tr"><z id="user-demand-profit">0.00</z>元</div>
+                </div>
+                <div class="sh-val bt row">
+                    <span class="t small-6 columns margin0 line-h2">输入赎回金额(元)</span>
+                    <div class="small-6 columns">
+                        <input placeholder="请输入赎回金额" value="" id="user-demand-profit-amount" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace(/^\./g, '').replace(/\.{2,}/g, '.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.').replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3').replace(/^[0]*([1-9])/gmi, '$1').replace(/^[0]*(\.)/, '0$1').replace(/^([0-9]{1,7})([0-9]*)/, '$1');" />
+                    </div>
+                </div>
+                <a class="pay_btn top" href="javascript:checkiswithholdauthoity()">立即赎回</a>
+                <p class="sy_time" style=" margin-top:1.5rem;">收益赎回小贴士</p>
+                <p class="sy_time">1.随时赎回，立即进入账户余额。</p>
+                <p class="sy_time">2.当收益赎回至账户余额后，投资者可再次投资。</p>
+                <div class="btmpro-ab" onclick="window.location.href='/html/picc.html'">
+                    <p class="btmpro"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</p>
+                </div>
+            </content>
+
+        </article>
+    </section>
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/paycenter/user-profit-redeem.js"></script>
+</body>
+</html>

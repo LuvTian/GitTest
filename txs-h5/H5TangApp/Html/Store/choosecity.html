@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>选择城市</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="wrap choosecity">
+        <div class="row bg-white">
+            <div class="small-12 columns az-padding0">
+                <input type="text" style=" padding-left:33px;" id="search" placeholder="搜索" class="input-text" />
+                <i class="wxicon icon-search"></i>
+            </div>
+        </div>
+
+        <div id="searchContainer" style=" display:none;">
+            <div class="row bg-gray mt">
+                <div class="small-12 columns">
+                    搜索结果
+                </div>
+            </div>
+            <div id="searchlist">
+
+            </div>
+        </div>
+
+        <div class="row bg-gray mt">
+            <div class="small-12 columns" id="currentcityflag">
+                选择城市
+            </div>
+        </div>
+        <div class="row bg-white mt bb bt">
+            <div id="currentcity" class="small-6 columns az-padding0">
+
+            </div>
+            <div class="small-6 columns az-text-right">
+                <i class="wxicon icon-locate red font-size-135"></i><a id="reposition">重新定位</a>
+            </div>
+        </div>
+        <div class="row bg-gray mt">
+            <div class="small-12 columns">
+                热门城市
+            </div>
+        </div>
+        <div class="cityname">
+            <div id="hotcity">
+
+            </div>
+            <div id="choosecitylist">
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="a">
+                        A
+                    </div>
+                </div>
+                <div id="Acity">
+                </div>
+
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="b">
+                        B
+                    </div>
+                </div>
+                <div id="Bcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="c">
+                        C
+                    </div>
+                </div>
+                <div id="Ccity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="d">
+                        D
+                    </div>
+                </div>
+                <div id="Dcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="e">
+                        E
+                    </div>
+                </div>
+                <div id="Ecity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="f">
+                        F
+                    </div>
+                </div>
+                <div id="Fcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="g">
+                        G
+                    </div>
+                </div>
+                <div id="Gcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="h">
+                        H
+                    </div>
+                </div>
+                <div id="Hcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="i">
+                        I
+                    </div>
+                </div>
+                <div id="Icity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="j">
+                        J
+                    </div>
+                </div>
+                <div id="Jcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="k">
+                        K
+                    </div>
+                </div>
+                <div id="Kcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="l">
+                        L
+                    </div>
+                </div>
+                <div id="Lcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="m">
+                        M
+                    </div>
+                </div>
+                <div id="Mcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="n">
+                        N
+                    </div>
+                </div>
+                <div id="Ncity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="o">
+                        O
+                    </div>
+                </div>
+                <div id="Fcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="p">
+                        P
+                    </div>
+                </div>
+                <div id="Pcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="q">
+                        Q
+                    </div>
+                </div>
+                <div id="Qcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="r">
+                        R
+                    </div>
+                </div>
+                <div id="Rcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="s">
+                        S
+                    </div>
+                </div>
+                <div id="Scity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="t">
+                        T
+                    </div>
+                </div>
+                <div id="Tcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="u">
+                        U
+                    </div>
+                </div>
+                <div id="Ucity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="v">
+                        V
+                    </div>
+                </div>
+                <div id="Vcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="w">
+                        W
+                    </div>
+                </div>
+                <div id="Wcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="x">
+                        X
+                    </div>
+                </div>
+                <div id="Xcity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="y">
+                        Y
+                    </div>
+                </div>
+                <div id="Ycity">
+                </div>
+                <div class="row bg-gray mt">
+                    <div class="small-12 columns" id="z">
+                        Z
+                    </div>
+                </div>
+                <div id="Zcity">
+                </div>
+            </div>
+            <div class="letter-search">
+                <span><a href="#a">A</a></span>
+                <span><a href="#b">B</a></span>
+                <span><a href="#c">C</a></span>
+                <span><a href="#d">D</a></span>
+                <span><a href="#e">E</a></span>
+                <span><a href="#f">F</a></span>
+                <span><a href="#g">G</a></span>
+                <span><a href="#h">H</a></span>
+                <span><a href="#i">I</a></span>
+                <span><a href="#j">J</a></span>
+                <span><a href="#k">K</a></span>
+                <span><a href="#l">L</a></span>
+                <span><a href="#m">M</a></span>
+                <span><a href="#n">N</a></span>
+                <span><a href="#o">O</a></span>
+                <span><a href="#p">P</a></span>
+                <span><a href="#q">Q</a></span>
+                <span><a href="#r">R</a></span>
+                <span><a href="#s">S</a></span>
+                <span><a href="#t">T</a></span>
+                <span><a href="#u">U</a></span>
+                <span><a href="#v">V</a></span>
+                <span><a href="#w">W</a></span>
+                <span><a href="#x">X</a></span>
+                <span><a href="#y">Y</a></span>
+                <span><a href="#z">Z</a></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/jquery_citycenter.js"></script>
+
+</body>
+</html>

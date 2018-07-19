@@ -1,0 +1,270 @@
+@bnitem:rgb(206,206,206);
+@bgcolor:rgb(246,246,246);
+@bgcolorw:rgb(255,255,255);
+@clickcolor:rgb(244,63,63);
+@linecolor:rgb(235,235,235);
+@spitemcolor:rgb(207,207,207);
+@graycolor:#9b9b9b;
+@ftcolor:#333;
+@titlecolor:#4a4a4a;
+body{
+    color: @ftcolor;
+    background-color: @bgcolor;
+}
+.splitline{
+    height: .35rem;
+}
+.headbn{
+    position: relative;
+    overflow: hidden;
+    // margin-bottom: .35rem;
+    .headbnlist{
+        // width: 9999px;
+        .headbnitem{
+            float: left;
+            max-height: 5.5rem;
+        }
+    }
+    img{
+        border: 0;
+        display: block;
+        width: 100%;
+          float: left;
+    }
+    .headsp{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        .headspitem{
+            width: .25rem;
+            height: .25rem;
+            background-color: @spitemcolor;
+            border-radius: 1rem;
+            display: inline-block;
+            transition: all .4s ease-in;
+            -webkit-transition: all .4s ease-in;
+            -moz-transition: all .4s ease-in;
+            &.cur{
+                border-radius: 1rem;
+                background-color: @clickcolor;
+                width: .8rem;
+            }
+        }
+    }
+}
+.pcontent{
+    // padding-bottom: 2.5rem;
+}
+.itemlist{
+    // height: 1rem;
+    width: 100%;
+    max-width: 720px;
+    background-color: @bgcolorw;
+    color: @titlecolor;
+    z-index: 999;
+    ul{
+        overflow: hidden;
+        text-align: center;
+        border-bottom:1px solid @linecolor; 
+    }
+    li{
+        padding: .5rem 0;
+         float: left;
+         width: 33.3333%;
+         &.cur{
+             color: @clickcolor;
+             position: relative;
+             &::after{
+                bottom: 0;
+                width: 60%;
+                left: 50%;
+                transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                position: absolute;
+                content: ' ';
+                border-top: 1px solid #f43f3f;
+                transform-origin:  center center;
+                -webkit-transform-origin: center center;
+             }
+         }
+    }
+    .realfilter{
+        color: @graycolor;
+        overflow: hidden;
+        padding: 0 1rem;
+        font-size: .7rem;
+        background-color: @bgcolor;
+        box-sizing: border-box;
+        display: none;
+        .relitem{
+            position: relative;
+            float: left;
+            width: 33.33%;
+            padding: .4rem 0;
+            text-align: center;
+            &::after,&::before{
+                position: absolute;
+                content: ' ';
+                top: .7rem;
+                right: .5rem;
+                width: .2rem;
+                height: .2rem;
+                border-bottom: .05rem solid @graycolor;
+                border-right: .05rem solid @graycolor;
+                transform: rotateZ(-135deg);
+                -webkit-transform: rotateZ(-135deg);
+                -moz-transform: translateZ(-135deg);
+                box-sizing: border-box;
+            }
+            &::before{
+                top: 1rem;
+                transform: rotateZ(-315deg);
+                -webkit-transform: rotateZ(-315deg);
+                -moz-transform: translateZ(-315deg);
+            }
+            &.curup{
+                &::after{
+                    border-bottom: 1px solid @ftcolor;
+                    border-right: 1px solid @ftcolor;
+                }
+            }
+            &.curdown{
+                &::before{
+                    border-bottom: 1px solid @ftcolor;
+                    border-right: 1px solid @ftcolor;
+                }
+            }
+        }
+    }
+}
+.productlist{
+    .productitem{
+        .lith3{
+            font-size: .84rem;
+            color: @ftcolor;
+            margin-bottom: .4rem;
+            .litnshare{
+                display: inline-block;
+                font-size: .6rem;
+                background-color: @clickcolor;
+                color: @bgcolorw;
+                padding: 0 .4rem;
+                margin-left: .2rem;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+    li{
+        position: relative;
+        padding: .8rem;
+        margin-bottom: .4rem;
+        background-color: @bgcolorw;
+        box-sizing: border-box;
+        color: @graycolor;
+        .litright{
+            position: absolute;
+            right: 30%;
+            top: 0;
+            font-size: .6rem;
+            .litrate{
+                  position: absolute;
+                  bottom: -1.8rem;
+                  font-size: .8rem;
+                  color: @titlecolor;
+            }
+            &.dqi{
+                right: 40%;
+            }
+        }
+        .litcircle{
+            width: 3.4rem;
+            height: 3.4rem;
+            border-radius: 50%;
+            border: .1rem solid #ffe4e4;
+            position: absolute;
+            top: -.4rem;
+            right: 0;
+            background-color: #ffc2c2;
+            background-image: url(/css/img2.0/loading.gif);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: @bgcolorw;
+            text-align: center;
+            line-height: 3.4rem;
+            &.end{
+                border: .1rem solid #efefef;
+                background: #c9c9c9;
+            }
+        }
+        .litreal{
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            width: 38%;
+            .litrate{
+                  position: absolute;
+                  bottom: -1.8rem;
+                  font-size: .8rem;
+                  color: @titlecolor;
+                  right: 0;
+            }
+        }
+        .little{
+            font-size: .6rem;
+            position: relative;
+        }
+        .litfactor{
+            color: @clickcolor;
+            .litspan{
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .in100 {
+        background-position: 0 -3rem
+    }
+
+    .in90 {
+        background-position: 0 -2.4rem
+    }
+
+    .in80 {
+        background-position: 0 -2rem
+    }
+
+    .in70 {
+        background-position: 0 -1.8rem
+    }
+
+    .in60 {
+        background-position: 0 -1.4rem
+    }
+
+    .in50 {
+        background-position: 0 -1rem
+    }
+
+    .in40 {
+        background-position: 0 -.6rem
+    }
+
+    .in30 {
+        background-position: 0 -.3rem
+    }
+
+    .in20 {
+        background-position: 0 .0rem
+    }
+
+    .in10 {
+        background-position: 0 0.3rem;
+    }
+
+    .in0 {
+        background-position: 0 1rem
+    }
+}

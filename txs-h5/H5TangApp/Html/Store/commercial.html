@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商户详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="commercialpage">
+        <div class="banner">
+            <img id="imglarge" src="" alt="">
+        </div>
+        <div class="tips">
+            <div class="row border-bom">
+                <div class="small-4 medium-4 large-4 columns">
+                    <div class="tipbox">
+                        <img id="imgsmall" src="" alt="">
+                    </div>
+                </div>
+                <div class="small-6 columns az-padding0">
+                    <p><z id="Category"></z><span id="name"></span></p>
+                    <i class="wxicon icon-approve"> 已认证</i>
+                </div>
+                <div class="small-2 columns az-padding0">
+                    <p class="az-text-right gray-font" style="display:none;"><span id="distance"></span>m</p>
+                </div>
+            </div>
+            <div class="row padding-2">
+                <div class="small-9 columns border-r" id="addressMap">
+                    <div class="row">
+                        <div class="small-2 columns az-padding0">
+                            <i class="wxicon icon-locate az-right"></i>
+                        </div>
+                        <div id="address" class="small-10 columns font-9 az-padding0" style="padding:0 0 8px 0">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="small-3 columns az-center">
+                    <a href="javascript:phone()"><i class="wxicon icon-tel"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="az-tip mt bt">商户提供的福利</p>
+        <div id="WelfareList">
+
+        </div>
+        <button href="#" id="loadmore" class="button small expand" style=" background-color:#f6ecec; color:#ff6a00; font-size:10px;display:none">商户暂未提供福利</button>
+        <p class="on-click"><span>点击展开更多福利</span><i class="wxicon icon-right-arrow"></i></p>
+        <div class="prointerduce margin-t-1">
+            <p>商户介绍</p>
+            <span id="descLong">
+                
+            </span>
+        </div>
+    </div>
+
+    
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/commercial.js"></script>
+    
+</body>
+</html>

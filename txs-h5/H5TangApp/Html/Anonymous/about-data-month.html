@@ -1,0 +1,296 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>历史交易额</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160325001">
+    <style>
+        .month-progress {
+            padding: 1.75rem .5rem;
+        }
+
+        .small-3 {
+            width: 19%;
+        }
+
+        .small-9 {
+            width: 81%;
+        }
+
+        .month-progress .progress-money {
+            padding-left: .1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>-->
+    <section class="content">
+        <article class="viewport">
+            <article class="bg-white month-progress">
+                <div class="small-3 left gray" id="month">
+                    <p>2017年10月</p>
+                    <p>2017年9月</p>
+                    <p>2017年8月</p>
+                    <p>2017年7月</p>
+                    <p>2017年6月</p>
+                    <p>2017年5月</p>
+                    <p>2017年4月</p>
+                    <p>2017年3月</p>
+                    <p>2017年2月</p>
+                    <p>2017年1月</p>
+                    <p>2016年12月</p>
+                    <p>2016年11月</p>
+                    <p>2016年10月</p>
+                    <p>2016年9月</p>
+                    <p>2016年8月</p>
+                    <p>2016年7月</p>
+                    <p>2016年6月</p>
+                    <p>2016年5月</p>
+                    <p>2016年4月</p>
+                    <p>2016年3月</p>
+                    <p>2016年2月</p>
+                    <p>2016年1月</p>
+                    <p>2015年12月</p>
+                    <p>2015年11月</p>
+                    <p>2015年10月</p>
+                    <p>2015年9月</p>
+                    <p>2015年8月</p>
+                    <p>2015年7月</p>
+                    <p>2015年6月</p>
+                    <p>2015年5月</p>
+                </div>
+                <div class="small-9 left" id="month-data">
+                    <p class="p30"></p>
+                    <p class="p29"></p>
+                    <p class="p28"></p>
+                    <p class="p27"></p>
+                    <p class="p26"></p>
+                    <p class="p25"></p>
+                    <p class="p24"></p>
+                    <p class="p23"></p>
+                    <p class="p22"></p>
+                    <p class="p21"></p>
+                    <p class="p20"></p>
+                    <p class="p19"></p>
+                    <p class="p18"></p>
+                    <p class="p17"></p>
+                    <p class="p16"></p>
+                    <p class="p15"></p>
+                    <p class="p14"></p>
+                    <p class="p13"></p>
+                    <p class="p12"></p>
+                    <p class="p11"></p>
+                    <p class="p10"></p>
+                    <p class="p9"></p>
+                    <p class="p8"></p>
+                    <p class="p7"></p>
+                    <p class="p6"></p>
+                    <p class="p5"></p>
+                    <p class="p4"></p>
+                    <p class="p3"></p>
+                    <p class="p2"></p>
+                    <p class="p1"></p>
+                </div>
+            </article>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        $(window).load(function () {
+            $("#all-body-div-status").fadeOut();
+            $("#all-body-div-preloader").delay(250).fadeOut("slow");
+        });
+
+
+        $.fn.extend({
+            ProgressBarWars: function (opciones) {
+                var ProgressBarWars = this;
+                var theidProgressBarWars = $(ProgressBarWars).attr("id");
+                var StringStyle = "";
+
+                defaults = {
+                    porcentaje: "100",
+                    tiempo: 1000,
+                }
+
+                var opciones = $.extend({}, defaults, opciones);
+                $(ProgressBarWars).before(StringStyle);
+                $(ProgressBarWars).append('<span class="progress-bg left" id="bar' + theidProgressBarWars +
+                    '"></span><span class="progress-money left">' + opciones.data + '元</span>');
+                $("#bar" + theidProgressBarWars).animate({
+                    width: opciones.porcentaje + "%"
+                }, opciones.tiempo);
+                this.mover = function (ntamanio) {
+                    $("#bar" + $(this).attr("id")).animate({
+                        width: ntamanio + "%"
+                    }, opciones.tiempo);
+                };
+                return this;
+            }
+        });
+
+        //Array.prototype.max = function () {//最大值
+        //    return Math.max.apply({}, this)
+        //}
+        //Array.prototype.min = function () {//最小值
+        //    return Math.min.apply({}, this)
+        //}
+        //var month_data = [2041902482, 1681149808, 2034423147, 2283009670, 1673813918, 1115758366, 916822214.17, 440837009, 283929491, 176184168, 20361688, ];
+        //var month = ["2016年3月", "2016年2月", "2016年1月", "2015年12月", "2015年11月", "2015年10月", "2015年9月", "2015年8月", "2015年7月", "2015年6月", "2015年5月"];
+        //var $month_data = $("#month-data");
+        //var $month = $("#month");
+        //var h_month = [];
+        //var h_month_data = [];
+        //var date_max = month_data.max();
+        //var date_min = month_data.min();
+        //$.each(month_data, function (index, item) {
+        //    h_month.push('<p>' + month[index] + '</p>');
+        //    h_month_data.push('<p class="p' + (month_data.length - index) + '"></p>');
+        //});
+        //$month_data.append(h_month_data.join(''));
+        //$month.append(h_month.join(''));
+        ////赋值
+        //var data = "";
+        //var prodata = "";
+        //$.each(month_data, function (index, item) {
+        //    data = item / 100000000;
+        //    prodata = month_data[index] / date_max * 7 / 10 * 100;
+        //    $(".p" + (month_data.length - index) + "").ProgressBarWars({ porcentaje: ~~prodata, data: $.fmoney(data) });
+        //});
+
+
+        // 最大值75% 计算
+        var p1 = $(".p1").ProgressBarWars({
+            porcentaje: 1,
+            data: $.fmoney(20361688, 0)
+        });
+        var p2 = $(".p2").ProgressBarWars({
+            porcentaje: 6,
+            data: $.fmoney(176184168, 0)
+        });
+        var p3 = $(".p3").ProgressBarWars({
+            porcentaje: 13,
+            data: $.fmoney(283929491, 0)
+        });
+        var p4 = $(".p4").ProgressBarWars({
+            porcentaje: 23,
+            data: $.fmoney(440837009, 0)
+        });
+        var p5 = $(".p5").ProgressBarWars({
+            porcentaje: 33,
+            data: $.fmoney(916822214.17)
+        });
+        var p6 = $(".p6").ProgressBarWars({
+            porcentaje: 36,
+            data: $.fmoney(1115758366, 0)
+        });
+        var p7 = $(".p7").ProgressBarWars({
+            porcentaje: 43,
+            data: $.fmoney(1673813918, 0)
+        });
+        var p8 = $(".p8").ProgressBarWars({
+            porcentaje: 48,
+            data: $.fmoney(2283009670, 0)
+        });
+        var p9 = $(".p9").ProgressBarWars({
+            porcentaje: 46,
+            data: $.fmoney(2034423147, 0)
+        });
+        var p10 = $(".p10").ProgressBarWars({
+            porcentaje: 43,
+            data: $.fmoney(1681149808, 0)
+        });
+        var p11 = $(".p11").ProgressBarWars({
+            porcentaje: 46,
+            data: $.fmoney(2041902482, 0)
+        });
+        var p12 = $(".p12").ProgressBarWars({
+            porcentaje: 45,
+            data: $.fmoney(1982092702, 0)
+        });
+        var p13 = $(".p13").ProgressBarWars({
+            porcentaje: 46,
+            data: $.fmoney(2008003350, 0)
+        });
+        var p14 = $(".p14").ProgressBarWars({
+            porcentaje: 48,
+            data: $.fmoney(2206598663, 0)
+        });
+        var p15 = $(".p15").ProgressBarWars({
+            porcentaje: 54,
+            data: $.fmoney(3198913099, 0)
+        });
+        var p16 = $(".p16").ProgressBarWars({
+            porcentaje: 52,
+            data: $.fmoney(2949618106, 0)
+        });
+        var p17 = $(".p17").ProgressBarWars({
+            porcentaje: 56,
+            data: $.fmoney(3364386304, 0)
+        });
+        var p18 = $(".p18").ProgressBarWars({
+            porcentaje: 49,
+            data: $.fmoney(2675790261, 0)
+        });
+        var p19 = $(".p19").ProgressBarWars({
+            porcentaje: 60,
+            data: $.fmoney(4563859745, 0)
+        });
+        var p20 = $(".p20").ProgressBarWars({
+            porcentaje: 59,
+            data: $.fmoney(4407446985, 0)
+        });
+        var p21 = $(".p21").ProgressBarWars({
+            porcentaje: 57,
+            data: $.fmoney(4089084821, 0)
+        });
+        var p22 = $(".p22").ProgressBarWars({
+            porcentaje: 60,
+            data: $.fmoney(4526191084, 0)
+        });
+        var p23 = $(".p23").ProgressBarWars({
+            porcentaje: 63,
+            data: $.fmoney(5574103855, 0)
+        });
+        var p24 = $(".p24").ProgressBarWars({
+            porcentaje: 61,
+            data: $.fmoney(4850421544, 0)
+        });
+        var p25 = $(".p25").ProgressBarWars({
+            porcentaje: 63,
+            data: $.fmoney(5549661171, 0)
+        });
+        var p26 = $(".p26").ProgressBarWars({
+            porcentaje: 62,
+            data: $.fmoney(5180445309, 0)
+        });
+        var p26 = $(".p27").ProgressBarWars({
+            porcentaje: 62.7,
+            data: $.fmoney(5275165087, 0)
+        });
+        var p27 = $(".p28").ProgressBarWars({
+            porcentaje: 63.2,
+            data: $.fmoney(5555220727, 0)
+        });
+        var p28 = $(".p29").ProgressBarWars({
+            porcentaje: 60.5,
+            data: $.fmoney(3720338781, 0)
+        });
+        var p29 = $(".p30").ProgressBarWars({
+            porcentaje: 59.5,
+            data: $.fmoney(3509720932, 0)
+        });
+    </script>
+</body>
+
+</html>

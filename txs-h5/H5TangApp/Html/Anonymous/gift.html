@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>新人有礼</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <style>
+        .gift_mid img,
+        .gift_bom img {
+            margin-top: 0rem;
+        }
+    </style>
+</head>
+
+<body class="gift_bg">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content">
+        <article class="viewport">
+            <div class="gift_top">
+                <img src="/css/img2.0/gift_tip1.jpg" alt="">
+            </div>
+            <div class="text_rule">
+                <img src="/css/img2.0/tips_text.png" alt="">
+            </div>
+            <div class="content_box_top">
+                <h3>在唐小僧理财注册，即可购买新手专享产品，并获得188元代金券；首次投资指定产品再送2000理财金&500唐果。</h3>
+            </div>
+            <div class="content_box_top_tips">
+                <h4>每位用户仅可获赠一次。<br>参与此活动者将不同时享有其他新人优惠活动。</h4>
+            </div>
+            <div class="gift_mid">
+                <img src="/css/img2.0/gift_tip2.jpg" alt="">
+            </div>
+            <div class="content_box_top">
+                <h3>在投金额不少于1000元的用户，每日上线签到即可获得奖励，100%有礼！<br> 一周连续签到6天即可参与周日转盘赢大奖，快来小僧签个到吧！
+                </h3>
+            </div>
+            <div class="gift_bom">
+                <img src="/css/img2.0/gift_tip3.jpg" alt="">
+            </div>
+            <div class="content_box_top">
+                <h3>活动期间，在投金额≥1000元的用户，推荐好友首投成功送288元代金券礼包+收益加成。</h3>
+            </div>
+            <p style="padding-right: 1rem;display: block;width: 100%;text-align: right;color: #fff;font-size: 1.6rem;margin: 1rem 0;">网贷有风险，出借需谨慎</p>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        $(window).load(function() {
+            $("#all-body-div-status").fadeOut();
+            $("#all-body-div-preloader").delay(350).fadeOut("slow");
+        });
+        $(function() {
+            var referralcode = $.getQueryStringByName("referralcode") || '';
+            $.getWechatconfig("InviteFriends", function() {
+                $.BaiduStatistics('Invite', 'New_wechat_share_ok', '新人有礼-微信分享-成功');
+            }, function() {
+                $.BaiduStatistics('Invite', 'New_wechat_share_cancel', '新人有礼-微信分享-取消');
+            }, {
+                'link': window.location.origin + '/Landing.html?c=' + referralcode,
+                'title': '邀请有礼，敢约财能富', // 分享标题
+                'desc': '【唐小僧】期望年化收益8%+，多种期限标的信息任你选，红包福利享不停',
+                'imgUrl': 'http://www.txslicai.com/images/wechaticon.png', // 分享图标
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+#mainBody{
+    background: #fff;
+}
+#tab_winners_menu{
+    display: -webkit-flex;
+    display: flex;
+    border: 1px solid #e7e7e7;
+}
+#tab_winners_menu li{
+    text-align: center;
+    flex: 1;
+    line-height: 1.706667rem;
+    font-size: .682667rem;
+    color:#333;
+}
+#tab_winners_menu li span{
+    border-bottom: 3px solid #fff;
+    width: 4.437333rem;
+    display: inline-block;
+}
+#tab_winners_menu li.current span{
+    border-color:#ff4949;
+    color:#ff4949;
+}
+.tab_contents{
+    margin-left: .64rem;
+    display: none;
+}
+.tab_contents li{
+    line-height: 1.792rem;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: .512rem;
+    color:#333;
+}
+.tab_contents .dateTime{
+    float: right;
+    margin-right: .64rem;
+    color: #999;
+}
+.loadMore{
+    text-align: center;
+    color:#999;
+    font-size: .512rem;
+    line-height: 1rem;
+}

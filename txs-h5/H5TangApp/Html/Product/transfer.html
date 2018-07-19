@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>转受让说明</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+
+<body class="bg-gray transfer-state">
+    <section class="current">
+         <article class="viewport">
+            <div>
+                <p>什么样的产品可以转让？</p>
+                <p>平台上并非所有产品都可以转让，对于可转让产品也需要符合条件才可以发起转让，多数定期产品都可以转让，新手标等特殊产品不可转让。</p>
+            </div>
+            <div>
+                <p>产品持有多少天后可以转让？</p>
+                <p>对于可转让产品，定向委托成立后存在转让锁定期<span class="transferlockday">2</span>天，在转让锁定期<span class="transferlockday">2</span>天后，且剩余期限大于（转让锁定期+1）天可转让。
+                <br><br>如A用户转让给B用户，B需要持有此产品时间大于等于转让锁定期，且剩余期限大于（转让锁定期+1）天才可转让。
+                <br><br>具体转让锁定期可通过产品详情页面查看。</p>
+            </div>
+            <div>
+                <p>转让产品如何定价？</p>
+                <p>用户可自行定价，定价金额存在上限和下限，只可选择其中区间金额。
+                <br><br>具体上下限金额可在产品转让页查看。</p>
+            </div>
+            <div>
+                <p>转让费率</p>
+                <p>转让手续费由平台收取，具体转让费率可通过产品详情页面查看。</p>
+            </div>
+            <div>
+                <p>转让是否可以撤销？</p>
+                <p>转让产品上架后可主动撤回，如果没有撤回，24小时未转出则自行下架。</p>
+            </div>
+            <div>
+                <p>什么是转让后期望年化收益率？</p>
+                <p>针对一次性还本付息产品，转让期望年化收益率=（原始本金+剩余利息+已产生利息-转让金额）/剩余期限/转让金额*365*100%。
+                <br><br>针对先息后本产品，转让期望年化收益率=（原始本金+剩余利息-转让金额）/剩余期限/转让金额*365*100%。</p>
+            </div>
+            <div>
+                <p>什么是剩余期望收益？</p>
+                <p>指在买入产品后，剩余期限下所能产生期望收益。</p>
+            </div>
+            <div>
+                <p>什么是已产生收益？</p>
+                <p>针对一次性还本付息产品，截止到转让当天（不含当天）已产生的收益。</p>
+            </div>
+            <div>
+                <p>什么是当期已产生收益？</p>
+                <p>针对先息后本产品，截止到转让当天（不含当天）已产生的收益减去已发放给用户的收益为当期已产生收益。</p>
+            </div>
+            <div>
+                <p>转让产品中使用了加息券或代金券如何计算？</p>
+                <p>产品转让金额以实际持有产品金额为准。
+                <br><br>如果使用加息券，一次性还本付息类产品使用的加息券失效。</p>
+            </div>
+        </article>
+        <div class="footer-btn">
+            <a href="javascript:void(0);" id="btn-ok">
+                确定
+            </a>
+        </div>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/transferinfo.js"></script>
+</body>
+</html>

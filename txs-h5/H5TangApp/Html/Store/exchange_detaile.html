@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>兑换详情</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/creditsMall/order_detaile.css">
+    <script>
+        ;
+        (function (doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            recalc();
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div class="view">
+        <div class="take_delivery">
+            <span class="location_icon"><img src="/css/img2.0/pointImg/icon1.png" /></span>
+            <div class="receive_address">
+                <div class="receive">
+                    <div class="receive_people"><span>收货人：</span><span class="JS_receive"></span></div><span class="receive_tel"></span>
+                </div>
+                <div class="address"><span>收货地址：</span><span class="JS_address"></span></div>
+            </div>
+        </div>
+        <div class="product_info">
+            <div class="product_content border_b12">
+                <img src="/css/img2.0/pointImg/welfare-icon1@2X.png" class="product_img" />
+                <p class="vartur_img interest">   
+                    <!-- <span class="ii-first"><i class="amount">20</i>%</span> -->
+                    <span class="ii-first money_unit"></span>
+                    <span class="product_name">接口-折扣</span>
+                </p>
+                <div class="info_list">
+                    <p class="product_title"></p>
+                    <p class="candy"><span class="candy_num"></span>唐果</p>
+                    <div class="product_price">市场参考价：<span class="price_num"></span>元</div>
+                </div>
+            </div>
+            <ul class="pro_list">
+                <li>
+                    <div>订单号</div>
+                    <div class="JS_order_number"></div>
+                </li>
+                <li>
+                    <div>订单时间</div>
+                    <div class="JS_time"></div>
+                </li>
+                <li>
+                    <div>购买数量<span class="tags_style limit_num" >1</span></div>
+                    <div class="JS_number">1</div>
+                </li>
+            </ul>
+            <ul class="pro_list preferential_list">
+                <!-- <li>
+                    <div>会员专享优惠唐果<span class="tags_style limit_num" >铂金会员专享</span></div>
+                    <div class="JS_privilege">￥0.00</div>
+                </li>
+                <li>
+                    <div>会员折扣优惠唐果<span class="tags_style limit_num" >铂金会员2折</span></div>
+                    <div class="JS_discount">￥0.00</div>
+                </li>
+                <li>
+                    <div>活动优惠唐果<span class="tags_style limit_num" >满减</span></div>
+                    <div class="JS_activity">0</div>
+                </li> -->
+            </ul>
+            <ul class="pro_list border_b12">
+                <li>
+                    <div>运费（快递）</div>
+                    <div class="JS_money">￥0.00</div>
+                </li>
+                <!-- <li>
+                    <div>优惠唐果</div>
+                    <div class="JS_reduce_candy prefer_candy"><label></label></div>
+                </li> -->
+                <li>
+                    <div>赠品</div>
+                    <div class="JS_gift"></div>
+                </li>
+                <li>
+                    <div>合计唐果</div>
+                    <div class="JS_total_candy"></div>
+                </li>
+            </ul> 
+            <ul class="pro_list virtual_list">
+                <li>
+                    <div>一维码</div>
+                    <div class="JS_code"></div>
+                </li>
+                <li>
+                    <div>有效期</div>
+                    <div class="JS_dueTime"></div>
+                </li>
+                <li>
+                    <div>状态</div>
+                    <div class="JS_state"></div>
+                </li>
+            </ul>
+            <ul class="pro_list deliver_list">
+                <li>
+                    <div>状态</div>
+                    <div class="JS_state"></div>
+                </li>
+                <li>
+                    <div>快递公司</div>
+                    <div class="JS_deliver"></div>
+                </li>
+                <li>
+                    <div>快递单号</div>
+                    <div class="JS_tracking_number"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="/js/vendor/jquery.js" type="text/javascript"></script>
+    <script src="/js/vendor/template.js" type="text/javascript"></script>
+    <script src="/js/common.js" type="text/javascript"></script>
+    <script src="/js/pagejs/creditsMall/exchange_detaile.js" type="text/javascript"></script>
+</body>
+
+</html>

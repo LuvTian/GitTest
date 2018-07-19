@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>身份证验证</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="pos-h100">
+        <div class="bankcardpage">
+            <div class="icon-bar three-up">
+                <div class="item">
+                    <i class="font-c-fb1">1</i>
+                    <label class="font-c-fb2">设置交易密码</label>
+                    <span class="link font-c-fb1"></span>
+                </div>
+
+                <div class="item">
+                    <i class="font-c-fb1">2</i>
+                    <label class="font-c-fb2">实名认证</label>
+                    <span class="link"></span>
+                </div>
+                <div class="item">
+                    <i>3</i>
+                    <label>绑定银行卡</label>
+                </div>
+            </div>
+        </div>
+        <div class="identitycardpage">
+            <p class="tips line-h-3">为了确保账户安全，我们将对您的身份进行验证</p>
+            <div class="row">
+                <div class="item">
+                    <input id="realname" type="text" maxlength="11" placeholder="请输入真实姓名" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <input id="idnumber" type="text" maxlength="18" pattern="([0-9]){7,18}(x|X)?" placeholder="请输入身份证号码" />
+                </div>
+            </div>
+            <a id="btn-ok" href="javascript:void(0)" class="button az-padding0 az-center">确定</a>
+
+            <p class="tips2">
+                <span></span>唐小僧不会在任何地方泄漏您的信息
+            </p>
+            <a href="/html/anonymous/" class="other az-center">先去逛逛</a>
+            
+        </div>
+    </div>
+    <a class="safety az-center pos-mr-3" href="/Html/picc.html"><span class="wxicon icon-safety az-padding0"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</a>
+    <script  type="text/javascript" src="/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/pagejs/fanba/regist-step.js"></script>
+    <script type="text/javascript" src="/js/pagejs/fanba/regist-step2.js"></script>
+</body>
+</html>

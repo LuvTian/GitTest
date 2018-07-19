@@ -1,0 +1,267 @@
+body {
+    background: #F6F6F6;
+}
+section {
+    background: #fff;
+    margin-bottom: 0.512rem;
+    padding: 0.512rem 0.682667rem;
+}
+section .title{
+	font-size: 0.682667rem;
+	color: #333;
+	margin-bottom: 0.512rem;
+}
+section .title .more{
+	font-size: 0.597333rem;
+	float: right;
+	color: #666;
+}
+section#welfareContainer{
+    background: url(/css/img2.0/pointImg/bg000.png) right top no-repeat #fff;
+    background-size: 70% 2.1rem;
+}
+.clearfix{
+	clear:both;
+}
+#memberInfoContainer{
+	padding: 0.512rem 0.682667rem;
+	display: -webkit-flex;
+	display: flex;
+	color: #666;
+	font-size: 0.597333rem;
+
+
+    display: -webkit-box;
+    display: box;
+    -webkit-box-lines: single;
+    -webkit-box-pack:start;
+}
+#memberInfoContainer a{
+	color:#666;
+}
+#memberInfoContainer div{
+    -webkit-flex:1;
+    flex: 1;
+
+    -moz-box-flex: 1.0; 
+    -webkit-box-flex: 1.0; 
+    box-flex: 1.0;
+}
+#memberInfoContainer #credits{
+	text-align: right;
+}
+i.locationIcon{
+	background: url(/css/img2.0/pointImg/icon1.png) no-repeat;
+    background-size: 100%;
+    width: 0.597333rem;
+    height: 0.768rem;
+    position: absolute;
+    top: 0.56rem;
+}
+#memberInfoContainer #location span{
+	margin-left:0.8rem;
+}
+#advertisementContainer{
+	position: relative;
+	padding: 0;
+	top: -0.512rem;
+	margin-bottom: 0;
+}
+#advertisementContainer img{
+	width: 100%;
+	display: block;
+	height: 3.072rem;
+}
+#advertisementContainer .close{
+	background: url('/css/img2.0/pointImg/icon2.png') no-repeat;
+	background-size: 100%;
+	width: 0.853333rem;
+	height: 0.853333rem;
+	position: absolute;
+	top: 0.853333rem;
+	right: 0.682667rem;
+	display: none;
+}
+#selectedItems li{
+	background: #f6f6f6;
+	padding: 0.512rem 0.4rem 0.512rem 0.170667rem;
+    box-sizing: border-box;
+    width: 49%;
+    float: left;
+    margin-bottom: 0.426667rem;
+}
+#selectedItems .selectedItem_img{
+	width: 2.5rem;
+	/*height: 3.2rem;*/
+	float: left;
+    margin-right: 0.512rem;
+    margin-top: 0.35rem;
+}
+#selectedItems .selectedItem_desc{
+	font-size: .512rem;
+	margin-top: .2rem;
+    margin-left: 3rem;
+	position: relative;
+}
+#selectedItems .selectedItem_name{
+    text-align: left;
+    line-height: 1.3;
+    word-break: break-all;
+    height: 1.88rem;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+@media screen and (max-width: 360px) {
+    #selectedItems .selectedItem_name{
+        height: 43px;
+    }
+}
+#selectedItems .selectedItem_price{
+	margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#selectedItems .selectedItem_price span{
+	color: #D74B38 ;
+}
+#gamesContainer{
+	display: -webkit-flex;
+}
+#gamesContainer a{
+	display: block;
+	flex: 1;
+	font-size: 0.597333rem;
+	color: #666666;
+}
+#gamesContainer a img{
+	width: 1.194667rem;
+	height: 1.194667rem;
+	vertical-align: middle;
+	margin-right: 0.256rem;
+}
+#neighbouringWelfareContainer{
+	padding-right: 0;
+}
+#neighbouringWelfares li{
+	border-top: 1px solid #E5E5E5;
+	padding: 0.512rem 0;
+	height: 4.949333rem;
+	box-sizing: border-box;
+}
+.neighbouringWelfare_img{
+	width: 4.864rem;
+	height: 3.925333rem;
+	float: left;
+}
+.neighbouringWelfare_desc{
+	margin:0.810667rem 0 0 5.461333rem;
+	padding-right: 0.682667rem;
+}
+.neighbouringWelfare_name{
+	font-size: 0.597333rem;
+	color: #666;
+	margin-bottom: 0.768rem;
+}
+.neighbouringWelfare_price{
+	font-size: 0.512rem;
+	color: #999;
+}
+.neighbouringWelfare_distance,.neighbouringWelfare_salesNum{
+	float: right;
+}
+
+
+/*重置福利背景图片*/
+.profit_list_out{
+	background: url(/css/img2.0/pointImg/movie.png) 7.936rem 0.92rem no-repeat, url(/css/img2.0/pointImg/ticket_out_bg_home.png) 0 0 no-repeat;
+    background-size: 3.925333rem 3.157333rem, contain;
+}
+.profit_title{
+	font-size: .682667rem;
+    color: #333;
+    padding-top: 0.5rem;
+    height: 0.81rem;
+}
+.profit_list .change_icon {
+    bottom: 0.5rem;
+    right: .597333rem;
+}
+.profit_list_inner {
+    background: url(/css/img2.0/pointImg/data.png) 7.936rem 0.92rem no-repeat, url(/css/img2.0/pointImg/ticket_inner_bg_home.png) 0 0 no-repeat;
+    background-size: 3.925333rem 3.157333rem, contain;
+}
+.profit_content{
+	padding-top: 1.534667rem;
+}
+.profit_money{
+	font-size: 1rem;
+    color: #fff;
+    float: left;
+    margin: 1.548rem 0 1.548rem;
+    text-align: center;
+    width: 5.224rem;
+}
+.profit_money span{
+	font-size: .6rem;
+}
+
+
+/*电影票CINEMA_TICKET*/
+.out_bg_movie{
+        background:url("/css/img2.0/pointImg/movie.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_out_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    .out_bg_coupon{
+        background:url("/css/img2.0/pointImg/coupon.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_out_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*流量PHONE_TRAFFIC*/
+    .out_bg_data{
+        background:url("/css/img2.0/pointImg/data.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_out_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    .out_bg_voucher{
+        background:url("/css/img2.0/pointImg/voucher.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_out_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*理财金FINANCIAL*/
+    .out_bg_fund{
+        background:url("/css/img2.0/pointImg/fund.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_out_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    .inner_bg_data{
+        background:url("/css/img2.0/pointImg/data.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_inner_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    .inner_bg_movie{
+        background:url("/css/img2.0/pointImg/movie.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_inner_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*代金券INTEREST*/
+    .inner_bg_coupon{
+        background:url("/css/img2.0/pointImg/coupon.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_inner_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*加息券COUPON*/
+    .inner_bg_voucher{
+        background:url("/css/img2.0/pointImg/voucher.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_inner_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    .inner_bg_fund{
+        background:url("/css/img2.0/pointImg/fund.png") 7.936rem 0.92rem no-repeat,
+                   url("/css/img2.0/pointImg/ticket_inner_bg_home.png") 0 0 no-repeat;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }

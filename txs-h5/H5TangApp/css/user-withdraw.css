@@ -1,0 +1,28 @@
+.az-showmasker-Text {
+    width: 72%;
+    background: #fff;
+    position: fixed;
+    left: 14%;
+    top: 30%;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.az-showmasker-Text {
+    padding: 0;
+}
+
+.az-showmasker-Text h3 {
+    padding: 2rem 1.25rem 0 !important;
+    font-size: 1.4rem;
+}
+
+.az-showmasker-Text p {
+    padding: 1.333333rem 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+}
+
+.az-showmasker-Text .col-g {
+    color: #ff4949;
+}

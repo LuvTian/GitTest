@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>平台奖励</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances2.css">
+    <style>
+        .pzzline {
+            margin: 0 auto;
+            width: 96%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray2">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content pozsiton">
+        <div class="finances-nav myreward-nav">
+            <a href="/Html/My/myreward-bonus.html">代金券</a>
+            <a href="/Html/My/myreward-ticket.html" class="on">加息券</a>
+            <!--<a href="/Html/My/myreward-money.html">现金奖励</a>-->
+        </div>
+        <article class="viewport">
+            <div class="wrap m-bottom">
+                <div id="interestcouponlist">
+                </div>
+            </div>
+        </article>
+        <!--加息券的规则-->
+        <!-- 加息券立即投资 -->
+        <div class="ticket-used display-none">
+            <p>您还没有投资至尊宝，请先投资再使用加息券。</p>
+            <div class="row">
+                <div class="small-12 fl tc">立即投资</div>
+            </div>
+            <img src="/css/img2.0/ticket02.png" alt="" class="pic pic3">
+            <img src="/css/img2.0/ticket05.png" alt="" class="pic2">
+        </div>
+        <!-- 加息券已使用 -->
+        <div class="ticket-used display-none">
+            <p>已使用
+                <z>0</z>%加息券，是否用当前加息券替换。<span class="newspan display-none">最大加息限额为<k>0</k>元，超出部分不加息。</span></p>
+            <div class="row">
+                <div class="small-5 fl tc color-a3">使用</div>
+                <div class="small-5 fr tc color-e9">取消</div>
+            </div>
+            <img src="/css/img2.0/ticket01.png" alt="" class="pic">
+            <img src="/css/img2.0/ticket05.png" alt="" class="pic2">
+        </div>
+        <!-- 至尊宝加息 -->
+        <div class="ticket-used display-none">
+            <h3 class="tc">至尊宝理财加息</h3>
+            <center>
+                <div class="imgbox az-relative">
+                    <span class="percent col-fff9"><span class="col-fff9 size-220">8</span>%</span>
+                    <img src="/css/img2.0/ticket04.png" alt="" class="pic4 az-center">
+                </div>
+            </center>
+            <p class="pzzline">当前至尊宝在投，及新增至尊宝投资<br /><span class="color-org"><z>0</z>天</span>内均加息。</p>
+            <div class="row bottom-1">
+                <div class="small-5 fl tc color-e9">使用</div>
+                <div class="small-5 fr tc color-a3">取消</div>
+            </div>
+            <img src="/css/img2.0/ticket03.png" alt="" class="pic pic5">
+            <img src="/css/img2.0/ticket05.png" alt="" class="pic2">
+        </div>
+        <!-- 新增的弹框 -->
+        <div class="win display-none">
+            <div class="win_img"><img src="/css/img2.0/win_pic1.png"></div>
+            <div class="win_close"><img src="/css/img2.0/close_icon.png"></div>
+            <div class="win_main">
+                <p class="margin_b">最大加息限额为
+                    <z>0</z>元，超出部分不加息。</p>
+                <span class="win_ok">确定</span>
+            </div>
+        </div>
+        <a class="tc usage-rules bt" href="javascript:void(0)">使用规则 <span class="wxicon icon-right-arrow"></span></a>
+    </section>
+    <div class="mask display-none"></div>
+    <div class="rule-tip display-none">
+        <h3>使用规则</h3>
+        <ol>
+            <li><span class="color-org">加息券</span>分为至尊宝<span class="color-org">加息券</span>(只可用于至尊宝产品)、定期<span class="color-org">加息券</span>（只可用于指定产品）</li>
+            <li><span class="color-org">加息券</span>有最大加息限额，只可使用最大加息金额，超出部分不加息</li>
+            <li>点击至尊宝<span class="color-org">加息券</span>即刻生效。生效期内当前至尊宝投资和新增投资均可获得加息</li>
+            <li>定期<span class="color-org">加息券</span>只可在新增投资时可使用</li>
+            <li>每张<span class="color-org">加息券</span>只可使用一次，不可叠加使用；多张至尊宝<span class="color-org">加息券</span>同时使用，以最近使用的<span class="color-org">加息券</span>为准</li>
+            <li>有效期内每日产品加息收益；若当日无至尊宝在投资金，至尊宝<span class="color-org">加息券</span>不产生加息收益</li>
+            <li>代金券与<span class="color-org">加息券</span>不可叠加使用</li>
+            <li>最终解释权归唐小僧理财</li>
+        </ol>
+        <i class="az-icon icon-turnoff2"></i>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/myreward-ticket.js"></script>
+
+</body>
+
+</html>

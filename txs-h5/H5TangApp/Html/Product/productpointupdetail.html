@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--产品名称-->
+    <title>周周僧</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/jiejieseng-productdetail.css">
+    <script src="/js/vendor/fontsize.js"></script>
+    <style type="text/css">
+    *{margin: 0;padding: 0}
+    .pt_header{
+        position: relative;
+        padding-top: 0.8533333333333334rem;
+        padding-bottom: 0.3rem;
+        background-color: #fff;
+    }
+    .pt_ul{
+        width: 100%;
+        display: flex;
+    }
+    .pt_li{
+        flex: 1;
+        margin: 0 0.9386666666666666rem;
+        height: 7.936rem;
+        background-image: url("/css/img2.0/img/red-card.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #ffffff;
+        padding: 1.0666666666666667rem 1.28rem;
+        box-sizing: border-box;
+    }
+    .pt_li .pt_title{
+        font-size: 0.6826666666666666rem;
+        margin-bottom: 0.4266666666666667rem;
+    }
+    .pt_li .pt_hd_rtitle{
+        opacity: .6;
+        font-size: 0.4266666666666667rem;
+    }
+    .pt_li .pt_hd_rate{
+        font-size: 1.28rem;
+    }
+    .pt_li .pt_hd_btm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pt_li .pt_hd_item{
+        flex: 1;
+        font-size: 0.5973333333333334rem;
+        text-align: center;
+    }
+    #allRightsContianer{
+        position: static;
+    }
+    #allRightsContianer .privilege_list{
+        flex: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody">
+        <div class="pt_header">
+            <div class="pt_ul">
+                <div class="pt_li">
+                    <div class="pt_title">周周僧1期</div>
+                    <div class="pt_hd_rtitle">期望年化收益率</div>
+                    <div class="pt_hd_rate">5.65%~8.99%</div>
+                    <div class="pt_hd_btm">
+                        <div class="pt_hd_item">
+                            <p>7天</p>
+                            <p class="pt_hd_rtitle">最短投资期限</p>
+                        </div>
+                        <div class="pt_hd_item">
+                            <p>200</p>
+                            <p class="pt_hd_rtitle">起投金额</p>
+                        </div>
+                        <div class="pt_hd_item">
+                            <p>10人</p>
+                            <p class="pt_hd_rtitle">已投资</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--赎回状态 背景图 详情-->
+        <div id="jiejieseng-detail-top" class="jiejieseng-detail-top" style="display: none;">
+            <p class="principal">期望年化收益率</p>
+            <p class="principal-amout" id="currentTotalAmont">0.00%</p>
+            <div class="head_arrow">
+                <img src="/css/img2.0/head_arrow.png" alt="">
+            </div>
+            <div class="sy_mod">
+                <div class="sy_amout">
+                    <p>7天</p>
+                    <p>30人</p>
+                </div>
+                <div class="sy_detail">
+                    <p>最短投资期限</p>
+                    <p>已投资</p>
+                </div>
+            </div>
+        </div>
+        <div id="allRightsContianer">
+            <ul class="privilege_list">
+                <li class="mar-bottom">
+                    <div class="header-describe clearfix">
+                        <div class="describe-left">
+                            <span class="zhu">注</span><span>持有越久收益越高</span>
+                            <p>每周赎回日可操作赎回(不支持部分赎回）</p>
+                        </div>
+                        <div class="describe-right txt_right">
+                            <div class="arrow_icon pad_top_3">
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--- 柱形图 -->
+                <li>
+                    <div class="bar">
+                        <div class="chart-desc">年收益率(%)</div>
+                        <div class="chart-tip">手指移至柱状图滑动，可查看每个周期的收益</div>
+                        <div id="container" class="chart-container">
+
+                            <div class="chart-y">
+                                <span>5.00</span>
+                                <span>6.12</span>
+                                <span>7.22</span>
+                                <span>8.90</span>
+                            </div>
+                            <div style="position:absolute;height:1px;width:20px;" id="hide-bottom">
+                                <!--测试用数据-->
+                            </div>
+                            <div class="chart-x">
+                                <div class="chart-x-con">
+                                    <div class="chart-x-item">
+                                        <div style=" height:87px"></div><span style="height:87px">7.22</span>
+                                        <z class="">1</z>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li>
+                    <div class="contian_product" style="display: ">
+                        <!--售罄&赎回-->
+                        <div class="incomn"></div>
+                        <div class="progress_product">
+                            <!-- <div class="product_fl_1">
+                          <b>募集</b>
+                          <p id="">2017-02-11</p>
+                          <div class="cirle pro_before_bord"></div>
+                      </div> -->
+                            <div class="product_fl_1">
+                                <b>起息日</b>
+                                <p id="product-profitstartday">2017-02-11</p>
+                                <div class="cirle pro_before_bord"></div>
+                            </div>
+                            <div class="product_fl_1" style="text-align: center;">
+                                <b>开放退出</b>
+                                <p>7天一次</p>
+                                <div class="cirle pro_before_bord64" style="left: 50%;"></div>
+                            </div>
+                            <div class="product_fl_1 txt_right clearfix">
+                                <b>标的到期</b>
+                                <p id="product-profitendday">2017-02-02</p>
+                                <div class="cirle sta_end fl_right"></div>
+                            </div>
+                        </div>
+                        <!--产品详情1期立即赎回-->
+                        <div class="info_list incomn">
+                            <a class="info_list_item" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    回款方式
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="typetext"></span>
+                                </div>
+                            </a>
+                            <a class="info_list_item" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    是否可转让
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="cantransfer">否</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="info_list mar_bottom_05">
+                            <!--立即赎回-->
+                            <a class="info_list_item" id="invest-detail" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    投资详情
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="invest-amout">25,000.00</span>
+                                    <div class="arrow_icon">
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--立即赎回-->
+                            <a id="product-detail" class="info_list_item">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    产品详情
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <div class="arrow_icon">
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a id="product-xiangmuinfo" class="info_list_item">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    项目介绍
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <div class="arrow_icon">
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a id="product-active" class="info_list_item">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    相关文件
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <div class="arrow_icon">
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a id="arepayplan" class="info_list_item">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    回款计划
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <div class="arrow_icon">
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--产品详情立即赎回-->
+                        <div class="info_list" id="redeem-detail">
+                            <a class="info_list_item" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    回款方式
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="typetexted">开发日赎回偿还本息，到期偿还本息</span>
+                                </div>
+                            </a>
+                            <a class="info_list_item" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    是否可转让
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="cantransfered">否</span>
+                                </div>
+                            </a>
+                            <a class="info_list_item" href="">
+                                <div class="product_fl_1 col_3 bor_bottom_f1">
+                                    产品评级
+                                </div>
+                                <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                    <span id="riskleveltext">否极低风险产品 <t>R1</t></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--账户资金安全-->
+                        <div class="wel_btm_com safty">
+                            <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+                          账户资金防盗安全由新浪支付和太平财险共同保障
+                      </span>
+                            <p>网贷有风险 出借需谨慎</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="privilege_list">
+                <li>
+                    <div class="header-describe clearfix">
+                        <div class="describe-left">
+                            <span class="zhu">注</span><span>更多周周僧产品敬请期待</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="no_star" style="">
+                        <!--未开始-->
+                        敬请期待
+                    </div>
+                </li>
+                <li>
+                    <button class="to_buy" style="display: none">未开售</button>
+                    <!--未开售回状态-->
+                </li>
+            </ul>
+            </div>
+            <a class="to_buy _toreduce_bg buyrest" id="product-buy">
+                <div style="    display: table-cell;vertical-align: middle;">
+                    <p id="product-buy-link"></p>
+                    <p id="product-countdown-timer-amount"></p>
+                </div>
+
+                <!--申购状态-->
+            </a>
+
+            <!-- header下标 -->
+            <!-- <div class="header-icon"> 
+            <span class="icon on"></span>
+            <span class="icon"></span>
+        </div> -->
+            <button class="to_buy" style="display: none">售  罄</button>
+            <!--售罄状态-->
+            <button class="to_buy _toreduce_bg" style="display: none;">立即赎回</button>
+            <!--赎回状态-->
+
+        </div>
+        <!--</section>-->
+        <!-- <a class="timeDeposit_sh_btn1 buying" id="product-soldout" href="javascript:;" style="display:none;background: rgb(212, 212, 212);">已售罄</a>
+    <a class="timeDeposit_sh_btn_s1 buying" id="product-buy" href="javascript:;" style="display: none; background-color: #e94a3d;">
+        <span class="txt">
+            <p class="p1" id="product-buy-link">立即抢购</p>
+            <p class="p2" id="product-countdown-timer-amount"></p>
+        </span>
+    </a> -->
+        <!-- 赎回弹框 -->
+        <div class="invest-mtk" id="invest-mtk" style="display: none;">
+            <h3>标题</h3>
+            <div class="invest-mtk-body">
+                <div>
+                    <p class="left">赎回本金（元）</p>
+                    <p class="right" id="capital">0.00</p>
+                </div>
+                <div>
+                    <p class="left">赎回收益（元）</p>
+                    <p class="right" id="earnings">0.00</p>
+                </div>
+                <div>
+                    <p class="left">扣除手续费（元）</p>
+                    <p class="right" id="poundage">0.00</p>
+                </div>
+                <div>
+                    <p class="left">赎回合计（元）</p>
+                    <p class="right" id="total">0.00</p>
+                </div>
+            </div>
+            <div class="paymentdate" id="paymentdate">预计赎回到账日期为</div>
+            <div class="invest-mtk-footer">
+                <div class="left" id="cancel">取消</div>
+                <div class="right" id="ensure">确定</div>
+            </div>
+        </div>
+        <div class="mask" style="display:none"></div>
+        <div class="rule-tip rule1" style="display:none">
+            <div class="question q1result" style="display:none">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <div class="x">x</div>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip rule2" style="display:none">
+            <div class="question q2result" style="display:none">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <div class="x">x</div>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip rule3" style="display:none">
+            <div class="question q3result" style="display:none">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <div class="x">x</div>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip rule4" style="display:none">
+            <div class="question q4result" style="display:none">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <div class="x">x</div>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                    <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip rule5" style="display:none">
+            <div class="question q5result" style="display:none">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <div class="x">x</div>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                    <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+            <article class="poplayer-content text-center">
+                <p class="notice-alert-title" id="notice-alert-title"></p>
+                <p id="notice-alert-content"></p>
+            </article>
+            <article class="okbtn row" id="notice-ok">
+                <div class="left small-12">
+                    <span class="fpbutton">确定</span>
+                </div>
+            </article>
+        </article>
+        <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript" src="/js/common.js"></script>
+        <script type="text/javascript" src="/js/utils/notice.js"></script>
+        <script src="/js/vendor/fastclick.js"></script>
+        <!-- <script src="/js/pagejs/my/member_level/slider.js"></script> -->
+        <script type="text/javascript" src="/js/pagejs/product/jiejieseng-productdetail.js"></script>
+</body>
+
+</html>

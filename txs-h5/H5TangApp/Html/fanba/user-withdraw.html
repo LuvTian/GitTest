@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提现</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray" id="extractcash">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="wrap" id="div-user-withdraw">
+        <div class="bg-white bb">
+            <div class="small-6 fl">账户余额</div>
+            <div class="small-6 fl tr gray-font"><z id="user-basic-balance"></z>元</div>
+        </div>
+        <div class="bg-white bb">
+            <div class="small-6 fl line-h-3">提现金额</div>
+            <div class="small-6 fl">
+                <div class="item">
+                    <input type="text" value="" class="input-text b-width0" id="user-withdraw-amount" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace(/^\./g, '').replace(/\.{2,}/g, '.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.').replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3').replace(/^[0]*([1-9])/, '$1').replace(/^[0]*(\.)/, '0$1').replace(/^([0-9]{1,7})([0-9]*)/, '$1');" />
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="small-9 fl">借记卡(<z id="user-card-name"></z>)</div>
+            <div class="small-3 fl tr gray-font" id="user-card-code"></div>
+        </div>
+        <div class="fillet-btn"><a href="javascript:void(0);" id="user-withdraw" class="button expand az-padding0 mt-2rem">提现</a></div>
+        <div class="row columns">
+            <span class="fs8 gray-font">新浪支付安全验证规则现已升级。</span><a href="http://www.zjtghelp.com/index.php?r=content/view&id=445" style="display:inline-block;float: right;">了解更多信息>></a><br />
+            <span class="fs8 gray-font">提现小贴士</span><br />
+            <span class="fs8 gray-font">1. 提现免手续费，只能给当前账户本人提现。</span><br />
+            <span class="fs8 gray-font je1">2. 账户提现金额单笔5元起，每日提现总限额为10万元。</span><br />
+            <span class="fs8 gray-font je2" style="display:none;">2. 春节期间账户提现金额单笔5元起，单笔限额2000元，每日提现总限额为1万元。</span><br />
+        </div>
+    </div>
+    <div id="rechargesuccess" class="display-none">
+        <div class="tips bb">
+            <div class="imgbox az-center">
+                <img src="/css/img2.0/logo1.png" alt="">
+            </div>
+            <h3>提现提交完成<br />预计两小时内到账</h3>
+            <h6 class="gray-font">提现金额：<z id="user-withdraw-amount-text"></z>元</h6>
+        </div>
+        <div class="bg-white bb bt mt">
+            <div class="small-6 fl">银行卡(<z id="user-bank-name-text"></z>)</div>
+            <div class="small-6 fl tr gray-font" id="user-card-code-text"></div>
+        </div>
+        <div class="fillet-btn"><a href="/Html/My/" class="button expand line-h-2r">确定</a></div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/fanba/user-withdraw.js"></script>
+</body>
+</html>

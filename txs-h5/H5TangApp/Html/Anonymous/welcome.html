@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>首页</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/welcome.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="nominheight">
+        <!--头部banner-->
+        <div class="headheight" style="max-height:11.5rem;min-height: 6.4rem;">
+            <div class="headbn com_bg">
+                <!--<ul class="headbnlist">
+                    <li class="headbnitem wel_head" style="width:16rem;">
+                        <img src="/css/img2.0/1497434584.png" />
+                    </li>
+                </ul>-->
+                <ul class="headbnlist">
+                    <!-- <li class="headbnitem wel_head" data-url="/html/anonymous/about-index.html">
+                        <img src="/css/img2.0/index_demo.png" />
+                    </li> -->
+                    <!--<li class="headbnitem wel_head">
+                        <img src="http://madisonzillion.oss-cn-hangzhou.aliyuncs.com/844447171989360640.jpg" />
+                    </li>-->
+                    <!--<li class="headbnitem wel_head">
+                        <img src="http://madisonzillion.oss-cn-hangzhou.aliyuncs.com/708252273360384000.jpg" />
+                    </li>-->
+                </ul>
+                <div class="headsp" style="display:none">
+                    <!--<div class="headspitem cur"></div>
+                    <div class="headspitem"></div>
+                    <div class="headspitem"></div>-->
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="spitempl">
+            <div class="headspitem {0}"></div>
+        </script>
+        <script type="text/template" id="bantmpl">
+            <li class="headbnitem wel_head" data-url="{1}" data-desc="">
+                <img data-src="{0}" src="/css/img2.0/defaultbanner.png" />
+            </li>
+        </script>
+        <!--银行通知 -->
+        <div class="notice-wrap" id="notice-wrap" style="display:none;">
+            <div class="notice-horn">
+                <i class="n-horn-icon"></i>
+            </div>
+            <div class="close">
+                <i class="n-horn-close"></i>
+            </div>
+            <div class="content" id="content">
+            </div>
+        </div>
+        <!--平台用户投资-->
+        <div class="wel_usevest">
+            <div class="wel_useitem">
+                <div class="wel_usetitle"></div>
+                <div class="wel_usenum">
+                    0</div>
+            </div>
+            <div class="wel_useitem">
+                <div class="wel_usetitle"></div>
+                <div class="wel_usenum">
+                    0</div>
+            </div>
+        </div>
+        <!--广告位-->
+        <div class="wel_advert">
+            <!--<img class="wel_advoimg" src="/css/img2.0/1497436207.png" />-->
+            <!--<div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">签到抽奖</span>
+            </div>
+            <div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">竞猜活动</span>
+            </div>
+            <div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">签到抽奖</span>
+            </div>
+            <div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">签到抽奖</span>
+            </div>-->
+            <!--<div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">签到抽奖</span>
+            </div>
+            <div class="wel_advitem">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="/css/img2.0/financingIcon_selected@2x.png" />
+                </div>
+                <span class="wel_advtags">签到抽奖</span>
+            </div>-->
+        </div>
+        <script type="text/template" id="advsgtpl">
+            <img class="wel_advoimg" data-url="{1}" src="{0}" />
+        </script>
+        <script type="text/template" id="advmulttpl">
+            <div class="wel_advitem" data-url="{0}">
+                <div class="wel_advicon">
+                    <img class="wel_advliimg" src="{1}" />
+                </div>
+                <span class="wel_advtags">{2}</span>
+            </div>
+        </script>
+        <!--新手专区-->
+        <div id="wel_newprefecture" class="cls">
+            <div class="viewport">
+                <div class="flipsnap JS_allprefecture">
+                    <!-- <div class="wel_newnorm JS_newprefecture item">
+                        <div class="wel_norm_head JS_onetitle wel_remafter"></div>
+                        <div class="product_label right">
+                        
+                        </div>
+                        <div class="wel_flexcont">
+                            <div class="wel_box">
+                                <div class="wel_right">
+                                    <div class="qfax_rate">
+                                        <span class="wel_rate"><z>0</z><span class="wel_b brate" style="display:none">%</span><span class="wel_b wel_rateq ratedesc" style="display:none">起</span></span>
+                                        <span class="wel_rate aftrate" style="display:none">~<z>0.00</z><span class="wel_b arate arate" style="display:none">%</span></span>
+                                    </div>
+                                    <div class="wel_ratetext"></div>
+                                </div>
+                                <div class="wel_center">
+                                    <div class="wel_mainprate wel_actrate wel_arate"></div>
+                                </div>
+                                <div class="wel_left">
+                                    <div>
+                                        <span class="wel_day"><z>0</z><span class="wel_b zdatdesc"></span><span class="wel_b wel_dayq" style="display:none">起</span></span>
+                                        <span class="wel_day afterday" style="display:none">~<z>0</z><span class="wel_b zdatdesc">天</span></span>
+                                    </div>
+                                    <div class="wel_daytext"></div>
+                                </div>
+                            </div>
+                            <div class="wel_bottom">立即投资</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="pointer">
+                    <span class="current"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="JS_prefecture">
+            <div class="wel_newnorm JS_newprefecture item" onclick="{11}">
+                <div class="wel_norm_head JS_onetitle wel_remafter">{9}</div>
+                <div class="product_label right JS_product_label">
+                    {10}
+                    <!-- <span class="label_desc" style="color:{0};border-color:{2}">{1}</span> -->
+                </div>
+                <div class="wel_flexcont">
+                    <div class="wel_box">
+                        <div class="wel_right">
+                            <div class="qfax_rate">
+                                <span class="wel_rate {12}" data-desc="{13}"><z>{3}</z><span class="wel_b brate" style="display:none">%</span><span class="wel_b wel_rateq ratedesc" style="display:none">起</span></span>
+                                <span class="wel_rate aftrate" style="display:none">~<z>0.00</z><span class="wel_b arate arate" style="display:none">%</span></span>
+                            </div>
+                            <div class="wel_ratetext">{4}</div>
+                        </div>
+                        <div class="wel_center">
+                            <div class="wel_mainprate wel_actrate wel_arate">{5}</div>
+                        </div>
+                        <div class="wel_left">
+                            <div>
+                                <span class="wel_day"><z>{6}</z><span class="wel_b zdatdesc">{7}</span><span class="wel_b wel_dayq" style="display:none">起</span></span>
+                                <span class="wel_day afterday" style="display:none">~<z>0</z><span class="wel_b zdatdesc">天</span></span>
+                            </div>
+                            <div class="wel_daytext">{8}</div>
+                        </div>
+                    </div>
+                    <div class="wel_bottom">立即投资</div>
+                </div>
+            </div>
+        </script>
+        <!--主推产品-->
+
+        <div class="wel_newnorm wel_mainpush" style="display:none">
+            <div class="wel_norm_head wel_onetitle  wel_remafter br_bg"></div>
+            <div class="product_label right">
+                <!-- <i class="label_desc" style="color:#FFA6A4;border-color:#FFA6A4">最新产品</i>
+                <i class="label_desc" style="color:#FFBE8E;border-color:#FFBE8E">理财优选</i>
+                <i class="label_desc" style="color:#B2CEFB;border-color:#B2CEFB">营销类术语标签</i> -->
+            </div>
+            <div class="wel_onecont">
+                <div class="wel_oneleft">
+                    <div class="wel_onerate">
+                        <span class="zrate">
+                            <z>0</z>
+                            <span class="com_per">%</span>
+                        </span>
+                        <span class="aftrate act_30" style="display:none">~
+                            <z>0.00</z>
+                            <span class="com_per">%</span>
+                        </span>
+                        <div class="wel_mainprate wel_actrate"></div>
+                    </div>
+                    <div class="wel_onebtmtip wel_onelefttip"></div>
+                </div>
+                <div class="wel_oneright">
+                    <div class="wel_onedate">
+                        <z class="zdate">0</z>
+                        <z class="zdatdesc"></z>
+                    </div>
+                    <div class="wel_onebtmtip wel_onerighttip"></div>
+                </div>
+                <div class="wel_onebottom">立即投资</div>
+            </div>
+        </div>
+        <!--主推产品新样式-->
+        <div class="wel_newnorm wel_mainpush" style="display:none">
+            <div class="wel_norm_head wel_onetitle wel_remafter"></div>
+            <div class="product_label right">
+
+            </div>
+            <div class="wel_flexcont">
+                <div class="wel_box">
+                    <div class="wel_right">
+                        <div class="qfax_rate">
+                            <span class="wel_rate">
+                                <z>0</z>
+                                <span class="wel_b brate" style="display:none">%</span>
+                                <span class="wel_b wel_rateq ratedesc" style="display:none">起</span>
+                            </span>
+                            <span class="wel_rate aftrate" style="display:none">~
+                                <z>0.00</z>
+                                <span class="wel_b arate arate" style="display:none">%</span>
+                            </span>
+                        </div>
+                        <div class="wel_ratetext"></div>
+                    </div>
+                    <div class="wel_center">
+                        <div class="wel_mainprate wel_actrate wel_arate"></div>
+                    </div>
+                    <div class="wel_left">
+                        <div>
+                            <span class="wel_day">
+                                <z>0</z>
+                                <span class="wel_b zdatdesc"></span>
+                                <span class="wel_b wel_dayq" style="display:none">起</span>
+                            </span>
+                            <span class="wel_day afterday" style="display:none">~
+                                <z>0</z>
+                                <span class="wel_b zdatdesc">天</span>
+                            </span>
+                        </div>
+                        <div class="wel_daytext"></div>
+                    </div>
+                </div>
+                <div class="wel_bottom">立即投资</div>
+            </div>
+        </div>
+        <!-- <script type="text/template" id="mainpushtitle">
+            <span class="label_desc" style="color:{0};border-color:{2}">{1}</span>
+        </script> -->
+
+        <!--推荐-->
+        <div class="wel_newnorm wel_recomcont" style="margin-top:0;">
+            <div class="wel_norm_head wel_norm_title">优选理财</div>
+            <div class="new_nrecomlist">
+                <!--<div class="wel_recommed" data-url="{8}">
+                        <div class="wel_rectitle">{0}</div>
+                        <div class="wel_recrate">
+                            <div class="wel_recleft">{1}<span class="wel_rateg">%</span>{2}</div>
+                            <div class="wel_recright">
+                                <z class="wel_date">{3}</z>
+                                <span class="wel_stlimit">{4}</span>
+                            </div>
+                        </div>
+                        <div class="wel_rectips">
+                            <div class="wel_rectpsleft">
+                                {5}
+                            </div>
+                            <div class="wel_rectpsright">
+                                <span>{6}</span>
+                                <span class="wel_stlimit">{7}</span>
+                            </div>
+                        </div>
+                    </div>-->
+            </div>
+            <div class="com_bg wel_more" onclick="window.location.href='/html/product/index.html'">
+                <span class="wel_more_span">查看更多</span>
+            </div>
+        </div>
+        <script type="text/template" id="recomtpl">
+            <div class="wel_recommed" onclick="{8}">
+                <div class="wel_rectitle">{0}</div>
+                <div class="product_label" style="display:{13}">{12}</div>
+                <div class="wel_recrate">
+                    <div class="wel_recleft wwwll" data-desc="{14}">{1}<span class="wel_rateg" style="display:{9}">%{16}</span>{2}
+                        <div class="wel_recactrate wel_actrate" style="display:{11}">{10}</div>
+                    </div>
+                    <div class="wel_recright">
+                        <z class="wel_date">{3}</z>
+                        <span class="wel_stlimit">{4}</span>
+                    </div>
+                </div>
+                <div class="wel_rectips">
+                    <div class="wel_rectpsleft wwwll" data-desc="{15}">
+                        {5}
+                    </div>
+                    <div class="wel_rectpsright">
+                        <span>{6}</span>
+                        <span class="wel_stlimit">{7}</span>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/template" id="recomoretpl">
+            <z>~{0}<span class="wel_rateg">%{1}</span></z>
+        </script>
+        <!-- 小僧精选 -->
+        <div class="wel_newnorm wel_choiceness">
+            <div class="wel_choiceness_title"></div>
+            <ul class="rewardlist">
+                <li class="rightbor">
+                    <div class="tagsContainer"></div>
+                    <img class="proImg" src="" alt="">
+                    <h4 class="pro_tit"></h4>
+                    <div class="exchangeAmount">
+                        <span></span> 唐果
+                        <b></b>
+                    </div>
+                </li>
+                <li>
+                    <div class="tagsContainer"></div>
+                    <img class="proImg" src="" alt="">
+                    <h4 class="pro_tit"></h4>
+                    <div class="exchangeAmount">
+                        <span></span> 唐果
+                        <b></b>
+                    </div>
+                </li>
+            </ul>
+            <div class="com_bg wel_more" onclick="window.location.href='/html/store/welfare_center.html?category=physical'">
+                <span class="wel_more_span">查看更多</span>
+            </div>
+        </div>
+
+
+        <!--快速投资-->
+        <div class="wel_newnorm wel_fastcont" style="display:none">
+            <div class="wel_norm_head wel_remafter wel_fasterint">快速投资</div>
+            <div class="wel_fastinvst">
+                <div class="wel_fastul">
+                    <!--<div class="wel_fastli">
+                        <span>3个月以内</span>
+                        <div class="wel_fstrate">16.30%~17.80%</div>
+                    </div>
+                    <div class="wel_fastli">
+                        <span>3个月以内</span>
+                        <div class="wel_fstrate">16.30%~17.80%</div>
+                    </div>
+                    <div class="wel_fastli">
+                        <span>3个月以内</span>
+                        <div class="wel_fstrate">16.30%~17.80%</div>
+                    </div>-->
+                    <!--<div style="width: 18px;opacity: 0;">w</div>-->
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="fasttpl">
+            <div class="wel_fastli" onclick="window.location.href='{2}'">
+                <span>{0}</span>
+                <div class="wel_fstrate">{1}</div>
+            </div>
+        </script>
+        <!--底部banner-->
+        <div class="wel_newnorm wel_xscont">
+            <!--<div class="wel_xsnews btm">
+                <img class="btm_img" src="/css/img2.0/Bitmap@3x.png" />
+                <div class="btm_mask"></div>
+                <div class="wel_xsbtmtip">
+                    <span class="wel_txstitle">新手如何选择理财品</span>
+                    <div class="wel_xsstip">短期让资产涨不停</div>
+                </div>
+            </div>
+            <div class="wel_xsnews btm">
+                <img class="btm_img" src="/css/img2.0/welfare-ban.jpg" />
+                <div class="btm_mask"></div>
+                <div class="wel_xsbtmtip">
+                    <span class="wel_txstitle">新手如何选择理财品</span>
+                    <div class="wel_xsstip">短期让资产涨不停</div>
+                </div>
+            </div>
+            <div class="wel_xsnews btm">
+                <img class="btm_img" src="/css/img2.0/modtop.jpg" />
+                <div class="btm_mask"></div>
+                <div class="wel_xsbtmtip">
+                    <span class="wel_txstitle">新手如何选择理财品</span>
+                    <div class="wel_xsstip">短期让资产涨不停</div>
+                </div>
+            </div>-->
+        </div>
+        <script type="text/template" id="xsttpl">
+            <div class="wel_xsnews btm" data-url="{3}">
+                <img class="btm_img" src="{0}" />
+                <div class="btm_mask"></div>
+                <div class="wel_xsbtmtip">
+                    <span class="wel_txstitle">{1}</span>
+                    <div class="wel_xsstip">{2}</div>
+                </div>
+            </div>
+        </script>
+
+
+        <!--快速资讯-->
+        <div class="wel_newnorm wel_news">
+            <div class="wel_xsnews">
+                <img class="wel_xsicon" src="" />
+                <div class="wel_xstitle">
+                    <span class="wel_xssubtitle"></span>
+                    <div class="wel_xstag"></div>
+                </div>
+            </div>
+        </div>
+        <!--引导蒙版-->
+
+        <!-- <div class="mk_roll_show"></div>
+            <div class="bor_roll">
+                <img src="/css/img2.0/mk_roll2.png" alt="" class="yd_roll">
+                <img src="/css/img2.0/tip_img_mask.png" alt="" class="tip_mask">
+            </div>  
+             -->
+        <!--引导蒙版END-->
+    </div>
+    <div class="data-box" id="announcementmessage" style="display:none">
+        <div class="data-box1">
+            <h1 id="messagetitle"></h1>
+            <z id="MessageContent"></z>
+            <ul>
+                <li>唐小僧</li>
+                <li id="created"></li>
+            </ul>
+        </div>
+        <div class="data-box2" id="readmessage">我知道了</div>
+    </div>
+    <div class="reveal-modal" id="mt" style="display:none"></div>
+    <!--底部信息说明-->
+    <div class="wel_btm_newxp">
+        <div class="wel_btm_newleft" onclick="window.location.href='/html/anonymous/txsdisclosure.html'">
+            <div class="wel_btm_newicon wel_ndisc_icon"></div>
+            <div style="display:inline-block">
+                <h3 class="h3">信息披露</h3>
+                <div class="wel_btm_newtt">平台信息与动态</div>
+            </div>
+        </div>
+        <div class="wel_btm_newright" onclick="window.location.href='/html/anonymous/txssafetyguarantee.html'">
+            <div class="wel_btm_newicon wel_nsafe_icon"></div>
+            <div style="display:inline-block">
+                <h3 class="h3">安全保障</h3>
+                <div class="wel_btm_newtt">了解唐小僧</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="wel_btm_info" style="display:none" onclick="window.location.href = '/html/anonymous/about-index.html'">
+        <ul>
+            <li>
+                <div class="wel_btm_xp" style="display:inline-block;"></div>
+                <span style="display:inline-block;">严格甄选
+                    <br/>优质产品</span>
+            </li>
+            <li>
+                <div class="wel_btm_xp xp2" style="display:inline-block;"></div>
+                <span style="display:inline-block;">多层风控
+                    <br/>严格审核</span>
+            </li>
+            <li>
+                <div class="wel_btm_xp xp3" style="display:inline-block;"></div>
+                <span style="display:inline-block;">贴心服务
+                    <br/>便捷操作</span>
+            </li>
+        </ul>
+    </div> -->
+    <!--底部通用说明-->
+    <div class="wel_btm_com">
+        <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+            账户资金防盗安全由新浪支付和太平财险共同保障
+        </span>
+        <p>网贷有风险 出借需谨慎</p>
+    </div>
+
+
+    <div class="mask" style="z-index:999999;display:none;"></div>
+    <div class="q_fax">
+        <div class="q_content"> </div>
+        <div class="q_btn JS_qbtn">知道了，去看看</div>
+    </div>
+
+    <script src="/js/appendButtonBar.js"></script>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/utils/notice.js"></script>
+    <script src="/js/vendor/flipsnap.js"></script>
+    <script src="/js/pagejs/anonymous/welcome.js"></script>
+</body>
+
+</html>

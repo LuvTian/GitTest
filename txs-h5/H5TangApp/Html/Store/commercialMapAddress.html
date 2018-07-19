@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商户地址</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <style type="text/css">
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        #allmap {
+            height: 100%;
+            width: 100%;
+        }
+
+        #r-result {
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+</head>
+<body>
+    <div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    //---------百度地图API功能---------
+    var longitude = $.getQueryStringByName("longitude");
+    var latitude = $.getQueryStringByName("latitude");
+    var storename = $.getQueryStringByName("storename");
+    //var storeaddress = $.getQueryStringByName("storeaddress");
+    //var phone = $.getQueryStringByName("phone");
+    //var storedesclong = $.getQueryStringByName("storedesclong");
+    //var storeimagelogo = $.getQueryStringByName("storeimagelogo");
+    //storeaddress = decodeURI(storeaddress);
+    //storedesclong = decodeURI(storedesclong);
+    storename = decodeURI(storename);
+    //storeimagelogo = decodeURIComponent(storeimagelogo);
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(longitude, latitude);
+    map.centerAndZoom(point, 16);
+
+
+
+
+    //创建检索信息窗口对象
+    //var searchInfoWindow = null;
+    //searchInfoWindow = new BMapLib.SearchInfoWindow(map, '<div style="margin:0;line-height:20px;padding:2px;">' +
+    //                '<img src="' + storeimagelogo + '" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+    //                '地址：' + storeaddress + '<br/>电话：' + phone + '<br/>简介：' + $.Cutstring(storedesclong, 25, "..") + '</div>',
+    //    {
+    //        title: storename,      //标题
+    //        width: 290,             //宽度
+    //        height: 105,              //高度
+    //        panel: "panel",         //检索结果面板
+    //        enableAutoPan: true,     //自动平移
+    //        searchTypes: [
+    //            BMAPLIB_TAB_TO_HERE,  //到这里去
+    //            BMAPLIB_TAB_FROM_HERE, //从这里出发
+    //            BMAPLIB_TAB_SEARCH   //周边检索
+    //        ]
+    //    });
+    //var marker = new BMap.Marker(point); //创建marker对象
+    //marker.enableDragging(); //marker可拖拽
+    //marker.addEventListener("click", function (e) {
+    //    searchInfoWindow.open(marker);
+    //})
+    //map.addOverlay(marker); //在地图中添加marker
+    //searchInfoWindow.open(marker);
+
+    //创建标注
+    var marker = new BMap.Marker(point);// 创建标注
+    map.addOverlay(marker);             // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+    //获取信息窗口的信息
+    var sContent = decodeURI(storename);
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow, point); //开启信息窗口
+
+    //添加控件和比例尺
+    var top_left_control = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT });// 左上角，添加比例尺
+    var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+    var top_right_navigation = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL }); //右上角，仅包含平移和缩放按钮
+    /*缩放控件type有四种类型:
+	BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+
+    map.addControl(top_left_control);
+    map.addControl(top_left_navigation);
+    //map.addControl(top_right_navigation);
+
+    //隐藏发送到手机图标
+    $(".BMapLib_sendToPhone").hide();
+
+</script>

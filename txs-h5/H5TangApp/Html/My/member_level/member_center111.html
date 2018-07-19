@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>会员中心</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="/css/newbase.css">
+    <link rel="stylesheet" href="/css/member_center.css">
+    <script src="/js/vendor/fontsize.js"></script>
+</head>
+
+<body>
+    <div class="view">
+        <div class="center_head bojin_color">
+            <img src="/css/img2.0/member_level/level0.png" class="level_icon" />
+            <div class="progress_bar">
+                <span class="default_bar por_bar"></span>
+                <span class="por_bar current_bar bar_length"></span>
+                <span class="level_name"><i>普通</i><i>青铜</i><i>白银</i><i>黄金</i><i>铂金</i></span>
+            </div>
+            <div class="add_level">如何升级<img src="/css/img2.0/member_level/question_gray.png" class="ask_icon" /></div>
+        </div>
+        <div class="my_privilege">
+            <div class="privilege_title">
+                <span>我的特权</span>
+                <a href="#">全部会员特权<i class="arrow"></i></a>
+            </div>
+            <div class="my_list">
+                <div class="privilege_list cls">
+                    <img src="/css/img2.0/member_level/icon.png" />
+                    <div class="privilege_content">
+                        <div>
+                            <p class="gift_value">20元代金券</p>
+                            <p class="gift_name">首升礼</p>
+                        </div>
+                        <div class="gift_status">待发放</div>
+                    </div>
+                </div>
+            </div>
+             <div class="my_list">
+                <div class="privilege_list cls">
+                    <img src="/css/img2.0/member_level/icon.png" />
+                    <div class="privilege_content">
+                        <div>
+                            <p class="gift_value">20元代金券</p>
+                            <p class="gift_name">首升礼</p>
+                        </div>
+                        <div class="gift_status">待发放</div>
+                    </div>
+                </div>
+            </div>
+            <div class="normal">
+                <img src="/css/img2.0/member_level/wait.png" class="normal_wait" />
+                <p class="normal_tip">施主，小僧一直在等您升级</p>
+                <div class="normal_btn">我要升级</div>
+            </div>
+            <div class="normal test" style="display:none;">
+                <img src="/css/img2.0/member_level/wait.png" class="normal_wait" />
+                <p class="normal_tip">施主，小僧一直在等您升级</p>
+                <div class="normal_btn">我要升级</div>
+            </div>
+        </div>
+        <!--<div class="bottom">我要升级</div>-->
+    </div>
+    <div class="mask"></div>
+    <div class="member_win">
+        <div class="win_content">
+            <p class="win_text">恭喜施主荣升XX会员</p>
+            <img src="/css/img2.0/member_level/win_icon1.png" class="privilege_one" />
+            <div class="privilege_two">唐果20</div>
+            <!--<div class="privilege_three">代金券10000</div>-->
+            <div class="privilege_three"><img src="/css/img2.0/member_level/win_icon7.png" /></div>
+            <div class="privilege_forth">代金券10000元</div>
+            <!--<div class="privilege_five">加息券1%</div>-->
+            <div class="privilege_five"><img src="/css/img2.0/member_level/win_icon8.png" /></div>
+            <img src="/css/img2.0/member_level/win_icon6.png" class="privilege_six" />
+            <div class="share_btn">去炫耀</div>
+        </div>
+        <div class="close"><img src="/css/img2.0/member_level/win_close.png" /></div>
+
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/template.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {  
+                // alert("1");      
+                var $this = $(".view"),
+                            viewH = $(window).height(), //可见高度
+                            contentH = $(".view").height(), //内容高度
+                            scrollTop = $(window).scrollTop(); //滚动高度
+                        //if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容
+                       
+                if (((scrollTop+viewH) / contentH ) >= 1) { //到达底部100px时,加载新内容
+                           
+                    $(".test").show()       
+                }    
+            });
+        })
+    </script>
+</body>
+
+</html>

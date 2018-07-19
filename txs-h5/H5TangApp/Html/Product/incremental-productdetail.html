@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--产品名称-->
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/incremental-productdetail.css">
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section id="mainBody">
+        <article class="viewport">
+            <script id="product-header-tpl" type="text/html">
+                <div class="rate-tip">历史年化收益率</div>
+                <div class="rate">
+                    <%if(d.isbid){%>
+                        <%=d.currentrate%>%
+                            <%}else{%>
+                                <%=d.minrate%>~
+                                    <%=d.maxrate%>%
+                                        <%}%>
+                </div>
+                <div class="line-felx">
+                    <div class="item">
+                        <p>
+                            <%=d.leastdays%>天</p>
+                        <p>最短投资期限</p>
+                    </div>
+                    <% if(!d.isbid){%>
+                        <div class="item">
+                            <p>
+                                <%=d.amountmin%>
+                            </p>
+                            <p>起投金额</p>
+                        </div>
+                        <%}%>
+                            <div class="item" onclick="window.location.href='/html/product/productbidlist.html?id=<%=d.productid%>'">
+                                <p>
+                                    <%=d.bidcount%>人</p>
+                                <p>已投资</p>
+                            </div>
+                </div>
+                <div class="product-header-tip">
+                    <%=d.laddersaleintroduce%>
+                </div>
+            </script>
+            <header class="product-header" id="product-header">
+                <div class="rate-tip">历史年化收益率</div>
+                <div class="rate">0.00~0.00%</div>
+                <div class="line-felx">
+                    <div class="item">
+                        <p>0天</p>
+                        <p>最短投资期限</p>
+                    </div>
+                    <div class="item">
+                        <p>00.00</p>
+                        <p>起投金额</p>
+                    </div>
+                    <div class="item">
+                        <p>0人</p>
+                        <p>已投资</p>
+                    </div>
+                </div>
+                <div class="product-header-tip">持有越久,收益越高。</div>
+            </header>
+            <!--柱状图-->
+            <div class="bar-graph " id="bar-graph">
+            </div>
+            <script id="bar-graph-tpl" type="text/html">
+                <div class="bar-graph-tip">
+                    <%=data.fmodel.termtip%>
+                </div>
+                <%if(data.saletype=="98"|| (data.saletype=="97" && data.lastperiods>7 ) || (data.saletype=="96" && data.lastperiods>7) ) {%>
+                    <%for(var i=0,d=data.ladderratelist;i<d.length;i++){%>
+                        <%if(i==0 || i==1 || i==2|| i==3){%>
+                            <div class="bar-item">
+                                <span class="b-rate"><%=toFixed(d[i].ladderrate)%>%</span>
+                                <span class="bar bar<%=(i+1)%>"></span>
+                                <span class="b-stage">第<%=d[i].periods%><%=data.fmodel.unit%></span>
+                            </div>
+                        <%}else if(i==4){%>
+                            <div class="bar-item">
+                                <span class="b-rate rate-spc"><%=d[i].periods%><%=data.fmodel.unit%>后保持<%=toFixed(d[i].ladderrate,2)%>%</span>
+                                <span class="bar bar5 "></span>
+                                <span class="b-stage">第<%=d[i].periods%><%=data.fmodel.unit%></span>
+                            </div>
+                        <%} else if(i==5){%>
+                            <div class="bar-item width-spc1">
+                                <span class="b-rate"></span>
+                                <span class="bar bar5"></span>
+                                <span class="b-stage">第<%=d[i].periods%><%=data.fmodel.unit%></span>
+                            </div>
+                        <%} else if(i==6){%>
+                            <div class="bar-item bar-spc">
+                                <span class="bar ellipsis">••••••</span>
+                            </div>
+                            <div class="bar-item width-spc1">
+                                <span class="b-rate"></span>
+                                <span class="bar bar5"></span>
+                                <span class="b-stage">第<%=d[i].periods%><%=data.fmodel.unit%></span>
+                            </div>
+                        <%}%>
+                    <%}%>
+                <%}else{%>
+                    <%for(var i=0,d=data.ladderratelist;i<d.length;i++){%>
+                        <div class="bar-item">
+                            <span class="b-rate"><%=toFixed(d[i].ladderrate)%>%</span>
+                            <span class="bar bar<%=(i+1)%>"></span>
+                            <span class="b-stage">第<%=d[i].periods%><%=data.fmodel.unit%></span>
+                        </div>
+                    <%}%>
+                <%}%>
+                <%barAnimation()%>
+            </script>
+            <div id="allRightsContianer">
+                <ul class="privilege_list">
+                    <li>
+                        <div class="contian_product" style="">
+                            <!--售罄&赎回-->
+                            <div class="incomn"></div>
+                            <script id="time-line-tpl" type="text/html">
+                                <div class="product_fl_1">
+                                    <b>起息日</b>
+                                    <p id="product-profitstartday">
+                                        <%=d.profitstartday%>
+                                    </p>
+                                    <div class="cirle pro_before_bord"></div>
+                                </div>
+                                <div class="product_fl_1" style="">
+                                    <b>开放转出日</b>
+                                    <%if(d.fmodel.alert){%>
+                                        <p id="tip">
+                                            <%=d.ladderfreewithdrawaltime%><i class="tip"></i>
+                                        </p>
+                                    <%}else{%>
+                                        <p>
+                                            <%=d.ladderfreewithdrawaltime%>
+                                        </p>
+                                    <%}%>
+                                    <div class="cirle pro_before_bord64" style="left: 18%;"></div>
+                                </div>
+                                <div class="product_fl_1 txt_right clearfix">
+                                    <b>最长持有至</b>
+                                    <p id="product-profitendday">
+                                        <%=d.endprofittime%>
+                                    </p>
+                                    <div class="cirle sta_end fl_right"></div>
+                                </div>
+                            </script>
+
+                            <div class="progress_product" id="time-line">
+                            </div>
+                            <!--产品详情1期立即赎回-->
+                            <script id="product-rule-tpl" type="text/html">
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        回款方式
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span><%=d.typetext%></span>
+                                    </div>
+                                </a>
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        转出规则
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span><%=d.ladderwithdrawalrule%></span>
+                                    </div>
+                                </a>
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        到期规则
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span><%=d.ladderendrule%></span>
+                                    </div>
+                                </a>
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        是否可转
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span id="cantransfer"><%=d.cantransfer%></span>
+                                    </div>
+                                </a>
+                            </script>
+                            <div class="info_list incomn" id="product-rule">
+
+                            </div>
+                            <div class="info_list mar_bottom_05">
+                                <!--立即赎回-->
+                                <a class="info_list_item" id="invest-detail" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        投资详情
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span id="invest-amout">0.00</span>
+                                        <div class="arrow_icon">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!--立即赎回-->
+                                <a id="product-detail" class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        产品详情
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <div class="arrow_icon">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a id="product-xiangmuinfo" class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        项目介绍
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <div class="arrow_icon">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a id="product-active" class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        相关文件
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <div class="arrow_icon">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a id="arepayplan" class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        回款计划
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <div class="arrow_icon">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--产品详情立即赎回  无效代码-->
+                            <div class="info_list" id="redeem-detail" style="display:none;">
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        回款方式
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span id="typetexted">开发日赎回偿还本息，到期偿还本息</span>
+                                    </div>
+                                </a>
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        是否可转让
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span id="cantransfered">否</span>
+                                    </div>
+                                </a>
+                                <a class="info_list_item" href="javascript:void(0);">
+                                    <div class="product_fl_1 col_3 bor_bottom_f1">
+                                        产品评级
+                                    </div>
+                                    <div class="product_fl_1 bor_bottom_f1 arrow_right">
+                                        <span id="riskleveltext">否极低风险产品 <t>R1</t></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--账户资金安全-->
+                            <div class="wel_btm_com safty">
+                                <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+                          账户资金防盗安全由新浪支付和太平财险共同保障
+                      </span>
+                                <p>网贷有风险 出借需谨慎</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <a class="to_buy _toreduce_bg buyrest" id="product-buy" href="javascript:void(0);">
+        <div style="display: table-cell;vertical-align: middle;">
+            <p id="product-buy-link"></p>
+            <p id="product-countdown-timer-amount"></p>
+        </div>
+    </a>
+    <button class="to_buy" style="display: none">售  罄</button>
+    <!--售罄状态-->
+    <button class="to_buy _toreduce_bg" style="display: none;">立即赎回</button>
+    <!--赎回状态-->
+    <!-- 赎回弹框 -->
+    <div class="invest-mtk" id="invest-mtk" style="display: none;">
+        <h3>转出</h3>
+        <div class="invest-mtk-body invest-mtk-body2">
+            <div>
+                <p class="left">转出总额：</p>
+                <p class="right" id="total">0.00</p>
+            </div>
+            <div>
+                <p class="left">转出本金：</p>
+                <p class="right" id="capital">0.00</p>
+            </div>
+            <div>
+                <p class="left">转出收益：</p>
+                <p class="right" id="earnings">0.00</p>
+            </div>
+            <div>
+                <p class="left">已持有天数：</p>
+                <p class="right" id="holdingsdays">0.00</p>
+            </div>
+            <div>
+                <p class="left">本期收益率：</p>
+                <p class="right" id="currentladderrate">0.00</p>
+            </div>
+        </div>
+        <div class="paymentdate" id="paymentdate">预计到账日期为</div>
+        <div class="invest-mtk-footer">
+            <div class="left" id="cancel">取消</div>
+            <div class="right" id="ensure">确定</div>
+        </div>
+    </div>
+    <!-- 开放日说明 -->
+    <script id="openHouse-tpl" type="text/html">
+        <h3>开放日说明</h3>
+        <p class="invest-head"><%=d.opendateintroducehead%></p>
+        <div class="invest-mtk-body ">
+            <div class="thead">
+                <p>周期</p>
+                <p>开放日</p>
+            </div>
+            <div class="tbody">
+            <% for(var i=0;i<d.opendaylist.length;i++){%>
+                <div>
+                    <p>第<%=(d.opendaylist[i].Period)%><%=d.fmodel.unit2%></p>
+                    <p><%=d.opendaylist[i].OpenDate%></p>
+                </div>
+                <%}%>
+            </div>
+        </div>
+        <div class="invest-mtk-footer">
+            <div id="closeOpenHouse">关闭</div>
+        </div>
+    </script>
+    <div class="invest-mtk openhouse" id="open-house" style="display:none">
+    </div>
+
+
+    <div class="mask" style="display:none"></div>
+    <div class="rule-tip rule1" style="display:none">
+        <div class="question q1result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule2" style="display:none">
+        <div class="question q2result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule3" style="display:none">
+        <div class="question q3result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule4" style="display:none">
+        <div class="question q4result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule5" style="display:none">
+        <div class="question q5result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span>
+                <br />
+            </div><br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/vendor/template.js"></script>
+    <script type="text/javascript" src="/js/pagejs/product/incremental-productdetail.js"></script>
+</body>
+
+</html>

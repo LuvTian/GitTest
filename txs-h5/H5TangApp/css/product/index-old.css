@@ -1,0 +1,215 @@
+.cls:after {
+  display: block;
+  content: '';
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+.arrow_icon i {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999 ;
+  -webkit-transform: rotate(45deg) translateY(0.2rem);
+  transform: rotate(45deg) translateY(0.2rem);
+}
+.view {
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 1.4rem;
+}
+.product_current {
+  background-color: #fff;
+  margin-top: 0.412rem;
+  padding: 0.512rem 0.682667rem;
+  background: #fff url("/css/img2.0/sengcaibao/zhizunbao_bg.png") no-repeat 8.694667rem bottom;
+  background-size: 30%;
+}
+.new_product_current {
+  padding: 0.312rem 0 0;
+}
+.product_list_title {
+  margin-bottom: 0.282667rem;
+}
+.product_list_title strong {
+  font-size: 0.682667rem;
+  color: #333333;
+  font-weight: 500;
+  width: 5.845333rem;
+  display: inline-block;
+}
+.product_list_title span {
+  font-size: 0.512rem;
+  color: #9b9b9b;
+}
+.current_list {
+  display: flex;
+  display: -webkit-flex;
+  min-height: 4rem;
+}
+.current_list li {
+  flex: 1;
+  -webkit-flex: 1;
+}
+.current_list li p {
+  font-size: 0.597333rem;
+  color: #333333;
+}
+.current_price {
+  font-size: 1.28rem;
+  color: #f43f3f;
+  line-height: 1;
+  display: block;
+  margin-top: 0.64rem;
+  margin-bottom: 0.426667rem;
+}
+.rate_text {
+  font-size: 0.426667rem;
+  color: #9b9b9b;
+  display: block;
+}
+.regular {
+  background-color: #fff;
+  margin-top: 0.412rem;
+  padding: 0.312rem 0 0;
+  min-height: 9.6rem;
+  overflow: hidden;
+}
+.regular_title {
+  position: relative;
+  padding-bottom: 0.354667rem;
+  padding-left: 0.682667rem;
+}
+.regular_title:after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.regular_list {
+  padding: 0.4rem 0 0.4rem 0.597333rem;
+  margin: 0.025333rem 0 0 0.682667rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  position: relative;
+  min-height: 2.0rem;
+}
+.regular_list:after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.regular_list li {
+  flex: 1;
+  -webkit-flex: 1;
+  min-width: 20%;
+}
+.regular_list li:nth-child(2) {
+  padding-left: 0.938667rem;
+}
+.regular_list:last-child {
+  border: none;
+}
+.jiejieseng .regular_list:after,
+.product_current .regular_list:after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.jiejieseng_bg {
+  background: url(/css/img2.0/sengcaibao/zhouzhouseng_bg.png) no-repeat 8.694667rem bottom;
+  background-size: 30%;
+}
+.regular_style strong {
+  font-size: 0.597333rem;
+  color: #333333;
+  font-weight: 500;
+  display: inline-block;
+}
+.quantity {
+  display: inline-block;
+  width: 1.066667rem;
+  height: 0.768rem;
+  line-height: 1.6;
+  font-size: 0.5rem;
+  color: #4A90E2;
+  background: url(/css/img2.0/sengcaibao/num_icon.png) no-repeat;
+  background-size: contain;
+  margin-right: 1.024rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.quantity_icon {
+  text-align: right;
+  padding-right: .682667rem;
+}
+.rate_percent {
+  font-size: 0.768rem;
+  color: #fb6149;
+  margin-top: 0.213333rem;
+}
+.realization {
+  background-color: #fff;
+  margin-top: 0.412rem;
+  padding: 0.312rem 0.682667rem;
+}
+.realization .product_list_title {
+  margin-bottom: .282667rem;
+  margin-top: .3rem;
+}
+.realize {
+  float: left;
+}
+.realize_icon {
+  display: block;
+  float: right;
+}
+.headheight {
+  max-height: 4.694rem;
+  min-height: 4.694rem!important;
+}
+.jiejieseng {
+  background-color: #fff;
+  margin-top: 0.412rem;
+  padding: .312rem 0 0;
+}
+.wel_nlogo {
+  position: absolute;
+  width: 1.45rem;
+  height: .64rem;
+  background-image: url(/css/img2.0/newlogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-left: .17066666666666666rem;
+}
+.JS_regular_title {
+  margin-bottom: 0;
+}
+.regular_list:last-child:after {
+  border: none;
+}

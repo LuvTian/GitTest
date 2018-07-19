@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <title>投资排行</title>
+  <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link href="/css/finances.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+  <div id="inrankingpage">
+    <div class="btn">
+      <div class="row">
+        <div class="small-6 columns bor-bottom az-text-center" id="btn1">投资用户</div>
+        <div class="small-6 columns bor-bottom az-text-center botr" id="btn2">推荐用户</div>
+      </div>
+    </div>
+    <div class="tj">
+      <p class="info">
+        <span class="az-text-left">王小双</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+    </div>
+    <div class="tz">
+      <p class="info">
+        <span class="az-text-left">王小双2</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双2</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+      <p class="info">
+        <span class="az-text-left">王小双2</span>
+        <span class="az-right col-e">150****4152</span>
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation()
+  </script>
+  <script>
+   $(function(){
+    $("#btn1").click(function(){
+      $(".tz").css("display","block");
+      $(".tj").css("display","none");
+      $("#btn2").removeClass("botr");
+      $(this).addClass("botr");
+      })
+    $("#btn2").click(function(){
+      $(".tz").css("display","none");
+      $(".tj").css("display","block");
+      $("#btn1").removeClass("botr");
+      $(this).addClass("botr");
+      })
+   })
+  </script>
+</body>
+</html>

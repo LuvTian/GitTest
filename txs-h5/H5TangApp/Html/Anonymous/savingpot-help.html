@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>僧财宝</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances2.css">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section>
+        <article class="viewport">
+            <div style="font-size:1.333rem;padding:3rem 1.5rem 0 1.5rem;">
+                <h3>
+                    Q：什么是<z class="scb"></z>？
+                </h3>
+                <p style="color:#979797">
+                    A：<z class="scb"></z>是一款低风险、随存随取的基金理财产品。把钱<z class="depositbtntext"></z><z class="scb"></z>，相当于购买了汇添富现金宝货币基金。收益自动发放到<z class="scb"></z>账户中，每天收益计入本金，享受复利收益。资金1分起存，随存随取，天天计息，日日复利。目前通过使用<z class="scb"></z>申购和赎回汇添富现金宝货币的开放时间正常情况下为每个自然日7*24小时，如遇国家法定节假日等情形，可能暂停申购，具体以汇添富基金管理股份有限公司的相关公告和规则为准。
+                </p>
+            </div>
+            <div style="font-size:1.333rem;padding:3rem 1.5rem 0 1.5rem;">
+                <h3>
+                    Q：<z class="scb"></z><z class="depositbtntext"></z>收益如何计算？
+                </h3>
+                <p style="color:#979797">
+                    A：交易日（股市交易市场开放时间）15 点前<z class="depositbtntext"></z>，下一交易日开始计算收益（遇双休、节假日顺延）。
+                </p>
+            </div>
+            <div style="font-size:1.333rem;padding:3rem 1.5rem 0 1.5rem;">
+                <h3>
+                    Q：<z class="scb"></z><z class="withdrawbtntext"></z>收益如何计算？
+                </h3>
+                <p style="color:#979797">
+                    交易日当天15:00 前<z class="withdrawbtntext"></z>，则不享受交易日当天的收益；如果是交易日当天15:00 后<z class="withdrawbtntext"></z>，则享受交易日当天的收益。
+                </p>
+            </div>
+            <a id="savingdetail" href="javascript:void(0);" style="float: right;padding-right: 3rem;padding-top: 1.5rem;font-size: 1.333rem;color:#503AFD">查看收益详情</a>
+        </article>
+    </section>
+    <article class="bg-black display-none"></article>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript">
+        var type = $.getQueryStringByName("type");
+        if (!$.isNull(type)) {
+            type = type.toLocaleLowerCase();
+        }
+        $(function () {
+            $.sengcaibaobtntext(function (d) {
+                $(".depositbtntext").html(d[0]);
+                $(".withdrawbtntext").html(d[1]);
+                $(".basic").html(d[2]);
+                $(".scb").html(d[3]);
+                $.UpdateTitle(d[3]);
+            });
+            $("#savingdetail").click(function () {
+                if (type == "ios") {
+                    //JS 调用本地分享方法
+                    PhoneMode.jumpAppWithString({ 'controller': 'MoneyBoxListViewController' });
+                } else if (type == "android") {
+                    //JS 调用本地分享方法
+                    window.PhoneMode.callToPage("PiggyBankReturnsActivity", "");
+                } else {
+                    window.location.href = "/Html/My/savingpot-detail.html";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

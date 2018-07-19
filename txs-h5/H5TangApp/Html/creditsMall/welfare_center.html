@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>福利中心</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/points.css">
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="view" id="move_up">
+		<ul class="welfare_tab JS_tab">
+			<li><span class="tab_current">小僧精选</span></li>
+			<li><span>小僧礼券</span></li>
+		</ul>
+		<div class="welfare_content">
+		<!--小僧精选-->
+			<div class="welfare_choice" >
+				<!-- <a href="choice_detail.html" class="list_a">
+					<div class="choice_list cls">
+						<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+							<div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+						</div>
+				    </div>
+				</a>
+				<a href="choice_detail.html" class="list_a">
+					<div class="choice_list cls">
+						<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+							<div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+						</div>
+				    </div>
+				</a>
+				<a href="choice_detail.html" class="list_a">
+					<div class="choice_list cls">
+						<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+							<div class="change_icon"><img src="/css/img2.0/pointImg/sellout.png"></div>
+						</div>
+				    </div>
+				</a>
+				<a href="choice_detail.html" class="list_a">
+					<div class="choice_list cls">
+						<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+							<div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+						</div>
+				    </div>
+				</a>
+				<a href="choice_detail.html" class="list_a">
+					<div class="choice_list cls">
+						<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+							<div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+						</div>
+				    </div>
+				</a>
+				
+				<p class="more_product">上拉查看更多商品</p> -->
+
+			</div>
+			<script type="test/html" id="welfare_choice">
+				<% if (list.length > 0) {%>
+					<% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					%>
+                      
+							<div class="choice_list cls">
+							<a href="choice_detail.html?category=physical&id=<%=item.id%>" class="list_a">
+								<img src=<%=item.homepageImgUrl%> class="list_pic">
+								<div class="intro">
+									<p class="intro_title"><%=item.name%></p>
+									<p class="intro_content"><span class="point_color"><%=item.pointPayAmount%></span>唐果</p>
+									<p class="intro_content">市场参考价： <%=item.marketPrice%> 元</p>
+								</div>
+								 </a>
+								 
+                                    <%if (item.inventory >0) {%>
+                                    	<div class="change_icon" onClick="exchange('<%=item.name%>','<%=item.pointPayAmount%>','<%=item.id%>','<%=item.marketPrice
+%>','<%=item.itemType%>')">
+									       <img src="/css/img2.0/pointImg/convert.png">
+									    </div>
+									<%}else{%>
+										<div class="change_icon">
+									        <img src="/css/img2.0/pointImg/sellout.png">	
+									    </div>
+									<%}%>
+									
+						    </div>
+					 
+					<%}%>
+				<% }%>
+			</script>
+		<!--小僧福利-->
+			<div class="welfare_profit" style="display:none;">
+				<!-- <a href="choice_detail.html" class="list_a">
+					<div class="profit_list out_bg_movie">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <p class="profit_content"><span class="point_color">3000</span>唐果</p>
+						</div>
+	                    <div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+				    </div>
+				</a>
+				<a href="choice_detail.html" class="list_a">
+					<div class="profit_list out_bg_coupon">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <p class="profit_content"><span class="point_color">3000</span>唐果</p>
+						</div>
+	                    <div class="change_icon"><img src="/css/img2.0/pointImg/convert.png"></div>
+				    </div>
+				</a> -->
+				<script type="test/html" id="welfare_profit">
+					<% if (list.length > 0) {%>
+                       <% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					   %>
+					      
+							<div class="profit_list 
+							<% if (item.itemType == "FINANCIAL"){%>
+								inner_bg_fund
+							<%} else if (item.itemType == "INTEREST"){//代金券%>
+								inner_bg_coupon
+							<%} else if (item.itemType == "CINEMA_TICKET") {%>//电影票
+							    out_bg_movie
+							<%} else if (item.itemType == "PHONE_TRAFFIC") {%>//流量
+								out_bg_data
+							<%} else if (item.itemType == "COUPON") {%>//加息券
+								inner_bg_voucher
+							<%}%>
+							">
+							<a href="profit_detail.html?category=virtual&id=<%=item.id%>" class="list_a">
+								<span class="profit_money"><%=item.virtualAmount%><%=item.unit%></span>
+								<div class="profit_intro">
+									<p class="profit_title"><%=item.name%></p>
+			                        <p class="profit_content"><span class="point_color"><%=item.pointPayAmount%></span>唐果</p>
+								</div>
+			                  </a>
+			                  <div class="change_icon">
+									<%if (item.inventory >0) {%>
+                                    	<div class="change_icon" onClick="exchange('<%=item.name%>','<%=item.pointPayAmount%>','<%=item.id%>','<%=item.marketPrice
+%>','<%=item.itemType%>')">
+									       <img src="/css/img2.0/pointImg/convert.png">
+									    </div>
+									<%}else{%>
+										<div class="change_icon">
+									        <img src="/css/img2.0/pointImg/sellout.png">	
+									    </div>
+									<%}%>
+			                    </div>
+						    </div>
+						
+					   <%}%>
+					<%}%>
+				</script>
+				<!-- <p class="more_product">上拉查看更多商品</p> -->
+			</div>
+		</div>
+	</div>
+	<script src="/js/vendor/jquery.js" type="text/javascript"></script>
+	<script src="/js/vendor/template.js" type="text/javascript"></script>
+	<script src="/js/common.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/welfare_center.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/exchange.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			
+		})
+	</script>
+</body>
+</html>

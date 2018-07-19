@@ -1,0 +1,327 @@
+.timeDeposit-info .top-mod .row2 .da {
+    color: #c6c6c6;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: 2rem;
+}
+
+.timeDeposit-info .info_list_jl span.m1 {
+    width: 80%;
+    color: #979797;
+    font-size: 1.3rem;
+}
+
+.timeDeposit-info .top-mod .row3 div {
+    color: #C34949;
+}
+
+.timeDeposit-info .info_list_jl span.m1 i {
+    color: #C54846;
+}
+
+.timeDeposit-info .info_list.qixi {
+    background-color: #f7f7f7;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    overflow: hidden;
+    margin-top: .65rem;
+    color: #979797;
+}
+
+.timeDeposit-info .info_list.qixi p {
+    color: #444;
+}
+
+.timeDeposit-info .info_list li.anquan {
+    margin: .65rem 0;
+}
+
+.timeDeposit-info .info_list {
+    margin-top: 0;
+}
+
+.timeDeposit-info .info_list li span.m1 {
+    color: #444;
+}
+
+.timeDeposit-info .info_list li span.m1 img {
+    vertical-align: text-bottom;
+}
+
+.timeDeposit-info .info_list li span {
+    color: #979797;
+}
+
+.timeDeposit-info .info_list li span.m1 i {
+    color: #37A1ED;
+    background-color: #f6f6f6;
+    border-radius: 7px;
+    padding: 0rem .6rem;
+    font-weight: 500;
+    margin-left: .6rem;
+    border: 1px solid #37A1ED;
+}
+
+.timeDeposit-info .info_list li span.m2 {
+    color: #444;
+}
+
+
+/*.timeDeposit-info .timeDeposit_sh_btn_s1 .p1{    font-size: 1.8rem;height: 4rem;line-height: 4rem;	}*/
+
+.timeDeposit-info .info_list li span.protection {
+    float: initial;
+}
+
+.safe {
+    text-align: center;
+    margin: 2rem 0;
+    overflow: hidden;
+    padding: 0 9vw;
+}
+
+.safe .small-4 {
+    color: #444;
+}
+
+.safe .small-4 img {
+    width: 3.7rem;
+    margin-bottom: 1rem;
+}
+
+.safe p {
+    color: #444;
+    font-size: 1.19rem
+}
+
+.timeDeposit-info .top-mod {
+    position: relative;
+}
+
+.timeDeposit-info .top-mod>a {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}
+
+.mask {
+    width: 100%;
+    background-color: #444;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    opacity: .6;
+}
+
+.mtk {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 30;
+}
+
+.mtk .weixin {
+    padding: 2rem;
+    border-bottom: 2px solid #EBECF4;
+    overflow: hidden;
+}
+
+.mtk .weixin .left {
+    text-align: center;
+    margin-right: 3rem;
+}
+
+.mtk .quxiao {
+    text-align: center;
+    color: #C54846;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.mtk2 {
+    position: relative;
+    z-index: 30;
+}
+
+.mtk2>i {
+    position: absolute;
+    right: 6vw;
+    top: -.3vw;
+    border: .6rem solid transparent;
+    border-bottom-color: #FEAE00;
+    z-index: 20;
+}
+
+.mtk2>div {
+    position: absolute;
+    top: 3vw;
+    right: 4.5vw;
+    z-index: 20;
+    width: 2rem;
+    color: #fff;
+    height: 10rem;
+    background: #FEAE00;
+    border-right: 1px solid #fff;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.timeDeposit-info .info_list_jl {
+    background-color: #FEF3D3;
+}
+
+.info_list li {
+    font-size: 1.2rem!important
+}
+
+
+/*安全保障*/
+
+.insurance {
+    font-size: 1.4rem;
+    padding: 2rem 1rem 1rem;
+    background-color: #F7F7F7;
+    margin-bottom: .5rem;
+}
+
+.insurance>div {
+    font-size: 1.2rem;
+    color: #979797;
+    border-top: 1px solid #E4E4E4;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+
+/*product-detail*/
+
+.header-detail {
+    overflow: hidden;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #979797;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #E4E4E4;
+}
+
+.header-detail>div.active {
+    color: #444;
+    border-bottom: 2px solid #C54846;
+}
+
+.header-detail>div {
+    padding: 1rem 0;
+}
+
+.insurance-header {
+    font-size: 1.4rem;
+    padding: 2rem 1rem 1rem;
+    background-color: #F7F7F7;
+}
+
+.insurance-div {
+    font-size: 1.2rem;
+    color: #979797;
+    border-top: 1px solid #E4E4E4;
+    padding: 2rem 1rem 1rem;
+    margin-bottom: .5rem;
+    background-color: #F7F7F7;
+    overflow: hidden;
+}
+
+.insurance-div .small-4 {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border: 1px solid #EFEFEF;
+    margin-right: 1vw;
+    text-align: center;
+    line-height: 30vw;
+    font-size: 1.6rem;
+}
+
+.insurance-div .small-4:last-child {
+    margin-right: 0;
+}
+
+.insurance-div .small-4 span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 2rem;
+    background-color: #979797;
+    color: #fff;
+    padding: 0 .6rem;
+    font-size: 1.2rem;
+}
+
+.plan {
+    font-size: 1.2rem;
+    color: #979797;
+}
+
+.plan .head {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    margin-bottom: .5rem;
+    overflow: hidden;
+}
+
+.plan .capital {
+    color: #444;
+    border-right: 1px solid #979797;
+    line-height: 3rem;
+}
+
+.plan .capital p {
+    color: #979797;
+}
+
+.plan .income {
+    color: #444;
+    padding-left: 2rem;
+    line-height: 3rem;
+}
+
+.plan .income p {
+    color: #979797;
+}
+
+.plan ul li {
+    padding: 1rem;
+    border-bottom: 1px solid #E4E4E4;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.plan ul li:first-child {
+    color: #444;
+}
+
+.file {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f7f7f7;
+}
+
+.file img {
+    width: 90%;
+}
+
+.mar-top {
+    margin-top: .65rem;
+}
+
+#product-transferlockday img {
+    width: 7%;
+    margin-left: 5px
+}
+
+.m1 t {
+    color: #979797
+}

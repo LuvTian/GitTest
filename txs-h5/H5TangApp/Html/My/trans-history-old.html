@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>交易记录</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <style>
+        .gray {
+            color: #999999;
+        }
+        
+        .red {
+            color: #F25D50;
+        }
+        
+        .green {
+            color: #00AA6C;
+        }
+        
+        .tlname p.oh {
+            font-size: 1.22rem;
+            color: #333333;
+        }
+        
+        .tlname .small-7 .gray {
+            font-size: 1.05rem;
+        }
+        
+        .line-h {
+            line-height: 4.4rem;
+        }
+        
+        .dealrecord-list .mb,
+        .dealrecord-list p,
+        .dealre-nav .dealre-list a {
+            font-size: 1.22rem;
+        }
+        
+        .borb:after {
+            display: block;
+            height: 1px;
+            border-bottom: 1px solid #E7E7E7;
+            transform: scaleY(.5);
+            -webkit-transform: scaleY(.5);
+            position: absolute;
+            bottom: 0;
+            content: ' ';
+            left: 0;
+            right: 0;
+        }
+        
+        .finances-nav a {
+            display: block;
+            float: left;
+            line-height: 4rem;
+            height: 4rem;
+            width: 50%;
+            text-align: center;
+            color: #333333;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.4rem;
+        }
+        
+        .finances-nav .active a {
+            color: #F25D50;
+        }
+        
+        .finances-nav .active a:before {
+            height: 3px;
+            background: #F25D50;
+        }
+        
+        .finances-nav {
+            background: #FFFFFF;
+            height: 4rem;
+            overflow: hidden;
+            font-size: 1.4375rem;
+        }
+        
+        .bg-white {
+            background: #FFFFFF;
+            padding: 0.9375rem;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            color: #444;
+        }
+        
+        .tabs-content {
+            margin: 0;
+            margin-top: 12px;
+        }
+        
+        .bg-gray {
+            background: rgb(247, 247, 247);
+        }
+        
+        .content .tabs-content {
+            background: rgb(247, 247, 247);
+        }
+        
+        .fz {
+            font-size: 1.22rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content">
+        <article class="viewport dealrecord-list ">
+            <ul class="finances-nav transhistory-nav" data-tab>
+                <li class="tab-title active"><a href="#panel0">全部</a></li>
+                <li class="tab-title"><a href="#panel1" id="deposit">充值</a></li>
+                <li class="tab-title"><a href="#panel2" id="withdraw">提现</a></li>
+                <li class="tab-title"><a href="#panel3">投资</a></li>
+                <li class="tab-title"><a href="#panel4">赎回</a></li>
+            </ul>
+            <!--<article class="bg-white">
+                <div class="small-6 left">交易项</div>
+                <div class="small-6 left text-right">交易金额</div>
+            </article>-->
+            <div class="tabs-content">
+
+                <article id="panel0" class="content active" data-transtype="0">
+                    <!--<article class="bg-white bt tlname">
+                        <div class="small-7 left">
+                            <p class="oh" style="color:#4198F6"><a href="savingpot-help.html" style="color:#4198F6">存钱罐收益？</a></p>
+                            <span class="gray" style="font-size:1.2rem;">2016/07/07 19:51</span>
+                        </div>
+                        <div class="small-5 left text-right">
+                            <p class="red">+1.34</p>
+                            <span class="gray">余额：1000.00</span>
+                        </div>
+                    </article>-->
+                    <article class="mb8  translist tlname"></article>
+                </article>
+                <article id="panel1" class="content" data-transtype="1">
+                    <article class="mb8  translist tlname"></article>
+                </article>
+                <article id="panel2" class="content" data-transtype="2">
+                    <article class="mb8  translist tlname"></article>
+                </article>
+
+                <article id="panel3" class="content" data-transtype="3">
+                    <article class="mb8  translist tlname"></article>
+                </article>
+
+                <article id="panel4" class="content" data-transtype="4">
+                    <article class="mb8  translist tlname"></article>
+                </article>
+            </div>
+
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/trans-history.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+#gameList li {
+    background: #fff;
+    margin-top: .512rem;
+    padding: .64rem;
+}
+
+#gameList li img {
+    width: 100%;
+    display: block;
+}
+
+#gameList li p {
+    margin-top: .426667rem;
+    font-size: .512rem;
+    color: #333333;
+}
+
+#gameList li p span{
+    float: right;
+}
+#gameList li p span b{
+    color:#ff4949;
+}

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每日收益</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/commercial.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobiscroll.core-2.5.2.css">
+    <link href="/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css">
+    <link href="/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css">
+    <style>
+        .bb:last-child {
+            border: none;
+        }
+        .small-3 {
+            width: 24%;
+        }
+    </style>
+</head>
+<body class="bg-f0">
+    <article class="mar-t15 bg-white padd-15 padding-b0">
+        <p class="col-9 padd-b15 bb fz-15">您共计邀请了<span id="count">0</span> 位用户注册唐小僧，产生投资行为的用户可获取用户投资额度年化<span id="rate">0.5</span> % 的收益。</p>
+        <div class="row padd-tb15">
+            <div class="small-6 columns az-padding0 col-3 fz-15">
+                累计获得收益（元）:
+            </div>
+            <div id="totalprofit" class="small-6 columns az-padding0 fz-15 col-e60012 az-text-right">
+            </div>
+        </div>
+        <div class="row padd-b15">
+            <div class="small-6 columns az-padding0 col-3 fz-15">
+                昨日获得收益（元）:
+            </div>
+            <div id="yesterdayprofit" class="small-6 columns az-padding0 fz-15 col-e60012 az-text-right">
+            </div>
+        </div>
+    </article>
+    <article class="mar-t15 bg-white padd-lr15 padd-b1">
+        <p class="col-3 fz-15 padd-tb1">日期范围：</p>
+        <div class="row">
+            <div class="small-5 columns az-padding0 az-positionr">
+                <input type="tel" class="databox col-3 fz-15" id="check1" placeholder="点击选择日期">
+                <icon class="wechat icon-date dataicon-ab" id="check1-icon"></icon>
+            </div>
+            <div class="small-2 columns col-3 fz-15 az-padding0 az-text-center">至</div>
+            <div class="small-5 columns az-padding0 az-positionr">
+                <input type="tel" class="databox col-3 fz-15" id="check2" placeholder="点击选择日期">
+                <icon class="wechat icon-date dataicon-ab" id="check2-icon"></icon>
+            </div>
+        </div>
+        <a id="btnsearch" href="javascript:void(0);" class="commercial-btn">查 询</a>
+    </article>
+    <article id="listdata" class="mar-t15 bg-white padd-lr15 padd-b1">
+        <p class="col-3 fz-15 padd-tb1">最近推荐收益</p>
+        <div class="row bb padd-b1">
+            <div class="small-3 columns az-padding0 az-text-left col-9">日期</div>
+            <div class="small-3 columns az-padding0 az-text-center col-9">当日首投数</div>
+            <div class="small-3 columns az-padding0 az-text-center col-9">当日在投数</div>
+            <div class="small-3 columns az-padding0 az-text-right col-9" style=" width: 26%;">当日收益(元)</div>
+        </div>
+    </article>
+    <p class="col-9 fz-15 padd-tb1 az-text-center">收益经过四舍五入计算，可能存在微小偏差</p>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/mobiscroll.core-2.5.2.js"></script>
+    <script src="/js/mobiscroll.core-2.5.2-zh.js"></script>
+    <script src="/js/mobiscroll.datetime-2.5.1.js"></script>
+    <script src="/js/mobiscroll.datetime-2.5.1-zh.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/dailyincomeindex.js"></script>
+</body>
+</html>

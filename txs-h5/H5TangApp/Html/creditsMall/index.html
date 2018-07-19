@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>唐果商城</title>
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/index.css">
+</head>
+<body>
+	<div id="mainBody">
+		<section id="memberInfoContainer">
+			<div id="location"><a href="/html/store/choosecity.html"><i class="locationIcon"></i><span id="city">选择城市</span></a></div>
+			<div id="credits"><a href="/html/anonymous/login.html">请登录</a></div>
+		</section>
+		<section id="advertisementContainer">
+			<img src="/css/img2.0/pointImg/shzmz.png">
+			<i class="close"></i>
+		</section>
+		<section id="selectedContainer">
+			<div class="title">
+				<span>小僧精选</span>
+				<a class="more" href="/Html/creditsMall/welfare_center.html?category=physical">更多</a>
+			</div>
+			<ul id="selectedItems">
+			</ul>
+			<div class="clearfix"></div>
+		</section>
+		<section id="gamesContainer">
+			<a href="/Html/creditsMall/convert_record.html?category=physical"><img src="/css/img2.0/pointImg/icon3.png"><span>兑换记录</span></a>
+			<a href="javascript:;" id="agame"><img src="/css/img2.0/pointImg/icon4.png"><span>幸运西游机</span></a>
+			<a href="javascript:;" id="happy-rock"><img src="/css/img2.0/pointImg/icon5.png"><span>开心摇一摇</span></a>
+		</section>
+		<section id="welfareContainer">
+			<div class="title">
+				<span>小僧礼券</span>
+				<a class="more" href="/Html/creditsMall/welfare_center.html?category=virtual">更多</a>
+			</div>
+			<div class="welfare_profit" style="">
+			</div>
+		</section>
+		<section id="neighbouringWelfareContainer">
+			<div class="title">
+				<span>附近福利</span>
+				<a class="more" href="javascritp:;" style="margin-right: 0.682667rem;">更多</a>
+			</div>
+			<ul id="neighbouringWelfares">
+				<!-- <li>
+					<img class="neighbouringWelfare_img" src="/css/img2.0/pointImg/20170329170434.png">
+					<div class="neighbouringWelfare_desc">
+						<dl>
+							<dt class="neighbouringWelfare_name">
+								普乐迪量贩式KTV 
+								<span class="neighbouringWelfare_distance">6.2km</span>
+							</dt>
+							<dt class="neighbouringWelfare_price">
+								价值 <span class="priceColor">30 元</span>
+								<span class="neighbouringWelfare_salesNum">已出3495件</span>
+							</dt>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<img class="neighbouringWelfare_img" src="/css/img2.0/pointImg/20170329170434.png">
+					<div class="neighbouringWelfare_desc">
+						<dl>
+							<dt class="neighbouringWelfare_name">
+								普乐迪量贩式KTV 
+								<span class="neighbouringWelfare_distance">6.2km</span>
+							</dt>
+							<dt class="neighbouringWelfare_price">
+								价值 <span class="priceColor">30 元</span>
+								<span class="neighbouringWelfare_salesNum">已出3495件</span>
+							</dt>
+						</dl>
+					</div>
+				</li> -->
+			</ul>
+		</section>
+	</div>
+	<script type="text/javascript" src="/js/appendButtonBar.js"></script>
+	<script type="text/javascript" src="https://txsres.txslicai.com/js/vendor/jquery.js"></script>
+    <script src="/js/common.js?s=2015"></script>
+    <script type="text/javascript" src="/js/pagejs/creditsMall/exchange.js"></script>
+    <script type="text/javascript" src="/js/pagejs/creditsMall/index.js"></script>
+</body>
+</html>

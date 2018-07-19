@@ -1,0 +1,41 @@
+#cityList li {
+    font-size: .597333rem;
+    color: #333333;
+    line-height: 1.877333rem;
+    padding: 0 .64rem;
+    background: #fff;
+    position: relative;
+    clear: both;
+}
+#cityList li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #9b9b9b;
+    transform: scaleY(.5);
+    width: 100%;
+}
+#cityList li .rightArrow{
+    float: right;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype');
+}
+
+i.rightArrow {
+    display: inline-block;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    width: 0.64rem;
+    margin-left: 0.1rem;
+}
+
+i.rightArrow:before {
+    font-family: iconfont;
+    content: '\e615';
+    box-sizing: border-box;
+    color:#999;
+}

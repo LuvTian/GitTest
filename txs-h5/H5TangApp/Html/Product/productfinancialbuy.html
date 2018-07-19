@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html class="no-js financial" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立即投资</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+</head>
+<body class="investment financial">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content financial" id="contenthtml">
+        <article class="viewport">
+            <div class="po-re-h100">
+                <div class="item-mod">
+                    <div class="row1">
+                        <span class="l col1">理财金专享产品</span>
+                        <span class="r col2"></span>
+                    </div>
+                    <div class="row2">
+                        <span class="l col3">12.00<s>%</s><b></b></span>
+                        <span class="r col1">期限3天</span>
+                    </div>
+                </div>
+
+                <div class="sr-val pa-rel" id="clickfinancial">
+                    <span class="t">使用理财金：</span>
+                    <div><span class="v money">0.00</span></div>
+                    <span class="wxicon icon-right-arrow ar pa-r4"></span>
+                </div>
+                <div class="sr-val pa-rel">
+                    <span class="t">可使用理财金余额&nbsp;&nbsp;&nbsp;<span class="sumamount">0.00</span></span>
+                    <div><span class="v col-97"></span></div>
+                </div>
+                <!-- <p class="show-val">理财金余额(元)：<span class="col1 sumamount"></span></p> -->
+                <p class="sy_time">预计显示收益时间：<z id="displayprofittime">0000-00-00</z></p>
+                <p class="sy_time n-in-pad15">本产品为唐小僧平台推出的理财金专享产品，持有理财金的用户可进行购买，产品到期后，收益自动发放至个人账户，可直接提现。</p>
+                <a class="pay_btn mt-5r" href="javascript:void(0);" id="btn-buy">立即投资</a>
+            </div>
+            <div class="btmpro-ab po-re-m-3P">
+                <a class="btmpro" href = '/Html/picc.html'><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</a>
+            </div>
+        </article>
+    </section>
+
+    <section style="display:none" id="financialhtml" class="financial content">
+
+        <article class="viewport">
+            <article class="mt-top15m">
+                <div class="item-mod2">
+                    <p class="choose-all"><img src="/css/img2.0/answer-choosepic0.png" alt="" class="h-ticket-choose" id="all"><span>全选</span></p>
+                </div>
+            </article>
+            <div id="financiallist">
+                
+            </div>
+        </article>
+        <div class="pz-fix item-mod2 btn-rightnow-fixed">
+            <a href="javascript:void(0);" id="btn-rightnow">确定</a>
+        </div>
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/productfinancialbuy.js"></script>
+
+</body>
+</html>

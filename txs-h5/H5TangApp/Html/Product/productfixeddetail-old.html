@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--产品名称-->
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link href="/css/timedeposit.css" rel="stylesheet" />
+</head>
+<body class="timeDeposit-info">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport">
+            <!--银行通知 -->
+            <div class="notice-wrap" id="notice-wrap">
+                <div class="notice-horn">
+                    <i class="n-horn-icon"></i>
+                </div>
+                <div class="close">
+                    <i class="n-horn-close"></i>
+                </div>
+                <div class="content" id="content">
+                </div>
+            </div>
+            <div class="top-mod">
+                <div class="row1">
+                    期望年化收益
+                </div>
+                <div class="row4">
+                    <z id="product-rate">0.00</z><span class="s">% <span class="sml" id="product-rate-rateactivite" style="display:none;"></span></span>
+                </div>
+                <div class="row2">
+                    <div class="da1 wxicon"></div>
+                    <div class="ar"></div>
+                    <div class="da2 wxicon"></div>
+                </div>
+
+                <div class="row3">
+                    <div id="product-profitstartday">0000-00-00 起息</div>
+                    <div>投资期限<z id="product-duration">&nbsp;&nbsp;</z>天</div>
+                </div>
+            </div>
+            <div class="info_list_jl" id="product-activity" style="display:none;"><span class="m1" id="product-activity-title"></span><span class="m2"><b></b></span></div>
+            <ul class="info_list">
+                <li><a id="product-detail" href="javascript:void(0);"><span>产品详情</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-xiangmuinfo" href="javascript:void(0);"><span>项目介绍</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-safaty" href="javascript:void(0);"><span>安全保障</span><span class="m1">承诺回购<b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a href="/Html/Product/contract/legal-document.html"><span>法律文件</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="arepayplan" href="javascript:void(0);"><span>还款计划</span><span class="m1"><z id="typetext">&nbsp;</z><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li class="product-status-text-parent"><a href="javascript:void(0);"><span id="product-status-text">&nbsp;</span><span class="m1"><z id="product-status-count">&nbsp;</z>人<b class="wxicon icon-right-arrow"></b></span></a></li>
+            </ul>
+            <div class="timeDeposit_txt po-init">
+
+                <p class="btmpro line-het12" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金安全由新浪支付保障</p>
+            </div>
+
+            <!--<article class="safety text-center" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span> 账户资金安全由新浪支付保障</article>-->
+            <!--<a class="timeDeposit_sh_btn_s1"  href="javascript:void(0);">
+                <span class="icn calculator">
+                    <img src="/css/img2.0/btn-ic10.png" />
+                </span>
+                <span class="txt">
+                    <p class="p1">立即抢购</p>
+                    <p class="p2">剩余金额22万元</p>
+                </span>
+            </a>-->
+
+
+
+
+            <a class="timeDeposit_sh_btn_s1 buying" id="product-buy" href="javascript:;" style="display:none;">
+                <span class="icn calculator"><img src="/css/img2.0/btn-ic10.png"></span>
+                <span class="txt">
+                    <p class="p1" id="product-buy-link">立即抢购</p>
+                    <p class="p2" id="product-countdown-timer-amount"></p>
+                </span>
+            </a>
+
+            <a class="timeDeposit_sh_btn_s1 buying" id="product-ready" href="javascript:;" style="text-align: center; display: none;">
+                <span id="calculator_img" class="icn calculator"><img src="/css/img2.0/btn-ic10.png"></span>
+                <z id="product-appoint">开售提醒</z>
+            </a>
+            <a class="timeDeposit_sh_btn1 buying" id="product-soldout" href="javascript:;" style="display:none;background: rgb(212, 212, 212);">已售罄</a>
+        </article>
+    </section>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/product/productfixeddetail-old.js"></script>
+    <script type="text/javascript">
+        var Notice1 = new Notice();
+    </script>
+</body>
+</html>

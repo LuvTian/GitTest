@@ -1,0 +1,232 @@
+.splitline {
+  height: .35rem;
+}
+.headbn {
+  position: relative;
+  overflow: hidden;
+}
+.headbn .headbnlist .headbnitem {
+  float: left;
+  max-height: 5.5rem;
+}
+.headbn img {
+  border: 0;
+  display: block;
+  width: 100%;
+  float: left;
+}
+.headbn .headsp {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.headbn .headsp .headspitem {
+  width: .25rem;
+  height: .25rem;
+  background-color: #cfcfcf;
+  border-radius: 1rem;
+  display: inline-block;
+  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+}
+.headbn .headsp .headspitem.cur {
+  border-radius: 1rem;
+  background-color: #f43f3f;
+  width: .8rem;
+}
+.itemlist {
+  width: 100%;
+  max-width: 720px;
+  background-color: #ffffff;
+  color: #4a4a4a;
+  z-index: 999;
+}
+.itemlist ul {
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.itemlist li {
+  padding: .5rem 0;
+  float: left;
+  width: 33.3333%;
+}
+.itemlist li.cur {
+  color: #f43f3f;
+  position: relative;
+}
+.itemlist li.cur::after {
+  bottom: 0;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  position: absolute;
+  content: ' ';
+  border-top: 1px solid #f43f3f;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+.itemlist .realfilter {
+  color: #9b9b9b;
+  overflow: hidden;
+  padding: 0 1rem;
+  font-size: .7rem;
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  display: none;
+}
+.itemlist .realfilter .relitem {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: .4rem 0;
+  text-align: center;
+}
+.itemlist .realfilter .relitem::after,
+.itemlist .realfilter .relitem::before {
+  position: absolute;
+  content: ' ';
+  top: .7rem;
+  right: .5rem;
+  width: .2rem;
+  height: .2rem;
+  border-bottom: 0.05rem solid #9b9b9b;
+  border-right: 0.05rem solid #9b9b9b;
+  transform: rotateZ(-135deg);
+  -webkit-transform: rotateZ(-135deg);
+  -moz-transform: translateZ(-135deg);
+  box-sizing: border-box;
+}
+.itemlist .realfilter .relitem::before {
+  top: 1rem;
+  transform: rotateZ(-315deg);
+  -webkit-transform: rotateZ(-315deg);
+  -moz-transform: translateZ(-315deg);
+}
+.itemlist .realfilter .relitem.curup::after {
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+}
+.itemlist .realfilter .relitem.curdown::before {
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+}
+.productlist .productitem .lith3 {
+  font-size: .84rem;
+  color: #333;
+  margin-bottom: .4rem;
+}
+.productlist .productitem .lith3 .litnshare {
+  display: inline-block;
+  font-size: .6rem;
+  background-color: #f43f3f;
+  color: #ffffff;
+  padding: 0 .4rem;
+  margin-left: .2rem;
+  vertical-align: text-bottom;
+}
+.productlist li {
+  position: relative;
+  padding: .8rem;
+  margin-bottom: .4rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #9b9b9b;
+}
+.productlist li .litright {
+  position: absolute;
+  right: 30%;
+  top: 0;
+  font-size: .6rem;
+}
+.productlist li .litright .litrate {
+  position: absolute;
+  bottom: -1.8rem;
+  font-size: .8rem;
+  color: #4a4a4a;
+}
+.productlist li .litright.dqi {
+  right: 40%;
+}
+.productlist li .litcircle {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  border: .1rem solid #ffe4e4;
+  position: absolute;
+  top: -0.4rem;
+  right: 0;
+  background-color: #ffc2c2;
+  background-image: url(/css/img2.0/loading.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+  text-align: center;
+  line-height: 3.4rem;
+}
+.productlist li .litcircle.end {
+  border: .1rem solid #efefef;
+  background: #c9c9c9;
+}
+.productlist li .litreal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  width: 38%;
+}
+.productlist li .litreal .litrate {
+  position: absolute;
+  bottom: -1.8rem;
+  font-size: .8rem;
+  color: #4a4a4a;
+  right: 0;
+}
+.productlist li .little {
+  font-size: .6rem;
+  position: relative;
+}
+.productlist li .litfactor {
+  color: #f43f3f;
+}
+.productlist li .litfactor .litspan {
+  font-size: 1.4rem;
+}
+.productlist .in100 {
+  background-position: 0 -3rem;
+}
+.productlist .in90 {
+  background-position: 0 -2.4rem;
+}
+.productlist .in80 {
+  background-position: 0 -2rem;
+}
+.productlist .in70 {
+  background-position: 0 -1.8rem;
+}
+.productlist .in60 {
+  background-position: 0 -1.4rem;
+}
+.productlist .in50 {
+  background-position: 0 -1rem;
+}
+.productlist .in40 {
+  background-position: 0 -0.6rem;
+}
+.productlist .in30 {
+  background-position: 0 -0.3rem;
+}
+.productlist .in20 {
+  background-position: 0 0rem;
+}
+.productlist .in10 {
+  background-position: 0 0.3rem;
+}
+.productlist .in0 {
+  background-position: 0 1rem;
+}

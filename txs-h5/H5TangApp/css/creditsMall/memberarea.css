@@ -1,0 +1,229 @@
+.forTangGuo,
+.forGift {
+    
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype');
+}
+
+i.leftArrow {
+    display: inline-block;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    width: 0.64rem;
+    margin-left: 0.1rem;
+}
+
+i.leftArrow:before {
+    font-family: iconfont;
+    content: '\e615';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.listContainer li {
+    float: left;
+    width: 49.9%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .64rem;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#welfareList.listContainer li {
+    padding-top: 1.28rem;
+}
+
+#welfareList li .quan,
+#selectedItems li .product {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.recommendWelfare li .quanImg,
+.recommendWelfare li .productImg {
+    width: 100%;
+}
+
+.recommendWelfare li .product,.recommendWelfare li .quan, .listContainer li {
+    position: relative;
+    line-height: 1;
+}
+
+.listContainer li .quanDesc {
+    position: absolute;
+    left: 1.024rem;
+    top: 1.28rem;
+    font-size: 1.109333rem;
+    color: #fff;
+}
+
+.listContainer li .quanDesc span {
+    font-size: .597333rem;
+}
+
+.listContainer li .quanType {
+    position: absolute;
+    font-size: .512rem;
+    left: 1.024rem;
+    top: 2.730667rem;
+    color: #fff;
+}
+
+.listContainer li:nth-child(2n)::after {
+    border-left: 1px solid #e7e7e7;
+    content: "";
+    width: 1px;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.listContainer li:nth-child(n+3)::before {
+    border-top: 1px solid #e7e7e7;
+    content: "";
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.listContainer li .quanName,
+.listContainer li .productName {
+    font-size: .597333rem;
+    color: #333;
+    margin-top: .384rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+    height: 1.36rem;
+}
+
+.listContainer li .exchangeAmount {
+    font-size: .512rem;
+    color: #666;
+    margin-top: .384rem;
+    line-height: 1.2;
+    height: 1.3rem;
+}
+
+.listContainer li .exchangeAmount span {
+    font-size: .597333rem;
+    color: #ff4949;
+}
+
+.listContainer li .exchangeAmount b {
+    font-size: .426667rem;
+    color: #999999;
+    float: right;
+    text-decoration: line-through;
+}
+
+#bottomBanner {
+    display: none;
+}
+
+.tagsContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: -6.5rem;
+    overflow: hidden;
+    line-height: 1.5;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.quan .tagsContainer {
+    /* top: -.768rem; */
+}
+
+.tag0 {
+    background-image: linear-gradient(-135deg, #ff734e 0%, #ff3f3f 100%);
+    border-radius: .085333rem;
+    color: #fff;
+    font-size: .682666rem;
+    padding: 0.1rem 0.170666rem;
+    margin-right: .085333rem;
+    display: inline-block;
+}
+
+.tag2 {
+    background: #fba516;
+    border-radius: .085333rem;
+    color: #fff;
+    font-size: .682666rem;
+    padding: .042667rem .085333rem;
+    margin-right: .085333rem;
+    display: inline-block;
+    /*transform: scale(0.5);
+    transform-origin: left top;*/
+}
+
+.tag1 {
+    border: .042667rem solid #ff7a04;
+    border-radius: 2px;
+    font-size: .682666rem;
+    padding: 0.1rem 0.170666rem;
+    color: #ff7a04;
+    margin-right: .085333rem;
+    display: inline-block;
+    /*transform: scale(0.5);
+    transform-origin: left top;*/
+}
+
+.tag3 {
+    border: .042667rem solid #d2a55b;
+    border-radius: 2px;
+    font-size: .682666rem;
+    padding: 0.1rem 0.170666rem;
+    color: #d2a55b;
+    margin-right: .085333rem;
+    display: inline-block;
+    /*transform: scale(0.5);
+    transform-origin: left top;*/
+}
+
+.tag4 {
+    background: #BB86FF;
+    border-radius: 2px;
+    font-size: .682666rem;
+    padding: 0.1rem 0.170666rem;
+    color: #fff;
+    margin-right: .085333rem;
+    display: inline-block;
+    /*transform: scale(0.5);
+    transform-origin: left top;*/
+}
+
+.product .productImg {
+    display: block;
+}
+
+.loadMore{
+    font-size: .512rem;
+    color: #999;
+    text-align: center;
+    margin-bottom: .725333rem;
+    padding-top: .554667rem;
+    clear: both;
+    display: none;
+}
+#mainBody.noData{
+    background:url("/css/img2.0/nodata.png") center no-repeat;
+    background-size: 4.181333rem;
+}

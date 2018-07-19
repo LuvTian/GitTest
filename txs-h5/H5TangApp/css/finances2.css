@@ -1,0 +1,1636 @@
+﻿@charset "utf-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: "PingFang SC","Helvetica Neue",'Microsoft YaHei', 'Arial', 'Century Gothic';
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+body {
+    text-shadow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+html,
+body,
+section {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    vertical-align: middle
+}
+
+li {
+    list-style: none
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.oh {
+    overflow: hidden
+}
+
+a:hover {
+    color: #333;
+}
+
+.br1 {
+    border-right: 1px #e8e8e8 solid;
+}
+
+.display-none {
+    display: none
+}
+
+u {
+    text-decoration: none;
+}
+
+
+/*media-width*/
+
+.viewport {
+    margin: 0px auto;
+}
+
+.home .viewport,
+.fuli .viewport,
+.current .viewport,
+.myindex .viewport,
+.content .viewport,
+.shake .viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: scroll;
+    margin-bottom: 4.8rem;
+}
+
+.content .viewport,
+.shake .viewport {
+    margin-bottom: 0;
+}
+
+.shake .viewport {
+    margin-top: 4rem;
+}
+
+@media only screen and (max-width:300px) {
+    html {
+        font-size: 8.33333px
+    }
+    .viewport {
+        max-width: 300px
+    }
+}
+
+@media only screen and (max-width:310px) and (min-width:300px) {
+    html {
+        font-size: 8.33333px
+    }
+    .viewport {
+        max-width: 310px
+    }
+}
+
+@media only screen and (max-width:320px) and (min-width:310px) {
+    html {
+        font-size: 8.81111px
+    }
+    .viewport {
+        max-width: 320px
+    }
+}
+
+@media only screen and (max-width:350px) and (min-width:320px) {
+    html {
+        font-size: 8.98889px
+    }
+    .viewport {
+        max-width: 350px
+    }
+}
+
+@media only screen and (max-width:360px) and (min-width:350px) {
+    html {
+        font-size: 9.72222px
+    }
+    .viewport {
+        max-width: 360px
+    }
+}
+
+@media only screen and (max-width:375px) and (min-width:360px) {
+    html {
+        font-size: 10px
+    }
+    .viewport {
+        max-width: 375px
+    }
+}
+
+@media only screen and (max-width:400px) and (min-width:375px) {
+    html {
+        font-size: 10.41667px
+    }
+    .viewport {
+        max-width: 400px
+    }
+}
+
+@media only screen and (max-width:415px) and (min-width:400px) {
+    html {
+        font-size: 11.5px
+    }
+    .viewport {
+        max-width: 415px
+    }
+}
+
+@media only screen and (max-width:470px) and (min-width:415px) {
+    html {
+        font-size: 11.11111px
+    }
+    .viewport {
+        max-width: 470px
+    }
+}
+
+@media only screen and (max-width:480px) and (min-width:470px) {
+    html {
+        font-size: 13.05556px
+    }
+    .viewport {
+        max-width: 480px
+    }
+}
+
+@media only screen and (max-width:540px) and (min-width:480px) {
+    html {
+        font-size: 13.33333px
+    }
+    .viewport {
+        max-width: 540px
+    }
+}
+
+@media only screen and (max-width:560px) and (min-width:540px) {
+    html {
+        font-size: 15px
+    }
+    .viewport {
+        max-width: 560px
+    }
+}
+
+@media only screen and (max-width:570px) and (min-width:560px) {
+    html {
+        font-size: 15.55556px
+    }
+    .viewport {
+        max-width: 570px
+    }
+}
+
+@media only screen and (max-width:630px) and (min-width:570px) {
+    html {
+        font-size: 15.83333px
+    }
+    .viewport {
+        max-width: 630px
+    }
+}
+
+@media only screen and (max-width:640px) and (min-width:630px) {
+    html {
+        font-size: 17.5px
+    }
+    .viewport {
+        max-width: 640px
+    }
+}
+
+@media only screen and (max-width:710px) and (min-width:640px) {
+    html {
+        font-size: 17.77778px
+    }
+    .viewport {
+        max-width: 710px
+    }
+}
+
+@media only screen and (max-width:720px) and (min-width:710px) {
+    html {
+        font-size: 19.72222px
+    }
+    .viewport {
+        max-width: 720px
+    }
+}
+
+@media only screen and (min-width:720px) {
+    html {
+        font-size: 20px
+    }
+    .viewport {
+        width: 720px
+    }
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype')
+}
+
+@media screen and (max-width:750px) {
+    .tr_scale {
+        transform: scale(2.34);
+        -webkit-transform: scale(2.34);
+    }
+}
+
+@media screen and (max-width:640px) {
+    .tr_scale {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+    }
+}
+
+@media screen and (max-width:414px) {
+    .tr_scale {
+        transform: scale(1.29);
+        -webkit-transform: scale(1.29);
+    }
+}
+
+@media screen and (max-width:375px) {
+    .tr_scale {
+        transform: scale(1.17);
+        -webkit-transform: scale(1.17);
+    }
+}
+
+@media screen and (max-width:320px) {
+    .tr_scale {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+.wxicon {
+    font-family: 'iconfont';
+    position: relative;
+    top: 0;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clock:before {
+    content: "\e617";
+}
+
+.icon-right-arrow:before {
+    content: "\e615";
+}
+
+.icon-up-arrow:before {
+    content: "\e62f";
+}
+
+.icon-down-arrow:before {
+    content: "\e630";
+}
+
+.icon-left-arrow:before {
+    content: "\e644";
+}
+
+.icon-nav-home:before {
+    content: "\e601";
+}
+
+.icon-nav-list:before {
+    content: "\e600";
+}
+
+.icon-nav-welfare:before {
+    content: "\e603";
+}
+
+.icon-nav-account:before {
+    content: "\e602";
+}
+
+.icon-safety:before {
+    content: "\e614";
+}
+
+.icon-help:before {
+    content: "\e61d";
+}
+
+.icon-time:before {
+    content: "\e616";
+}
+
+.icon-calculator:before {
+    content: "\e604";
+}
+
+.icon-my-business:before {
+    content: "\e60d";
+    color: #e94a3d;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-friend:before {
+    content: "\e61c";
+    color: #3ccacf;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-activity:before {
+    content: "\e60b";
+    color: #ff7800;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-record:before {
+    content: "\e60a";
+    color: #3b84d1;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-reward:before {
+    content: "\e609";
+    color: #da609b;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-welfare:before {
+    content: "\e608";
+    color: #ffd162;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-money:before {
+    content: "\e607";
+    color: #ffb400;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-withdraw:before {
+    content: "\e606";
+    color: #ff4a4a;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-redemption:before {
+    content: "\e645";
+    color: #ff4a4a;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-investment:before {
+    content: "\e647";
+    color: #ff4a4a;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-assess:before {
+    content: "\e657";
+    color: #0092ea;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-recharge:before {
+    content: "\e61a";
+    color: #56cecc;
+    margin-right: 10px;
+    font-size: 2.3rem;
+}
+
+.icon-my-news:before {
+    content: "\e60e";
+}
+
+.icon-my-report:before {
+    content: "\e643";
+}
+
+.icon-my-user:before {
+    content: "\e61b";
+}
+
+.icon-locate:before {
+    content: "\e61e";
+}
+
+.icon-tel:before {
+    content: "\e619";
+}
+
+.icon-unbind:before {
+    content: "\e624";
+}
+
+.icon-round-check:before {
+    content: "\e61f";
+}
+
+.icon-round-check-on:before {
+    content: "\e627";
+}
+
+.icon-add-delete:before {
+    content: "\e626";
+}
+
+.icon-add-edit:before {
+    content: "\e628";
+}
+
+.icon-plus:before {
+    content: "\e62a";
+}
+
+.icon-revocat:before {
+    content: "\e62b";
+}
+
+.icon-refresh:before {
+    content: "\e649";
+}
+
+.icon-sigh:before {
+    content: "\e618";
+}
+
+.icon-notifica-activities:before {
+    content: "\e623";
+}
+
+.icon-approve:before {
+    content: "\e620";
+}
+
+.icon-qrcode:before {
+    content: "\e62c";
+}
+
+.icon-left-filling:before {
+    content: "\e641";
+}
+
+.icon-right-filling:before {
+    content: "\e642";
+}
+
+.icon-back:before {
+    content: "\e62d";
+}
+
+.icon-yard:before {
+    content: "\e62e";
+}
+
+.icon-search:before {
+    content: "\e631";
+}
+
+.icon-circle:before {
+    content: "\e646";
+}
+
+.icon-bank-citic:before {
+    content: "\e639";
+    font-size: 103%;
+    color: #db3410;
+}
+
+
+/*中信*/
+
+.icon-bank-ceb:before {
+    content: "\e633";
+    font-size: 103%;
+    color: #e6a608;
+}
+
+
+/*光大*/
+
+.icon-bank-cmb:before {
+    content: "\e638";
+    font-size: 103%;
+    color: #c8152d;
+}
+
+
+/*招商*/
+
+.icon-bank-cgb:before {
+    content: "\e634";
+    font-size: 103%;
+    color: #ed1b2d;
+}
+
+
+/*广东发展*/
+
+.icon-bank-pingan:before {
+    content: "\e632";
+    font-size: 103%;
+    color: #f15a23;
+}
+
+
+/*平安*/
+
+.icon-bank-shb:before {
+    content: "\e635";
+    font-size: 103%;
+    color: #00973b;
+}
+
+
+/*上海*/
+
+.icon-bank-psbc:before {
+    content: "\e637";
+    font-size: 103%;
+    color: #018263
+}
+
+
+/*中国邮政*/
+
+.icon-bank-cib:before {
+    content: "\e636";
+    font-size: 103%;
+    color: #042268
+}
+
+
+/*兴业*/
+
+.icon-bank-ccb:before {
+    content: "\e612";
+}
+
+
+/*建行*/
+
+.icon-bank-icbc:before {
+    content: "\e610";
+    font-size: 103%;
+    line-height: 1.3;
+    color: #db261b
+}
+
+
+/*工商*/
+
+.icon-bank-boc:before {
+    content: "\e613";
+    font-size: 103%;
+    line-height: 1.3;
+    color: #9f0023
+}
+
+
+/*中国银行*/
+
+.icon-bank-abc:before {
+    content: "\e611";
+    font-size: 103%;
+    line-height: 1.3;
+    color: #1b8878
+}
+
+
+/*农业银行*/
+
+.icon-light:before {
+    content: "\e648";
+    color: #ff9c00;
+    top: -2px
+}
+
+.icon-coins:before {
+    content: "\e64a";
+}
+
+
+/*icon-fuli*/
+
+.icon-allkinds:before {
+    content: "\e650";
+    color: #fd615e
+}
+
+
+/*全部分类*/
+
+.icon-food:before {
+    content: "\e64e";
+    color: #fd615e
+}
+
+
+/*餐饮美食*/
+
+.icon-entertain:before {
+    content: "\e651";
+    color: #fd615e
+}
+
+
+/*休闲娱乐*/
+
+.icon-hotel:before {
+    content: "\e64d";
+    color: #fd615e
+}
+
+
+/*酒店*/
+
+.icon-beautify:before {
+    content: "\e656";
+    color: #fd615e
+}
+
+
+/*丽人*/
+
+.icon-viewspot:before {
+    content: "\e64c";
+    color: #fd615e
+}
+
+
+/*景点*/
+
+.icon-marry:before {
+    content: "\e654";
+    color: #fd615e
+}
+
+
+/*结婚*/
+
+.icon-education:before {
+    content: "\e64b";
+    color: #fd615e
+}
+
+
+/*教育培训*/
+
+.icon-medicalcare:before {
+    content: "\e652";
+    color: #fd615e
+}
+
+
+/*医疗健康*/
+
+.icon-renovation:before {
+    content: "\e653";
+    color: #fd615e
+}
+
+
+/*家装*/
+
+.icon-carservice:before {
+    content: "\e64f";
+    color: #fd615e
+}
+
+
+/*汽车服务*/
+
+.icon-tree:before {
+    content: "\e655";
+    color: #fd615e
+}
+
+
+/*园林绿化*/
+
+.icon-outsports:before {
+    content: "\e63d";
+    color: #fd615e
+}
+
+
+/*运动健身*/
+
+.icon-life:before {
+    content: "\e63c";
+    color: #fd615e
+}
+
+
+/*生活服务*/
+
+.icon-shopping:before {
+    content: "\e63b";
+    color: #fd615e
+}
+
+
+/*购物*/
+
+
+/*icon-img*/
+
+.az-icon {
+    display: inline-block;
+    background: url(/css/img2.0/icon.png) no-repeat;
+}
+
+.icon-turnoff {
+    background-position: -93px -230px;
+    width: 42px;
+    height: 42px;
+}
+
+.bg-gray2 {
+    background: #efeff3
+}
+
+.finances-nav {
+    background: #f7f7f7;
+    height: 4.5rem;
+    overflow: hidden;
+    font-size: 1.4405rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 22
+}
+
+.finances-nav a.on {
+    color: #4c4744;
+    border-color: #c34949;
+}
+
+.myreward-nav a {
+    width: 50% !important;
+    float: left;
+    line-height: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    color: #979797;
+    border-bottom: 2px solid #e4e4e4
+}
+
+#couponlist,
+#interestcouponlist {
+    display: block;
+    margin-top: 5.5rem
+}
+
+.ticket {
+    width: 90.5%;
+    margin: 1rem auto 0;
+    position: relative;
+    height: 13.2rem;
+}
+
+
+/* 未使用 */
+
+.status1 {
+    background: url(/css/img2.0/bonus-available.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 已使用 */
+
+.status2 {
+    background: url(/css/img2.0/ticket-expired.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 已过期 */
+
+.status3 {
+    background: url(/css/img2.0/ticket-used.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 加息使用中 */
+
+.status4 {
+    background: url(/css/img2.0/bonus-using.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 加息立即使用 */
+
+.expired-white-font {
+    font-size: 1.1525rem;
+    color: white;
+}
+
+.status5 {
+    background: url(/css/img2.0/ticket-available.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.percentage {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    font-size: 30px;
+    width: 36%;
+    text-align: center;
+}
+
+.ticket .percentage span {
+    display: block;
+    /*margin-top: -15px;*/
+    font-size: 2.2085rem;
+}
+
+.ticket1 .ticket-content,
+.ticket .ticket-content {
+    position: absolute;
+    left: 42%;
+    width: 55%;
+    font-size: 0.7rem;
+    top: 11%
+}
+
+.ticket1 .ticket-content .expired-icon,
+.ticket .ticket-content .expired-icon {
+    position: absolute;
+    border: 1px #999 solid;
+    border-radius: 5px;
+    right: .5rem;
+    top: 0.3rem;
+    padding: 1px 6px;
+    font-size: 1.0435rem
+}
+
+.ticket1 .ticket-content h3,
+.ticket .ticket-content h3 {
+    font-size: 1.8rem;
+    margin: 0 0 .4rem 0;
+}
+
+.gray-font2 {
+    position: absolute;
+    bottom: 7%;
+    left: 42%;
+    font-size: 0.96rem;
+    color: #888;
+}
+
+.expired-font {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.col-fe655f {
+    color: #fe655f!important
+}
+
+.b-col-fe655f {
+    border-color: #fe655f!important
+}
+
+.col-999 {
+    color: #999!important
+}
+
+.b-col-97 {
+    border-color: #979797!important
+}
+
+.col-cac {
+    color: #cacaca!important
+}
+
+.b-col-cac {
+    border-color: #cacaca!important
+}
+
+.col-fff {
+    color: #fff!important
+}
+
+.b-col-fff {
+    border-color: #fff!important
+}
+
+.col-979 {
+    color: #979797!important
+}
+
+.b-col-979 {
+    border-color: #979797!important
+}
+
+a.usage-rules {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    height: 4.6rem;
+    line-height: 4.6rem;
+    text-align: center;
+    font-size: 1.6325rem;
+    color: #979797
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.rule-tip {
+    background: #fff;
+    padding: .6em .6em .9em;
+    width: 80%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    z-index: 22;
+    border-radius: .4em;
+    color: #959595;
+    font-size: 1.5rem;
+}
+
+.rule-tip h3 {
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    text-align: center;
+    padding: .9375rem 0;
+    color: #666;
+}
+
+.rule-tip ol {
+    padding: 5px 0;
+    margin-left: 27px;
+    color: #666;
+    line-height: 1;
+}
+
+.rule-tip ol li {
+    list-style: decimal;
+    margin: 7px 0;
+}
+
+i.icon-turnoff2 {
+    display: block;
+    transform: scale(.5);
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -o-transform: scale(.5);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icon-turnoff2 {
+    background-position: -386px -229px;
+    width: 42px;
+    height: 42px;
+}
+
+.color-org {
+    color: #ff9c00!important;
+}
+
+.az-relative {
+    position: relative;
+}
+
+.percentage t {
+    font-size: 2.319rem
+}
+
+.t-22 {
+    top: 22%!important;
+    margin-top: 2rem;
+}
+
+
+/*.t-line-fix{margin-top:.1rem;}*/
+
+.t-5 {
+    top: 10%!important
+}
+
+.bottom-0 {
+    bottom: 0!important;
+}
+
+.margin-bottom0 {
+    margin-bottom: 0!important
+}
+
+
+/* .m-bottom{margin-bottom:4.5rem!important} */
+
+.m-top-2 {
+    margin-top: -2px;
+}
+
+.m-top-3x {
+    margin-top: 0px;
+}
+
+.bottom-4x {
+    bottom: 7px!important
+}
+
+.top-07r {
+    top: .7rem!important
+}
+
+
+/*加息券活动规则*/
+
+.tc {
+    text-align: center;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-center {
+    text-align: center
+}
+
+.rule-tip {
+    background: #fff;
+    padding: .6em .6em .9em;
+    width: 80%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    z-index: 22;
+    border-radius: .4em;
+    color: #959595;
+}
+
+i.icon-turnoff2 {
+    display: block;
+    transform: scale(.5);
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -o-transform: scale(.5);
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.ticket-used {
+    background-color: #fff;
+    border-radius: 4px;
+    position: fixed;
+    top: 36%;
+    z-index: 22;
+    padding: 3em 1.5em 0;
+    width: 78%;
+    margin: 0 11%;
+}
+
+.ticket-used p {
+    color: #666;
+    font-size: 1.4rem
+}
+
+.ticket-used .row .small-5 {
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    margin: 1em 0;
+    width: 47%;
+    line-height: 2.5;
+}
+
+.ticket-used img.pic {
+    position: absolute;
+    width: 75%;
+    left: 50%;
+    margin: 0 0 0 -37%;
+    bottom: 85%;
+}
+
+.ticket-used img.pic2 {
+    position: absolute;
+    bottom: 100%;
+    right: 0%;
+    width: 10%;
+}
+
+.ticket-used .row .small-12 {
+    background-color: #cd3830;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    margin: 1em 0;
+    line-height: 2.5;
+}
+
+.ticket-used img.pic3 {
+    width: 45%;
+    margin: 0 0 0 -22%;
+}
+
+.ticket-used h3 {
+    font-weight: bold;
+    color: #666666;
+    font-size: 1.4rem
+}
+
+.ticket-used .pic4 {
+    width: 35%
+}
+
+.ticket-used .pic5 {
+    width: 80%!important;
+    margin: 0 0 0 -44%!important;
+    bottom: 88%!important
+}
+
+.ticket-used .row.bottom-1 {
+    margin: 0 0 .5em 0!important;
+}
+
+.ticket-used .imgbox {
+    margin: 10px 0
+}
+
+.color-a3 {
+    background-color: #a3a3a3
+}
+
+.color-e9 {
+    background-color: #e94a3d
+}
+
+.pop {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    left: 100%;
+    width: 83%
+}
+
+.ticket-used .percent {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    margin-top: -7%
+}
+
+.col-fff9 {
+    color: #fff9b8;
+    font-weight: bold
+}
+
+.size-220 {
+    font-size: 110%;
+}
+
+.bg-white {
+    background: #f7f7f7;
+    width: 100%;
+    height: 5rem;
+    padding: 0 1.25rem;
+    color: #444;
+    line-height: 5rem;
+    font-size: 1.3445rem
+}
+
+.red {
+    color: #c34949!important
+}
+
+.line-h-5 {
+    line-height: 5rem
+}
+
+.bb-e4 {
+    border-bottom: 1px solid #e4e4e4
+}
+
+.bt-e4 {
+    border-top: 1px solid #e4e4e4
+}
+
+.ver-mid {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.ver-mid-con {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.ondata {
+    font-size: 1.3rem;
+    color: #979797;
+    padding: 1rem 0;
+}
+
+.wrap-45h {
+    height: 4.5rem;
+    display: block;
+}
+
+.amr-top5 {
+    margin-top: 5.5rem;
+}
+
+.bt {
+    border-top: 1px #e4e4e4 solid;
+}
+
+.bb {
+    border-bottom: 1px #e4e4e4 solid;
+}
+
+
+/* 商户优惠券 */
+
+.ticket1 {
+    width: 87%;
+    margin: 1rem auto 0;
+    position: relative;
+    height: 40vw;
+}
+
+.top-10 {
+    top: 10%!important
+}
+
+.font-z-1 {
+    font-size: 1.3rem!important
+}
+
+.top-80 {
+    top: 78%!important
+}
+
+.t-51 {
+    top: 5%!important
+}
+
+.fz-16rem {
+    font-size: 1.6rem!important
+}
+
+.left_35 {
+    left: 37%!important;
+}
+
+.percentage span {
+    display: block;
+    position: absolute;
+    top: 77%;
+    width: 100%;
+    font-size: 2.8rem
+}
+
+
+/* 折 */
+
+.discount {
+    background: url(/css/img2.0/discount.png) no-repeat center/100% 100%;
+}
+
+
+/* 代 */
+
+.chit {
+    background: url(/css/img2.0/chit.png) no-repeat center/100% 100%;
+}
+
+
+/* 减 */
+
+.subtract {
+    background: url(/css/img2.0/subtract.png) no-repeat center/100% 100%;
+}
+
+
+/* 唐 */
+
+.tang {
+    background: url(/css/img2.0/tang.png) no-repeat center/100% 100%;
+    padding: 0 1.5rem;
+}
+
+.self {
+    font-size: 3rem;
+    padding-top: .75rem;
+}
+
+.content-box {
+    font-size: 1.6rem
+}
+
+.content-18 {
+    width: 81vw;
+    height: 7vw;
+    overflow: hidden
+}
+
+.col-888 {
+    color: #888
+}
+
+.zj {
+    display: block;
+    float: left;
+    width: 67%;
+}
+
+.tang-name {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 33%;
+    font-size: 1.3rem;
+    color: #ff645b;
+}
+
+.col-ff645b {
+    color: #ff645b!important
+}
+
+.over-auto {
+    overflow: auto!important;
+    height: auto!important;
+}
+
+.mar-t-0 {
+    margin-top: 0!important
+}
+
+
+/* 代金券优化 */
+
+.font-s-14 {
+    font-size: 1.4rem
+}
+
+.col-444 {
+    color: #444
+}
+
+button.use_btn {
+    width: 90%;
+    margin: 2rem auto 0;
+    display: block;
+    border-radius: 5px;
+    height: 4.2rem;
+    font-size: 1.4rem;
+    background-color: #c34949;
+}
+
+.col-469 {
+    color: #469af3!important;
+}
+
+.hauto {
+    height: auto;
+    line-height: inherit
+}
+
+.spanblk {
+    width: 20%;
+    display: block;
+    float: left;
+    line-height: 6rem
+}
+
+.tabcell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 80%;
+    height: 6rem
+}
+
+.inlinemid {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.ticket-content p:last-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.4rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.pozsiton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.new_col {
+    width: 80%;
+    float: left;
+    padding: 4px 0;
+}
+
+.win {
+    width: 90%;
+    z-index: 101;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -45%;
+    margin-top: -45%;
+    text-align: center;
+    font-family: "微软雅黑", sans-serif;
+}
+
+.win_img {}
+
+.win_img img {
+    height: 10rem;
+}
+
+.win_close {
+    position: absolute;
+    right: .2rem;
+    top: 3.3rem;
+}
+
+.win_close img {
+    width: 2rem;
+}
+
+.win_main {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: -3.8rem;
+    padding-bottom: .8rem;
+}
+
+.win_main>p {
+    padding-top: 5.0rem;
+    font-size: 1.4rem;
+    color: #979797;
+    margin: 0;
+    padding-bottom: .5rem;
+}
+
+.win_main>p.margin_b {
+    margin-bottom: 2.5rem;
+}
+
+.win_main>span {
+    display: block;
+    margin: 0 auto 0;
+    background-color: #cd3830;
+    width: 90%;
+    border-radius: 10px;
+    padding: .8rem;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.col-end {
+    margin-top: -.4rem;
+}

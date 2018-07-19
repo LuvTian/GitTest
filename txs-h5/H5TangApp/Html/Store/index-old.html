@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>福利</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="fuli">
+        <article class="viewport">
+            <a class="city-select" href="/html/store/choosecity.html">
+                <i class="wxicon icon-locate ml"></i>
+                <span id="city">选择城市</span>
+            </a>
+            <a class="fuli-ad display-none" href="#" id="atopbanner">
+                <img id="imgtopbanner" src="" class="img-responsive" />
+                <div class="turnoff"><i class="az-icon icon-turnoff"></i></div>
+            </a>
+            <a class="fuli-title bg-white bb mb" href="#" id="rocklist">
+                <div class="small-6 left"><img src="/css/img2.0/home-icon-02.png"> 免费精品福利</div>
+                <div class="small-6 left text-right gray">
+                    <span id="WelfareCount"></span>
+                    <i class="wxicon icon-right-arrow yellow"></i>
+                </div>
+            </a>
+            <article class="fuli-list bg-white bb bt mb display-none" id="BoutiqueList"></article>
+            <a href="javascript:void(0)" class="fuli-banner mt" id="agame"><img data-src="/css/img2.0/welfare-act.jpg" src="/css/img2.0/loadbanner.gif" class="img-responsive"></a>
+            <a id="commercial_welfare" href="/Html/Store/commercial-welfare.html" class="fuli-title bg-white bb mt bt">
+                <div class="small-6 left">附近福利</div>
+                <div class="small-6 left text-right gray">更多<i class="wxicon icon-right-arrow yellow"></i></div>
+            </a>
+            <article class="mb" id="NearestList"></article>
+        </article>
+    </section>
+    <nav class="navbar navqujin">
+        <article class="viewport">
+            <a href="/" class=""><i class="wxicon icon-nav-home"></i><span>首页</span></a>
+            <a href="/Html/Product/" class=""><i class="wxicon icon-nav-list"></i><span>理财</span></a>
+            <a href="/Html/My/qujin.html" class="qujin-nav">&nbsp;<img src="/css/img2.0/qujin-bg.png" class="img-qujin-bg"><img src="/css/img2.0/qujin-icon-money.png" class="img-qujin-money mymove2"></a>
+            <a href="javascript:void(0)" class="on"><i class="wxicon icon-nav-welfare"></i><span>福利</span></a>
+            <a href="/html/my/" class=""><i class="wxicon icon-nav-account"></i><span>我的</span></a>
+        </article>
+    </nav>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js?s=2015"></script>
+    <script src="/js/pagejs/store/welfare.js"></script>
+    
+
+</body>
+</html>

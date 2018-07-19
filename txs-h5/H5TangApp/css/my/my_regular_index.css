@@ -1,0 +1,237 @@
+.content {
+    width: 100%;
+    height: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-bottom: 1.4rem;
+}
+
+.timeDeposit-index-modtop {
+    width: 16rem;
+    /* height: 7.68rem; */
+    background: #F25D50;
+    background-size: 100% 100%;
+    padding:1.28rem 0 1.28rem .682667rem ;
+    box-sizing: border-box;
+}
+
+.invot_title {
+    font-size: .682667rem;
+    line-height: .682667rem;
+    color: #fff;
+}
+
+.invot_money {
+    font-size: 1.024rem;
+    color: #fff;
+    line-height: 1.109333rem;
+    margin-top: .426667rem;
+}
+
+.sy_mod {
+    display: flex;
+    display: -webkit-flex;
+    position: relative;
+    margin-top: 1.024rem;
+}
+
+.sy_mod>div {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.income_title {
+    font-size: .682667rem;
+    color: #fff;
+}
+
+.income_num {
+    font-size: 1.024rem;
+    color: #fff;
+}
+
+.income_num span {
+    font-size: .682667rem;
+}
+
+/* .border {
+    border-right: 1px solid #e7e7e7;
+    position: absolute;
+    display: inline-block;
+    height: 1.365333rem;
+    width: 1px;
+    color: #e7e7e7;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+} */
+
+.pro_list {}
+
+.pro_list li {
+    background-color: #fff;
+    margin-top: .512rem;
+    padding: .768rem .64rem;
+}
+
+.pro_list li p {
+    flex: 1;
+    -webkit-flex: 1;
+    line-height: 1;
+    margin-bottom: .256rem;
+}
+
+.pro_list li p span {
+    flex: 1;
+    -webkit-flex: 1;
+    display: inline-block;
+    width: 50%;
+}
+
+.pro_list li p:last-child {
+    margin-bottom: 0;
+}
+
+.pro_list li p span:first-child {
+    text-align: left;
+}
+
+.pro_list li p span:last-child {
+    text-align: right;
+}
+
+.pro_list li p:first-child span:first-child {
+    font-size: .597333rem;
+    color: #333;
+}
+
+.pro_list li p:first-child span:last-child {
+    color: #b9b9b9;
+    font-size: .512rem;
+}
+
+.pro_list li p:nth-child(2) span {
+    color: #999;
+    font-size: .512rem;
+}
+
+.pro_list li p:last-child span:first-child {
+    color: #999;
+    font-size: .682667rem;
+}
+
+.pro_list li p:last-child span:last-child {
+    color: #ff7a04;
+    font-size: .682667rem;
+}
+
+.pro_list li p span:first-child {
+    width: 65%;
+}
+
+.pro_list li p span:last-child {
+    width: 35%;
+}
+
+.appointment_list li p:first-child span:last-child {
+    color: #ff7a04;
+    font-size: .512rem;
+}
+
+.appointment_list li p:last-child span:last-child {
+    color: #999;
+    font-size: .512rem;
+}
+
+.history {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 1rem 1rem;
+}
+
+.history span {
+    color: #979797;
+    background: #f7f7f7;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translateX(-50%, 50%);
+    font-size: .597333rem;
+}
+
+.addtimeDeposit-list {
+    color: #b9b9b9;
+    font-size: .597333rem;
+    text-align: center;
+    display: block;
+    padding: 2rem 0 4.133333rem;
+    background: none;
+}
+
+.buytimeDeposit-list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    background: #F25D50;
+    height: 2.133333rem;
+    line-height: 2.133333rem;
+    font-size: .682667rem;
+    color: #FFFFFF ;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+}
+
+.wsg-ico {
+    width: 3.2rem;
+    height: 2.176rem;
+    background: url("/css/img2.0/no_buy.png") no-repeat center center;
+    background-size: 100% 100%;
+    text-align: center;
+    margin: 6rem auto 0;
+}
+
+.wsg-txt {
+    font-size: .682667rem;
+    text-align: center;
+    color: #b4b4b4;
+    margin-top: .426667rem;
+}
+
+.assign_tip {
+    color: #F25D50;
+    border: 1px solid #F25D50;
+    border-radius: 2px;
+    margin-left: .341333rem;
+    font-size: .384rem;
+    padding: .085333rem;
+}
+
+.demand-img_2 {
+    background-image: url(/css/img2.0/pre001.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0 0.3rem 0 1.1rem;
+    color: rgb(255, 100, 95);
+    width: 4.053333rem;
+    height: .810667rem;
+    margin-left: .2rem;
+    font-size: .597333rem;
+}
+
+.apitred {
+    color: #ff7a04!important;
+    font-size: .682667rem;
+}
+
+.apitgray {
+    color: #b9b9b9!important;
+    font-size: .512rem;
+}
+
+.pic-pre {
+    width: 3.4rem;
+}

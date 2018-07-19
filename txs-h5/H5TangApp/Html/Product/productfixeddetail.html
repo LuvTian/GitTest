@@ -1,0 +1,814 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>定期产品详情</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newfinances.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/productfixeddetail.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" style="padding-bottom: 2.7rem;">
+        <!--银行通知 -->
+        <!-- <div class="notice-wrap" id="notice-wrap">
+            <div class="notice-horn">
+                <i class="n-horn-icon"></i>
+            </div>
+            <div class="close">
+                <i class="n-horn-close"></i>
+            </div>
+            <div class="content" id="content">
+            </div>
+        </div> -->
+        <div class="mtk2" style="display:none">
+            <i style="right:0.6rem"></i>
+            <div style="width:.8rem">点这里分享哦</div>
+        </div>
+        <header>
+            <div class="title_income">
+                <p class="title_word unified-rate-text">
+                    <!--历史年化收益率-->
+                </p>
+                <p class="title_p">
+                    <!-- <span class="pro_rate"> -->
+                    <z class="rate_num" id="product-rate">0</z>%
+                    <span class="income_fixed" id="product-rate-rateactivite" style="display:none;"></span>
+                    <!-- </span> -->
+                </p>
+            </div>
+            <div class="title_money">
+                <div class="income rb">
+                    <p class="income_day js_invert_term">投资期限</p>
+                    <p class="income_money ">
+                        <span id="product-duration">0</span>
+                        <span class="inccd">天</span>
+                    </p>
+                </div>
+                <div class="income rb">
+                    <p class="income_day js_min_step">起购金额</p>
+                    <p class="income_money">
+                        <span id="product_startmoney">0.00</span>
+                        <span class="inccd">元</span>
+                    </p>
+                </div>
+                <div class="income">
+                    <p class="income_day" id="incommen">已投资</p>
+                    <p class="income_money">
+                        <span id="product-bidcount">0</span>
+                        <span class="inccd">人</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+        <div class="jxd_list" id="description" style="display:none">惊喜单:一次性购买剩余金额可获得30000理财金</div>
+        <div class="pro_content" id="p2ptimeline" style="display:none">
+            <div class="interest clearfix">
+                <div class="interest_day">
+                    <p class="start color_g">投标开始日</p>
+                    <p class="start color_h product-invertstartday"></p>
+                </div>
+                <div class="interest_day">
+                    <p class="midd color_g lefttext">起息日</p>
+                    <p class="midd color_h product-profitstartday lefttext">0</p>
+                </div>
+                <div class="interest_day">
+                    <p class="end color_g">回款日</p>
+                    <p class="end color_h product-rebackday">0</p>
+                </div>
+            </div>
+            <div class="income_press">
+                <span class="press_end start"></span>
+                <span class="press_end center p2p_center"></span>
+                <span class="press_end back"></span>
+            </div>
+        </div>
+        <div class="pro_content" id="noready" style="display:none">
+            <div class="interest clearfix">
+                <div class="interest_day">
+                    <p class="start color_g">起息</p>
+                    <p class="start color_h product-profitstartday">0</p>
+                </div>
+                <div class="interest_day">
+                    <p class="midd color_g midtext">到期结息</p>
+                    <p class="midd color_h product-profitendday">0</p>
+                </div>
+                <div class="interest_day">
+                    <p class="end color_g">回款</p>
+                    <p class="end color_h product-rebackday">0</p>
+                </div>
+            </div>
+            <div class="income_press">
+                <span class="press_end start"></span>
+                <span class="press_end center"></span>
+                <span class="press_end back"></span>
+            </div>
+        </div>
+        <div class="pro_content" id="ready" style="display:none">
+            <div class="interest clearfix">
+                <div class="interest_day interest_day_4">
+                    <p class="start color_g">成交</p>
+                    <p class="start color_h product-dealtime">0000-00-00</p>
+                </div>
+                <div class="interest_day interest_day_4">
+                    <p class="midd color_g">起息</p>
+                    <p class="midd color_h product-profitstartday">0</p>
+                </div>
+                <div class="interest_day interest_day_4">
+                    <p class="end color_g midtext">到期结息</p>
+                    <p class="end color_h product-profitendday">0</p>
+                </div>
+                <div class="interest_day interest_day_4">
+                    <p class="end color_g">回款</p>
+                    <p class="end color_h product-rebackday">0</p>
+                </div>
+            </div>
+            <div class="income_press">
+                <span class="press_end start"></span>
+                <span class="press_end" style="left:33.333%"></span>
+                <span class="press_end" style="left:66.666%"></span>
+                <span class="press_end back"></span>
+            </div>
+        </div>
+        <ul class="info_list clearfix">
+            <li class="js_return_money" style='display:none;'>
+                <span class="li_left">回款去向</span>
+                <span class="li_right">
+                    <z class="over-ellipsis">
+                    </z>
+                </span>
+            </li>
+            <li>
+                <span class="li_left">回款方式</span>
+                <span class="li_right" id="product-typetext">
+                    <z>*</z>
+                    <i class="i_right"></i>
+                </span>
+            </li>
+            <li>
+                <span class="li_left" id="transpty">转让条件</span>
+                <div class="li_right pos_r" id="producttransferlink">
+                    <span class="li_right pd_r" id="product-transferlockday">*</span>
+                    <span class="li_right attom">
+                        <img class="tran_tip" src="/css/img2.0/attom.png" alt="">
+                    </span>
+                </div>
+            </li>
+            <li>
+                <span class="li_left js_invert_percent">募集进度</span>
+                <span class="li_right" id="purchaseprogress">0%</span>
+            </li>
+
+        </ul>
+        <p class="btm_arrow">
+            <img class="img_arrow" src="/css/img2.0/rotate.png" alt="">
+            <span>点击查看详情</span>
+        </p>
+        <!--产品详细信息-->
+        <div class="pro_info" style="display:none;">
+            <div class="pro_tablist_warp">
+                <div class="pro_tablist" data-index="0">
+                    <div class="pro_tab cur">产品详情</div>
+                    <div class="pro_tab">标的资产</div>
+                    <div class="pro_tab">合作机构</div>
+                    <div class="pro_tab">受托方</div>
+                    <div class="btm_line p0"></div>
+                </div>
+            </div>
+            <div class="pro_tabview" id="pro_tab0">
+                <div class="pro_tab_item" style="display:none;" id="rateitem">
+                    <div class="pro_item">
+                        <div class="pro_it_left unified-rate-text">
+                            <!--历史年化收益率-->
+                        </div>
+                        <div class="pro_it_right" id="rate">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">产品评级</div>
+                        <div class="pro_it_right" id="productleavel">
+                            <span class="s_text">*</span>
+                            <b class="zm"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="collection_amount">总募集金额</div>
+                        <div class="pro_it_right" id="raisetotal">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="regamount">可投资金额</div>
+                        <div class="pro_it_right" id="startamountnote">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">起息日</div>
+                        <div class="pro_it_right" id="dateofinterest">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="regmuji">
+                    <div class="pro_item">
+                        <div class="pro_it_left">募集期限</div>
+                        <div class="pro_it_right" id="recruitmentperiod">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">项目期限</div>
+                        <div class="pro_it_right" id="projectduration">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item old_218">
+                    <div class="pro_item">
+                        <div class="pro_it_left">提前赎回封闭期</div>
+                        <div class="pro_it_right" id="closedperiod">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="regrepaystyle">回款方式</div>
+                        <div class="pro_it_right" id="repaymentmethod">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" style="display:none;" id="investor">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="investor_title">投资人数</div>
+                        <div class="pro_it_right" id="investor_num">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="penalty">
+                    <div class="pro_item">
+                        <div class="pro_it_left">手续费</div>
+                        <div class="pro_it_right" id="counterfee">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="regreback">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="yuqirule">到期回款规则</div>
+                        <div class="pro_it_right" id="rulesay"></div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="redpenaltyhtml" style="display:none;">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="yuqirule">赎回手续费</div>
+                        <div class="pro_it_right" id="redpenalty">免手续费</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="zr_218" style="display:none">
+                    <div class="pro_item">
+                        <div class="pro_it_left">产品转让锁定期</div>
+                        <div class="pro_it_right">不可转让</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="redtime" style="display:none">
+                    <div class="pro_item">
+                        <div class="pro_it_left">赎回到账时间</div>
+                        <div class="pro_it_right">申请赎回后
+                            <z id="redeemday">1</z> 个工作日内，具体以第三方支付公司到账时间为准</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="transferpenalty">
+                    <div class="pro_item">
+                        <div class="pro_it_left" id="producttransferhtml">产品转让手续费</div>
+                        <div class="pro_it_right" id="earlyredemptionfee">手续费=投资本金*2%</div>
+                    </div>
+                </div>
+
+                <div class="pro_tab_item" id="enddate" style="display:none">
+                    <div class="pro_item">
+                        <div class="pro_it_left">转让到账时间</div>
+                        <div class="pro_it_right" id="enddate_value">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" id="transfer" style="display:none">
+                    <div class="pro_item">
+                        <div class="pro_it_left">是否可转</div>
+                        <div class="pro_it_right">否</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">投资人适当性管理要求</div>
+                        <div class="pro_it_right">
+                            <b class="col1" id="fitcustomertype" style="color: #00a950;">保守型及以上</b>
+                            <br>
+                            <b class="col2">
+                                （若您还不知道您的客户类型，请至“我的 —《风险评估问卷》”进行风险评估）
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">税费计算</div>
+                        <div class="pro_it_right" id="tax_calculation">*</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item" style="display:none">
+                    <div class="pro_item">
+                        <div class="pro_it_left">风险提示</div>
+                        <div class="pro_it_right" id="risk_warn">网贷有风险，出借需谨慎</div>
+                    </div>
+                </div>
+                <div class="pro_tab_item">
+                    <div class="pro_item">
+                        <div class="pro_it_left">相关文件</div>
+                        <div class="pro_it_right" id="protocol_new">
+                            <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2ptipcontract.html'">《网络借贷风险和禁止性行为提示书》</div>
+                            <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2ppromisebook.html'">《资金来源合法承诺书》</div>
+                            <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2pcontractslease.html'">《借款合同》</div>
+                        </div>
+                        <div class="pro_it_right" id="protocol_old">
+                            <div class="pro_link" onclick="window.location.href='/html/product/contract/risk-tip.html'">《风险提示函》</div>
+                            <div class="pro_link" onclick="window.location.href='/html/product/contract/disclaimer-of-liability.html'">《免责声明》</div>
+                            <div class="pro_link" id="entrustxieyi">《定向委托投资协议》</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <template id="itemtpl0">
+                <div class="p2p_hack pt0">
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">借款年化利率</div>
+                            <div class="pro_it_right">{0}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">产品规模</div>
+                            <div class="pro_it_right">{1}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">起借金额</div>
+                            <div class="pro_it_right">{2}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">回款方式</div>
+                            <div class="pro_it_right">{3}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">起息日</div>
+                            <div class="pro_it_right">{4}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">回款日</div>
+                            <div class="pro_it_right">{5}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">是否可转</div>
+                            <div class="pro_it_right">{6}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left">相关文件</div>
+                            <div class="pro_it_right" id="protocol_new">
+                                <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2ptipcontract.html'">《网络借贷风险和禁止性行为提示书》</div>
+                                <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2ppromisebook.html'">《资金来源合法承诺书》</div>
+                                <div class="pro_link" onclick="window.location.href='/html/product/contract/txsp2pcontractslease.html'">《借款合同》</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template id="itemtpl">
+                <div class="pro_tab_item other rp4">
+                    <div class="pro_tab_title">{0}</div>
+                    <div class="pro_tab_p {3}">{1}</div>
+                </div>
+            </template>
+            <div class="pro_tabview" id="pro_tab1" style="display:none;">
+                <!-- <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">资产管理；投资咨询服务；企业管理咨询服务；投资管理服务等.</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div> -->
+
+            </div>
+            <!-- 项目详情tab 模板 -->
+            <template id="itemtpl1">
+                <div class="loan_company">
+                    <p>{0}</p>
+                    <div>
+                        借款金额
+                        <span>
+                            <z>{1}</z>元
+                        </span>
+                    </div>
+                </div>
+                <div class="p2p_hack">
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">项目名称</div>
+                            <div class="pro_it_right">{2}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">项目简介</div>
+                            <div class="pro_it_right">{3}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">借款期限</div>
+                            <div class="pro_it_right">{4}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">借款用途</div>
+                            <div class="pro_it_right">{5}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">还款方式</div>
+                            <div class="pro_it_right">{6}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">还款来源</div>
+                            <div class="pro_it_right">{7}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p2p_hack">
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">借款年化利率</div>
+                            <div class="pro_it_right">{8}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">起息日</div>
+                            <div class="pro_it_right">{9}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">募集期</div>
+                            <div class="pro_it_right">{10}</div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">项目风险等级</div>
+                            <div class="pro_it_right">
+                                {11}
+                                <i class="tip"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro_tab_item">
+                        <div class="pro_item">
+                            <div class="pro_it_left ">相关费用</div>
+                            <div class="pro_it_right">{12}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p2p_hack">
+                    <div class="pro_tab_item after_invert">
+                        <div class="pro_item triangle_icon">
+                            <div class="pro_it_left ">贷后情况</div>
+                            <div class="pro_it_right"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div class="pro_tabview" id="pro_tab2" style="display:none;">
+                <!-- <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">资产管理；投资咨询服务；企业管理咨询服务；投资管理服务等.</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div> -->
+            </div>
+            <template id="common_qa">
+                <div class="common_qa">
+                    <h2>
+                        1. 什么是“招财僧”？
+                    </h2>
+                    <p>
+                        答 招财僧是唐小僧向其平台上的投资方（即出借人）和融资方（借款人）推出的个人借贷服务。借贷双方通过 “招财僧”服务可以快捷方便地达成借款交易并完成资金的借出和借入。
+                    </p>
+                </div>
+                <div class="common_qa">
+                    <h2>
+                        2. 成功投资“招财僧”后什么时候开始计息？
+                    </h2>
+                    <p>
+                        答 在您的投资资金成功发放到借款人唐小僧户账户之日起的第1日（借款发放成功之日为第1日），开始计息,具体时间以产品时间轴展示为准。
+                    </p>
+                </div>
+                <div class="common_qa">
+                    <h2>
+                        3. 投资“招财僧”后什么时候回款？
+                    </h2>
+                    <p>
+                        答 “招财僧”采用到期还本付息的回款方式，产品时间轴上展示回款日期。正常情况下，在回款日当天截止23:59分钱会回款至余额。
+                    </p>
+                </div>
+                <div class="common_qa">
+                    <h2>
+                        4. “招财僧”出借成功后，可以撤销吗？
+                    </h2>
+                    <p>
+                        答 成功出借的项目不能撤回。
+                    </p>
+                </div>
+                <div class="common_qa">
+                    <h2>
+                        5. 我签订的“招财僧”电子合同受法律保护吗？
+                    </h2>
+                    <p>
+                        答 根据《合同法》、《电子签章法》等的相关条款规定，您签订的线上《借款合同》具有法律效力，受法律保护。
+                    </p>
+                </div>
+            </template>
+            <div class="pro_tabview" id="pro_tab3" style="display:none;">
+                <!-- <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">资产管理；投资咨询服务；企业管理咨询服务；投资管理服务等.</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_title">受托机构：</div>
+                    <div class="pro_tab_p">受托机构：</div>
+                </div>
+                <div class="pro_tab_item other not100">
+                    <div class="pro_tab_title"></div>
+                    <div class="pro_tab_p padtop0 pro_compy_item">资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_p padtop0">资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_p padtop0">资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司资本主义理财有限公司</div>
+                </div>
+                <div class="pro_tab_item other not100">
+                    <div class="pro_tab_title"></div>
+                    <div class="pro_tab_p padtop0 pro_compy_item"><a href="https://m.baidu.com">资本主义理财有限公司资本主义理财有限公司资本</a></div>
+                </div>
+                <div class="pro_tab_item other">
+                    <a class="pro_tab_p padtop0">资本主义理财有限公司资本主义理财有限公司资本主义</a>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_p padtop0">资本主义理财有限公司资本主义理财有限公司资本主义</div>
+                </div>
+                <div class="pro_tab_item other">
+                    <div class="pro_tab_p padtop0 pro_more">查看更多</div>
+                </div> -->
+            </div>
+            <template id="prod_safety">
+                <div class="prod_safety">
+                    <h1>全方位、多层次的风控体系</h1>
+                    <div class="safety_item">
+                        <h2>
+                            1.资金去向透明
+                        </h2>
+                        <p>
+                            穿透式管理，完整清晰记录每一笔出借的去向、借款人详细信息；多层风控审核机制，层层审核，降低出借风险；
+                        </p>
+                    </div>
+                    <div class="safety_item">
+                        <h2>
+                            2.风控模型丰富
+                        </h2>
+                        <p>
+                            反欺诈系统、预测模型和大数据评分、交易风险识别处理系统；
+                        </p>
+                    </div>
+                    <div class="safety_item">
+                        <h2>
+                            3.风控数据源广泛
+                        </h2>
+                        <p>
+                            支持20+数据源，1000+变量，实现贷前、贷中和贷后智能化客户全周期风险管理；
+                        </p>
+                    </div>
+                    <div class="safety_item">
+                        <h2>
+                            4.风控手段先进
+                        </h2>
+                        <p>
+                            大数据风控进行风险识别；专业风控现场实地尽调；多套风控模型进行客户评级和风险定价。
+                        </p>
+                    </div>
+                </div>
+                <div class="risk_process">
+                    <h3>风控流程</h3>
+                    <img src='/css/img2.0/report/risk_process.png'>
+                </div>
+            </template>
+        </div>
+        <!--底部通用说明-->
+        <div class="wel_btm_com" style="display:none;">
+            <!-- <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+                账户资金防盗安全由新浪支付和太平财险共同保障
+            </span> -->
+            <p>网贷有风险 出借需谨慎</p>
+        </div>
+    </div>
+    <div class="btn_pay buying" id="product-buy" style="display:none">
+        <div style="display:table-cell;vertical-align:middle">
+            <p class="product_buy">立即出借</p>
+        </div>
+    </div>
+    <div class="btn_pay buying" id="product-soldout" style="background: #b9b9b9;display:none">
+        <div style="display:table-cell;vertical-align:middle">
+            <p class="product_buy">已售罄</p>
+        </div>
+    </div>
+    <div class="mask" style="display:none"></div>
+    <div class="rule-tip rule1" style="display:none">
+        <div class="question q1result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低
+                    <br>获利期待：本金保值
+                    <br>对应风险类型：保守型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule2" style="display:none">
+        <div class="question q2result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低
+                    <br>获利期待：本金平稳增值
+                    <br>对应风险类型：稳健型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule3" style="display:none">
+        <div class="question q3result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：中
+                    <br>获利期待：稳定收益
+                    <br>对应风险类型：平衡型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule4" style="display:none">
+        <div class="question q4result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：较高
+                    <br>获利期待：高收益
+                    <br>对应风险类型：成长型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule5" style="display:none">
+        <div class="question q5result" style="display:none">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <div class="x">x</div>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极高
+                    <br>获利期待：较高收益
+                    <br>对应风险类型：进取型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <!-- <div class="invest-mtk openhouse" id="open-house" style="display:none;">
+        <h3>转让说明</h3>
+        <div class="invest-mtk-body ">
+            <div class="tbody">
+                <div>
+                    转让条件：项目成立后存在转让锁定期2天，在产生收益2天后且剩余期限大于3天该产品方可转让。
+                </div>
+                <div>
+                    转让手续费：转让金额*0.2%，10元起，不高于200元。
+                </div>
+            </div>
+        </div>
+        <div class="invest-mtk-footer">
+            <div id="closeOpenHouse">确认</div>
+        </div>
+    </div> -->
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- <script src="/js/utils/notice.js"></script> -->
+    <script src="/js/pagejs/product/productfixeddetail.js"></script>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

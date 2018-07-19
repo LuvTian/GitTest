@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport">
+            <article class="usersignin-title bg-white bg-red mb8">
+                <div class="small-6 left">累计签到&nbsp;<em id="user-signtimes">0</em>次</div>
+                <a class="small-6 left text-right" href="/Html/My/myreward-money.html">查看奖励记录<span class="wxicon icon-right-arrow"></span></a>
+            </article>
+            <article class="calendar bb mb8">
+                <article class="bg-white bb bt">
+                    <div class="small-4 left text-left">
+                        <span class="wxicon icon-left-arrow">
+                        </span>上一月
+                    </div>
+                    <div class="small-4 left text-center"></div>
+                    <div class="small-4 left text-right gray">
+                        下一月<span class="wxicon icon-right-arrow">
+                        </span>
+                    </div>
+                </article>
+                <article class="bg-white">
+                    <div class="row">
+                        <div class="left">一</div>
+                        <div class="left">二</div>
+                        <div class="left">三</div>
+                        <div class="left">四</div>
+                        <div class="left">五</div>
+                        <div class="left">六</div>
+                        <div class="left">日</div>
+
+                    </div>
+                    <div class="row calendar-list">
+                        
+                        
+                    </div>
+                    <p class="calendar-yiqian text-center gray" style="display:none;">每日签到等于帮您多投 <span class="red">4015元</span> 活期资金</p>
+                    <p>
+                        <a href="javascript:void(0)" id="user-sign" class="button trailer expand">签到</a>
+                    </p>
+                    <p class="calendar-tongji text-center gray">
+                        签到人数：&nbsp;&nbsp;&nbsp;昨天&nbsp;
+                        <span class="red" id="user-yesterday-signcount">0</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        今天&nbsp;<span class="red" id="user-curent-signcount">0</span>
+                    </p>
+                </article>
+            </article>
+            <article class="decimal bg-white bg-none">
+                <p class="bb">签到规则</p>
+                <ol class="gray">
+                    <li>在投金额≥1000元，方可参与签到活动；在投金额＜1000元，本次签到将会失效</li>
+                    <li>签到后，可获得红包奖励0.88元；未签到或签到失效，则无法获得红包奖励</li>
+                    <li>参与邀请好友，分享唐小僧理财至朋友圈即可获得奖励免签一周</li>
+                </ol>
+            </article>
+        </article>
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/user-sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>身份证验证</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <style>
+        #mainBody{
+            text-align: center;
+        }
+        .emotionPic{
+            height: 4.053333rem;
+            padding-top:.5rem;
+        }
+        .tip{
+            margin-top: 1.024rem;
+            color:#333;
+            font-size: .597333rem;
+            line-height: .896rem;
+        }
+        #btn_downloadApp{
+            background: #F25D50;
+            border-radius: 3px;
+            font-size: .682667rem;
+            color:#fff;
+            margin-top: 1.706667rem;
+            width: 92%;
+            height: 2.133333rem;
+            line-height: 2.133333rem;
+            display: inline-block;
+        }
+        .guangguang{
+            font-size: .597333rem;
+            color: #4A90E2;
+            margin-top: 1.706667rem;
+            display: block;
+        }
+        .wel_btm_com{
+            position: absolute;
+            margin: 0 auto;
+            bottom: .853333rem;
+            left: .5rem;
+            right: 0;
+        }
+        .wel_btm_com .wel_btm_comspan::after{
+            top:-.09rem;
+        }
+    </style>
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="">
+        <img src="/css/img2.0/disclosure/emotionPic1.png" alt="" class="emotionPic">
+        <div class="tip">
+            为了认证您的信息<br />您需要进入唐小僧app进行认证
+        </div>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.az.madison.android" id="btn_downloadApp">下载唐小僧app</a>
+        <a href="/html/anonymous/" class="guangguang">先去逛逛</a>
+        <div class="wel_btm_com"><span class="wel_btm_comspan" onclick="window.location.href=&quot;/Html/picc.html&quot;">账户资金防盗安全由新浪支付和太平财险共同保障</span></div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

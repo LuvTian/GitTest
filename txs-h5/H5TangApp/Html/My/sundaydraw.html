@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="w-h100">
+<head>
+    <meta charset="UTF-8">
+    <title>周末赢大奖</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <link rel="stylesheet" type="text/css" href="/css/signed.css?v=2016">
+</head>
+<body class="containbox">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <article class="viewport">
+        <div class="roll az-text-center">
+            <div class="roll-box2">
+                <img src="/css/img2.0/roll.gif" alt="">
+                <div class="pointer az-text-center">
+                    <img src="/css/img2.0/pointer.png" alt="" id="luckdraw">
+                </div>
+            </div>
+
+        </div>
+        <div class="notice">
+            <p class="tip">今日中奖名单</p>
+            <!--<marquee direction="up" scrollamount="5" id="weekdrawlist" style="display:none">
+
+            </marquee>
+            <p id="not-sunday-tip" class="az-text-center font-col-fff font-size-14rem padding-t-1rem">今天不开奖哦，一周每日签到，即可在周日<br />参与大转盘赢大奖活动</p>-->
+        </div>
+
+        <div class="miss-tip" style="display:none" id="missday">
+            <h3 class="az-text-center"></h3>
+            <p class="az-text-center bb">本周未满签，无法抽奖！</p>
+            <a href="javascript:void(0);" onclick="history.back();" class="az-text-center" id="lookinfo">返回</a>
+            <i class="wxicon icon-cancle"></i>
+        </div>
+        <div class="mask display-none"></div>
+        <div class="miss-tip _undraw display-none">
+            <h3 class="az-text-center">今天不抽奖哦</h3>
+            <p class="az-text-center bb">一周每日签到，即可在周日参与大转盘<br />赢大奖活动！</p>
+            <a href="javascript:void(0)" class="az-text-center" id="gobuyproduct">确定</a>
+        </div>
+    </article>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jquery.rotate.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/sundaydraw.js"></script>
+
+</body>
+</html>

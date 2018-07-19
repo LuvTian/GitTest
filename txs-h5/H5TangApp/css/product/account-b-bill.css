@@ -1,0 +1,66 @@
+.transhistory-nav a {
+            width: 25% !important;
+        }
+        
+        .bg-f6 {
+            background: #f6f6f6;
+        }
+        
+        .bg-white,
+        .finances-nav {
+            background-color: #fff;
+        }
+        
+        .finances-nav {
+            padding: 0 3rem;
+            margin-bottom: 1rem;
+            margin: 0 auto;
+        }
+        
+        .finances-nav a:before {
+            background: #fff;
+        }
+        .finances-nav .active a {
+            color:#f24139; 
+        }
+        .finances-nav .active a:before {
+            left: 12%;
+            background: #f24139;
+            height: 2px;
+            width: 78%;
+        }
+        
+        .finances-nav {
+            margin-bottom: 1rem;
+        }
+        .content .tabs-content {
+            background: #f6f6f6; 
+        }
+        .tabs-content .content {
+            background: #fff;
+        }
+        .tabs-content .content .ondata {
+            background: #f6f6f6;
+        }
+        
+        .bt {
+            border-bottom: 1px #e5e5e5 solid;
+            border-top: 0px;
+        }
+        .translist  .bg-white{
+            padding-left: 0;
+            margin-left: 1.3rem;
+        }
+        .tlname p {
+            height: 1.8rem;
+        }
+        .small-5 p.red {
+                height: 2.8rem;
+                line-height: 3.8rem;
+                color:#c34949;
+        }
+        .small-5 p.green {
+                height: 2.8rem;
+                line-height: 3.8rem;
+                color:#5D8FD3;
+        }

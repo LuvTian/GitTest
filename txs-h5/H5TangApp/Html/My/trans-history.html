@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>交易记录</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my/trans-history.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="">
+        <!--主体部分-->
+        <div class="fixed_top">
+            <div class="title_favourable">
+                <div class="confirm_title">
+                    <div class="JS_choose" style="display:inline-block;"><span class="title_name"></span><i class="triangle triangle_up"></i></div>
+                </div>
+                <ul class="choose_favourable">
+                    <!-- <li class="choosed_favourable">唐小僧记录</li>
+                        <li>网贷记录</li>
+                        <li>侨金所记录</li>
+                        <li>赣金所记录</li> -->
+                </ul>
+            </div>
+            <div class="mask JS_mask" style="display:none;"></div>
+            <!-- <ul class="bonus_tab JS_bonus_tab">
+                    <li class="tab_selected headspitem">未使用</li>
+                    <li class="headspitem">已使用</li>
+                    <li class="headspitem">已失效</li>
+                </ul> -->
+        </div>
+        <div class="main_content">
+            <ul class="content_tab JS_tab">
+                <!-- <li class="tab_selected headspitem">全部</li>
+                <li class="headspitem">转入</li>
+                <li class="headspitem">转出</li>
+                <li class="headspitem">投资</li>
+                <li class="headspitem">赎回</li> -->
+            </ul>
+            <div class="content JS_content">
+                <!-- <ul class="pro_list">
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money red_color">+10,115.02</span>
+                            <span class="status">成功</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money red_color">+10,115.02</span>
+                            <span class="status">成功</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pro_list" style="display:none;">
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money red_color">+10,115.02</span>
+                            <span class="status">成功</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pro_list" style="display:none;">
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money green_color">+10,115.02</span>
+                            <span class="status">处理中</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pro_list" style="display:none;">
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money green_color">+10,115.02</span>
+                            <span class="status">处理中</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pro_list" style="display:none;">
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money red_color">+10,115.02</span>
+                            <span class="status">成功</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="pro_name">转让产品－侨金所01期</span>
+                            <span class="time">2017-08-01  10:10:00</span>
+                        </div>
+                        <div>
+                            <span class="pro_money red_color">+10,115.02</span>
+                            <span class="status">成功</span>
+                        </div>
+                    </li>
+                </ul> -->
+
+            </div>
+            <!-- <div class="ondata JS_ondata">点击加载更多</div> -->
+        </div>
+        <div class="mask guide_mask" style="display:none;"></div>
+        <div class="tip" style="display:none;">
+            <!-- <img src="/css/img2.0/guide_record.png" class="title_tip_img"> -->
+            <div style="display:inline-block;background-color: #fff;border-radius: 20px;padding: 8px 30px;">
+                <span class="title_name">唐小僧</span><i class="triangle triangle_up"></i>
+            </div>
+            <img src="/css/img2.0/guide.png" class="guide_img JS_guide">
+        </div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/trans-history.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<title>唐小僧首页</title>
+<link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="/css/base.css?20160321010">
+  <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+</head>
+
+<body class="bg-gray">
+<div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+<section class="home">
+  <article class="viewport">
+        <ul data-orbit data-options="timer_speed:3000;">
+            <li class=""><img src="/css/img2.0/index-banner.jpg" alt=""></li>
+            <li class=""><img src="/css/img2.0/index-banner.jpg" alt=""></li>
+        </ul>
+        <article class="tongji bg-white bb text-center">
+            <div class="small-6 left">
+                <p><span>3</span> <span>4</span> <span>8</span> 亿 <span>4</span> <span>1</span> <span>5</span> <span>6</span> 万</p>
+                累计投资额(元)
+            </div>
+            <div class="small-6 left">
+                <p class="pr"><i class="dline">|</i><span>1</span> <span>6</span> <span>8</span> 万 <span>6</span> <span>4</span> <span>2</span> <span>0</span> 人</p>
+                注册用户数
+            </div>
+        </article>
+      <a class="bg-white bt bb mt nologin-fundlist" href="javascript:void(0);">
+          <div class="nologin-warp">
+              <div class="fundlist-title pr"><span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income"><i>8</i>.00%+</span></div>
+              <div class="fundlist-intro">
+                  <span class="gray">期限灵活 随存随取</span>
+                  <span class="right"><span class="wxicon icon-hike"></span>&nbsp;新年加息 3%</span>
+              </div>
+          </div>
+      </a>
+      <a class="bg-white bb mb nologin-fundlist" href="javascript:void(0);">
+          <div class="nologin-warp">
+              <div class="fundlist-title pr"><span class="wxicon icon-regular"></span>定期&nbsp;&nbsp;&nbsp;<span class="dline">|</span><span class="income"><i>8</i>.50%~<i>10</i>.50%</span></div>
+              <div class="fundlist-intro">
+                  <span class="gray">随时可转 百元起购</span>
+                  <span class="right"><span class="wxicon icon-exclusive"></span>&nbsp;新用户专享&nbsp;&nbsp;</span>
+              </div>
+          </div>
+      </a>
+       <article class="ensure" onClick="window.location.href=''">
+			<div class="small-4 left pr"><span class="wxicon icon-ensure-01"></span>严格甄选<br>优质产品</div>
+            <div class="small-4 left pr"><span class="wxicon icon-ensure-02"></span>十层风控<br>十道审核</div>
+            <div class="small-4 left pr"><span class="wxicon icon-ensure-03"></span>贴心服务<br>便捷操作</div>
+       </article>
+       <article class="safety text-center" onClick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</article>
+    </article>
+</section>
+<script src="/js/vendor/jquery.js"></script> 
+<script src="/js/foundation.min.js"></script> 
+
+<script type="text/javascript" src="/js/appendButtonBar.js"></script>
+<script type="text/javascript">
+     $(function(){
+        // footerBar.highlight(2);
+    })
+</script>
+
+<script>
+$(document).foundation();
+	$(document).foundation({
+		orbit: {
+    animation: 'slide',
+    pause_on_hover: false,
+    animation_speed: 500,
+    navigation_arrows:false,
+    bullets: false
+	}
+
+});
+</script> 
+<script>
+$(window).load(function() {
+	$("#all-body-div-status").fadeOut();
+	$("#all-body-div-preloader").delay(350).fadeOut("slow");
+	setTimeout(function(){$(".mymove2").removeClass("mymove2");},3000);
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>我的</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <link rel="stylesheet" href="/css/sengcaibaoMy.css">
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+
+    <section class="my_index">
+        <header>
+            <div class="namemesg clearfix">
+                <div class="name float_l" id="userinfo_list">
+                    <img src="/css/img2.0/sengcaibao/username.png" alt="">
+                    <span id="my-name">***</span>
+                </div>
+                <div class="mesg float_r posi_r">
+                    <div class="" id="xxnum"></div>
+                    <img src="/css/img2.0/sengcaibao/message.png" alt="" id="wxmitte">
+                </div>
+            </div>
+            <div class="income clearfix" id="prfinfo">
+                <div class="all_asset float_l">
+                    <h3>总资产(元)<img src="/css/img2.0/sengcaibao/eyes.png" alt="" id="eyes"></h3>
+                    <p id="my-sum-balance">0.00</p>
+                </div>
+                <div class="yesterday_income float_r">
+                    <h3>昨日收益(元)</h3>
+                    <p id="yesterdaysumprofit">0.00</p>
+                </div>
+            </div>
+            <div class="Ontheway bor_top" style="display: none">
+                <div class="rub"></div>
+                <span>在途金额：<span>11111111</span>元</span>
+            </div>
+        </header>
+        <!--银行通知 -->
+        <div class="notice-wrap" id="notice-wrap" style="display:none;">
+            <div class="notice-horn">
+                <i class="n-horn-icon"></i>
+            </div>
+            <div class="close">
+                <i class="n-horn-close"></i>
+            </div>
+            <div class="content" id="content">
+            </div>
+        </div>
+        <div class="contian_box">
+            <div class="content_s bor_bottom" id="sengcaibao_list">
+                <div class="zh_info half_box">
+                    <h4 class="scaibao" id="sengcaibaotitle">账户余额</h4>
+                    <p id="sengcaibao_money">0.00元</p>
+                </div>
+                <div class="half_box">
+                    <div class="line_h_content_s txt_left p_block" id="deposit">充值</div>
+                    <div class="line_h_content_s txt_left p_block" id="withdraw">提现</div>
+                </div>
+                <div class="freelist sjx" style="display:none"></div>
+            </div>
+            <div class="api_box freelist" style="display:none">
+                <span class="free_text">含预约冻结款<span id="reservefreezeamount">0</span>元</span>
+            </div>
+            <div class="content_s posi_r bor_bottom">
+                <div class="zh_info part_flex1 half_box" id="lht_list">
+                    <h4 class="scaibao" id="laddertitile">灵活投<span>(包含至尊宝)</span></h4>
+                    <p id="flexibletotalamount">0.00元</p>
+                </div>
+                <div class="tab_line"></div>
+                <div class="zh_info part_flex1 half_box" id="regular_list">
+                    <h4 class="scaibao" id="activefixedcount">定期</h4>
+                    <p id="my-fixed-balance">0.00元</p>
+                </div>
+            </div>
+            <div class="content_s posi_r bor_bottom" id="p2pandqjs" style="display:none">
+                <div class="zh_info part_flex1 half_box" id="p2p_wd" style="display:none">
+                    <h4 class="scaibao">网贷</h4>
+                    <p id="p2pbalance">0.00元</p>
+                </div>
+                <div class="tab_line qjsline"></div>
+                <div class="zh_info part_flex1 half_box" id="qjs" style="display:none">
+                    <h4 class="scaibao qjsplatformName">侨金所</h4>
+                    <p id="qjsMoney">0.00元</p>
+                </div>
+                <div class="zh_info part_flex1 half_box gjsc" id="gjs_one" style="display:none">
+                    <h4 class="scaibao gjsplatformName">赣金所</h4>
+                    <p class="gjsMoney">0.00元</p>
+                </div>
+            </div>
+            <div class="content_s posi_r" id="gjs" style="display:none">
+                <div class="zh_info part_flex1 half_box gjsc" id="gjs_two" style="display:none">
+                    <h4 class="scaibao gjsplatformName">赣金所</h4>
+                    <p class="gjsMoney">0.00元</p>
+                </div>
+            </div>
+            <div class="rewardlist_box mar_top12 clearfix">
+                <div class="float_l reward_div re_width35" id="myreward-money">
+                    <p><img src="/css/img2.0/money_icon.png" alt="" class="money_icon"></p>
+                    <p class="reward_title">现金奖励</p>
+                    <p class="reward_value" id="platform">0.00元</p>
+                </div>
+                <div class="float_l reward_div re_width30" id="myreward-bonus">
+                    <p><img src="/css/img2.0/bonus_icon.png" alt="" class="bonus_icon"></p>
+                    <p class="reward_title">优惠券</p>
+                    <p class="reward_value" id="couponCount">0张</p>
+                </div>
+                <div class="float_l reward_div re_width35" id="financial_list">
+                    <p><img src="/css/img2.0/financial_icon.png" alt="" class="financial_icon"></p>
+                    <p class="reward_title">理财金</p>
+                    <p class="reward_value" id="totalamount">0.00元</p>
+                </div>
+            </div>
+            <div class="contain_box_base mar_top12" id="trans-history_list">
+                <div class="part_flex1 all_left  bor_bottom">
+                    <div class="record_icon myindex_icon"></div>
+                    <div class="pro_items">交易记录</div>
+                </div>
+                <div class="part_flex1 all_right  bor_bottom">
+                    <div class="item_contain"></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base" id="group_list" style="display:none">
+                <div class="part_flex1 all_left  bor_bottom">
+                    <div class="grouptrans_icon myindex_icon"></div>
+                    <div class="pro_items">拼团订单</div>
+                </div>
+                <div class="part_flex1 all_right  bor_bottom">
+                    <div class="item_contain"></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base" id="qujin_list">
+                <div class="part_flex1 all_left  bor_bottom">
+                    <div class="in_firend_icon myindex_icon"></div>
+                    <div class="pro_items">好友邀请</div>
+                </div>
+                <div class="part_flex1 all_right  bor_bottom">
+                    <div class="item_contain"><span id="levelname" style="display:none;">白龙马</span><span id="levelrate" style="display:none;"> +0.0%</span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base" id="level_list">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="memLevel_icon myindex_icon"></div>
+                    <div class="pro_items">会员等级</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span id="vip_name">白金</span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <!--<div class="contain_box_base" id="reward_list" style="display:none">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="stat_weal_icon myindex_icon"></div>
+                    <div class="pro_items">平台奖励(含代金券)</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span id="platform">0.00</span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>-->
+            <!--<div class="contain_box_base" id="financial_list" style="display:none">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="lcj_icon myindex_icon"></div>
+                    <div class="pro_items">理财金</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span id="totalamount">0.00</span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>-->
+            <div class="contain_box_base" id="myCredits_list">
+                <div class="part_flex1 all_left ">
+                    <div class="sweets_icon myindex_icon"></div>
+                    <div class="pro_items">我的唐果</div>
+                </div>
+                <div class="part_flex1 all_right ">
+                    <div class="item_contain"><span id="points">0.00个</span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base mar_top12" onclick="window.location.href='/html/my/helpcenter.html'">
+                <div class="part_flex1 all_left ">
+                    <div class="help_icon myindex_icon"></div>
+                    <div class="pro_items">帮助中心</div>
+                </div>
+                <div class="part_flex1 all_right ">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base" id="mywelfare_list" style="display:none">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="my_weal_icon myindex_icon"></div>
+                    <div class="pro_items">我的福利</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base " style="display: none">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="sevonline_icon myindex_icon"></div>
+                    <div class="pro_items">在线客服</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base mar_top12" id="store_list" style="display:none">
+                <div class="part_flex1 all_left bor_bottom">
+                    <div class="merchants_settled_icon myindex_icon"></div>
+                    <div class="pro_items" id="store_text">商户入驻</div>
+                </div>
+                <div class="part_flex1 all_right bor_bottom">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base mar_top12" id="txsinfo_list">
+                <div class="part_flex1 all_left">
+                    <div class="toknow_icon myindex_icon"></div>
+                    <div class="pro_items">唐小僧简介</div>
+                </div>
+                <div class="part_flex1 all_right">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+            <div class="contain_box_base mar_top12" style="display: none">
+                <div class="part_flex1 all_left">
+                    <div class="setting_icon myindex_icon"></div>
+                    <div class="pro_items">设置</div>
+                </div>
+                <div class="part_flex1 all_right">
+                    <div class="item_contain"><span></span></div>
+                    <div class="arrow_icon"><i></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="p_bottom_tip">网贷有风险 出借需谨慎</div>
+    <!-- <div class="mask " id="tangmask" style="display: none">
+        <div class="tangmask"> -->
+    <!--糖果遮罩 -->
+    <!-- <div class="luK tang_bg"></div>
+            <img src="/css/img2.0/sengcaibao/mask_arrow.png" class="arrow_mask" alt="" width="25%" />
+            <img src="/css/img2.0/sengcaibao/tang_mask.png" alt="" class="tang_mask" width="100%" />
+        </div>
+    </div>
+
+    <div class="mask" id="melvmask" style="display: none">
+        <div class="melvmask">
+            <div class="luK tp mel_bg"></div> -->
+    <!--会员等级遮罩 -->
+    <!-- <img src="/css/img2.0/sengcaibao/mask_arrow.png" class="arrow_mask tp_sc" alt="" width="25%" />
+            <img src="/css/img2.0/sengcaibao/mer_lv_mask.png" class="mer_mask" alt="" width="70%" />
+        </div>
+    </div> -->
+
+    <!-- 存钱罐 -->
+    <div class="ji_box" style="display: none">
+
+        <h1>激活账户</h1>
+        <p class="tit1">
+            请设置新浪支付交易密码，激活存钱罐账户。
+        </p>
+        <p class="tit1">
+            激活后会提高您的账户安全性。
+        </p>
+        <div class="bod"></div>
+        <div class="row">
+            <a href="javascript:void(0)" class="column">
+                去设置
+            </a>
+        </div>
+    </div>
+    <script src="/js/appendButtonBar.js"></script>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/my/myindex.js"></script>
+</body>
+
+</html>

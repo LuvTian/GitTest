@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css" />
+    <link rel="stylesheet" type="text/css" href="/css/exchange.css">
+</head>
+
+<body class="timeDeposit-info">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content">
+        <article class="viewport">
+            <div class="mtk2" style="display:none">
+                <i></i>
+                <div>点这里分享哦</div>
+            </div>
+            <div class="top-mod">
+                <!--<a href="javascript:void(0);"><img style="width: 60%;" src="/css/img2.0/sharefixed.png"></a>-->
+                <div class="row1">
+                    期望年化收益率
+                </div>
+                <div class="row4">
+                    <z id="product-rate"></z><span class="s">% <span class="sml" id="product-rate-rateactivite" style="display:none;"></span></span>
+                </div>
+                <div class="row2">
+                    <div class="da">投资期限</div>
+                    <div class="ar"></div>
+                    <div class="da">已投资</div>
+                </div>
+                <div class="row3">
+                    <div id="product-duration"></div>
+                    <div id="product-bidcount"></div>
+                </div>
+            </div>
+            <div class="info_list qixi">
+                <div class="small-6 left">
+                    起息
+                    <p id="product-profitstartday"></p>
+                </div>
+                <div class="small-3 left">
+                    到期结息
+                    <p id="product-profitendday"></p>
+                </div>
+                <div class="small-3 left text-right">
+                    回款
+                    <p>T+1</p>
+                </div>
+                <img src="/css/img2.0/btn.png">
+            </div>
+            <ul class="info_list">
+
+                <li id="product-invited-detail" style="display:none" class="mar-top">
+                    <a id="product-investMoney" href="javascript:void(0);">
+                        <span class="m2">投资详情</span>
+                        <span class="m1">
+                            <s id="investMoney"></s><z style="color:gray">元</z>
+                            <b class="wxicon icon-right-arrow" id="investicon"></b>
+                        </span>
+                    </a>
+                </li>
+                <li><a id="product-detail" href="javascript:void(0);"><span class="m2">产品详情</span><span class="m1"><z>&nbsp;</z><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-xiangmuinfo" href="javascript:void(0);"><span class="m2">项目介绍</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+                <li><a id="product-active" href="javascript:void(0);"><span class="m2">相关文件</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+
+                <!--<li id="contractDocument" style="display:none;">
+                    <a id="product-contractDocument" href="javascript:void(0);">
+                        <span class="m2">法律文件</span>
+                        <span class="m1">
+                            <b class="wxicon icon-right-arrow"></b>
+                        </span>
+                    </a>
+                </li>-->
+                <li><a id="arepayplan" href="javascript:void(0);"><span class="m2">回款计划</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></a></li>
+
+
+                <li class="mar-top"><a href="javascript:void(0);"><span>回款方式</span><span class="m1" id="product-typetext"></span></a></li>
+                <li><a href="javascript:void(0);" id="producttransferlink"><span>转让条件</span><span class="m1" id="product-transferlockday"></span></a></li>
+                <li><a href="javascript:void(0);"><span>产品等级</span><span class="m1" id="product-risklevel"></span></a></li>
+                <li class="anquan">
+                    <a href="/Html/Product/contract/regular-product-safedetail.html" id="iconclick">
+                        <div class="safe">
+                            <div class="small-4 left">
+                                <img src="/css/img2.0/exchange.png">
+                                <p id="icontext">专业受托机构</p>
+                            </div>
+                            <div class="small-4 left">
+                                <img src="/css/img2.0/fund.png">
+                                <p>资金安全</p>
+                            </div>
+                            <div class="small-4 left">
+                                <img src="/css/img2.0/property.png">
+                                <p>资产安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul><br /><br />
+
+            <div class="timeDeposit_txt po-init">
+                <p class="btmpro line-het12" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金安全由新浪支付和太平财险共同保障</p>
+            </div>
+
+
+
+        </article>
+    </section>
+    <a id="operBtn" href="javascript:void(0);" class="timeDeposit_sh_btn1">转让</a>
+    <div class="mask" style="display:none"></div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/my-regular-entrust-detail.js"></script>
+    <script>
+        $('.timeDeposit-info .top-mod a').click(function() {
+            $('.mask').show();
+            $('.mtk2').show();
+        })
+        $('.quxiao').click(function() {
+            $('.mask').hide();
+            $('.mtk2').hide();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+body {
+  color: #333;
+  background-color: #f6f6f6;
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+.off-line {
+  height: 4.693333rem;
+  width: 100%;
+  background: url(/css/img2.0/sengcaibao/banner.png) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+.account-info {
+  height: 9.088rem;
+  background-image: url(/css/img2.0/sengcaibao/ccb-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f6f6f6;
+  color: #C3C3C3;
+  text-align: center;
+}
+.acc-investing {
+  padding: 0.810667rem  0 0.710667rem;
+  font-size: 0.597333rem;
+}
+.acc-investing-amount {
+  font-size: 1.536rem;
+  color: #F43C3C;
+}
+.acc-investing-strong {
+  display: inline-block;
+  height: 0.810667rem;
+  width: 3.626667rem;
+  background-image: url(/css/img2.0/sengcaibao/artboard.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 0.426667rem;
+}
+.acc-yesterday p:first-child,
+.acc-total p:first-child {
+  font-size: 0.512rem;
+}
+.acc-yesterday p:last-child,
+.acc-total p:last-child {
+  font-size: 0.682667rem;
+  color: #f43f3f;
+}
+.acc-yesterday {
+  text-align: right;
+  padding-right: 0.853333rem;
+}
+.acc-total {
+  text-align: left;
+  padding-left: 0.853333rem;
+}
+.ac-chart {
+  background-color: #fff;
+}
+.chart-title {
+  margin-top: 0.45rem;
+  margin-bottom: 1rem;
+}
+.chart-title ul {
+  font-size: 0.6826666666666666rem;
+  width: 92%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e4e4e4;
+  overflow: hidden;
+  text-align: center;
+}
+.chart-title li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.chart-title li span {
+  display: block;
+}
+.chart-title li .text {
+  padding-top: 0.412rem;
+}
+.chart-title li .value {
+  padding-top: 0.15rem;
+  padding-bottom: 0.3rem;
+}
+.chart-title li.active {
+  color: #f43f3f;
+  position: relative;
+}
+.chart-title li.active::after {
+  bottom: 0;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  position: absolute;
+  content: ' ';
+  border-top: 1px solid #f43f3f;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+.chart-title {
+  position: relative;
+}
+.chart-title  .risk2{
+  position: absolute;
+  font-size: 0.512rem;
+  color: #E2E3E2;
+  right: 0.6826666666666666rem;
+  bottom:-1.1rem;
+}
+.tabs-content {
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: .5rem;
+}
+.abs-hide {
+  position: absolute;
+  top: -10000px;
+}
+.ac-line {
+  display: block;
+  background-color: #fff;
+  color: #333;
+  padding: 0.554667rem 0.682667rem;
+  margin-top: 0.512rem;
+  overflow: hidden;
+}
+.ac-line {
+  display: block;
+  background-color: #fff;
+  color: #333;
+  padding: 0.554667rem 0.682667rem;
+  margin-top: 0.512rem;
+}
+.ac-line .desc {
+  float: left;
+  width: 30%;
+}
+.ac-line .arrow {
+  padding-top: 0.15rem;
+  float: left;
+  width: 70%;
+  font-size: 0.5410628019323671rem;
+  color: #b9b9b9;
+  text-align: right;
+}
+.blank-gap {
+  font-size: 0.682667rem;
+  line-height: 100%;
+}
+.icon-arrow-right {
+  width: 0.384rem;
+  height: 0.554667rem;
+  padding-bottom: 0.1rem;
+  vertical-align: middle;
+  background-size: contain;
+  background-image: url(/css/img2.0/sengcaibao/arrow.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.footer {
+  margin-top: 1rem;
+  font-size: 0.512rem;
+  text-align: center;
+  color: #b9b9b9;
+}
+.footer .risk2 {
+  text-align: right;
+  margin-right: 0.682667rem;
+  margin-top: 1rem;
+}
+.footer .safety {
+  display: block;
+  color: #b9b9b9;
+}
+.footer .risk {
+  margin-top: 0.512rem;
+}
+.icon-safety {
+  width: 0.597333rem;
+  height: 0.597333rem;
+  background-size: contain;
+  background-image: url(/css/img2.0/sengcaibao/shield.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: -0.1rem;
+  padding-right: 3px;
+}
+.navbar {
+  background-color: #fff;
+  height: 2.090667rem;
+  line-height: 2.090667rem;
+  color: #f43f3f;
+  font-size: 0.682667rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.column-5 {
+  width: 50%;
+  box-sizing: border-box;
+}
+.left {
+  float: left;
+}
+.bl {
+  border-left: 1px #e4e4e4 solid;
+}
+.hide {
+  display: none;
+}
+.colorb9 {
+  color: #b9b9b9;
+}
+.display-none {
+  display: none;
+}
+/*---bank notice---begin*/
+/*---bank notice---end*/

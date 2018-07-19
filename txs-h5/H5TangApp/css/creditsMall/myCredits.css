@@ -1,0 +1,114 @@
+body {
+    background: #F6F6F6;
+}
+section .title{
+	font-size: 0.682667rem;
+	color: #fff;
+	margin-bottom: 0.512rem;
+	position: relative;
+}
+#currentCreditsContainer{
+	background-image: radial-gradient(48% 114%, #FF734E 5%, #F43F3F 100%);
+	height: 4.949333rem;
+	text-align: center;
+	padding-top: 0.512rem;
+	box-sizing: border-box;
+	margin-bottom: 0.512rem;
+}
+#currentCreditsContainer .creditsNum{
+	margin-top: 0.597333rem;
+	font-size: 1.536rem;
+	color: #fff;
+}
+#creditsChangeHistoryContainer{
+    /*background: #fff;*/
+    margin-bottom: 0.512rem;
+	margin-bottom: 2.2rem;
+	position: absolute;
+    top: 5.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+    max-width: 720px;
+    margin: 0 auto;
+    display: none;
+}
+#creditsChangeHistoryPanel{
+	background: #fff;
+    padding: 0.512rem 0 .512rem 0.682667rem;
+}
+#creditsChangeHistoryContainer .title{
+	color: #333;
+}
+#creditsChangeRecords li{
+	border-top: 0.5px solid #e5e5e5;
+	padding: 0.512rem 0;
+	position: relative;
+}
+.creditsChange_itemName{
+	font-size: 0.512rem;
+	color: #666;
+	margin-bottom: 0.341333rem;
+}
+.creditsChange_date{
+	font-size: 0.512rem;
+	color: #999;
+}
+.creditsChange_num{
+	font-size: 0.768rem;
+	color: #666;
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	margin-top: -0.384rem;
+}
+.wenhao{
+	width: 1.365333rem;
+    height: 1.365333rem;
+    background: url(/css/img2.0/tangguo_wenhao.png) center no-repeat;
+    background-size: 50%;
+    top: -0.21rem;
+    left: 50%;
+    margin-left: 1.4rem;
+    position: absolute;
+}
+.wenhao a{
+    display: block;
+    height: 100%;
+}
+#creditsChangeRecords{
+	margin-bottom: .8rem;
+}
+#creditsChangeHistoryStatus{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	bottom: .5rem;
+	font-size: .512rem;
+	color: #333;
+	margin-left: -0.3rem;
+}
+.link_exchange{
+	float: right;
+	margin-right: 1rem;
+	color: #4a90e2;
+    font-size: 0.597333rem;
+    line-height: 1.1rem;
+}
+#noneCreditsChangeHistory{
+	color: #333;
+	text-align: center;
+	display: none;
+}
+#noneCreditsChangeHistory img{
+	margin-top: 3.5rem;
+}
+#noneCreditsChangeHistory p{
+	color: #999;
+    margin-top: 1rem;
+    font-size: .64rem;
+}

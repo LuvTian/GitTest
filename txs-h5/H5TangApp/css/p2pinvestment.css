@@ -1,0 +1,136 @@
+#mainbody {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.if_bg {
+    background: #FFFFFF;
+}
+
+.if_title {
+    box-sizing: border-box;
+    padding: 0.768rem 0.64rem;
+    /* width: 375px; */
+    height: 2.1333333333333333rem;
+    font-size: 0.6826666666666666rem;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 0.6826666666666666rem;
+}
+
+.if_t {
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 0.5973333333333334rem;
+}
+
+.if_v {
+    font-size: 0.5973333333333334rem;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 0.5973333333333334rem;
+    text-align: right;
+}
+
+.float_r {
+    float: right;
+    box-sizing: border-box;
+}
+
+.float_l {
+    float: left;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    zoom: 1;
+    width: 100%;
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    clear: both;
+}
+
+.if_ob,
+.if_obg {
+    position: relative;
+}
+
+.if_obg:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #e4e4e4;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+    bottom: 0;
+    left: 0;
+}
+
+.if_ob:after {
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 15.4rem;
+    border-bottom: 1px solid #e4e4e4;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+    bottom: 0;
+    left: .6rem;
+    content: '';
+}
+
+.if_red_b {
+    background: #F25D50;
+    width: 0.128rem;
+    height: 0.5973333333333334rem;
+}
+
+.tbz {
+    position: absolute;
+    top: 0.768rem;
+    left: 1.1946666666666668rem;
+}
+
+.mt12 {
+    margin-top: 0.512rem;
+}
+
+.js_c {
+    text-align: left;
+    padding: 0px 0.6826666666666666rem 0.8533333333333334rem 3.4133333333333336rem;
+}
+
+.js_l {
+    width: 3.4133333333333336rem;
+    padding: 0.8533333333333334rem 0 0.768rem 0.6826666666666666rem;
+}
+
+.js_r {
+    width: 12.586666666666666rem;
+    padding: 0.8533333333333334rem 0 0.768rem 0;
+}
+
+.hh {
+    height: 0.512rem;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.if_v p {
+    /* height: 0.896rem; */
+    line-height: 0.896rem;
+}

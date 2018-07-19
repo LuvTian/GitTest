@@ -1,0 +1,305 @@
+html,
+body {
+    height: 100%;
+}
+#mainBody{
+    background-color:#eee;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 0.597rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.visit-qfax{
+    display: block;
+    height: 2.987rem;
+    width: 100%;
+    margin-bottom: .5rem;
+    background-image: url(/css/img2.0/goto-qfax.jpg);
+    background-size: 100% 100%;
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    /* z-index: 1; */
+    max-width: 100%;
+    min-height: 100%;
+    padding-top: 3.8rem;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    font-size: 0.768rem;
+    /* background: #fff; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    /* -webkit-justify-content: center; */
+    /* justify-content: center; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /* -webkit-align-items: center; */
+    /* align-items: center; */
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 18rem;
+    flex-direction: column;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.product-nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.768rem;
+    background: #fff;
+    color: #333;
+    height: 3.3rem;
+    padding: 0.4rem 0.8rem 0;
+    max-width: 720px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.product-nav p{
+    text-align: center;
+    flex: 1;
+}
+
+.product-nav p.active span,.product-nav p.active z{
+    color: #F44444;
+}
+
+.product-nav p span,.product-nav p z{
+    display: block;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 100%;
+}
+
+.product-nav p span{
+    font-size: 0.768rem;
+}
+.product-nav p q{
+    
+}
+
+.dot{
+    display: block;
+    border-radius: 0.2134rem;
+    width: 0.256rem;
+    height: 0.256rem;
+    background-color: #f44444;
+    margin: 0.2134rem auto 0.384rem;
+    
+}
+
+.visib-hide{
+    visibility: hidden;
+}
+
+
+.product-nav p z{
+    font-size: 0.4267rem;
+    padding-top: 0.1rem;
+}
+
+.product-nav .nav-progress{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    width: 2.057rem;
+    -webkit-transform: translateX(0.8rem);
+    -moz-transform: translateX(0.8rem);
+    -ms-transform: translateX(0.8rem);
+    -o-transform: translateX(0.8rem);
+    transform: translateX(0.8rem);
+    transition: transform .2s;
+    height: 0.13rem;
+    background-color: #ff4949;
+    
+}
+.product-nav .nav-progress-bg {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e7e7e7;
+    -webkit-transform: scaleY(.5);
+    -moz-transform: scaleY(.5);
+    -ms-transform: scaleY(.5);
+    -o-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.product-name{
+    color: #333;
+    font-size: .512rem;
+}
+
+.product-info{
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: .192rem;
+}
+
+.product-list{
+    width: 100%;
+    font-size: 0.512rem;
+    /* padding-left: .725333rem; */
+}
+
+.product-list li{
+    position: relative;
+    padding: .512rem .725333rem;
+    /* margin-left: .725333rem; */
+    background-color: #fff;
+}
+
+.product-list li::after{
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    transform: scaleY(.9);
+    -webkit-transform: scaleY(.9);
+    position: absolute;
+    bottom: 0;
+    left: .725333rem;
+}
+
+.productInterestRates{
+    flex:3;
+    color: #f43f3f;
+    font-size: 1.109333rem;
+}
+
+.productInterestRates .productactrate {
+    font-size: .384rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #f43f3f;
+    color: #f43f3f;
+    padding: 0 0.14rem;
+    border-radius: 0.15rem;
+    margin-left: .2rem;
+    height: .6rem;
+    line-height: .6rem;
+    box-sizing: border-box;
+    margin-bottom: .4rem;
+}
+
+.productInterestRates .unit{
+    font-size: .682667rem;
+}
+.productTimeLimit{
+    flex: 2;
+    color: #666;
+    font-size: .682667rem;
+}
+.productTimeLimit .unit{
+    color: #666666;
+    font-size: 0.512rem;
+}
+.product-due{
+    margin-top: .3rem;
+    margin-bottom: .15rem;
+}
+.productInterestRates .desc{
+    color: #999;
+    font-size: .512rem;
+
+}
+.productTimeLimit .desc{
+    font-size: .512rem;
+    color: #999;
+}
+.productTimeLimit .desc span{
+    font-size: .62rem;
+    color: #666;
+    padding-right: 0.2rem;
+}
+.appointment-end{
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    width: 52px;
+    height: 53px;
+    display: block;
+    background-image: url(/css/img2.0/appoint-end.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.no-products-warp{
+    margin: 0 auto;
+}
+
+.no-products-warp p{
+    text-align: center;
+    font-size: 18px;
+    color: #666666;
+    margin-top: .8rem;
+}
+
+.no-products-warp a{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #5FA4FB;
+    margin-top: .2rem;
+}
+
+.no-products{
+    background-image: url(/css/img2.0/no-products.png);
+    height: 6rem;
+    width: 6rem;
+    margin: 2.986rem auto 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>收益计算</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="wrap">
+        <div class="bg-white bb bt" id="title"></div>
+        <div class="bg-white bb">
+            <div class="small-6 fl line-h-3">计划投资(元)</div>
+            <div class="small-6 fl tr gray-font">
+                <input type="tel" id="txtPrincipal" value="10000" class="input-text b-width0" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace('.','')" />
+            </div>
+        </div>
+        <div class="bg-white bb">
+            <div class="small-6 fl line-h-3">投资期限(天)</div>
+            <div class="small-6 fl tr gray-font">
+                <input type="tel" id="txtDays" value="30" class="input-text b-width0">
+            </div>
+        </div>
+        <div class="bg-white mb b0">
+            <div class="fillet-btn"><a href="javascript:void(0)" id="Calculation" class="button az-padding0 expand">开始计算</a></div>
+        </div>
+        <div class="row">
+            <div class="small-6 columns font-z14rem">回收本息</div>
+            <div class="small-6 columns tr red font-z14rem" id="divTotal">0.00元</div>
+        </div>
+        <div class="row">
+            <div class="small-6 columns font-z14rem">理财本金</div>
+            <div class="small-6 columns tr font-z14rem" id="divPrincipal">0.00元</div>
+        </div>
+        <div class="row">
+            <div class="small-6 columns font-z14rem">理财收益</div>
+            <div class="small-6 columns tr font-z14rem" id="divInterest">0.00元</div>
+        </div>
+        <div class="mt bt gray-font tc CalculatorNotes font-z14rem">● 计算结果仅供参考，以赎回当日的实际情况为准</div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/calculator.js"></script>
+
+</body>
+</html>

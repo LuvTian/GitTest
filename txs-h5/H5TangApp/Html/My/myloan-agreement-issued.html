@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>发行人详情</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray">
+    <div class="wrap">
+        <div class="serialnumber-title gray-font">投资时间: <span id="holddate"></span></div>
+        <div class="serialnumber bt bb">
+            <div class="small-6 fl"><span id="contractid_text">债权转让协议编号：</span> <label id="contractid"></label>  </div>
+            <div class="small-6 fl tr"><span class="red" id="amount"></span>在投金额(元)</div>
+        </div>
+        <div class="record-list bb" id="loantitle_text" style="display:none;">
+            <div class="small-6 columns">产品名称</div>
+            <div class="small-6 columns tr" id="loantitle"></div>
+        </div>
+        <div class="record-list bb">
+            <div class="small-6 columns" id="borrowename_text">发行人</div>
+            <div class="small-6 columns tr" id="borrowename"></div>
+        </div>
+        <div class="record-list bb">
+            <div class="small-6 columns">证件号码</div>
+            <div class="small-6 columns tr" id="borroweidnumber"></div>
+        </div>
+        <div class="record-list bb olddisplay">
+            <div class="small-6 columns" id="borroweamount_text">转让方投资规模</div>
+            <div class="small-6 columns tr" id="borroweamount"></div>
+        </div>
+        <!--暂时隐藏-->
+        <div class="record-list bb record-dxwt olddisplay">
+            <div class="small-6 columns" id="repaycount_text">基础产品续存期限</div>
+            <div class="small-6 columns tr" id="repaycount"></div>
+        </div>
+        <div class="record-list bb">
+            <div class="small-6 columns">预计回款日</div>
+            <div class="small-6 columns tr" id="repaydate"></div>
+        </div>
+        <a href="javascript:void(0);" class="record-list bb" id="linlcontract">
+            <div class="small-6 columns">查看合同</div>
+            <div class="small-6 columns tr"><span class="wxicon icon-right-arrow"></span></div>
+        </a>
+        <a href="javascript:void(0);" class="record-list bb" id="product-safaty">
+            <div class="small-6 columns">安全保障</div>
+            <div class="small-6 columns tr"><span class="wxicon icon-right-arrow"></span></div>
+        </a>
+        <a class="safety" href="/Html/picc.html"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</a>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/myloan-agreement-issued.js"></script>
+</body>
+</html>

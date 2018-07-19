@@ -1,0 +1,217 @@
+.view{
+    background:#F6F6F6;
+    padding-bottom: 2.56rem;
+}
+section{
+    margin-top: .512rem;
+    background:#fff;
+}
+section:last-of-type{
+    /* margin-bottom: 2.56rem; */
+}
+section .title{
+    line-height: 2.133333rem;
+    font-size: .682667rem;
+    color:#333;
+    padding-left:.64rem;
+    position: relative;
+}
+section .title span{
+    font-size: .597333rem;
+    margin-left: .4rem;
+}
+section .title::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+section li{
+    padding: .725333rem 0 .725333rem .64rem ;
+}
+section .content{
+    margin-left: 2.346667rem;
+    position: relative;
+    line-height: 1;
+}
+section .content::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    left: 0;
+    bottom: -.725333rem;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+section li:last-of-type .content::after{
+    display: none;
+}
+section .pImg{
+    float: left;
+    width: 1.621333rem;
+    height: 1.621333rem;
+}
+section .name{
+    font-size: .597333rem;
+    color: #333333;
+    margin-bottom: .512rem;
+    margin-right: 4rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.2;
+}
+section .giftBag{
+    font-size: .597333rem;
+    color: #999;
+}
+section .status{
+    font-size: .512rem;
+    color: #999999;
+    position: absolute;
+    right: .725333rem;
+    top: .554667rem;
+}
+
+section .status a{
+    color: #999999;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype');
+}
+
+i.leftArrow {
+    display: inline-block;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    width: 0.4rem;
+    margin-left: 0.1rem;
+}
+
+i.leftArrow:before {
+    font-family: iconfont;
+    content: '\e615';
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+
+/* 如何升级弹窗样式 */
+
+.cover_dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    display: none;
+}
+
+.up_win {
+    background-color: #fff;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    transform: translateY(100%) scale(0);
+    -webkit-transform: translateY(100%) scale(0);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    left: 0;
+    right: 0;
+}
+
+.up_scale {
+    transform: translateY(0) scale(1);
+    -webkit-transform: translateY(0) scale(1);
+}
+
+.up_cose {
+    width: .896rem;
+    height: .896rem;
+    position: absolute;
+    top: .64rem;
+    left: .64rem;
+    z-index: 100;
+}
+
+.up_title {
+    font-size: .597333rem;
+    color: #333;
+    padding: .725333rem;
+    position: relative;
+    text-align: center;
+}
+
+.up_title:after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.up_content {
+    margin-top: 1.024rem;
+    padding: 0 .725333rem;
+}
+
+.up_content li {
+    font-size: .597333rem;
+    line-height: .853333rem;
+    color: #333;
+    margin-bottom: .512rem;
+}
+
+.normal_btn {
+    width: 14.72rem;
+    height: 1.877333rem;
+    line-height: 1.877333rem;
+    color: #fff;
+    font-size: .682667rem;
+    background-color: #FF3F3F;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.up_btn {
+    margin-top: 2.005333rem;
+    margin-bottom: 1.450667rem;
+    text-align: center;
+    display: block;
+}
+
+#wantUp{
+    height: 2.133333rem;
+    line-height: 2.133333rem;
+    text-align: center;
+    font-size: .682667rem;
+    color: #FF3F3F;
+    display: block;
+    background:#fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-top: 1px solid #f7f7f7;
+    max-width: 720px;
+    margin: 0 auto;
+}

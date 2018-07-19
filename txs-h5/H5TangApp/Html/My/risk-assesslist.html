@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风险评测</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-col-efeff3">
+    <ul>
+        <li class="question question-title" style="display:block">
+            <h2 class="az-center font-blod pad-tb-1 text-col-42" id="risktitle">会员风险测试问卷</h2>
+            <p class="statement az-textindet text-col-888" id="riskcenter">以下10个问题将根据您的财务状况、投资经验、投资风格、风险偏好和风险承受能力等对您进行风险评估，我们将根据评估结果为您更好的配置资产。请您认真作答,感谢您的配合！（每个问题请选择唯一选项，不可多选）</p>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <z id="checkboxtob" style="display:none"><input type="checkbox" name="check" value="checkbox" class="ez-box " id="check" /><span class="ez-col">我同意<a href="/Html/Product/contract/risk-tip.html" id="riskwarning">《风险提示书》</a><z id="he">和</z><a href="/Html/Product/contract/investor-announcement.html" id="passinvestor">《合格投资人声明》</a></span></z>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 riskstart">开始测试</a>
+            <!--<p class="az-center text-col-888 line-h-4">以下各题均为单选</p>-->
+        </li>
+
+        <li class="question question-list" style="display:none">
+            <div class="progress-qs"></div>
+            <div class="ques-num" data-question="1">
+                <div class="ques text-col-42 bb" data-question="1">
+                    1 您的年龄是 <span class="wxicon icon-right-arrow az-text-right fr"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、18-30</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:block">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="1" data-answer="A" data-score="-2">A、18-30</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="1" data-answer="B" data-score="0">B、31-50</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="1" data-answer="C" data-score="-4">C、51-60</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="1" data-answer="D" data-score="-10">D、高于60岁</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="2">
+                <div class="ques text-col-42 bb" data-question="2">
+                    2 .您的家庭年收入为（折合人民币）<span class="wxicon icon-right-arrow az-text-right fr trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、5万元以下</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="2" data-answer="A" data-score="0">A、5万元以下</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="2" data-answer="B" data-score="2">B、5-20万元</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="2" data-answer="C" data-score="6">C、20-50万元</div>
+                    </div>
+                    <div class="ques-answer row D bb">
+                        <div class="small-12 columns az-padding0" data-question="2" data-answer="D" data-score="8">D、50-100万元</div>
+                    </div>
+                    <div class="ques-answer row E">
+                        <div class="small-12 columns az-padding0" data-question="2" data-answer="E" data-score="10">E、100万元以上</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="3">
+                <div class="ques text-col-42 bb" data-question="3">
+                    3 在您每年的家庭收入中，可用于金融投资（储蓄存款除外）的比例为<span class="wxicon icon-right-arrow az-text-right fr trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、小于10%</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="3" data-answer="A" data-score="2">A、小于10%</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="3" data-answer="B" data-score="4">B、10%至25%</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="3" data-answer="C" data-score="8">C、25%至50%</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="3" data-answer="D" data-score="10">D、大于50%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="4">
+                <div class="ques text-col-42 bb" data-question="4">
+                    4 以下哪项最能说明您的投资经验<span class="wxicon icon-right-arrow az-text-right fr trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、除存款、国债外，我几乎不投资其他金融产品</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="4" data-answer="A" data-score="0">A、除存款、国债外，我几乎不投资其他金融产品</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="4" data-answer="B" data-score="2">B、大部分投资于存款、国债等，较少投资于股票、基金等风险产品</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="4" data-answer="C" data-score="6">C、资产均衡地分布于存款、国债、银行理财产品、信托产品、股票、基金等</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="4" data-answer="D" data-score="10">D、大部分投资于股票、基金、外汇等高风险产品，较少投资于存款、国债</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="5">
+                <div class="ques text-col-42 bb" data-question="5">
+                    5 您有多少年投资股票、基金、外汇、金融衍生产品等风险投资品的经验<span class="wxicon icon-right-arrow az-text-right fr trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、没有经验</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="5" data-answer="A" data-score="0">A、没有经验</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="5" data-answer="B" data-score="2">B、少于2年</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="5" data-answer="C" data-score="6">C、2至5年</div>
+                    </div>
+                    <div class="ques-answer row D bb">
+                        <div class="small-12 columns az-padding0" data-question="5" data-answer="D" data-score="8">D、5至8年</div>
+                    </div>
+                    <div class="ques-answer row E">
+                        <div class="small-12 columns az-padding0" data-question="5" data-answer="E" data-score="10">E、8年以上</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="6">
+                <div class="ques text-col-42 bb" data-question="6">
+                    6 以下哪项描述最符合您的投资态度<span class="wxicon icon-right-arrow az-text-right fr line-half1 trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、厌恶风险，不希望本金损失，希望获得稳定回报</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="6" data-answer="A" data-score="0">A、厌恶风险，不希望本金损失，希望获得稳定回报</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="6" data-answer="B" data-score="4">B、保守投资，不希望本金损失，愿意承担一定幅度的收益波动</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="6" data-answer="C" data-score="8">C、寻求资金的较高收益和成长性，愿意为此承担有限本金损失</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="6" data-answer="D" data-score="10">D、希望赚取高回报，愿意为此承担较大本金损失</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="7">
+                <div class="ques text-col-42 bb" data-question="7">
+                    7 以下情况，您会选择哪一种<span class="wxicon icon-right-arrow az-text-right fr line-half1 trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、有100%的机会赢取1000元现金</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="7" data-answer="A" data-score="0">A、有100%的机会赢取1000元现金</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="7" data-answer="B" data-score="4">B、有50%的机会赢取5万元现金</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="7" data-answer="C" data-score="6">C、有25%的机会赢取50万元现金</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="7" data-answer="D" data-score="10">D、有10%的机会赢取100万元现金</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="8">
+                <div class="ques text-col-42 bb" data-question="8">
+                    8 您计划的投资期限是多久<span class="wxicon icon-right-arrow az-text-right fr line-half1 trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、1年以下</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="8" data-answer="A" data-score="4">A、1年以下</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="8" data-answer="B" data-score="6">B、1－3年</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="8" data-answer="C" data-score="8">C、3 - 5年</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="8" data-answer="D" data-score="10">D、5年以上</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="9">
+                <div class="ques text-col-42 bb" data-question="9">
+                    9 您的投资目的是<span class="wxicon icon-right-arrow az-text-right fr line-half1 trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、资产保值</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="9" data-answer="A" data-score="2">A、资产保值</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="9" data-answer="B" data-score="6">B、资产稳健增长</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="9" data-answer="C" data-score="10">C、资产迅速增长</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ques-num" data-question="10">
+                <div class="ques text-col-42 " data-question="10">
+                    10 您的投资出现何种程度的波动时，您会呈现明显的焦虑<span class="wxicon icon-right-arrow az-text-right fr line-half1 trans-up"></span>
+                    <div class="row mart-t-1rem" style="display:none">
+                        <div class="small-9 columns choosed-answer">A、本金无损失，但收益未达期望</div>
+                        <div class="small-3 columns az-text-right col-ff6664"><img src="/css/img2.0/answer-choosepic.png" class="cho-img " alt=""> 已选</div>
+                    </div>
+                </div>
+                <div class="ansowerbox" style="display:none">
+                    <div class="ques-answer row A bb">
+                        <div class="small-12 columns az-padding0" data-question="10" data-answer="A" data-score="-5">A、本金无损失，但收益未达期望</div>
+                    </div>
+                    <div class="ques-answer row B bb">
+                        <div class="small-12 columns az-padding0" data-question="10" data-answer="B" data-score="5">B、出现轻微本金损失</div>
+                    </div>
+                    <div class="ques-answer row C bb">
+                        <div class="small-12 columns az-padding0" data-question="10" data-answer="C" data-score="10">C、本金10％以内的损失</div>
+                    </div>
+                    <div class="ques-answer row D bb">
+                        <div class="small-12 columns az-padding0" data-question="10" data-answer="D" data-score="15">D、本金20-50％的损失</div>
+                    </div>
+                    <div class="ques-answer row D">
+                        <div class="small-12 columns az-padding0" data-question="10" data-answer="E" data-score="20">E、本金50％以上损失</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+        <li class="question q1" style="display:none">
+            <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+            <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+            <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+            <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">确定</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测试</a>
+        </li>
+        <li class="question q2" style="display:none">
+            <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+            <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">稳健型</h2>
+            <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+            <span class="statement resulet-qs text-col-42-2">风险承受能力：较低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">确定</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测试</a>
+        </li>
+        <li class="question q3" style="display:none">
+            <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+            <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">平衡型</h2>
+            <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+            <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">确定</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测试</a>
+        </li>
+        <li class="question q4" style="display:none">
+            <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+            <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">成长型</h2>
+            <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+            <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">确定</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测试</a>
+        </li>
+        <li class="question q5" style="display:none">
+            <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+            <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">进取型</h2>
+            <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+            <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">确定</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测试</a>
+        </li>
+
+        <div class="rule-tip q1canbuy" style="display:none">
+            <li class="question ">
+                <div class="bb" style="margin-bottom:1rem;">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                <p class="statement az-textindet text-col-42-2 ">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span></br></br>
+                    </div></br>
+                <span class="statement resulet-qs text-col-42-2">您现在的风险等级可以购买该产品</span></br>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnikonw">我知道了</a>
+            </li>
+        </div>
+        <div class="rule-tip q2canbuy" style="display:none">
+            <li class="question ">
+                <div class="bb" style="margin-bottom:1rem;">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">稳健型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：较低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span></br></br>
+                </div></br>
+                <span class="statement resulet-qs text-col-42-2">您现在的风险等级可以购买该产品</span></br>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnikonw">我知道了</a>
+            </li>
+        </div>
+        <div class="rule-tip q3canbuy" style="display:none">
+            <li class="question ">
+                <div class="bb" style="margin-bottom:1rem;">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">平衡型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span></br></br>
+                </div></br>
+                <span class="statement resulet-qs text-col-42-2">您现在的风险等级可以购买该产品</span></br>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnikonw">我知道了</a>
+            </li>
+        </div>
+        <div class="rule-tip q4canbuy" style="display:none">
+            <li class="question ">
+                <div class="bb" style="margin-bottom:1rem;">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">成长型</h2>
+                    <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span></br></br>
+                </div></br>
+                <span class="statement resulet-qs text-col-42-2" >您现在的风险等级可以购买该产品</span></br>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnikonw">我知道了</a>
+            </li>
+        </div>
+        <div class="rule-tip q5canbuy" style="display:none">
+            <li class="question ">
+                <div class="bb" style="margin-bottom:1rem;">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pb0">进取型</h2>
+                    <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span></br></br>
+                </div></br>
+                <span class="statement resulet-qs text-col-42-2" >您现在的风险等级可以购买该产品</span></br>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 btnikonw">我知道了</a>
+            </li>
+        </div>
+
+        <div class="rule-tip q1nocanbuy" style="display:none">
+            <div class="question">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金保值<br>对应风险类型：保守型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 lookproduct">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip q2nocanbuy" style="display:none">
+            <div class="question">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>获利期待：本金平稳增值<br>对应风险类型：稳健型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 lookproduct">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip q3nocanbuy" style="display:none">
+            <div class="question" >
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                    <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>获利期待：稳定收益<br>对应风险类型：平衡型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 lookproduct">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip q4nocanbuy" style="display:none">
+            <div class="question ">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                    <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>获利期待：高收益<br>对应风险类型：成长型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 lookproduct">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+        <div class="rule-tip q5nocanbuy" style="display:none">
+            <div class="question ">
+                <div class="bb">
+                    <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                    <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                    <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                    <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>获利期待：较高收益<br>对应风险类型：进取型 </span>
+                    <br />
+                </div><br />
+                <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 lookproduct">去看看别的产品</a>
+                <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+                <br />
+            </div>
+        </div>
+    </ul>
+    <div class="mask" style="display:none"></div>
+
+    <div class="fillet-btn az-center"><a href="javascript:;" class="button expand az-padding0 mt-2rem bg-colefbdbc btnover" style="display:none">完成</a></div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/risk_assesslist.js?v=20161022"></script>
+
+
+</body>
+</html>
+

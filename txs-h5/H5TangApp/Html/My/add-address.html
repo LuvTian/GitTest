@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增地址</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray" style="overflow-x:hidden">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="chooseaddresspage">
+        <div class="bg-white bb bg-fff">
+            <div class="small-6 fl line-h-3">收货人：</div>
+            <div class="small-6 fl">
+                <div class="item">
+                    <input type="text" id="consigneename" class="input-text" value="" maxlength="8" placeholder="收货人">
+                </div>
+            </div>
+        </div>
+        <div class="bg-white bb bg-fff">
+            <div class="small-6 fl line-h-3">联系电话：</div>
+            <div class="small-6 fl">
+                <div class="item">
+                    <input type="tel" id="phone" value="" maxlength="11" pattern="[0-9]*" class="input-text" placeholder="联系电话">
+                </div>
+            </div>
+        </div>
+        <div class="bg-white bb bg-fff">
+            <div class="small-6 fl">
+                所在省：
+            </div>
+            <div class="small-6 fl">
+                <span class="name az-right grateaddress pcqaddress">
+                    <select id="province" class="prov">
+                        <option value="111">省</option>
+                    </select>
+                    <span id="aprov" class="col">省</span>
+                </span>
+            </div>
+        </div>
+        <div class="bg-white bb bg-fff">
+            <div class="small-6 fl">
+                所在市：
+            </div>
+            <div class="small-6 fl">
+                <span class="name az-right grateaddress pcqaddress">
+
+                    <select id="city" class="city">
+                        <option value="111">市</option>
+                    </select>
+                    <span id="acity" class="col">市</span>
+                </span>
+            </div>
+        </div>
+        <div class="bg-white bb bg-fff">
+            <div class="small-6 fl">
+                所在区县：
+            </div>
+            <div class="small-6 fl">
+                <span class="name az-right grateaddress pcqaddress">
+
+                    <select id="dist" class="dist">
+                        <option value="111">区</option>
+                    </select>
+                    <span id="adist" class="col">区</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="bg-white bg-fff">
+            <div class="small-6 fl line-h-3">详细地址：</div>
+            <div class="small-6 fl">
+                <div class="item">
+                    <textarea type="text" id="address" value="" class="input-text az-text-right" placeholder="具体街道或门牌号"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="fillet-btn az-center"><a href="javascript:;" class="button expand az-padding0 mt-2rem" id="OKBtn">确定</a></div>
+    </div>
+
+
+
+
+   
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/add-address.js"></script>
+    <script src="/js/jquery.cn_cityselect.js"></script>
+    <script>
+        $(document).foundation()
+    </script>
+    <script>
+        $(function () {
+            $("#add").find("input").click(function () {
+                $(".place").css("display", "block")
+            })
+            $("#az1").find("div").click(function () {
+                $("#zz1").val($(this).html());
+            })
+            $("#az2").find("div").click(function () {
+                $("#zz2").val($(this).html());
+            })
+            $("#az3").find("div").click(function () {
+                $("#zz3").val($(this).html());
+            })
+            $("#cancel").click(function () {
+                $(".place").css("display", "none")
+                $('#zz1,#zz2,#zz3').val("");
+            })
+            $("#msure").click(function () {
+                $(".place").css("display", "none")
+            })
+            $(".acquiescent").find("i").click(function () {
+                $(this).toggleClass("wxicon icon-round-check-on").toggleClass("wxicon icon-round-check");
+            })
+        })
+    </script>
+</body>
+</html>

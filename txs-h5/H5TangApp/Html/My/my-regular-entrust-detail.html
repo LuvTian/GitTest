@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>投资详情</title>
+    <!-- 投资详情
+         加入版本：2.9.2
+         页面说明：用户持有定期列表，产品详情页，可以跳转到具体的持有定期详情页或转让页面
+         添加时间：2017年9月4日 
+    -->
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my/my-regular-pre-detail.css">
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <script id="mainBody-tpl" type="text/html">
+            <header class="info-head product-base-info" onclick="window.location.href='/html/product/productfixeddetail.html?id=<%=bid.productid%>'">
+                    <p class="pro-title"><span><%=bid.title%></span>
+                        
+                    </p>
+                    <%if(bid.matchmode == 3 || bid.matchmode == 4){%><!--如果是p2p的产品 -->
+                        <p class="pro-rate">借款年化利率<span class="rate"><%=toFixed(bid.productrate)%></span>% 
+                            <%if(bid.interestrate){%>
+                                <span class="active-rate">+<%=toFixed(bid.interestrate*100)%>%</span>
+                            <%}%>
+                        </p>
+                    <%}else{%>
+                    <p class="pro-rate">历史年化收益率<span class="rate"><%=toFixed(bid.productrate)%></span>% 
+                        <%if(bid.interestrate){%>
+                            <span class="active-rate">+<%=toFixed(bid.interestrate*100)%>%</span>
+                        <%}%>
+                    </p>
+                    <%}%>
+                    <% if(bid.status==4||bid.status==6){%>
+                        <span class="received">回款中</span>
+                    <%} else if(bid.status==3||bid.status==5){%>
+                        <span class="received">已回款</span>
+                    <%} else if(bid.status==8){%>
+                        <span class="received">已转让</span>
+                    <%}%>
+            </header>
+            <header class="info-head product-timeline-info" onclick="window.location.href='/html/product/productfixeddetail.html?id=<%=bid.productid%>'">
+                <ul class="pro-progress">
+                    <li class="item progress">
+                            &nbsp;
+                        <p class="progress-tip visib-hide"><span>持有期限 <%=bid.holdingsdays%>/<%=bid.duration%>天</span></p>
+                        <span class="overall-progress"></span>
+                        <span class="cur-progress"></span>
+                        <span class="point p1"></span>
+                        <!-- <span class="point p2 visib-hide"></span> -->
+                        <span class="point p3"></span>
+                    </li>
+                    <%if(bid.matchmode == 3 || bid.matchmode == 4){%><!--如果是p2p的产品 -->
+                        <%if(extra.isappoint){%>
+                            <li class="item progress-desc">
+                                <!-- <div class="tl">
+                                    <span>投资成功</span>
+                                    <span><%=dataFormat(bid.biddate,"yyyy-MM-dd")%></span>
+                                </div> -->
+                                <div class="tl">
+                                    <span>起息日</span>
+                                    <span><%=bid.startdate%></span>
+                                </div>
+                                <div style="height:1px"></div>
+                                <div class="tr">
+                                    <span>回款日</span>
+                                    <span><%=bid.repaydate%></span>
+                                </div>
+                            </li>
+                        <%}else{%>
+                            <li class="item progress-desc">
+                                <div class="tl">
+                                    <span>起息日</span>
+                                    <span><%=bid.startdate%></span>
+                                </div>
+                                <div class="visib-hide">
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                </div>
+                                <div class="tr">
+                                    <span>回款日</span>
+                                    <span><%=bid.repaydate%></span>
+                                </div>
+                            </li>
+                        <%}%>
+                    <%}else{%>
+                    <%if(extra.isappoint){%>
+                        <li class="item progress-desc">
+                            <!-- <div class="tl">
+                                <span>投资成功</span>
+                                <span><%=dataFormat(bid.biddate,"yyyy-MM-dd")%></span>
+                            </div> -->
+                            <div class="tl">
+                                <span>起息</span>
+                                <span><%=bid.startdate%></span>
+                            </div>
+                            <div style="height:1px"></div>
+                            <div class="tr">
+                                <span>产品到期</span>
+                                <span><%=bid.enddate%></span>
+                            </div>
+                        </li>
+                    <%}else{%>
+                        <li class="item progress-desc">
+                            <div class="tl">
+                                <span>起息</span>
+                                <span><%=bid.startdate%></span>
+                            </div>
+                            <div class="visib-hide">
+                                <span>&nbsp;</span>
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="tr">
+                                <span>产品到期</span>
+                                <span><%=bid.enddate%></span>
+                            </div>
+                        </li>
+                    <%}%>
+                <%}%>
+                </ul>
+            </header>
+            <ul class="pro-introduce">
+                
+                <%if(bid.matchmode == 3 || bid.matchmode == 4){%><!--如果是p2p的产品 -->
+                    <li>出借金额<span class="fr"><%=toFixed(bid.bidamount)%>元</span></li>
+                    <li>到期收益<span class="fr"><%=toFixed(bid.interest)%>元</span></li>
+                    <%
+                    var totalmoney=bid.interest+bid.bidamount;
+                %>
+                    <li>回款总金额<span class="fr"><%=toFixed(totalmoney)%>元</span></li>
+                <%}else{%>
+                    <li>投资金额<span class="fr"><%=toFixed(bid.bidamount)%>元</span></li>
+                    <% if(bid.status==3||bid.status==5||bid.status==8){%>
+                        <!-- 已还款/已转让/提前赎回已还款;此时不显示底部按钮，头部显示“已回款” -->
+                        <li>总获收益<span class="fr"><%=toFixed(bid.currentinterest)%>元</span></li>
+                    <%}else if(bid.producttype==2){%>
+                        <!-- 按月付息 -->
+                        <li>已收收益<span class="fr"><%=toFixed(bid.currentinterest)%>元</span></li>
+                        <li>待收收益<span class="fr"><%=toFixed(bid.remaininginterest)%>元</span></li>
+                    <%}else if(bid.producttype===3||bid.producttype===99){%>
+                        <!-- 本息一次 -->
+                        <li>预期总收益<span class="fr"><%=toFixed(bid.interest)%>元</span></li>
+                    <%}%>
+               <% }%>
+               
+                
+               
+            </ul>
+            <ul class="pro-introduce">
+                <% if(bid.producttype==2 && !extra.isappoint){%>
+                    <!-- 下面这个链接还需要传递参数 -->
+                    <li onclick="window.location.href='/html/product/backpaymentplan.html?id=<%=bid.id%>&bidstatus=<%=bid.status%>&interestcouponid=<%=bid.interestcouponid%>&title=<%=bid.title%>'" class="arrow">回款方式<span class="fr"><%=bid.typetext%></span></li>
+                <%} else{%>
+                    <li>回款方式<span class="fr"><%=bid.typetext%></span></li>
+                <%}%>
+                <li>订单编号
+                    <button class="fr copy-dom" data-clipboard-text="<%=bid.id%>">复制</button>
+                    <span class="fr"><%=bid.id%></span>
+                </li>
+                <!--
+                    1 如果是预约，显示预约时间 
+                    2 预约中隐藏投资时间和回款时间
+                    3 已回款 显示回款时间，已转让 显示转让时间
+                -->
+                
+                 <%if(bid.matchmode == 3 || bid.matchmode == 4){%><!--如果是p2p的产品 -->
+                    <% if(extra.isappoint){%>
+                        <li>预约时间<span class="fr"><%=bid.reservationtime%></span></li>
+                    <%}%>
+                    <% if(!extra.inappoint){%>
+                        <!-- 预约中不显示投资时间 -->
+                        <li>出借时间<span class="fr"><%=bid.biddate%></span></li>
+                    <%}%>
+                <%}else{%>
+                    <% if(extra.isappoint){%>
+                        <li>预约时间<span class="fr"><%=bid.reservationtime%></span></li>
+                    <%}%>
+                    <% if(!extra.inappoint){%>
+                        <!-- 预约中不显示投资时间 -->
+                        <li>投资时间<span class="fr"><%=bid.biddate%></span></li>
+                    <%}}%>
+                    <%if(bid.matchmode == 3 || bid.matchmode == 4){%><!--如果是p2p的产品 -->
+                        <% if(bid.status==8){%>
+                            <li>转让时间<span class="fr"><%=bid.transfersuccesstime%></span></li>
+                        <%}else if(bid.status==3||bid.status==5){%>
+                            <li>回款时间<span class="fr"><%=dataFormat(bid.repaytime,"yyyy-MM-dd HH:mm")%></span></li>
+                            <li>回款至<span class="fr"><%=bid.repaymentdirection%></span></li>
+                        <%}%>
+                    <%}else{%>
+                        <% if(bid.status==8){%>
+                            <li>转让时间<span class="fr"><%=bid.transfersuccesstime%></span></li>
+                        <%}else if(bid.status==3||bid.status==5){%>
+                            <li>回款时间<span class="fr"><%=dataFormat(bid.repaytime,"yyyy-MM-dd HH:mm")%></span></li>
+                        <%}%>
+                    <%}%>
+               
+            </ul>
+            <% if(!extra.inappoint){%>
+                <%if (bid.status != 8 && bid.status != 5 && bid.status != 3 && bid.status != 6) {%>
+                    <%if(bid.matchmode==3 || bid.matchmode==4){%>
+                        <ul class="pro-introduce" onclick='window.location.href = "/html/product/loadCompanyDetail.html?bid=<%=bid.id%>&productid=<%=bid.productid%>&amount=<%=bid.bidamount%>"'>
+                            <li class="arrow">资产详情</li>
+                        </ul>
+                    <%}else{%>
+                        <ul class="pro-introduce" onclick='window.location.href = "/html/my/userloanbid.html?bid=<%=bid.id%>&productid=<%=bid.productid%>"'>
+                            <li class="arrow">资产详情</li>
+                        </ul>
+                    <%}%>
+                <%} else{%>
+                    <ul class="pro-introduce">
+                        <li>资产详情</li>
+                    </ul>
+                <%}%>
+            <%}%>
+            <!-- 已转让， 预约中，已赎回，赎回中，提前赎回已还款不显示底部按钮 -->
+            <% if(",0,1,3,4,5,6,8".indexOf(","+bid.status)<0){%>
+                 <!-- 
+                        收益后两天后可转，期限大于三天可转 √
+                        已转让 √
+                        转让（可转让）√
+                        不可转让 √
+                        XX提前赎回功能不在此页面 ×
+                     -->
+                <%if(bid.status==2){%>
+                    <%if(regular.bidstatus==2||regular.bidstatus==4){%>
+                        <footer class="pro-btn pro-btn-warning"><%=regular.bidstatusdescription%></footer>
+                    <%}else if(regular.bidstatus==3){%>
+                        <%if(regular.ruletype == 1){%>
+                            <footer class="pro-btn"  onclick='window.location.href = "/html/my/my-product-transfer.html?id=<%=bid.id%>"'>转让</footer>                            
+                        <%}else{%>
+                            <footer class="pro-btn"  onclick='window.location.href = "/html/my/my-product-transfer-new.html?id=<%=bid.id%>"'>转让</footer> 
+                        <%}%>
+                    <%}else{%>
+                        <footer class="pro-btn pro-btn-disabled">不可转让</footer>
+                    <%}%>
+                <%}else if(bid.status==8){%>
+                    <footer class="pro-btn pro-btn-disabled">已转让</footer>
+                <%}else{%>
+                    <footer class="pro-btn pro-btn-disabled">不可转让</footer>
+                <%}%>
+            <%}%>
+            <div class="toast">
+                订单编号已复制
+            </div>
+    </script>
+    <div id="mainBody">
+        
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/template.js"></script>
+    <script src="/js/utils/clipboard.min.js"></script>
+    <script src="/js/pagejs/my/my-regular-pre-detail.js"></script>
+</body>
+
+</html>
+

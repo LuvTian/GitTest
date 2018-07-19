@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业中心</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/commercial.css">
+</head>
+<body class="bg-f0">
+    <div class="com-wrap">
+        <header class="mar-tb15 bg-white padd-15">
+            <div class="row opens">
+                <div class="small-4 columns companyinfo">
+                    <img id="companyLogo" src="/css/image-commercial/commer-header.jpg" alt="">
+                </div>
+                <div class="small-8 columns az-positionr az-padding0 companyinfo heig-vh">
+                    <h3 id="companyName"></h3>
+                    <div class="row">
+                        <div class="small-6 columns az-paddingRight0 az-text-left">管理员：<span id="adminName"></span></div>
+                        <a class="small-6 columns az-paddingRight0 az-text-right" href="/html/store/modify-admin.html" id="changedadMin"><span id="modifyAdmin" class="changemanger">更换管理员<icon class="wechat icon-right"></icon></span></a>
+                    </div>
+                </div>
+                    <!--<p>企业管理员：<span id="adminName"></span></p>
+                    <div class="small-4 columns az-padding0 po-ab">
+                        <a id="modifyAdmin" href="#" class="changemanger">更换管理员<icon class="wechat icon-right"></icon></a>
+                    </div>
+                </div>-->
+            </div>
+        </header>
+        <article id="noBranch" class="mar-t15 bg-white padd-15" style=" display:none">
+            <div class="row">
+                <a id="validateCode" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-coupon"></icon>
+                    <p class="col-6">验证优惠券</p>
+                </a>
+                <a id="storeMsg" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-commercialinfo"></icon>
+                    <p class="col-6">商户信息</p>
+                </a>
+                <a id="manageClerk" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-manager"></icon>
+                    <p class="col-6">管理店员</p>
+                </a>
+            </div>
+        </article>
+        <article id="hasBranch" class="mar-t15 bg-white padd-15" >
+            <div class="row">
+                <a id="manageBranch" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-fmanage"></icon>
+                    <p class="col-6" id="manageBranchTxt">分店管理</p>
+                </a>
+                <a id="validateCode2" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-coupon"></icon>
+                    <p class="col-6">验证优惠券</p>
+                </a>
+                <a id="manageClerk2" href="javascript:void(0);" class="small-4 columns az-center">
+                    <icon class="wechat icon-manager"></icon>
+                    <p class="col-6" id="manageClerk2Txt">管理店员</p>
+                </a>
+            </div>
+        </article>
+        <article class="mar-t15 bg-white padd-15">
+            <p class="col-3 fz-15">推荐收益</p>
+            <div class="row mar-t15 bb padding-b15">
+                <a id="profitDetail" href="javascript:void(0);" class="small-6 columns border-r az-center">
+                    <p class="col-9">累计收益（元）</p>
+                    <p class="col-ff19" id="totalProfit"></p>
+                    <p class="col-6 az-padding0">收益明细<icon class="wechat icon-right fz-12 textInd3"></icon></p>
+                </a>
+                <a href="javascript:void(0);" id="removeOut" class="small-6 columns az-center">
+                    <p class="col-9">可用余额（元）</p>
+                    <p class="col-ff19" id="amount"></p>
+                    <p class="col-6 az-padding0">转出<icon class="wechat icon-right fz-12 textInd3"></icon></p>
+                </a>
+            </div>
+            <p class="col-9 mar-tb15">近七天推荐收益</p>
+            <div class="currentpic">
+                <canvas id="myChart" class="bb padding-b15" width="400" height="180"></canvas>
+                <!--<span class="can-tips" id="yesterdayprofit">888</span>-->
+            </div>
+            <a id="investPeople" href="javascript:void(0);" class="commercial-btn">点我推荐</a>
+        </article>
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/chart.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/jquery.qrcode.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/company4.js"></script>
+</body>
+</html>

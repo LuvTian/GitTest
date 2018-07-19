@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>确认兑换</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/creditsMall/order_detaile.css">
+    <script>
+        ;
+        (function (doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            recalc();
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div class="view"  style="padding-bottom:2.133333rem;">
+        <div class="take_delivery">
+            <span class="location_icon"><img src="/css/img2.0/pointImg/location.png" /></span>
+            <div class="receive_address">
+                <!--选好了收货地址后的样式-->
+                <a onclick="return2_url();" class="choose_address" style="display:none;">
+                    <div class="receive">
+                        <div class="receive_people"><span>收货人：</span><span class="JS_receive">cherish</span></div><span class="receive_tel">15555555555</span>
+                    </div>
+                    <div class="address"><span>收货地址：</span><span class="JS_address">上海浦东新区杨高南路799号陆家嘴世纪金融广场8号楼18楼</span></div>
+                </a>
+                <!--没有收货地址需要添加的样式-->
+                <div class="address no_address" style="display:none;"><span>收货地址：</span><a class="add_adress" onclick="return_url();">+添加新地址</a></div>
+            </div>
+
+            <span class="arrow_icon"><i></i></span>
+        </div>
+        <div class="product_info">
+            <div class="product_content">
+                <img src="/css/img2.0/pointImg/welfare-icon1@2X.png" class="product_img" />
+                <div class="info_list">
+                    <p class="product_title"></p>
+                    <p class="candy"><span class="candy_num"></span>唐果</p>
+                    <div class="product_price">市场参考价：<span class="price_num"></span>元
+                        <!--<span class="pro_num">x1</span>--></div>
+                </div>
+            </div>
+            <ul class="pro_list">
+                <li>
+                    <div>购买数量<span class="tags_style limit_num" >1</span></div>
+                    <div><span class="JS_number">1</span></div>
+                </li>
+                <li>
+                    <div>运费（快递）</div>
+                    <div class="JS_money">￥0.00</div>
+                </li>
+                <li>
+                    <div>赠品</div>
+                    <div class="JS_gift no_gift">无</div>
+                </li>
+                <!-- <li>
+                    <div>会员专享优惠唐果<span class="tags_style limit_num" >铂金会员专享</span></div>
+                    <div class="JS_privilege">￥0.00</div>
+                </li>
+                <li>
+                    <div>会员折扣优惠唐果<span class="tags_style limit_num" >铂金会员2折</span></div>
+                    <div class="JS_discount">￥0.00</div>
+                </li>
+                <li>
+                    <div>活动优惠唐果<span class="tags_style limit_num" >满减</span></div>
+                    <div class="JS_activity">0</div>
+                </li> -->
+                <!-- <li>
+                    <div>优惠唐果</div>
+                    <div class="JS_reduce_candy prefer_candy"><label></label><input type="checkbox" class="input_check" style="display:none;" /><span class="check_box"
+                            style="display:none;"></span></div>
+                </li> -->
+                
+            </ul>
+        </div>
+        <div class="bottom_exchange">
+            <div class="exchange_candy">合计唐果：<span class="JS_total_candy">172000</span></div>
+            <div class="conform_btn JS_exchange_btn" style="display:none;">确认兑换</div>
+            <div class="conform_btn gray_btn" style="display:none;">确认兑换</div>
+        </div>
+    </div>
+    <div class="mask no_mask"></div>
+    <div class="share_remind JS_remind_icon"><img src="/css/img2.0/pointImg/share_remind.png"/></div>
+    <script src="/js/vendor/jquery.js" type="text/javascript"></script>
+    <script src="/js/vendor/template.js" type="text/javascript"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js" type="text/javascript"></script>
+    <script src="/js/pagejs/creditsMall/conform_exchange.js" type="text/javascript"></script>
+    <script src="/js/pagejs/creditsMall/exchange.js " type="text/javascript "></script>
+</body>
+
+</html>

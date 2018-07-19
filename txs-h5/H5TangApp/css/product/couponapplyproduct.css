@@ -1,0 +1,149 @@
+/*body,
+html {
+    overflow-x: hidden;
+    position: static
+}*/
+
+.cp_top {
+    font-size: 0.5973333333333334rem;
+    color: #999999;
+    text-align: center;
+    margin: 0.512rem;
+}
+
+.cp_pname {
+    font-size: 0.5973333333333334rem;
+    color: #333333;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.cp_prate {
+    font-size: 0.512rem;
+    color: #999999;
+}
+
+.cp_prate_v {
+    font-size: 0.6826666666666666rem;
+    color: #F25D50;
+    margin-left: 0.384rem;
+}
+
+.cp_pday_v {
+    font-size: 0.6826666666666666rem;
+    color: #666666;
+}
+
+.cp_btn {
+    font-size: 0.5973333333333334rem;
+    color: #F25D50;
+    line-height: 0.5973333333333334rem;
+}
+
+.cp_left {
+    width: 5.504rem;
+    flex: 1.5;
+}
+
+.cp_center {
+    width: 1.4933333333333334rem;
+    /*text-align: center;*/
+}
+
+.cp_right {
+    margin-bottom: 4px;
+}
+
+.cp_p_info {
+    width: 100%;
+    padding: 0.768rem 0.64rem 0.768rem 0.64rem;
+    align-items: flex-end;
+    -webkit-box-align: end;
+    display: -webkit-flex;
+    display: flex;
+    display: -webkit-box;
+    display: box;
+    box-align: end;
+    box-sizing: border-box;
+}
+
+.cp_product {
+    min-height: 3.072rem;
+}
+
+.float_l {
+    /*float: left;*/
+    moz-box-flex: 1.0;
+    -webkit-box-flex: 1.0;
+    box-flex: 1.0;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.cp_productlist {
+    background: #FFFFFF;
+}
+
+.cp_btn_box {
+    width: 3.4133333333333336rem;
+    height: 1.4506666666666668rem;
+    border: 1px solid #F25D50;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.408rem;
+    float: right;
+}
+
+.cp_btn_overbox {
+    width: 3.4133333333333336rem;
+    height: 1.536rem;
+    border: 1px solid #B9B9B9;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.408rem;
+    float: right;
+}
+
+.cp_pday {
+    font-size: 0.512rem;
+    color: #999999;
+}
+
+.borb:after {
+    display: block;
+    height: 1px;
+    border-bottom: 1px solid #e4e4e4;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+    /*position: absolute;*/
+    bottom: 0;
+    content: ' ';
+    margin-left: .7rem;
+}
+
+.over {
+    color: #B9B9B9!important;
+}
+
+.flex_left {
+    flex: 1.5;
+    moz-box-flex: 1.5;
+    -webkit-box-flex: 1.5;
+    box-flex: 1.5;
+    -webkit-flex: 1.5;
+}

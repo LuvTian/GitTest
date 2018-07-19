@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>周末赢大奖</title>
+    <link rel="stylesheet" type="text/css" href="/css/usersign.css">
+    <script>
+        (function(doc, win) {
+            var maxWidth = 720;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth < 320) clientWidth = 320;
+                    if (clientWidth > maxWidth) clientWidth = maxWidth;
+                    var fontSize = 20 * (clientWidth / 320);
+                    fontSize = (fontSize > 54) ? 54 : fontSize;
+                    //如果是pc访问
+                    if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                        fontSize = 20 * maxWidth / 320;
+                    }
+                    docEl.style.fontSize = fontSize + 'px';
+                    var dpi = window.devicePixelRatio;
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    docEl.setAttribute('data-dpi', dpi);
+                    var scale = 1 / dpi;
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body class="sundaybcolor">
+    <header>
+        <img src="/css/img2.0/sundayluck.png" alt="" class="sundayluck_img">
+        <div class="pul">
+            <div class="plist">
+                <!--<p class="retext">本周大奖名单139****6471抽中<span class="re_red">iPad mini2</span></p>-->
+            </div>
+        </div>
+    </header>
+    <div class="zhuanpan">
+        <img src="/css/img2.0/zhuanpan.png" alt="" class="zhuanpan_img">
+        <!--<div style="width:5rem;height:5rem;background-color:red" class="zzp_img" id="luckdraw"></div>-->
+        <img src="/css/img2.0/zzp.png" alt="" class="zzp_img" id="luckdraw">
+        <img src="/css/img2.0/mysignimg.png" alt="" class="mysignimg">
+    </div>
+    <div id="weekdrawdiv">
+        <div style="margin-top:.2rem;overflow: hidden;height: 8rem;">
+            <p class="noluck" style="display:none">今天不抽奖哦，一周每日签到，即可在周日参与大转盘赢大奖活动</p>
+            <ul class="srelist clearfix" id="weekdrawlist">
+                <!--<li><span>恭喜158****1646</span><span class="srespan">获得500M流量包</span></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="miss-tip" style="display:none" id="missday">
+        <h3 class="az-text-center"></h3>
+        <p class="az-text-center bb">本周未满签，无法抽奖！</p>
+        <a href="javascript:void(0);" onclick="history.back();" class="az-text-center" id="lookinfo">返回</a>
+        <i class="wxicon icon-cancle"></i>
+    </div>
+    <div class="mask" style="display:none"></div>
+    <div class="miss-tip _undraw" style="display:none;">
+        <h3 class="az-text-center">今天不抽奖哦</h3>
+        <p class="az-text-center bb">一周每日签到，即可在周日参与大转盘<br />赢大奖活动！</p>
+        <a href="javascript:void(0)" class="az-text-center" id="gobuyproduct">确定</a>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jquery.rotate.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/user-sunday-sign-rewardlist.js"></script>
+</body>
+
+</html>

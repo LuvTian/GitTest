@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script>
+    ;
+    (function(doc, win) {
+        var maxWidth = 720;
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth < 320) clientWidth = 320;
+                if (clientWidth > maxWidth) clientWidth = maxWidth;
+                fontSize = 20 * (clientWidth / 320);
+                fontSize = (fontSize > 54) ? 54 : fontSize;
+                //如果是pc访问
+                if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                    fontSize = 20 * maxWidth / 320;
+                }
+                docEl.style.fontSize = fontSize + 'px';
+                var dpi = window.devicePixelRatio;
+                var viewport = document.querySelector('meta[name="viewport"]');
+                docEl.setAttribute('data-dpi', dpi);
+                var scale = 1 / dpi;
+            };
+        if (!doc.addEventListener) return;
+        recalc();
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/sengcaibaoMy.css"></head>
+<body>
+	<div class="mask"></div>
+    <div class="agreement">
+        <div class="colse_icon">
+            <img src="/css/img2.0/close.png" alt="" width="6%">
+        </div>
+        <h2>用户协议变更</h2>
+        <p class="tit1">尊敬的用户，您好！</p>
+        <p class="tit1">即日起，账户余额正式升级为“僧财宝”。“僧财宝”对接汇添富货币基金，让您的账户余额不再睡大觉，本服务由存钱罐提供。</p>
+        <p class="p_show tit1">在继续正常使用唐小僧之前，请知悉并同意以下协议：</p>
+        <div class="dis_flex">
+            <!-- <div class="cho_box">□</div> -->
+            <div class="protocol">
+            <a href="/Html/Anonymous/moneybox-xy.html">《<span class="blue_text">存钱罐服务协议</span>》</a>、<a href="/Html/Product/contract/htffund.html">《<span class="blue_text">汇添富基金管理 股份有限公司电子交易直销前置式自助前台服务协议</span>》</a>
+            </div>
+        </div>
+        <p class="risk-tips">网贷有风险，出借需谨慎</p>
+        <div class="agreeused">
+        <div class="to_agree">我已充分理解以上协议</div>
+        <div class="protocol_agree">同意</div>
+        </div>
+    </div>
+</body>
+</html>

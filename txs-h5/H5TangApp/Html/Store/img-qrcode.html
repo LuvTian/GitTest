@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>二维码图片</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <style type="text/css">
+        body { margin: 0; padding: 0; text-shadow: none; -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+    </style>
+</head>
+
+<body>
+    <!--用于存放生成的二维码-->
+    <div id="invitedBy" style="display:none;"></div>
+    <!--<div style="display:none;" id="imgsource"></div>-->
+    <div id="imgBox" align="center" style="width: 100%"></div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jquery.qrcode.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript">
+
+        var reffercode = "";//推荐码
+        var storelog = "";//商户logo
+        $(function () {
+            reffercode = decodeURIComponent($.getQueryStringByName("code"));
+            storelog = decodeURIComponent($.getQueryStringByName("log"));
+
+            if ($.isNull(window.localStorage.getItem("storecodeimg"))) {
+                CreateCodeImg(reffercode, decodeURIComponent(storelog));
+            } else {
+                hecheng();
+            }
+        });
+
+        //生成带logo的二维码
+        //function invitedByLogo() {
+        //    var paramdata = [
+        //        { url: $("#invitedBy img").attr("src"), x: 0, y: 0, width: 262, height: 262, iscrossOrigin: false },
+        //        { url: storelog, x: 106, y: 106, width: 50, height: 50, iscrossOrigin: true }
+        //    ];
+        //    draw(paramdata, function (src) {
+        //        $("#invitedBy img").attr("src", src);
+        //        hecheng(src);
+        //    });
+        //}
+
+        function hecheng() {
+            var paramdata = [
+                { url: '/css/image-commercial/qr-bg.jpg', x: 0, y: 0, width: 874, height: 1240, iscrossOrigin: false },
+                { url: window.localStorage.getItem("storecodeimg"), x: 306, y: 592, width: 262, height: 262, iscrossOrigin: false }
+               /* ,{ url: '2.jpg', x: 412, y: 698, width: 50, height: 50 }*/
+            ];
+            draw(paramdata, function (src) {
+                $("#imgBox").html('<img width="100%" src="' + src + '">');
+                $("body").css("backgroundColor", "#f5b73e");
+            });
+        }
+
+        function draw(data, fn) {
+            var c = document.createElement('canvas'),
+                       ctx = c.getContext('2d'),
+                       len = data.length;
+            c.width = data[0].width;
+            c.height = data[0].height;
+            ctx.rect(0, 0, c.width, c.height);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+            function drawing(n) {
+                if (n < len) {
+                    var imgdata = data[n];
+                    var img = new Image;
+                    if (imgdata.iscrossOrigin) {
+                        img.crossOrigin = 'Anonymous';
+                    }
+
+                    img.src = imgdata.url;
+                    img.onload = function () {
+                        ctx.drawImage(img, imgdata.x, imgdata.y, imgdata.width, imgdata.height);
+                        drawing(n + 1);
+                    }
+                } else {
+                    fn(c.toDataURL("image/png", 0.8));
+                }
+            }
+            drawing(0);
+        }
+
+        var CreateCodeImg = function (content, logoUrl) {
+            var url = "/StoreServices.svc/anonymous/generateqrcode/qrcodewithlogo";
+            var param = {
+                text: content,
+                logo: logoUrl
+            }
+            $.AkmiiAjaxPost(url, param, false).then(function (data) {
+                if (data.result) {
+                    window.localStorage.setItem("storecodeimg", data.imgcode);
+                    hecheng();
+                } else if (data.errorcode == "missAccountid") {
+                    $.alertS(data.errormsg, function () {
+                        $.Loginlink();
+                    });
+                } else {
+                    $.alertS(data.errormsg);
+                    return false;
+                }
+            });
+        }
+
+
+        //生成二维码方法
+        function CreateCode(txt) {
+            var qrcode = new QRCode(document.getElementById("invitedBy"), {
+                width: 262,//设置宽高
+                height: 262
+            });
+            qrcode.makeCode(decodeURIComponent(txt));
+
+        }
+    </script>
+</body>
+</html>

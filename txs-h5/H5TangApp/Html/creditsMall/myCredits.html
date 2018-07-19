@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>我的唐果</title>
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/myCredits.css">
+</head>
+<body>
+	<section id="currentCreditsContainer">
+		<div class="title">剩余唐果</div>
+		<div class="creditsNum"></div>
+	</section>
+	<section id="creditsChangeHistoryContainer">
+		<div id="creditsChangeHistoryPanel">
+			<div class="title">唐果变换历史</div>
+			<ul id="creditsChangeRecords">
+			<li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 16:32:16</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 16:16:16</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 16:13:28</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 16:06:13</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 16:04:12</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 15:51:20</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 15:37:16</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 15:31:17</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 15:25:17</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li><li>					<dl>						<dt class="creditsChange_itemName">每日等级特权</dt>						<dt class="creditsChange_date">2017-04-10 15:16:17</dt>					</dl>					<div class="creditsChange_num">-5</div>				</li></ul>
+		</div>
+	</section>
+	<script type="text/javascript" src="/js/appendButtonBar.js"></script>
+	<script type="text/javascript" src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js?s=2015"></script>
+    <script type="text/javascript" src="/js/pagejs/creditsMall/myCredits.js"></script>
+    <script type="text/javascript">
+    
+    </script>
+    <script type="text/javascript">
+    	document.getElementById("creditsChangeRecords").addEventListener("touchmove",function(e){e.stopPropagation()})
+    	document.body.addEventListener("touchmove",function(e){e.preventDefault();return false;})
+    	var view = document.getElementById("creditsChangeHistoryPanel");
+		var flag = 0;
+		var startPointY=0;
+		var wHeight=$(window).height();
+		var maxTranslateHeight=wHeight*0.1	;
+		view.addEventListener("touchstart", function(e) {
+			if (Math.abs($("#creditsChangeHistoryPanel").position().top)+$("#creditsChangeHistoryContainer").height() >= $("#creditsChangeHistoryPanel").height()-3) {
+				flag = 1;
+				startPointY=e.targetTouches[0].clientY;
+			}
+		})
+		view.addEventListener("touchmove", function(e) {
+			if (flag == 1) {
+				var translateHeight=-Math.min(Math.abs(e.targetTouches[0].clientY-startPointY),maxTranslateHeight);
+				$(view).css("transform","translateY("+translateHeight+"px)");
+				// console.log(e.targetTouches[0].clientY);
+			}
+		})
+		/*document.body.addEventListener("touchmove",function(e){
+			console.log(e.targetTouches[0].clientY);
+		})*/
+		view.addEventListener("touchend", function(e) {
+			if (flag == 2) {
+				//$(".pic_detail").show();
+				/*if (pageIndex < totalPage) {
+					pageIndex++;
+					dataList(pageIndex); //从接口读取页面渲染的数据
+					flag = 0;
+					setTimeout(function() {
+						$("body").scrollTop($(".more_product").position().top)
+					}, 0);
+
+				}*/
+				console.log("加载")
+
+			}
+			if(flag==1){
+				var view = document.getElementById("creditsChangeHistoryPanel");
+				$(view).css({"transform":"translateY(0)","transition":"transform 300ms"});
+			}
+			flag=0;
+		})
+    </script>
+</body>
+</html>

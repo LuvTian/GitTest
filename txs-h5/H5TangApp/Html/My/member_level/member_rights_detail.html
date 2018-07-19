@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>特权详情</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="browsermode" content="application">
+	<meta name="x5-page-mode" content="app">
+    <meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/newbase.css">
+	<link rel="stylesheet" href="/css/newCommon.css">
+	<link rel="stylesheet" href="/css/member_rights_detail.css">
+	<script src="/js/vendor/fontsize.js"></script>
+	<script src="/js/pagejs/my/member_level/fastclick.js"></script>
+</head>
+
+<body>
+	<div id="mainBody" class="view">
+		<div id="all-body-div-preloader">
+			<div id="all-body-div-status"></div>
+		</div>
+		<div class="privilegesBasicInfo">
+			<div class="pbi_container">
+				<img class="pbi_img" src="" alt="">
+				<div class="pbi_txt">
+					<p class="pbi_name">唐果</p>
+					<p class="pbi_content">10元代金券，10000元理财金</p>
+				</div>
+				<div class="checkIn"><a href="/html/my/user-sign.html">去签到</a></div>
+			</div>
+			<!-- <div class="pbi_status">
+				<div class="alreadyCheckIn">今日已签到获得，目前唐果：<span></span></div>
+				<div class="currentLevelStatus">
+					<span></span>
+				</div>
+				<div class="notCurrentLevelStatus">
+					<span></span>
+					<a href="javascript:;" class="btn_showUpWin">如何升级<i class='leftArrow'></i></a>
+				</div>
+			</div> -->
+		</div>
+		<section>
+			<div class="title">特权说明</div>
+			<div class="privilegesDesc"></div>
+		</section>
+		<section>
+			<div class="title">享用人群</div>
+			<div class="privilegesLevel"></div>
+		</section>
+		<section class="forTangGuo">
+			<div class="title">推荐福利</div>
+			<div class="recommendWelfare">
+				<ul class="listContainer"></ul>
+			</div>
+		</section>
+		<section class="forGift">
+			<div class="title">使用规则</div>
+			<div class="useRules"></div>
+		</section>
+		<div style="clear:both;margin-bottom:2.133333rem;"></div>
+		<a href="javascript:phoneProxy.jumpToPage('licai');" id="toUse">立即使用</a>
+	</div>
+
+	<div class="cover_dark upPopWin">
+		<div class="up_win up_scale">
+			<img src="/css/img2.0/member_level/up_close.png" class="up_cose JS_close">
+			<p class="up_title">如何升级</p>
+			<ul class="up_content">
+			</ul>
+			<a href="javascript:phoneProxy.jumpToPage('licai');" class="normal_btn up_btn JS_invote">立即投资</a>
+		</div>
+	</div>
+	<script src="/js/vendor/jquery.js"></script>
+	<script src="/js/common.js"></script>
+	<script src="/js/vendor/phoneProxy.js"></script>
+	<script src="/js/pagejs/my/member_level/member_rights_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>账户详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <!--<script>
+    ;
+    (function(doc, win) {
+        var maxWidth = 720;
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth < 320) clientWidth = 320;
+                if (clientWidth > maxWidth) clientWidth = maxWidth;
+                fontSize = 20 * (clientWidth / 320);
+                fontSize = (fontSize > 54) ? 54 : fontSize;
+                //如果是pc访问
+                if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                    fontSize = 20 * maxWidth / 320;
+                }
+                docEl.style.fontSize = fontSize + 'px';
+                var dpi = window.devicePixelRatio;
+                var viewport = document.querySelector('meta[name="viewport"]');
+                docEl.setAttribute('data-dpi', dpi);
+                var scale = 1 / dpi;
+            };
+        if (!doc.addEventListener) return;
+        recalc();
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>-->
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/newCommon.css">
+    <link rel="stylesheet" href="/css/sengcaibaoMy.css">
+</head>
+
+<body class="bgf6f6f6">
+    <!-- <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div> -->
+    <div id="personaldatapage">
+        <div class="contain_box_base mar_top_p7">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">真实姓名</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span id="my-name"></span></div>
+            </div>
+        </div>
+        <div class="contain_box_base">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">身份证号码</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span id="my-idnumber"></span></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="phoneNo">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">手机号码</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span id="my-mobile"></span></div>
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="myInviter">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">邀请我的人</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span id="my-inviter"></span></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="address_list">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">收货地址</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base mar_top_p7" id="my-card">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">我的银行卡</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span id="my-bank"></span></div>
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="my-HandleWithholdAuthority">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">委托代扣</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base mar_tb_p7" id="passinvestorlist">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">合格投资人认证</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2">
+                    <!-- <span id="accreditationhtml"></span> -->
+                </div>
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="updatepwd">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">修改交易密码</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="contain_box_base" id="resetPwd">
+            <div class="part_flex1 asset bor_bottom_f1">
+                <div class="pro_items_infi">重置交易密码</div>
+            </div>
+            <div class="part_flex1 all_right bor_bottom_f1">
+                <div class="item_contain2"><span>忘记交易密码？</span></div>
+                <div class="arrow_icon"><i></i></div>
+            </div>
+        </div>
+        <div class="fillet-btn" id="signout"><a href="javascript:void(0)" class="button az-padding0 mt-2rem">安全退出</a></div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <!--<script src="/js/foundation.min.js"></script>-->
+    <script src="/js/vendor/fastclick.js"></script>
+    <!--<script src="/js/jweixin-1.0.0.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/userinfo.js"></script>
+</body>
+
+</html>

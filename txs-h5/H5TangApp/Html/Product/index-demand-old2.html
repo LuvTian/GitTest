@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>至尊宝</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/index-demand.css">
+</head>
+
+<body>
+    <div id="mainBody" class="nominheight">
+        <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+        <!--银行通知 -->
+        <div class="notice-wrap" id="notice-wrap">
+            <div class="notice-horn">
+                <i class="n-horn-icon"></i>
+            </div>
+            <div class="close">
+                <i class="n-horn-close"></i>
+            </div>
+            <div class="content" id="content">
+            </div>
+        </div>
+        <a href="/html/product/contract/zzb-instructions.html" class="off-line hide"></a>
+        <div class="account-info on-line">
+            <div class="acc-investing">在投金额(元)</div>
+            <div class="acc-investing-amount" id="acc-investing-amount">0.00</div>
+            <div class="acc-investing-strong"></div>
+            <div>
+                <div class="column-5 left acc-yesterday">
+                    <p>昨日收益</p>
+                    <p id="yesterday">+0.00</p>
+                </div>
+                <div class="column-5 left acc-total">
+                    <p>累计收益</p>
+                    <p id="total">+0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="ac-chart">
+            <div class="chart-title">
+                <ul>
+                    <li class="active" id="chart1-title" data-chart="chart1">
+                        <span class="text">历史最近七日年化(%)</span>
+                        <span class="value" id="char-avgpronumber">0.00</span>
+                    </li>
+                    <li class="" id="chart2-title" data-chart="chart2">
+                        <span class="text">万份收益(元)</span>
+                        <span class="value" id="char-avgmillionproceeds">0.0000</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabs-content bg-white">
+                <section class="content active" id="chart1-cont">
+                    <div class="current-line">
+                        <canvas id="chart1" style="width:100%;height:8.448rem;"></canvas>
+                    </div>
+                </section>
+                <section role="tabpanel" aria-hidden="true" class="content abs-hide" id="chart2-cont">
+                    <div class="current-line">
+                        <canvas id="chart2" style="width:100%;height:8.448rem;"></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div style="min-height:5.12rem;">
+            <a class="ac-line" href="/Html/Product/asset-allocation.html">
+                <span class="desc"><span class="blank-gap">至尊宝资产配置</span></span>
+                <span class="arrow"><span class="icon-arrow-right "></span> </span>
+            </a>
+            <a class="ac-line hide autoswitchdemand-warp ac-line-bb" href="javascript:void(0);">
+                <span class="desc"><span class="blank-gap">资金自动转入至尊宝</span></span>
+                <span class="arrow"> <z id="autoswitchdemand">持续享受收益，灵活赎回</z> <span class="icon-arrow-right "></span> </span>
+            </a>
+        </div>
+        <!--<div class="footer">
+            <a class="safety" href="/Html/picc.html">
+                <span class="icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障
+            </a>
+            <p class="risk">网贷有风险 出借需谨慎</p>
+        </div>-->
+        <!--<div class="navbar hide" id="btn-invest">
+            立即投资
+        </div>-->
+        <div class="navbar hide" id="btn-invert-redeem">
+            <div style="font-size:1rem" class="footerBar_shadow"></div>
+            <span class="column-5 left" id="btn-invest">投资</span>
+            <span class="column-5 left bl redeem">赎回</span>
+        </div>
+        <div class="navbar hide" id="btn-login-out">
+            <div style="font-size:1rem" class="footerBar_shadow"></div>
+            <span class="column-5 left" id="">注册</span>
+            <span class="column-5 left bl" id="">登录</span>
+        </div>
+        <div class="navbar hide" id="btn-remind-redeem">
+            <div style="font-size:1rem" class="footerBar_shadow"></div>
+            <span class="column-5 left">赎回</span>
+            <span class="column-5 left bl" id="btn-remind">开售提醒</span>
+        </div>
+        <div class="navbar hide" id="btn-sold-redeem">
+            <div style="font-size:1rem" class="footerBar_shadow"></div>
+            <span class="column-5 left redeem">赎回</span>
+            <span class="column-5 left bl" id="btn-sold">已售罄</span>
+        </div>
+    </div>
+    <!--底部通用说明-->
+	<div class="wel_btm_com">
+		<span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+            账户资金防盗安全由新浪支付和太平财险共同保障
+            </span>
+		<p>网贷有风险 出借需谨慎</p>
+	</div>
+    <div class="paddbottom"></div>
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/chart.new.min.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/product/index-demand.js?v=2"></script>
+</body>

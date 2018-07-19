@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/points.css">
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+</script>
+</head>
+<body>
+	<div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+	</div>
+	<div class="view productDetail" id="move_up">
+		<!-- <header>
+			<div class="prize-banner">
+				 <img  src="/css/img2.0/pointImg/prize-dome.png" alt="" >
+				  <div class="bb"></div>
+			</div>
+			<div class="prize-desc">
+				<p class="title">佳能（Canon）7D Mark II 单反套机 (EF-S 1511 m m f/3.5-5.6 IS USM镜头) 含Wi-Fi</p>
+				<p class="share">
+					<img style="display:block;" src="/css/img2.0/pointImg/share.png" alt="">
+					<span class="share-text">分享</span> 
+				</p>
+				<p><i class="price">17000</i><i class="tg">唐果</i><i class="mj">满减</i><i class="mz">满赠</i><i class="limit">每天限一件</i></p>
+				<p class="stock">
+					<span class="fl">市场参考价：158元</span>
+					<span class="fr">剩余 100份</span>
+				</p>
+			</div>
+		</header> -->
+<!-- <div class="exchange_note">
+		    <strong class="title_font">会员可享折扣</strong>
+			<div class="content_list">
+				<ul class="discount_list cls">
+					<li>青铜会员：<b class="discount_num">8.8</b>折 <b class="mark_font">限兑1件</b></li>
+					<li>白银会员：<b class="discount_num">8.0</b>折 <b class="mark_font">限兑1件</b></li>
+					<li>黄金会员：<b class="discount_num">7.8</b>折 <b class="mark_font">限兑1件</b></li>
+					<li>铂金会员：<b class="discount_num">7.0</b>折 <b class="mark_font">限兑1件</b></li>
+				</ul>
+			</div>
+</div>
+<div class="exchange_note">
+		    <strong>会员专享说明</strong>
+			<div  class="content_list">
+				<p class="for_member">黄金会员、铂金会员等级专享兑换商品</p>
+				<ul class="discount_list cls">
+					<li>黄金会员：<b class="discount_num">7.8</b>折 <b class="mark_font">限兑1件</b></li>
+					<li>铂金会员：<b class="discount_num">7.0</b>折 <b class="mark_font">限兑1件</b></li>
+				</ul>
+			</div>
+</div>
+<div class="exchange_note">
+		    <div class="title_font">满减优惠 <b class="discount_num">1000</b> 唐果<b class="mark_font">活动期间商品限兑1件</b>
+			<span class="favourable_checkbox"><input type="checkbox" class="input_check" /><b class="check_box"></b></span></div>
+			<div class="content_list discount_candy_list ">
+					<ul class="discount_list cls">
+						<li>青铜：<b>投资</b><b class="discount_candy">30万+50唐果</b></li>
+						<li>白银：<b>投资</b><b class="discount_candy">30万+50唐果</b></li>
+						<li>黄金：<b>投资</b><b class="discount_candy">30万+50唐果</b></li>
+						<li>铂金：<b>投资</b><b class="discount_candy">30万+50唐果</b></li>
+					</ul>
+				</div>
+			<div  class="content_list">
+				<p class="for_member">条件：2017.5.1-2015.5.10期间新增累计投资定期28天及以上理财产品<b>XXXX</b>元</p>
+			</div>
+</div>
+		<div class="exchange_note">
+		    <strong>使用规则</strong>
+			<div  class="content_list"><span>1.</span> <p>仅限投资定期产品风火轮、金刚B、如意棒、筋斗云、宝葫  
+   芦、金刚C、风火轮、金刚B、如意棒、筋斗云、宝葫芦、金刚 
+   A使用
+</p></div>
+			<div  class="content_list"><span>2.</span> <p>投资定期产品1500起可用</p></div>
+			<div  class="content_list"><span>3.</span> <p>不可与其他代金券叠加使用</p></div>
+		</div>
+		<div class="exchange_note">
+			<strong>兑换说明</strong>
+			<div><span>1.</span> <p>本商品用唐果兑换，不开具发票</p></div>
+			<div><span>2.</span> <p>兑换成功后我们会联系您寄出商品</p></div>
+			<div><span>3.</span> <p>相同手机号、身份证视为同一用户，如发现违规行为（如恶意      
+    注册大量账号使用作弊程序等），唐小僧将取消该用户的兑换  
+    资格
+</p></div>
+			<div><span>4.</span> <p>所有商品已经兑换唐果不退还</p></div>
+			<div><span>5.</span> <p>如有问题请拨打客服电话400-607-8587</p></div>
+			<div><span>6.</span> <p>本次商品最终解释权归唐小僧所有</p></div>
+		</div>
+		 <p class="pull_view">点击查看图文详情（建议WiFi环境下查看）</p>
+		<div class="pic_detail" >
+			<img src="/css/img2.0/pointImg/product.png">
+			<img src="/css/img2.0/pointImg/product.png">
+			<img src="/css/img2.0/pointImg/product.png">
+		</div> 
+		<div class="exchange_point">
+			<span>优惠<b class="price_red">3000</b>唐果</span>
+			<span class="exchange_btn">售罄</span>
+		</div>  -->
+		<div class="to_top"><img src="/css/img2.0/pointImg/to_top.png"/></div>
+<!-- <div class="cls"><span><%=i+1%>.</span> <p><%=specificationArray[i]%></p></div> -->
+		<script type="text/html" id="productDetail">
+		<header>
+			<div class="prize-banner">
+				 <img  src= <%= productDetail.imgUrl==""?"/css/img2.0/pointImg/phy_detaile.png":productDetail.imgUrl%> onerror='onerror=null;src="/css/img2.0/pointImg/phy_detaile.png"' alt="" >
+				  <div class="bb"></div>
+			</div>
+			<div class="prize-desc">
+				<p class="title"><%=productDetail.name%></p>
+				<p class="share J_share">
+					<img style="display:block;" src="/css/img2.0/pointImg/share.png" alt="">
+					<span class="share-text">分享</span> 
+				</p>
+				<p><i class="price"><%=productDetail.pointPayAmount%></i><i class="tg">唐果</i>
+					<!-- type:0(满减)，1（限购数量），2（满赠），3（会员专享），4（折扣） -->
+					<span class="product_tags">
+				<% var tags=productDetail.tags||[];
+				if(tags.length>0 && !!tags[0]){%>
+							 <% for(var j=0;j<tags.length;j++){%>
+								 <% if(!!tags[j]){var detag=tags[j];%>
+								 <%if(detag.type==0){%>
+									<i class="mj"><%=detag.tag%></i>
+								<%}else if(detag.type==1){%>
+									<i class="limit"><%=detag.tag%></i>
+								 <%}else if(detag.type==2){%>
+									<i class="mz"><%=detag.tag%></i>
+								 <%}else if(detag.type==3){%>
+									<i class="only_member"><%=detag.tag%></i>
+								<%}else if(detag.type==4){%>
+									<i class="discount"><%=detag.tag%></i>
+								<%}%>
+								<%}%>
+						 <%}}%>
+					</span>
+				</p>
+				<p class="stock">
+					<span class="fl">市场参考价：<%=pricefixed(productDetail.marketPrice) + productDetail.unit%></span>
+					<span class="fr"><%if(productDetail.inventory==0){%>售罄<%}else{%>剩余 <%=productDetail.inventory%>份<%}%></span>
+				</p>
+			</div> 
+		</header>
+		<!-- SINGLE_REDUCTION(单个优惠),TOTAL_REDUCTION（累计优惠），EXCLUSIVE(会员专享)，DISCOUNT（会员折扣） -->
+		<% 
+		var promotionType=productDetail.promotionType;
+		var promotionConfigId=productDetail.promotionConfigId;
+		var memberLevel=dataSort(productDetail.discountsConfig || []);
+		var ExchangeLimit=productDetail.activityExchangeLimit;
+if(promotionConfigId){
+		if(promotionType=="TOTAL_REDUCTION" ||promotionType=="SINGLE_REDUCTION"){
+		%>
+		
+		<%var discountsConfig=productDetail.discountsConfig;
+		var levelobj={};
+		var lvnum = 0;
+		var isnumal = 0;
+		var normal_name = "普通";
+		if(discountsConfig && discountsConfig.length>0 && discountsConfig[0].level!=null && discountsConfig[0].level!=""){
+			for(var i  =0; i < discountsConfig.length; i++){
+				var item = discountsConfig[i];
+				if(item.discountType=="DISCOUNT"){
+					discount_value=vround(productDetail.originPoint*(item.discountValue*0.1));
+				}else{
+					discount_value=vround(productDetail.originPoint-item.discountValue);
+				}
+				
+				if(item.threshold>=10000){
+					var key = ((item.threshold)/10000) + "万_" + discount_value;
+				}else{
+					var key = (item.threshold) + "_" + discount_value;
+				}
+				if( !levelobj[key] ) {
+					levelobj[key] = "";
+				}
+				levelobj[key] += item.levelName + "&";
+			}
+			for(var key in levelobj){
+				lvnum ++;
+				levelobj[key] = levelobj[key].substring(0, levelobj[key].length - 1);	
+			}
+			isnumal = discountsConfig.length < 5 ? 0 : 1;
+		}
+		%>
+			<div class="exchange_note">
+					<div class="title_font">满减优惠 <% if(userid && (lvnum<1) ){%><b class="discount_num"><%=productDetail.discount%></b> 唐果<%}%>
+						<%if (ExchangeLimit>0){%>
+						<b class="mark_font">活动期间商品限兑<%=productDetail.activityExchangeLimit%>件</b>
+						<%}%>
+						<i class="question_markt JS_question"></i>
+					<span class="favourable_checkbox"><input type="checkbox" class="input_check" /><b class="check_box"></b></span></div>
+					
+					<%if(lvnum == 1){
+						var iarr = [];
+						var key = "";
+						for(var k in levelobj){
+							key = k;
+							iarr = k.split("_");
+						}
+						%>
+						<div class="content_list discount_candy_list ">
+								<ul class="discount_list cls">
+									<%if(!isnumal){%>
+										<li style="width:100%"><%=levelobj[key]%>：<b>投资</b><b class="discount_candy"><%=iarr[0]%>+<%=iarr[1]%>唐果</b></li>
+									<%}else{%>
+										<li style="width:100%"><%=normal_name%>及以上：<b>投资</b><b class="discount_candy"><%=iarr[0]%>+<%=iarr[1]%>唐果</b></li>
+									<%}%>
+								</ul>
+							</div>
+					<%}else if(lvnum>1){
+						var iarr = [];
+						var ln = 0;
+						for(var k in levelobj){
+							iarr.push(k);
+						}
+						ln = iarr.length;
+						%>
+						<div class="content_list discount_candy_list ">
+								<ul class="discount_list cls">
+									<%for(var i = 0; i < iarr.length; i++){
+									var sarr = iarr[i].split("_");
+									var lname = levelobj[iarr[i]]%>
+									<%if(lname.split("&").length>1){%>
+										<li style="width:100%"><%=lname%>：<b>投资</b><b class="discount_candy"><%=sarr[0]%>+<%=sarr[1]%>唐果</b></li>
+									<%}else{%>
+										<li><%=lname%>：<b>投资</b><b class="discount_candy"><%=sarr[0]%>+<%=sarr[1]%>唐果</b></li>
+									<%}}%>
+								</ul>
+							</div>
+					<%}%>
+					<div  class="content_list">
+						<p class="for_member"><%=productDetail.discountDesc%></p>
+					</div>
+			</div>
+		<%}else if(promotionType=="DISCOUNT"){%>
+			<%if(memberLevel.length>0){%>
+		<div class="exchange_note">
+				<strong class="title_font">会员可享折扣</strong>
+				<div class="content_list">
+					<ul class="discount_list cls">
+						<% for(var i=0;i<memberLevel.length;i++){
+							var limitNum=memberLevel[i].limitNum;
+						%>
+						<li><%=memberLevel[i].levelName%>：<b class="discount_num"><%=memberLevel[i].discountValue%></b>折 
+							<%if (limitNum>0){%>
+							<b class="mark_font">限兑<%=limitNum%>件</b>
+							<%}%>
+						</li>
+						<%}%>
+					</ul>
+				</div>
+	</div>
+	<%}%>
+	<%}else if(promotionType=="EXCLUSIVE"){%>
+		<%if(memberLevel.length>0){%>
+		<div class="exchange_note">
+				<strong>会员专享说明</strong>
+				<div  class="content_list">
+					<p class="for_member"><%for(var i=0;i<(memberLevel.length-1);i++){%><%=memberLevel[i].levelName%>、<%}%><%=memberLevel[(memberLevel.length-1)].levelName%>等级专享兑换商品</p>
+					<ul class="discount_list cls">
+							<%for(var i=0;i<memberLevel.length;i++){
+								var limitNum=memberLevel[i].limitNum;
+							%>
+						<li><%=memberLevel[i].levelName%>：<b class="discount_num"><%=memberLevel[i].discountValue%></b>折 
+							<%if (limitNum>0){%>
+							<b class="mark_font">限兑<%=limitNum%>件</b>
+							<%}%>
+						</li>
+						<%}%>
+					</ul>
+				</div>
+		</div>
+		<%}%>
+	<%} }%>
+<% 
+              var specification1 = productDetail.useRule;
+              var specificationArray1 = [];
+              specificationArray1 = specification1?specification1.split("\n"):"";
+             if(specificationArray1.length>0){
+			%>
+				<div class="exchange_note profit_rule" style="margin-top: .725333rem;">
+					<strong>使用规则</strong>
+					<% for (var i = 0;i < specificationArray1.length; i++){%>
+						<div class="cls content_list">
+							<p>
+								<%=specificationArray1[i]%>
+							</p>
+						</div>
+						<%}%>
+				</div>
+				<%}%>
+		<%
+		var specification = productDetail.exchangeDesc;
+		var specificationArray = [];
+		specificationArray = specification?specification.split("\n"):"";
+		if(specificationArray.length>0){
+		%>
+		<div class="exchange_note">
+			<strong>兑换说明</strong>
+			<% 
+              for (var i = 0;i < specificationArray.length; i++){
+			%>
+			  <div class="cls content_list"><p><%=specificationArray[i]%></p></div>
+			<%}%>
+
+		</div>
+		<%}%>
+		<% if (list.length > 0) {%>
+		 <p class="pull_view">点击查看图文详情（建议WiFi环境下查看）</p>
+		<div class="pic_detail" >
+		   
+			<% for (var i = 0;i < list.length;i++) {
+				var item = list[i];
+		%>
+		 <img src=<%= item.value==""?"/css/img2.0/pointImg/default_pic_big.jpg":item.value%> onerror='onerror=null;src="/css/img2.0/pointImg/choice_detail_defaultImg.png"' />
+		<%}%>
+		</div> 
+		<%}%>
+		<div class="exchange_point">
+				<%if(productDetail.discount!=0){%>
+					<span class="JS_discount">优惠<b class="price_red"><%=productDetail.discount%></b> 唐果</span>
+					<%}else{%>
+					<span>无任何优惠</span>
+					<%}%>
+			<% if (productDetail.inventory >0) {%>
+			  <span class="exchange_btn" onClick="returnDetail2('<%=productDetail.id%>','<%=productDetail.originPoint%>');_hmt.push(['_trackEvent', 'Integral Mall', 'Btn_Details_Exchange', '详情-我要兑换', '详情-我要兑换']);">我要兑换</span>
+			<%}else{%>
+              <span class="sellOut_btn">售罄</span>
+            <%}%>
+		</div>
+		</script>
+	</div>
+	<!-- 活动规则 -->
+	<div class="mask no_mask"></div>
+	<div class="activity_rule">
+		<div class="rule_content">
+			<h3 class="activity_title">活动规则</h3>
+			<ul class="rule_list">
+				<!-- <li>活动时间：5月26日-6月6日；</li>
+				<li>活动期间，累计净新增投资额+唐果数达到相应兑换条件，即可兑换指定礼品；
+					<div class="cls"><span class="icon_circle"></span><p>累计净新增投资额=累计新增投资金额-累计转让金额；</p></div>
+					<div class="cls"><span class="icon_circle"></span><p>产品范围：28天及以上定期标；</p></div>
+					<div class="cls"><span class="icon_circle"></span><p>新手体验标、唐粉团团赚专享标、变现专区不参加该活动；</p></div>
+					<div class="cls"><span class="icon_circle"></span><p>成功兑换后将自动扣除账户相应唐果；</p></div>
+				</li>
+				<li>活动期间，每人仅限兑换1次；</li> -->
+			</ul>
+		</div>
+		<div class="close_win"><img src="/css/img2.0/pointImg/win_close.png" class="JS_close"/></div>
+	</div>
+	<script src="/js/vendor/jquery.js" type="text/javascript"></script>
+	<script src="/js/vendor/template.js" type="text/javascript"></script>
+	<script src="/js/jweixin-1.0.0.js"></script>
+	<script src="/js/common.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/choice_detail.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/exchange.js" type="text/javascript"></script>
+</body>
+</html>

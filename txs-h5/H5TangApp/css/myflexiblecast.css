@@ -1,0 +1,100 @@
+.moldlist li {
+    overflow: hidden;
+    content: '';
+    clear: both;
+}
+
+.moldlist .left {
+    float: left;
+}
+
+.moldlist .right {
+    float: right;
+}
+
+.icon {
+    position: absolute;
+    right: -0.25rem;
+    top: 0.28rem;
+    vertical-align: middle;
+}
+
+.icon:after,
+.icon:before {
+    border: 0.256rem solid transparent;
+    border-left: 0.256rem solid #fff;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    content: ' '
+}
+
+.icon:before {
+    border-left-color: #999999;
+    right: -21px;
+}
+
+.jiejieseng-detail-top {
+    background: url(/css/img2.0/jiejieseng-detail-top.png) no-repeat;
+    background-size: cover;
+    min-height: 7.466666666666667rem;
+}
+
+.principal {
+    padding-top: 1.28rem;
+    text-align: center;
+    font-size: 0.4266666666666667rem;
+    color: #9B9B9B;
+}
+
+.principal-amout {
+    font-size: 1.536rem;
+    color: #F43F3F;
+    text-align: center;
+}
+
+.sy_mod {
+    overflow: hidden;
+    padding: 0.6rem 0;
+}
+
+.tr,
+.tl {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.tr p,
+.tl p {
+    color: #9B9B9B;
+    font-size: 0.512rem;
+}
+
+.sy_mod .t1 {
+    color: #333;
+    font-size: 0.768rem;
+}
+
+.moldlist {
+    background: #fff;
+    padding: 0 .64rem;
+}
+
+.moldlist li {
+    border-bottom: 1px solid #e7e7e7;
+    padding: .5rem 0;
+}
+
+.moldlist li:last-child {
+    border: none;
+}
+
+.moldlist li .right {
+    color: #999999;
+    position: relative;
+    right: 1rem;
+    top: 0;
+}

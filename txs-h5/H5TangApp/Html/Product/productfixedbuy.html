@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>立即投资</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?v=20160914">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <link href="/css/coupon.css" rel="stylesheet" />
+    <link href="/css/bank-notice.css" rel="stylesheet" />
+</head>
+
+<body class="investment">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content" id="producthtml">
+        <article class="viewport">
+            <div class="po-re-h100">
+                <div class="item-mod">
+                    <div class="row1">
+                        <span class="l col1" id="product-title">&nbsp;<i class="wxicon icon-right-arrow"></i></span>
+                    </div>
+                    <div class="row2">
+                        <span class="l col3">
+                            <z id="product-rate">0.00</z>
+                            <s>%</s><strong id="product-rateactivite"></strong><b></b></span>
+                        <span class="r col1">期限<z id="product-duration"></z>天</span>
+                    </div>
+                </div>
+                <div class="sy_moy" id="product-remaining-div" style="display: none;">
+                    <span class="l">剩余金额：<z id="product-remainingamount"></z></span>
+                    <span class="r" id="product-remaining-buyall">全部购买</span>
+                </div>
+                <!--<div class="sr-val">
+                    <span class="t" id="paytypehtml"></span>
+                    <div>
+                        <z id="paytypeamount"></z>
+                    </div>
+                </div>-->
+                <div class="sr-val">
+                    <span class="t" style="display: inline-block; height: 3.5rem; line-height: 3.5rem;">购买金额</span>
+                    <div>
+                        <input type="tel" id="product-buy-amount" style="display: inline-block; height: 3.5rem; line-height: 3.5rem;" onkeyup="this.value = this.value.replace(/[^\d.]/g, '').replace('.', '').replace(/^[0]/g, '');" />
+                    </div>
+                </div>
+                <div class="hongbao">
+                    <span class="t">优惠券</span>
+                    <span class="col1 current-coupon">
+                        <z id="current-coupon-text">未使用优惠券</z>
+                    </span>
+                    <!--<span class="wxicon icon-right-arrow right l-h14"></span>-->
+                </div>
+                <p class="sy_time">预计显示收益时间：
+                    <z id="product-profitstartday"></z>
+                </p>
+
+                <p class="xieyi">
+                    <z id="buy-agreement">
+                        <input id="ck-buy-agreement" type="checkbox" value="checkbox" checked="checked" style="display:none;" />
+                        <span class="checkbox checkbox1" checkbox=""></span> 我已阅读并同意
+                    </z>
+                    <span class="col1"><a href="javascript:void(0)" id="invitexieyilink">《投资协议》</a></span>
+                </p>
+
+                <p class="renz" style="display: none;" id="user-investmentcertification">完成风险评测后方可投资</p>
+                <a class="pay_btn pay_btn_op maintenanct global-maintenanct" href="javascript:void(0);" id="product-buy">立即投资</a>
+
+                <!--<p class="assessment text-left" id="user-norisklevel" style="display:none;">
+                    您还未进行<span>风险评估测试</span>，若您想继续投资，则视为您已充分认识并愿意承担本项目可能存在的风险。
+                </p>-->
+                <p class="highrisk" id="user-highrisk" style="display: none;">
+                    投资本项目所需风险承受能力为<span id="product-risk-desc"></span>，已超出您的风险承受能力<span id="user-risk-desc">平衡型</span>，若您想继续投资，需重新评测您的风险等级。
+                </p>
+            </div>
+            <div class="btmpro-ab2 po-re-m-3P" style="margin-top: -5.5rem!important">
+                <p class="btmpro" onclick="window.location.href = '/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</p>
+                <p style="display: block;width: 100%;text-align: center;color: #b9b9b9;font-size: 1.2rem; margin: 1rem 0;">网贷有风险，出借需谨慎</p>
+            </div>
+        </article>
+    </section>
+
+    <div class="bonus_ticket display-none">
+        <div class="bt_header ">
+            <div class="row title_header">
+                <div class="bt_bonus_title small-6 columns bon_t_on">代金券</div>
+                <input type="hidden" id="current-coupon-value" value="0">
+                <input type="hidden" id="current-coupon-id" value="0">
+                <div class="bt-tickets_title small-6 columns">加息券</div>
+                <input type="hidden" id="current-interest-id" value="0">
+            </div>
+        </div>
+        <div class="bt_bonus">
+            <div class="bt_tips bb nousecoupon paddingtop">不使用代金券</div>
+            <div id="couponlist">
+            </div>
+            <!--<p class="bt_nomore">没有更多代金券</p><br /><br /><br />-->
+            <div class="bt_tip2 ">
+                <h2 class="col-fcc"><i class="wxicon icon-light col-fcc"></i>温馨提示:</h2>
+                <h2 class="col-fcc">代金券不可重复使用，不可累加使用</h2>
+                <h2 class="col-fcc">代金券投资到期后，可<span class="withdrawtext">提现</span></h2>
+            </div>
+        </div>
+        <div class="bt_tickets display-none">
+            <div class="bt_tips bb nouseticket paddingtop">不使用加息券</div>
+            <div id="ticketlist">
+            </div>
+            <div class="bt_tip2 ">
+                <h2 class="col-fcc"><i class="wxicon icon-light col-fcc"></i>温馨提示:</h2>
+                <h2 class="col-fcc">加息券不可重复使用，不可累加使用</h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="content" id="choicepay" style="display: none">
+        <articel class="viewport" id="articel-pay" style="background-color: #F0EFF4;">
+            <div class="box-content" id="basicdiv">
+                <span class="first-span" id="basic">账户余额</span><span class="select-span">可用余额<z id="basicbalance">0.00</z>元</span><img class="active basicimg" src="/css/img2.0/checkbox.png" style="display:none">
+            </div>
+            <div class="box-content" id="zzbdiv">
+                <span class="first-span" id="demand">至尊宝</span><span class="select-span">可用余额<z id="demandbalance">0.00</z>元</span><img class="active demandimg" src="/css/img2.0/checkbox.png" style="display:none">
+            </div>
+            <div class="box-content" id="bankdiv">
+                <span id="bank"> <z id="bankname"></z></span><span class="select-span">（<z id="cardcode"></z>）单笔限额<z id="depositsinglemax"></z></span><img class="active bankimg" src="/css/img2.0/checkbox.png" style="display:none">
+            </div>
+
+        </articel>
+    </section>
+
+    <div class="rule-tip rule1" style="display: none">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">保守型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受能力极低，对收益要求不高，但追求资本金绝对安全。期望报酬率优于中长期存款利率（约3-5年），并确保本金在通货膨胀中发挥保值功能。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>
+                    获利期待：本金保值<br>
+                    对应风险类型：保守型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule2" style="display: none">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">稳健型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度较低，能容忍一定幅度的本金损失，止损意识强。资产配置以低风险品种为主，少量参与股票投资。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极低<br>
+                    获利期待：本金平稳增值<br>
+                    对应风险类型：稳健型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule3" style="display: none">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">平衡型</h2>
+                <p class="statement az-textindet text-col-42-2">风险承受度适中，偏向于资产均衡配置，能够承受一定的投资风险，同时，对资产收益要求高于保守型、稳健型投资者。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：中<br>
+                    获利期待：稳定收益<br>
+                    对应风险类型：平衡型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+    <div class="rule-tip rule4" style="display: none">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">成长型</h2>
+                <p class="statement az-textindet text-col-42-2">偏向于激进的资产配置，对风险有较高的承受能力，投资收益期望相对较高，资产配置以股票等高风险品种为主，资产市值波动较大，除获取资本利得之外，也寻求投资差价收益。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：较高<br>
+                    获利期待：高收益<br>
+                    对应风险类型：成长型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+
+    <div class="mask" style="display: none"></div>
+    <div class="rule-tip rule5" style="display: none">
+        <div class="question">
+            <div class="bb">
+                <p class="statement az-text-center pad-tb-1 az-margin0 width100">您的风险测试结果</p>
+                <h2 class="az-center font-blod pad-tb-1 text-col-42 pt0">进取型</h2>
+                <p class="statement az-textindet text-col-42-2">在对风险有非常高的承受能力，资产配置以高风险投资品种为主，投机性强，利用市场波动赢取差价，追求在较短周期内的收益最大化。</p>
+                <span class="statement resulet-qs text-col-42-2">风险承受能力：极高<br>
+                    获利期待：较高收益<br>
+                    对应风险类型：进取型 </span>
+                <br />
+            </div>
+            <br />
+            <p class="text-center font_s_135 col_444">抱歉，您的测评结果不符合本产品投资要求</p>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 btnok">去看看别的产品</a>
+            <a href="javascript:void(0)" class="btn2 az-center width-90 tran-btn">重新测评</a>
+            <br />
+        </div>
+    </div>
+
+
+    <!--银行维护-->
+    <article id="txs-model" class="txs-model" style="display:none">
+        <img class="model-close js-model-close" src="/css/img2.0/close.png" />
+        <article class="model-header">
+            <p class="model-title"></p>
+            <p class="model-content"></p>
+        </article>
+        <article class="model-img">
+            <img src="/css/img2.0/notice-1.png" />
+        </article>
+        <article class="btn-double" style="display:none">
+            <div class="model-btn">
+                <div class="cancel js-model-close">
+                    <span>取消</span>
+                </div>
+                <div class="btnok chance-bank">
+                    <span>换张卡</span>
+                </div>
+            </div>
+        </article>
+        <article class="model-btn btn-signle" style="display:none">
+            <div class="btnok oneline js-model-close">
+                <span>好的，我知道了</span>
+            </div>
+        </article>
+    </article>
+    <article id="txs-model-bg" class="txs-model-bg" style="display:none"></article>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/product/productfixedbuy.js"></script>
+</body>
+
+</html>

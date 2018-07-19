@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>享多期拼团商城</title>
+</head>
+
+<body onselectstart="return false">
+</body>
+<script>
+    if(sessionStorage){
+        sessionStorage["xdq_trustedLogin"]=true;
+    }
+    var queryStr=window.location.href.match(/\?.*/) || "";
+    window.location.replace("xdq_trustedLogin1.html"+queryStr);
+</script>
+
+</html>

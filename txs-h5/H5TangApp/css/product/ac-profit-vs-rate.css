@@ -1,0 +1,71 @@
+heml,body{
+    background-color: #f6f6f6;
+    min-height: 100%;
+}
+.page .page-nav{
+    background-color: #fff;
+    list-style: none;
+    list-style-type: none;
+    font-size: 0;
+    position: relative;
+}
+.page .page-nav p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    width: 25%;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+    transition: transform .2s;
+    height: 0.128rem;
+    background-color: #ff4949;
+}
+.page .page-nav li{
+    width: 50%;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0.6827rem;
+    color: #333;
+    text-align: center;
+    padding: 0.5974rem 0;
+}
+.page .page-nav li.active{
+    color: #ff4949;
+}
+.page-data ul{
+    padding-top: 0.512rem;
+    font-size: 0.512rem;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+.page-data ul li:first-child p{
+    background-color: #4a90e2;
+}
+.page-data ul li{
+    background-color: #fff;
+    margin-bottom: 0.256rem;
+}
+.page-data ul li p{
+    background-color: #b9b9b9;
+    height: 1.536rem;
+    line-height: 1.536rem;;
+    display: inline-block;
+    padding: 0 0.64rem;
+    box-sizing: border-box;
+    /* min-width: 7.9786rem; */
+}
+.page-data ul.rate{
+    display: none;
+}
+.fr{
+    float: right;
+}
+
+
+
+/* 字体 和 字体单位！！！！！！！！！！！！！！！！！！！！！！！！！！！！ */

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<title>还款计划</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="/css/finances.css">
+
+</head>
+<body class="bg-gray">
+<div class="wrap">
+	<div class="record-title mb bb">
+    	<div class="small-6 fl pdtname"></div>
+        <div class="small-6 fl tr">以<span class="pdtamount"></span>元本金计算</div>
+    </div>
+	<div class="record-list bt bb">
+    	<div class="small-4 columns">还款期数</div>
+        <div class="small-4 fl tc">资金类型</div>
+        <div class="small-4 fl tc">还款金额</div>
+    </div>
+    <div class="record-list bb tc rpitemanchor display-none"></div>
+    <div class="record-list bb tc loadmore display-none"><a href="javascript:void(0);" class="gray-font">加载更多 ...</a></div>
+    <div class="record-list bb tc nodata display-none"><a href="javascript:void(0);" class="gray-font">没有发现数据</a></div>
+    <div class="tmplt-rpitem display-none">
+        <div class='record-list bb'>
+            <div class='small-4 columns gray-font'>${RepayNum}</div>
+            <div class='small-4 columns tc gray-font'>${AmountType}</div>
+            <div class='small-4 columns tc gray-font tr'>${Amount}</div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/pagejs/product/repaymentplan.js"></script>
+</body>
+</html>

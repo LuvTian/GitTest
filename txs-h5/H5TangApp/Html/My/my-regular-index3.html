@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的定期</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my/my_regular_index.css">
+
+</head>
+
+<body class="timeDeposit-index">
+
+    <section class="content">
+        <article class="viewport">
+            <div class="timeDeposit-index-modtop">
+                <p class="invot_title">投资金额（元）</p>
+                <p class="invot_money" id="currentTotalAmont">0.00</p>
+                <div class="sy_mod">
+                    <div>
+                        <p class="income_title">昨日收益</p>
+                        <p class="income_num"><span id="yesterdayInterest">+0.00</span>元</p>
+                        <span class="border"></span>
+                    </div>
+                    <div>
+                        <p class="income_title">累计收益</p>
+                        <p class="income_num"><span id="totalInterest">+0.00</span>元</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nouserfixedlist" style="display:none">
+                <div class="wsg-ico">
+                </div>
+                <p class="wsg-txt">您还未申购</p>
+            </div>
+            <div id="userfixedlist">
+                <!-- 新加的预约列表 -->
+                <!--<ul class="appointment_list pro_list">
+                        <li>
+                                <p><span>风火轮 4期</span><span class="tr ts1 ts11">已预约</span></p>
+                                <p><span class="ts1">预约金额(元)</span><span class="tr ts1">预计成交时间</span></p>
+                                <p><span>1000</span><span class="tr ts33">2017-08-20</span></p>
+                            </li>
+                            <li>
+                                    <p><span>风火轮 4期</span><span class="tr ts1 ts11">已预约</span></p>
+                                    <p><span class="ts1">预约金额(元)</span><span class="tr ts1">预计成交时间</span></p>
+                                    <p><span>1000</span><span class="tr ts33">2017-08-20</span></p>
+                                </li>
+                </ul>-->
+                <ul class="timeDeposit-list pro_list" id="user-fix-product">
+                    <!-- <li>
+                        <p><span>风火轮 4期</span><span class="tr ts1 ts11">还剩21天</span></p>
+                        <p><span class="ts1">在投金额（元）</span><span class="tr ts1">累计收益  </span></p>
+                        <p><span>1000</span><span class="tr ts33">1.28</span></p>
+                    </li>
+                    <li>
+                        <p><span>风火轮 4期</span><span class="tr ts1 ts22">赎回中</span></p>
+                        <p><span class="ts1">>在投金额（元）</span><span class="tr ts1 ">累计收益  </span></p>
+                        <p><span>1000</span><span class="tr ts33">1.28</span></p>
+                    </li> -->
+
+                </ul>
+                <div id="historyTitle" class="history tc">
+                    <span>历史投资</span>
+                </div>
+
+                <ul id="historyList" class="timeDeposit-list pro_list"></ul>
+            </div>
+
+            <a class="addtimeDeposit-list" href="javascript:;" id="loadmoreProject">点击加载更多</a>
+
+        </article>
+        <a class="buytimeDeposit-list" href="/Html/Product/index.html">投资其他产品</a>
+    </section>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/my-regular-index.js"></script>
+    <!--<script data-main="/js/pagejs/require.config.js" src="/js/vendor/require.js"></script>
+    <script>
+        require(['./my/my-regular-index']);
+    </script>-->
+    <!--<script src="/js/pagejs/my/my-regular-index.js"></script>-->
+</body>
+
+</html>

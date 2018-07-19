@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>至尊宝账单</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/timedeposit.css">
+</head>
+<body class="bg-gray">
+    <section class="content" id="bill-list">
+        <article class="viewport dealrecord-list ">
+            <ul class="zzb-nav transhistory-nav" data-tab>
+                <li class="tab-title active" id="title0" data-type="0"><a href="javascript:;">全部</a></li>
+                <li class="tab-title" id="title3" data-type="3"><a href="javascript:;">投资</a></li>
+                <li class="tab-title" id="title4" data-type="4"><a href="javascript:;">赎回</a></li>
+                <li class="tab-title" id="title5" data-type="5"><a href="javascript:;">收益</a></li>
+                <li class="tab-title" id="title6" data-type="6"><a href="javascript:;">冻结</a></li>
+            </ul>
+            <div class="tabs-content tabs-content1">
+                <article id="panel0" class="content active" data-transtype="0">
+                    <article class=" bt translist"></article>
+                    <div class="bg-gray"></div>
+                </article>
+
+                <article id="panel3" class="content" data-transtype="1">
+                    <article class=" bt translist"></article>
+
+                    <div class="bg-gray"></div>
+                </article>
+                <article id="panel4" class="content" data-transtype="2">
+                    <article class=" bt translist"></article>
+                    <div class="bg-gray"></div>
+                </article>
+                <article id="panel5" class="content" data-transtype="3">
+                    <article class=" bt translist"></article>
+                    <div class="bg-gray"></div>
+                </article>
+                <article id="panel6" class="content" data-transtype="4">
+                    <article class=" bt translist"></article>
+                    <div class="bg-gray"></div>
+                </article>
+            </div>
+        </article>
+    </section>
+
+    <section id="notinvest" class=" display-none">
+        <nav class="navbar status-nav notinvest">
+            <article class=" translist null-bg">
+                <div class="wsg-ico">
+                </div>
+                <p class="wsg-txt">您还未投资</p>
+
+            </article>
+        </nav>
+        <nav class="navbar status-nav" id="gozzb">
+            <article class=" viewport text-center navbtn">
+                <div class="small-12 left">前往至尊宝</div>
+            </article>
+        </nav>
+    </section>
+
+    <section class="content display-none" id="bill-detail">
+        <article class="viewport">
+            <ul class="zzb-info-list">
+                <li>
+                    <div class="l">金额</div>
+                    <div class="r" id="amount"></div>
+                </li>
+                <li>
+                    <div class="l">收支类型</div>
+                    <div class="r" id="detail"></div>
+                </li>
+                <li>
+                    <div class="l">时间</div>
+                    <div class="r" id="time"></div>
+                </li>
+                <li id="li-balance" class="display-none">
+                    <div class="l">至尊宝余额</div>
+                    <div class="r" id="balance"></div>
+                </li>
+                <li>
+                    <div class="l">流水号</div>
+                    <div class="r" id="id"></div>
+                </li>
+                <li class="display-none">
+                    <div class="l">备注</div>
+                    <div class="r" id="remark"></div>
+                </li>
+            </ul>
+
+            <dl class="zzbht-info-list display-none" id="contract">
+                <dt>合同详情</dt>
+                <dd>
+                    <div class="l">
+                        <p>发行人：SPV名称</p>
+                        <p class="f12 col2">协议编号：CLA_2016032496004768</p>
+
+                    </div>
+                    <div class="r">
+                        <p class="col1">512.00</p>
+                        <p class="col2">在投金额</p>
+                        <div class="wxicon ar"></div>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="l">
+                        <p>发行人：SPV名称</p>
+                        <p class="f12 col2">协议编号：CLA_2016032496004768</p>
+                    </div>
+                    <div class="r">
+                        <p class="col1">512.00</p>
+                        <p class="col2">在投金额</p>
+                        <div class="wxicon ar"></div>
+                    </div>
+                </dd>
+            </dl>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/demand-bill.js"></script>
+    <!--<script data-main="/js/pagejs/require.config.js" src="/js/vendor/require.js"></script>
+    <script>
+        require(['./product/demand-bill']);
+    </script>-->
+
+</body>
+</html>

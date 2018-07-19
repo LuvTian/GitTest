@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160321010">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="home">
+
+        <!--未登录-->
+        <article class="viewport" id="nologin" style="display:none;">
+            <ul id="divbanner" data-orbit data-options="timer_speed:3000;"></ul>
+            <article class="tongji bg-white text-center" style="display:none;">
+                <div class="small-6 left">
+                    <p id="totalinvestamount"></p>
+                    累计投资额（元）
+                </div>
+                <div class="small-6 left">
+                    <p class="pr"><i class="dline">|</i><z id="totalregisteredcount"></z></p>
+                    注册人数
+                </div>
+            </article>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red " id="demand-rate-nologin">0.00%</span>
+                    <p class="gray fls">期限灵活&nbsp;&nbsp;随投随取</p>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/Product/productfixedlist.html">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate-nologin">10.05%</span>
+                    <p class="gray fls">产品丰富&nbsp;&nbsp;自由选择</p>
+                </div>
+            </a>
+            <article class="ensure" onclick="window.location.href = '/html/anonymous/about-index.html'">
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-01"></span>严格甄选<br>优质产品</div>
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-02"></span>十层风控<br>十道审核</div>
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-03"></span>贴心服务<br>便捷操作</div>
+            </article>
+            <article class="safety text-center" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</article>
+        </article>
+
+        <!--已登录-->
+        <article class="viewport personal" id="is-login" style="display:none;">
+            <!--标签备注
+            个人账户显示<article class="viewport personal">
+            商家账户显示<article class="viewport">
+            -->
+            <!--个人信息-->
+            <article class="money-top pr">
+                <div class="vip-photo"><a href="/Html/My/UserInfo.html"><img src="/css/img2.0/icon-tang.png"></a></div>
+                <div class="money-nav">
+                    <a href="javascript:void(0);" class="qian"><img src="/css/img2.0/icon-sign.png"></a>
+                    <a href="/html/Anonymous/description-earnings.html"><img src="/css/img2.0/icon-about.png"></a>
+                </div>
+                <div class="money-count oh">
+                    <p class="text-center">昨日收益(元)<span><img src="/css/img2.0/isopeneye.png" class="img_eye" id="eyes" /></span></p>
+
+                    <p class="text-center yesterday-income display-none" id="yesterday-income"><span class="timer " id="count-number" data-to="88725" data-speed="1200"></span></p>
+                    <p class="text-center yesterday-income noincome " id="no-income"><span>暂无收益</span></p>
+                    <div class="total-assetsoh oh">
+                        <div class="small-6 left text-right">总资产(元)<span class="timer " data-to="30000" id="sumamout" data-speed="1200">0.00</span></div>
+                        <div class="small-6 right text-left bl">昨日收益率<span><i class="timer " id="yesterdayrate" data-to="1521" data-speed="1200">0.00</i></span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-white total-amount">
+                <div class="left"><span class="wxicon icon-coins"></span></div>
+                <div class="left tat">投资金额：</div>
+                <div class="left" id="sumbalance">0.00</div>
+            </article>
+            <article id="storeInfo" class="bg-white bt gray aerchant-account">
+                <div class="small-7 left">商户账户：<span id="stroeTotoalProfit">225,000.00</span></div>
+                <div class="small-5 left">昨日收益：<span id="storeYesterdayProfit">124.00</span></div>
+            </article>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html" id="demandlist" style="display:none;">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red" id="demand-rate">0.00%</span>
+                    <p class="gray">
+                        <z id="demand-balance">0.00</z>
+                        <span class="demand-img_2" style="display:none;"></span>
+                        <!--<img id="demand-img" class="pic-pre" style="display:none;" />-->
+                    </p>
+                </div>
+                <div class="small-4 right gray text-right">
+                    <p>昨日收益</p><span><z id="demand-profit">0.00</z></span>
+                </div>
+            </a>
+            <a class="bg-white bb mt8 fundlist" href="/html/product/index-demand.html" id="nodemandlist" style="display:none;">
+                <div class="small-12 left fundlist-title">
+                    <span class="wxicon icon-current"></span>至尊宝<span class="dline">|</span><span class="income red" id="demand-rate-noinvert">0.00%</span>
+                    <p class="gray fls">您还未申购 <span class="flsb right">期限灵活 随投随取</span></p>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/my/my-regular-index.html" id="fixedlist" style="display:none;">
+                <div class="small-8 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate">0.00%</span>
+                    <p class="gray" id="fixed-balance">0.00</p>
+                </div>
+                <div class="small-4 right gray text-right">
+                    <p>昨日收益</p><span><z id="fixed-yesterday-profit">0.00</z></span>
+                </div>
+            </a>
+            <a class="bg-white fundlist" href="/Html/Product/productfixedlist.html" id="nofixedlist" style="display:none;">
+                <div class="small-12 left fundlist-title">
+                    <span class="wxicon icon-regular"></span>定&nbsp;&nbsp;&nbsp;&nbsp;期<span class="dline">|</span><span class="income red" id="fixed-rate-noinvert">0.00%</span>
+                    <p class="gray fls">您还未申购<span class="flsb right">产品丰富 自由选择</span></p>
+                </div>
+            </a>
+            <article class="ensure" onclick="window.location.href = '/html/anonymous/about-index.html'">
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-01"></span>严格甄选<br>优质产品</div>
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-02"></span>十层风控<br>十道审核</div>
+                <div class="small-4 left pr"><span class="wxicon icon-ensure-03"></span>贴心服务<br>便捷操作</div>
+            </article>
+            <article class="safety text-center" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</article>
+
+
+        </article>
+
+    </section>
+    <nav class="navbar navqujin">
+        <article class="viewport">
+            <a href="javascript:void(0);" class="on"><i class="wxicon icon-nav-home"></i><span>首页</span></a>
+            <a href="/html/product/" class=""><i class="wxicon icon-nav-list"></i><span>理财</span></a>
+            <a href="/html/my/qujin.html" class="qujin-nav">&nbsp;<img src="/css/img2.0/qujin-bg.png" class="img-qujin-bg"><img src="/css/img2.0/qujin-icon-money.png" class="img-qujin-money mymove2"></a>
+            <a href="/html/Store/" class=""><i class="wxicon icon-nav-welfare"></i><span>福利</span></a>
+            <a href="/html/my/" class="usercenter" id="myicon"><i class="wxicon icon-nav-account"></i><span>我的</span></a>
+        </article>
+    </nav>
+    <div class="data-box" id="announcementmessage" style="display:none">
+        <div class="data-box1">
+            <h1 id="messagetitle"></h1>
+            <z id="MessageContent"></z>
+            <ul>
+                <li>唐小僧</li>
+                <li id="created"></li>
+            </ul>
+        </div>
+        <div class="data-box2" id="readmessage">我知道了</div>
+    </div>
+    <!--账户升级弹框-->
+    <!--<div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+            <h1 style="font-size: 1.8rem;padding:1rem;">账户升级公告</h1>
+            <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+                自2016年7月1日起，唐小僧原有帐户体系将升级为新版存钱罐账户体系，升级后余额也可以赚取收益；
+            </p>
+            <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+                如遇你在账户升级过程中遇到问题，请咨询客服：<span>400-607-8587</span>
+            </p>
+            <div style="margin-top:3rem;">
+                <label class="img-agree" style="font-size:1.05rem;color:#979797;text-align: left;padding: .5rem 1rem;">
+                    <img src="../../css/img2.0/checkbox2.jpg" alt="Alternate Text" style="width:1.06rem;height:1.06rem" />      同意<span style="font-size:1.043rem;color:#469AF3">《存钱罐账户服务协议》</span>
+                </label>
+            </div>
+        <div class="data-box2" id="" style="font-size:1.74rem;color:#C54846">马上升级</div>
+    </div>
+    账户暂不升级弹框
+    <div style ="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+
+            <h1 style="font-size: 1.8rem;padding:1rem;">温馨提示</h1>
+            <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+                放弃本次升级机会，您后续将无法使用<span style="color:#F1763B">”充值、提现、投资、赎回”</span>功能您确认放弃本次升级吗？
+            </p>
+        <div style="width:100%;height:1px;background:#ccc;margin-top:1rem"></div>
+        <div class="row">
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#bcbcbc;font-size: 1.6rem;line-height:3;display:block;border-right:1px solid #ccc">
+                放弃升级
+            </a>
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#ff6600;font-size: 1.6rem;line-height:3;display:block">马上升级</a>
+        </div>
+        </div>-->
+    <!---背景框--->
+    <div class="reveal-modal" id="mt" style="display:none">
+    </div>
+    <!--存钱罐账户升级提示-->
+    <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+        <h1 style="font-size: 1.8rem;padding:1rem;">存钱罐账户升级提示</h1>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">自2016-07-01起，唐小僧平台全面升级，升级为存钱罐账户后您的余额将产生收益。</p>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">升级为存钱罐账户，需要您先设置新浪支付交易密码来提升您的账户安全性，请前往设置吧~</p>
+        <div style="width:100%;height:1px;background:#ccc;margin-top:1rem"></div>
+        <a href="javascript:void(0);" style="color:#c54846;font-size: 1.6rem;line-height:3;">去设置</a>
+    </div>
+    <!--设置交易密码提示-->
+    <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+        <h1 style="font-size: 1.8rem;padding:1rem;">设置交易密码提示</h1>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">存钱罐用户在进行“充值”、“投资”、“赎回”、“提现”等资金操作时，必须先设置新浪支付交易密码。</p>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+            如有疑问，请致电客服：<br><br><span style="  display: block;
+  text-align: center;">400-607-8587</span>
+        </p>
+        <div style="width:100%;height:1px;background:#ccc;margin-top:1rem"></div>
+        <div class="row">
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#bcbcbc;font-size: 1.6rem;line-height:3;display:block;border-right:1px solid #ccc">暂不设置</a>
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#ff6600;font-size: 1.6rem;line-height:3;display:block">立即设置</a>
+        </div>
+    </div>
+    <!--委托代扣提示-->
+    <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+        <h1 style="font-size: 1.8rem;padding:1rem;">开通委托代扣提示</h1>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">开通新浪支付委托代扣后，您的“充值”、“投资”、“赎回”、“提现”等资金操作，不需要再跳转到新浪支付收银台进行支付。</p>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem">
+            开通委托代扣后您的操作体验更加快速、便捷，后续还可以使用银行卡直接进行投资。
+        </p>
+        <div style="width:100%;height:1px;background:#ccc;margin-top:1rem"></div>
+        <div class="row">
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#bcbcbc;font-size: 1.6rem;line-height:3;display:block;border-right:1px solid #ccc">去支付</a>
+            <a href="javascript:void(0)" class="small-6 columns" style="color:#ff6600;font-size: 1.6rem;line-height:3;display:block">去授权</a>
+        </div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/foundation/foundation.orbit.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/anonymous/welcome-old.js"></script>
+</body>
+</html>

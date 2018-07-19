@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改手机号码</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="newmoblie" class="oldmonile">
+        <div class="bg-white bb">
+            <div class="small-5 fl line-h-3">身份证号码</div>
+            <div class="small-7 fl tr gray-font">
+                <input type="text" id="idcard" value="" class="input-text">
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="small-5 fl line-h-3">原手机验证码</div>
+            <div class="small-7 fl tr gray-font">
+                <input type="tel" maxlength="6" id="oldyzm" name="" value="" class="input-text">
+                <button class="btn" id="oldgetyzm">获取验证码</button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="safety1 tl"><span class="wxicon icon-sigh yellow"></span>为了确保你的账户安全，请输入身份证号码</div>
+        </div>
+        <div class="fillet-btn az-center mt-3em"><a href="javascript:;" id="next" class="button expand az-padding0">下一步</a></div>
+    </div>
+    <div id="newmoblie" class="newmonile" style=" display:none;">
+        <div class="bg-white bb">
+            <div class="small-5 fl line-h-3">新手机号码</div>
+            <div class="small-7 fl tr gray-font">
+                <input type="tel" maxlength="11" id="newmobileinput" value="" class="input-text">
+            </div>
+        </div>
+        <div class="bg-white bb">
+            <div class="small-5 fl line-h-3">新手机验证码</div>
+            <div class="small-7 fl tr gray-font">
+                <input type="tel" maxlength="6" id="newyzm" name="" value="" class="input-text">
+                <button class="btn" id="newgetyzm">获取验证码</button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="safety tl"><span class="wxicon icon-sigh yellow"></span>为了确保你的账户安全,请输入新手机号码</div>
+        </div>
+
+        <div class="fillet-btn"><a href="javascript:;" id="sumbit" class="button expand az-padding0">提交</a></div>
+    </div>
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/newmobile.js"></script>
+</body>
+</html>

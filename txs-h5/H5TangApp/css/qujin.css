@@ -1,0 +1,164 @@
+.user-grade-title {
+    padding: .1rem 0.9375rem;
+    font-size: .64rem;
+}
+
+.red {
+    color: #fe5153 !important;
+}
+
+.user-grade-rule .title {
+    font-size: 0.682667rem;
+}
+
+.user-grade-rule p {
+    color: #666;
+    font-size: 0.5rem;
+    text-indent: -0.682667rem;
+    padding-left: 0.682667rem;
+    margin-bottom: 0.341333rem;
+    line-height: 1.5;
+}
+
+.user-grade-rule div.table {
+    margin: 0.853333rem 0 0.853333rem 0.682667rem;
+}
+
+.user-grade-rule div.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-grade-rule div.table thead tr {
+    border: 1px solid #fff;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.user-grade-rule div.table thead td {
+    height: 0.981333rem;
+    line-height: 0.981333rem;
+    background: #ffdcbb;
+    color: #f34e44;
+    text-align: center;
+}
+
+.user-grade-rule div.table tbody td {
+    height: 0.853333rem;
+    line-height: 0.853333rem;
+    background: #fff0d8;
+    color: #754238;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.user-grade-rule .subTitle {
+    color: #0270c3;
+    font-size: 0.512rem;
+    font-weight: bold;
+}
+
+.user-grade-rule .subContent {
+    margin-left: .682667rem;
+    padding: 0;
+    text-indent: 0;
+}
+
+.user-grade-link {
+    text-align: center;
+}
+
+.user-grade-link a {
+    color: #008CBA;
+    line-height: inherit;
+    text-decoration: none;
+    padding: 0 0 0 0.341333rem;
+}
+
+.user-grade-point {
+    font-size: 0.64rem;
+    line-height: 0.768rem;
+    margin: 0.853333rem 0.554667rem;
+    border-left: 0.128rem #c44a49 solid;
+    padding-left: 0.298667rem;
+    position: relative;
+}
+
+.user-grade-title img {
+    width: 2.133333rem;
+    margin-right: 0.426667rem;
+}
+
+.user-grade-point .dashed {
+    position: absolute;
+    border-bottom: 2px #d2d2d2 dashed;
+    width: 100%;
+    top: 0.341333rem;
+    margin-left: 0.426667rem;
+}
+
+.user-grade-button {
+    display: block;
+    width: 10.282667rem;
+    margin: 0.853333rem auto 0.384rem auto;
+}
+
+.user-grade-link {
+    font-size: 0.512rem;
+    padding-bottom: 0.938667rem;
+}
+
+.user-grade-rule {
+    padding: 0 0.853333rem 0.64rem 0.4rem;
+    font-size: 0.512rem;
+    color: #666;
+}
+
+.user-grade-rule .subContent li {
+    line-height: 1.5;
+    margin-bottom: 0.512rem;
+}
+
+.scrollUp {
+    text-align: center;
+}
+
+.scrollUp img {
+    width: 1.024rem;
+    height: 0.938667rem;
+    margin: 0 auto;
+}
+
+.gonggao header {
+    text-align: center;
+    font-size: .853333rem;
+    color: #333;
+    padding: 1.28rem 0;
+}
+
+#app {
+    background: #F7F7F7;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.gonggao .detail {
+    font-size: .682667rem;
+    color: #999;
+    padding: 0 2.133333rem;
+    line-height: 1.024rem;
+}
+
+.gonggao footer {
+    text-align: right;
+    padding: .426667rem 1.706667rem;
+    font-size: .597333rem;
+    color: #999;
+}
+
+#chaxun {
+    text-decoration: none;
+}

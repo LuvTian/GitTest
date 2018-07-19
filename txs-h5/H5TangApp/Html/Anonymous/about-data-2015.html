@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>2015年年报</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160325001">
+    <style>
+        .icon-circle:before {
+            content: '';
+        }
+
+        
+        .bg-white {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content">
+        <article class="viewport aboutus">
+            <article class="bg-white">
+                <div class="aobut-title">业绩回顾</div>
+                <p class="wxicon icon-circle"><span class="gray">注册人数：</span> <i id="reg_num">3,367,723</i> </p>
+                <p class="wxicon icon-circle"><span class="gray">投资金额：</span> <i id="invest_amount">6,910,755,239.17</i> </p>
+                <p class="wxicon icon-circle"><span class="gray">成交/交易笔数：</span><i id="deal_num">970,963</i></p>
+                <p class="wxicon icon-circle"><span class="gray">为投资人赚取利润：</span> <i id="get_money">47,909,661.69</i></p>
+            </article>
+            <article class="bg-white distributed">
+                <div class="aobut-title">投资人性别年龄分布</div>
+                <p><img src="/css/img2.0/about-icon-17.png" class="about-icon-17"></p>
+                <p><img src="/css/img2.0/about-icon-18.png" class="about-icon-18"></p>
+            </article>
+            <article class="bg-white distributed">
+                <div class="aobut-title">投资人地域分布TOP10</div>
+                <p><img src="/css/img2.0/about-icon-19.png" class="about-icon-19"></p>
+            </article>
+            <!--<article class="bg-white events">
+        	<div class="aobut-title">唐小僧大事记</div>
+            <div class="row">
+            	<div class="small-3 left gray text-right">
+                	<p class="ae1">2015-11-30</p>
+                    <p class="ae2">2015-08-15</p>
+                    <p class="ae3">2015-08-10</p>
+                    <p class="ae4">2015-07-26</p>
+                    <p class="ae5">2015-07-11</p>
+                    <p class="ae6">2015-07-10</p>
+                    <p class="ae7">2015-05-30</p>
+                </div>
+                <div class="small-1 left text-center"><img src="/css/img2.0/about-icon-21.png" class="about-icon-21"></div>
+                <div class="small-8 left">
+                	<p class="ae1">截至11月30日，客户投资总金额突破46亿元</p>
+                    <p class="ae2">8月15日 注册人数突破30万</p>
+                    <p class="ae3">8月10日 资邦唐小僧与中国民族贸易促进会签署战略合作协议</p>
+                    <p class="ae4">7月26日 唐小僧理财荣获“全国互联网金融领域最具诚信首选品牌”殊荣；唐小僧理财荣获“2015年度互联网金融最具风控平台”殊荣</p>
+                    <p class="ae5">7月11日 注册人数突破10万</p>
+                    <p class="ae6">7月10日 日投资额突破1000万</p>
+                    <p class="ae7">5月30日 唐小僧正式上线</p>
+                </div>
+            </div>
+        </article>-->
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        $(window).load(function () {
+            $("#all-body-div-status").fadeOut();
+            $("#all-body-div-preloader").delay(250).fadeOut("slow");
+        });
+        $(function () {
+            var type = $.getQueryStringByName("type"); //区别是哪一年的年报
+            if (type == "2016") {
+                $("#reg_num").html("4,110,052");
+                $("#invest_amount").html("33,114,184,652");
+                $("#deal_num").html("9,765,080");
+                $("#get_money").html("269,121,917.86");
+                $(".about-icon-17").attr("src", "/css/img2.0/about_2016_icon1.png");
+                $(".about-icon-18").attr("src", "/css/img2.0/about_2016_icon2.png");
+                $(".about-icon-19").attr("src", "/css/img2.0/about_2016_icon3.png");
+                $("title").html("2016年年报");
+            } else if (type == "2016q4") {
+                $("#reg_num").html("928,954");
+                $("#invest_amount").html("11,647,096,991");
+                $("#deal_num").html("5,721,130");
+                $("#get_money").html("71,392,754");
+                $(".about-icon-17").attr("src", "/css/img2.0/about_2016q_icon1.png");
+                $(".about-icon-18").attr("src", "/css/img2.0/about_2016q_icon2.png");
+                $(".about-icon-19").attr("src", "/css/img2.0/about_2016q_icon3.png");
+                $("title").html("2016年Q4季度报表");
+            } else if (type == "2017q1") {
+                $("#reg_num").html("966,363");
+                $("#invest_amount").html("14,189,379,760");
+                $("#deal_num").html("9,131,935");
+                $("#get_money").html("103,355,813");
+                $(".about-icon-17").attr("src", "/css/img2.0/about_2017q1_icon1.png");
+                $(".about-icon-18").attr("src", "/css/img2.0/about_2017q1_icon2.png");
+                $(".about-icon-19").attr("src", "/css/img2.0/about_2017q1_icon3.png");
+                $("title").html("2017年Q1季度报表");
+            } else if (type == "2017q2") {
+                $("#reg_num").html("1,057,653");
+                $("#invest_amount").html("15,580,528,024");
+                $("#deal_num").html("10,670,331");
+                $("#get_money").html("118,634,120");
+                $(".about-icon-17").attr("src", "/css/img2.0/about_2017q2_icon1.png");
+                $(".about-icon-18").attr("src", "/css/img2.0/about_2017q2_icon2.png");
+                $(".about-icon-19").attr("src", "/css/img2.0/about_2017q2_icon3.png");
+                $("title").html("2017年Q2季度报表");
+            }
+        })
+    </script>
+</body>
+
+</html>

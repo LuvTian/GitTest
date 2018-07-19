@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>优惠券</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my/myreward_bonus.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="">
+        <div class="fixed_top">
+            <div class="title_favourable">
+                    <div class="confirm_title"><div class="JS_choose" style="display:inline-block;"><span class="title_name">代金券</span><i class="triangle triangle_up"></i></div></div>
+                    <ul class="choose_favourable">
+                        <li class="choosed_favourable">代金券</li>
+                        <li>加息券</li>
+                    </ul>
+                </div>
+                <div class="mask JS_mask" style="display:none;"></div>
+                <ul class="bonus_tab JS_bonus_tab">
+                    <li class="tab_selected headspitem">未使用</li>
+                    <li class="headspitem">已使用</li>
+                    <li class="headspitem">已失效</li>
+                </ul>
+        </div>
+        <div >
+        <div class="bonus_content headbnlist">
+            <div class="bonus_list headbnitem show_item bonus_list_1">
+                <div class="JS_not_use"></div>
+                <!-- <div class="bonus_product">
+                    <img src="/css/img2.0/bonus/bonus_overdue.png" class="bonus_icon"/>
+                        <ul class="bonus_intro cls">
+                            <li class="bonus_text">
+                                <img src="/css/img2.0/bonus/bonus_txs.png" class="bonus_img"/>
+                                <span class="bonus_use">唐小僧专用</span>
+                                <p class="bonus_limit">投资满10000可用</p>
+                                <div class="bonus_cost"><span class="bonus_money">150</span><span class="bonus_unit">元</span></div>
+                            </li>
+                            <li  class="bonus_time">
+                                    <p>2017.10.01-2017.10.30</p>
+                                    <span class="bonus_btn use_now_btn">立即使用</span>
+                            </li>
+                            
+                        </ul>
+                        <p class="bonus_remind">使用范围60天（含）以上定期产品；唐粉专享标、会员专享产品除外。来源XXX活动。</p>
+                </div>
+                <div class="bonus_product">
+                        <img src="/css/img2.0/bonus/bonus_overdue.png" class="bonus_icon"/>
+                            <ul class="bonus_intro cls">
+                                <li class="bonus_text">
+                                    <img src="/css/img2.0/bonus/bonus_qfax.png" class="bonus_img"/>
+                                    <span class="bonus_use">唐小僧专用</span>
+                                    <p class="bonus_limit">投资满10000可用</p>
+                                    <div class="bonus_cost"><span class="bonus_money">150</span><span class="bonus_unit">元</span></div>
+                                </li>
+                                <li  class="bonus_time">
+                                        <p>2017.10.01-2017.10.30</p>
+                                        <span class="bonus_btn no_start_btn">尚未开始</span>
+                                </li>
+                                
+                            </ul>
+                            <p class="bonus_remind">使用范围60天（含）以上定期产品；唐粉专享标、会员专享产品除外。来源XXX活动。</p>
+                    </div> -->
+                    <div class="ondata text-center">点击加载更多</div>
+            </div>
+            
+            <div class="bonus_list bonus_used headbnitem hide_item bonus_list_2">
+                <div class="JS_used"></div>
+                    <!-- <div class="bonus_product">
+                        <img src="/css/img2.0/bonus/bonus_overdue.png" class="bonus_icon"/>
+                            <ul class="bonus_intro cls">
+                                <li class="bonus_text">
+                                    <img src="/css/img2.0/bonus/bonus_txs.png" class="bonus_img"/>
+                                    <span class="bonus_use">唐小僧专用</span>
+                                    <p class="bonus_limit">投资满10000可用</p>
+                                    <div class="bonus_cost"><span class="bonus_money">150</span><span class="bonus_unit">元</span></div>
+                                </li>
+                                <li  class="bonus_time">
+                                        <p>使用时间：2017.10.30</p>
+                                </li>
+                                
+                            </ul>
+                            <p class="bonus_remind">使用范围60天（含）以上定期产品；唐粉专享标、会员专享产品除外。来源XXX活动。</p>
+                    </div> -->
+                    <div class="ondata text-center">点击加载更多</div>
+                </div>
+                <!--已失效-->
+                <div class="bonus_list bonus_used headbnitem hide_item bonus_list_3">
+                    <div class="JS_lost_used"></div>
+                        <!-- <div class="bonus_product">
+                            <img src="/css/img2.0/bonus/bonus_overdue.png" class="bonus_icon"/>
+                                <ul class="bonus_intro cls">
+                                    <li class="bonus_text">
+                                        <img src="/css/img2.0/bonus/bonus_txs.png" class="bonus_img"/>
+                                        <span class="bonus_use">侨金所专用</span>
+                                        <p class="bonus_limit">投资满10000可用</p>
+                                        <div class="bonus_cost"><span class="bonus_money">150</span><span class="bonus_unit">元</span></div>
+                                    </li>
+                                    <li  class="bonus_time">
+                                            <p>有效期至：2017.10.30</p>
+                                    </li>
+                                    
+                                </ul>
+                                <p class="bonus_remind">使用范围60天（含）以上定期产品；唐粉专享标、会员专享产品除外。来源XXX活动。</p>
+                        </div> -->
+                        <div class="ondata text-center">点击加载更多</div>
+                    </div>
+                    <!-- <div class="no_bonus">
+                        <img src="/css/img2.0/bonus/no_bonus.png" class="no_bonus_img"/>
+                        <p>您暂无未使用的代金券</p>
+                        <a href="/html/product/index.html">去理财</a>
+                    </div> -->
+                </div>
+                    
+        </div>
+        <script type="text/template" id="not_used">
+            <div class="bonus_product {8}" data-platform="{9}" data-coupid="{10}" data-minamount="{11}" data-amount="{12}">
+                        {0}
+                        <ul class="bonus_intro cls">
+                            <li class="bonus_text">
+                                <img src="{1}" class="bonus_img"/>
+                                <span class="bonus_use">{2}</span>
+                                <p class="bonus_limit">{3}</p>
+                                <div class="bonus_cost"><span class="bonus_money">{4}</span><span class="bonus_unit">元</span></div>
+                            </li>
+                            <li  class="bonus_time">
+                                    <p>{5}</p>
+                                    {6}
+                            </li>
+                            
+                        </ul>
+                        <p class="bonus_remind">{7}</p>
+                </div>
+                
+        </script>
+        <script id="no_bonus" type="text/template">
+            <div class="no_bonus">
+                <img src="/css/img2.0/bonus/no_bonus.png" class="no_bonus_img"/>
+                <p>您暂无{0}的代金券</p>
+                <a href="/html/product/index.html">去理财</a>
+            </div>
+        </script>
+        <!--主体部分-->
+
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/flipsnap.js"></script>
+    <script src="/js/pagejs/my/myreward-bonus.js"></script>
+</body>
+
+</html>

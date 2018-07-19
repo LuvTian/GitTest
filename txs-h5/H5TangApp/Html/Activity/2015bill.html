@@ -1,0 +1,226 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>唐小僧理财年度账单</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160125">
+    <link rel="stylesheet" type="text/css" href="/css/topic.css?2016012516">
+    <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
+</head>
+
+<body class="bill">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status">
+            <span class="text-center"><z id="imgsCount">0</z>%</span>
+        </div>
+    </div>
+    <section class="content">
+        <article class="viewport">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/home-title.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <img class="img-bill ani" src="/css/imgtopic/1.25-bill/home-content.png" style="left:0;top:18rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                        <div class="ani text-left" style="left:0;top:51rem;z-index:1;padding:0 2rem;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">本次活动相关协议之效力、解释、变更、执行与争议均适用中华人民共和国法律。</div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide" id="registerslider">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one-face.png" style="left:0;top:20rem;z-index:2;" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.8s">
+                        <div class="s2-content ani" style="left:0;top:37rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                            <p class="reg-time"></p>
+                            <p class="s2-title">您与唐小僧相遇</p>
+                            <p class="s2-biaoyu"><span class="timer" id="count-number" data-to="1000" data-speed="5000"></span>万人一致的选择</p>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide" id="investslider">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one-pig.png" style="left:0;top:18rem;z-index:2;" swiper-animate-effect="slideInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.8s">
+                        <div class="s2-content ani" style="left:0;top:37rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                            <p class="reg-time"></p>
+                            <p class="s2-title">您与唐小僧第一次亲密接触</p>
+                            <p class="s2-biaoyu"><span></span>人与您同一天投资</p>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <!--有签到显示这段-->
+                        <div class="display-none" id="havesignslider">
+                            <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-calendar-have.png" style="left:0;top:21rem;z-index:1;" swiper-animate-effect="flipInX" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                            <div class="s2-content ani" style="left:0;top:37rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                                <p class="reg-time"></p>
+                                <p class="s2-title">您与唐小僧第一次约会</p>
+                                <p class="s2-biaoyu"><span></span>人与您同一天签到</p>
+                            </div>
+                        </div>
+                        <!--无签到显示这段-->
+                        <div class="display-block" id="nosignslider">
+                            <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-calendar.png" style="left:0;top:20.5rem;z-index:1;" swiper-animate-effect="flipInX" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                            <div class="s2-content ani" style="left:0;top:35rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                                <p class="s2-title">您还没有<span>签到</span>哦!</p>
+                                <p class="s2-biaoyu">签到每天<span>0.88</span>元</p>
+                                <p class="s2-exp">相当于4015元活期理财收益</p>
+                                <p class="s2-acc">平台已累计发放签到收益4,168,478.16元</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-one-money.png" style="left:0;top:20rem;z-index:2;" swiper-animate-effect="flipInX" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                        <div class="s2-content ani" style="left:0;top:37rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                            <p class="reg-time"><i>2</i><i>0</i><i>1</i><i>5</i> 年 <i>1</i><i>2</i> 月 <i>3</i><i>1</i> 日</p>
+                            <p class="s2-title">我投资了多少？</p>
+                            <p class="s2-title">赚了多少？</p>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide" id="investtotalslider">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-two.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <div class="mybill-content ani" style="left:0;top:16rem;z-index:1;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                            <p class="s9-title"><span class="wxicon icon-circle">截至2015年12月31日</span></p>
+                            <div class="chart" id="circle-2">
+                                <div class="mybill-ring">
+                                    <svg class="chart-circle" id="chart-4" width="100%" viewBox="0 0 100 100">
+                                        <path class="underlay" d="M5,50 A45,45,0 1 1 95,50 A45,45,0 1 1 5,50" />
+                                        <linearGradient id="gradient-2">
+                                            <stop offset="0" stop-color="#fbd300" />
+                                            <stop offset="0.3" stop-color="#fbd300" />
+                                            <stop offset="0.6" stop-color="#fbd300" />
+                                            <stop offset="1" stop-color="#fbd300" />
+                                        </linearGradient>
+                                    </svg>
+                                    <div class="s9-aggregate">累计投资<span>0</span>元</div>
+                                </div>
+                            </div>
+                            <p class="s9-current"><span class="wxicon icon-circle">活期累计：<i>0</i> 元</span></p>
+                            <p class="s9-regular"><span class="wxicon icon-circle">定期累计：<i>0</i> 元</span></p>
+                            <p class="s9-remind text-left"><span class="wxicon icon-light">小僧提醒：</span><br>良好的投资组合有助于满足资金流动需求，并获得更多收益</p>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide" id="detailtotalslider">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-three.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <div class="small-12 ani" style="left:0;top:15.5rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                            <p class="s10-title text-left">每月收益：</p>
+                            <div class="s10-tongji">
+                                <div class="s10-list">
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-50"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-20"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-70"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-40"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-100"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-60"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-10"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                    <li>
+                                        <div class="s10-tishi"><i class="tn">0</i><i class="tad"></i></div>
+                                        <span class="sl-80"><img src="/css/imgtopic/1.25-bill/s10-light.png"></span>
+                                    </li>
+                                </div>
+                                <div class="s10-month">
+                                    <li>5月</li>
+                                    <li>6月</li>
+                                    <li>7月</li>
+                                    <li>8月</li>
+                                    <li>9月</li>
+                                    <li>10月</li>
+                                    <li>11月</li>
+                                    <li>12月</li>
+                                </div>
+                            </div>
+                            <div class="s10-data">
+                                <li>
+                                    <div class="s10-data-list">
+                                        <img src="/css/imgtopic/1.25-bill/s10-data-icon-01.png">
+                                        <p class="s10-money sm01">累计活期收益<br><span>0</span>元</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="s10-data-list">
+                                        <img src="/css/imgtopic/1.25-bill/s10-data-icon-02.png">
+                                        <p class="s10-money sm02">累计定期收益<br><span>0</span>元</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="s10-data-list">
+                                        <img src="/css/imgtopic/1.25-bill/s10-data-icon-03.png">
+                                        <p class="s10-money sm03">累计奖励<br><span>0</span>元</p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="s9-remind text-left s10-remind">累计收益：<span>0</span> 元  收益PK榜：击败<span>0%</span> 用户
+                                <p class="s9-deviation">账单数据截至2015年12月31日,经过四舍五入计算可能存在微小偏差</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next text-center"><img src="/css/imgtopic/1.25-bill/btn-next.png"></div>
+                    </div>
+                    <div class="swiper-slide" id="assertprofitslider">
+                        <img class="img-bht ani" src="/css/imgtopic/1.25-bill/page-four.png" style="left:0;top:0;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
+                        <div class="small-12 ani" style="left:0;top:15.5rem;z-index:1;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                            <div class="s8-content text-left">
+                                <p class="s8-title">按年度累计收益预测，十年后我将拥有</p>
+                                <p class="s8-money"><span>0</span>元</p>
+                            </div>
+                            <img class="img-bht" src="/css/imgtopic/1.25-bill/page-four-face.png">
+                            <img class="img-btn bill-invite" src="/css/imgtopic/1.25-bill/page-four-btn.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="hill-top-bg"></div>
+            <img class="bill-hill" src="/css/imgtopic/1.25-bill/hill.png">
+            <img class="bill-bg" src="/css/imgtopic/1.25-bill/bg.png">
+            <div class="bill-music" id="play">
+                <div class="music-stop"><img src="/css/imgtopic/1.25-bill/music-on.png"></div>
+                <div class="music-play">
+                    <img src="/css/imgtopic/1.25-bill/music.png">
+                    <audio src="/css/imgtopic/1.25-bill/music.mp3" loop="loop" controls="controls" id="music" hidden autoplay="autoplay" preload></audio>
+                </div>
+            </div>
+        </article>
+    </section>
+    <div class="tipswrap">
+        <div class="bg-black" style=""></div>
+        <div class="tips fenxiang"><img src="/css/imgtopic/1.25-bill/fenxiang.png" /></div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/swiper.animate.min.js"></script>
+    <script src="/js/snap.svg-min.js"></script>
+    <script src="/js/pagejs/activity/2015bill.js"></script>
+</body>
+</html>

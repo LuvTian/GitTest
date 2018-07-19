@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>兑换记录</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/points.css">
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="view" id="move_up">
+		<ul class="welfare_tab JS_tab">
+			<li><span class="tab_current">小僧精选</span></li>
+			<li><span>小僧礼券</span></li>
+		</ul>
+		<div class="welfare_content">
+		<!--小僧精选-->
+			<div class="welfare_choice">
+				<!-- <div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div>
+				<div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_failed">交易失败</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div>
+				<div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div> -->
+				<!--没有记录-->
+				<div class="no_record">
+					<img src="/css/img2.0/pointImg/no_record_pic.png">
+					<p>暂无兑换记录哦，快去兑换吧</p>
+				</div>
+			</div>
+			<script type="test/html" id="welfare_choice">
+				<% if (list.length > 0) {%>
+					<% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					%>
+					<div class="choice_list choice_list_record">
+					    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span><%=item.orderNo%></span></li><li class="deal_status deal_success">
+                          <% if (item.orderStatus == "COMPLETE") {%>
+                          	交易成功
+                          <% }else if (item.orderStatus == "SYSTEM_DELETE"){%>
+                          	交易失败
+                          <%}%>
+					    </li></ul></div>
+					    <div class="order_content cls">
+					    	<img src="<%=item.imgUrl%>" class="list_pic">
+							<div class="intro">
+								<p class="intro_title"><%=item.itemName%></p>
+								<p class="intro_content"><span class="point_color"><%=item.pointAmount%></span>唐果</p>
+								<p class="intro_content">市场参考价： <%=item.itemPrice+item.unit%></p>
+							</div>
+					    </div>
+					</div>
+                      
+					<%}%>
+				<% }%>
+			</script>
+		<!--小僧福利-->
+			<div class="welfare_profit welfare_record" style="display:none;">
+		<!-- 	   <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_success_out">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+				<div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_success_inner">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+			   <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_failed">交易失败</li></ul></div>
+			   	   <div class="profit_list deal_failed_bg">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+			   <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_overdue_bg">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div> -->
+
+			</div>
+			<script type="test/html" id="welfare_profit">
+					<% if (list.length > 0) {%>
+                       <% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					   %>
+					   <div class="choice_list_record">
+					      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span><%=item.orderNo%></span></li><li class="deal_status deal_success">
+                              <% if (item.orderStatus == "COMPLETE") {%>
+	                          	交易成功
+	                          <% }else if (item.orderStatus == "SYSTEM_DELETE"){%>
+	                          	交易失败
+	                          <%}%>
+					      </li></ul></div>
+					   	   <div class="profit_list 
+                                <% if (item.deliveryStatus =="UNFINISHED" && ((item.itemType == "COUPON") || (item.itemType == "FINANCIAL") || (item.itemType == "INTEREST")) ){%>
+	                             		deal_success_inner
+	                             	<%} else if ((item.deliveryStatus =="UNFINISHED") && ((item.itemType == "CINEMA_TICKET") || (item.itemType == "PHONE_TRAFFIC")))  {%>
+	                             	    deal_success_out
+	                             	<%} else if(item.deliveryStatus =="FINISHED") {%>
+                             	deal_failed_bg
+                             <%}%>
+					   	   ">
+								<span class="profit_money"><%=item.itemPrice+item.unit%></span>
+								<div class="profit_intro">
+									<p class="profit_title"><%=item.itemName%></p>
+			                        <div class="profit_content cls"><p><span class="point_color"><%=item.pointAmount%></span>唐果</p><p>有效期至
+                                     <%=formatdate(item.createTime);%>
+                                     
+			                        </p></div>
+								</div>
+						   </div>
+					   </div>
+					   <%}%>
+					<%}%>
+				</script>
+		</div>
+	</div>
+	<script src="/js/vendor/jquery.js" type="text/javascript"></script>
+	<script src="/js/vendor/template.js" type="text/javascript"></script>
+	<script src="/js/common.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/convert_record.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			
+		})
+	</script>
+</body>
+</html>

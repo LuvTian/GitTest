@@ -1,0 +1,171 @@
+.gray {
+    color: #999999;
+}
+
+.red {
+    color: #F25D50;
+}
+
+.green {
+    color: #00AA6C;
+}
+
+.tlname p.oh {
+    font-size: 1.35rem;
+    color: #333333;
+}
+
+.tlname .small-7 .gray {
+    font-size: 1.05rem;
+}
+
+.line-h {
+    line-height: 4.4rem;
+}
+
+.dealrecord-list .mb,
+.dealrecord-list p,
+.dealre-nav .dealre-list a {
+    font-size: 1.22rem;
+}
+
+.borb:after {
+    display: block;
+    height: 1px;
+    border-bottom: 1px solid #E7E7E7;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+    position: absolute;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    right: 0;
+}
+
+.tlname p{
+    height: 1.7rem;
+}
+
+.finances-nav a {
+    display: block;
+    float: left;
+    line-height: 4rem;
+    height: 4rem;
+    width: 50%;
+    text-align: center;
+    color: #333333;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.4rem;
+}
+
+.finances-nav .active a {
+    color: #F25D50;
+}
+
+.finances-nav .active a:before {
+    height: 3px;
+    background: #F25D50;
+}
+
+.finances-nav {
+    position: fixed;
+    z-index: 9;
+    max-width: 720px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    height: 4rem;
+    overflow: hidden;
+    font-size: 1.4375rem;
+}
+
+.bg-white {
+    background: #FFFFFF;
+    padding: 0.9375rem;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    color: #444;
+}
+
+.tabs-content {
+    margin: 0;
+    margin-top: 12px;
+}
+
+.bg-gray {
+    background: rgb(247, 247, 247);
+}
+
+.content .tabs-content {
+    margin-top: 4.7rem;
+    background: rgb(247, 247, 247);
+}
+
+.fz {
+    font-size: 1.22rem;
+}
+
+.translist .small-7.left p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.finances-nav a:before{
+    height: 1px;
+}
+
+/*--------错误提示-----------*/
+
+.timeoutbody {
+    font-size: .768rem;
+    color: #666666;
+    margin-top: 1.024rem;
+}
+
+.connectiontimeout {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #F7F7F7;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+.timeout {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+}
+
+.timeoutbody .lianwang {
+    font-size: .597333rem;
+    color: #999999;
+    margin-top: .64rem;
+}
+
+.timeout {
+    text-align: center;
+}
+
+.timeoutfooter {
+    font-size: .597333rem;
+    color: #999999;
+    margin-top: 2.133333rem;
+}
+
+.timeoutheader {
+    width: 5.973333rem;
+    height: 5.973333rem;
+    margin: 0 auto;
+}
+
+.timeoutheader img {
+    width: 100%;
+}

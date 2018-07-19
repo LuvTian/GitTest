@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>理财账户</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/html/fanba/css/my.css">
+    <style type="text/css">
+        @font-face { font-family: 'iconfont'; src: url(/../../css/iconnoticefont.ttf) format('truetype'); }
+    </style>
+
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="myindex">
+        <article class="viewport">
+            <div class="notice-wrap" id="notice-wrap">
+                <div class="notice-horn">
+                    <i class="n-horn-icon"></i>
+                </div>
+                <div class="close">
+                    <i class="n-horn-close"></i>
+                </div>
+                <div class="content" id="content">
+                </div>
+            </div>
+            <div class="mb8 usertop">
+                <!-- <div class="myoverage text-center" id="go-referral">
+                    <div class="wxicon icon" id="my-message-center">
+                        <i>0</i>
+                    </div>
+                    <p id="level-big" class="display-none"><span class="orange " id="level-name">卷帘大将</span><span class="wxicon icon-my-uparrow" id="level-rate">0.2%</span></p>
+                    <p id="level-0" class="display-none"><span class="orange">白龙马</span><span class="gray"></span></p>
+                    <a class="myvip" id="level-my" href="javascript:;"><img src="" id="level-logo" class="img-responsive"><span id="v">v1</span></a>
+                    <a href="javascript:;" class="blue" id="more-profit">点击赚更多收益</a>
+                </div> -->
+                <div class="help-exp text-center">
+                    <div class="small-4 left br1">
+                        <p><span class="gray">账户余额</span><span class="red"><z id="my-basic-balance">0.00</z></span></p>
+                    </div>
+                    <div class="small-4 left br1">
+                        <p onclick="window.location.href = '/Html/Product/index-demand.html'"><span class="gray">至尊宝金额</span><span class="red"><z id="my-demand-balance">0.00</z></span></p>
+                    </div>
+                    <div class="small-4 left">
+                        <p onclick="window.location.href = '/Html/my/my-regular-index.html'"><span class="gray">定期总金额</span><span class="red"><z id="my-fixed-balance">0.00</z></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white mb8 myindexnav text-center">
+                <!-- <li id="qian"><span class="wxicon icon-my-sign" style="line-height:4rem"></span><p>签到</p></li>
+                <li id="my-referralcode"><span class="wxicon icon-my-invite" style="line-height:4rem"></span><p>邀请</p></li> -->
+                <li id="deposit"><span class="wxicon icon-my-recharge" style="line-height:4rem"></span><p>充值</p></li>
+                <li id="withdraw"><span class="wxicon icon-my-withdraw" style="line-height:4rem"></span><p>提现</p></li>
+            </div>
+
+            <!--<article class="bg-white mb bt bb" id="my-referralcode">
+                <div class="small-6 left"><span class="wxicon icon-my-friend"></span> 邀请好友</div>
+                <div class="small-6 left text-right gray f160" id="yaoqingaddhtml">收益加成<span class="red addprofit"></span><span class="wxicon icon-right-arrow"></span></div>
+                <div class="small-6 left text-right gray f160" id="yaoqingclickhtml" style="display:none;">点我赚更多收益<span class="wxicon icon-right-arrow"></span></div>
+            </article>-->
+            <!-- <a id="btnStore" class="bg-white">
+                <div class="small-6 left red"><span class="wxicon icon-my-business incomplete"></span> <span id="my-store-text">我是商户</span></div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a> -->
+            <!--<a class="bg-white" href="">
+                <div class="small-6 left red"><span class="wxicon icon-my-business"></span> 我是商户</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a>-->
+            <a class="bg-white mb bt bb" onclick="window.location.href = '/Html/product/product-financialbuylist.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-elite"></span>理财金</div>
+                <div class="small-6 left text-right gray f160"><span class="red" id="sumamount"></span><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+            <!-- <a class="bg-white bt" onclick="window.location.href='/Html/My/mywelfare.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-welfare"></span> 我的福利</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a> -->
+            <a class="bg-white bt" onclick="window.location.href='/Html/My/myreward-money.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-reward"></span> 平台奖励</div>
+                <div class="small-6 left text-right gray f160 "><span class="red" id="platform"></span><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+            <!-- <a class="bg-white bt" onclick="window.location.href='/Html/My/splendidactive.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-activity"></span> 精彩活动</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a> -->
+            <a class="bg-white bt" onclick="window.location.href='/Html/fanba/passinvestorlist.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-assess incomplete" style="top:4px!important;"></span>合格投资人认证</div>
+                <div class="small-6 left text-right gray f160" id="accreditation"><span class="orange" id="accreditationhtml"></span><span class="wxicon icon-right-arrow"></span></div>
+
+                <!--<div class="small-6 left"><span class="wxicon icon-my-assess"></span> 合格投资人认证</div>
+                <div class="small-6 left text-right gray f160">您的风险评估为 <span class="orange">保守型</span><span class="wxicon icon-right-arrow"></span></div>
+                <div class="small-6 left text-right gray f160 display-none"><span class="orange">未进行风险评估</span><span class="wxicon icon-right-arrow"></span></div>-->
+            </a>
+            <!--<article class="bg-white bt" onclick="window.location.href='/Html/Anonymous/about-safety.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-ensure"></span> 安全保障</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </article>-->
+            <a class="bg-white bt" onclick="window.location.href='/Html/fanba/UserInfo.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-setup"></span> 账户与安全</div>
+                <div class="small-6 left text-right gray f160"><z id="userphone"></z><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+            <a class="bg-white bt mb8" onclick="window.location.href = '/html/anonymous/about-introduction.html'">
+                <div class="small-6 left"><span class="wxicon icon-my-about incomplete"></span> 了解唐小僧</div>
+                <div class="small-6 left text-right gray f160"><span class="wxicon icon-right-arrow"></span></div>
+            </a>
+
+        </article>
+    </section>
+    <!-- <nav class="navbar navqujin">
+        <article class="viewport">
+            <a href="/" class=""><i class="wxicon icon-nav-home"></i><span>首页</span></a>
+            <a href="/Html/Product/" class=""><i class="wxicon icon-nav-list"></i><span>理财</span></a>
+            <a href="/Html/My/qujin.html" class="qujin-nav">&nbsp;<img src="/css/img2.0/qujin-bg.png" class="img-qujin-bg"><img src="/css/img2.0/qujin-icon-money.png" class="img-qujin-money mymove2"></a>
+            <a href="/Html/Store/" class=""><i class="wxicon icon-nav-welfare"></i><span>福利</span></a>
+            <a href="javascript:void(0)" class="on" id="myicon"><i class="wxicon icon-nav-account"></i><span>我的</span></a>
+        </article>
+    </nav> -->
+    <article class="poplayer fund-poplayer display-none text-center">
+        <center><span class="wxicon icon-my-sigh"></span><span class="gray">敬请期待</span> </center>
+        <span class="fpbutton">我知道了</span>
+    </article>
+    <!--<article class="bg-black"></article>-->
+    <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+
+        <h1 style="font-size: 1.8rem;padding:1rem;">激活账户</h1>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+            请设置新浪支付交易密码，激活存钱罐账户。
+        </p>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">
+            激活后会提高您的账户安全性。
+        </p>
+        <div style="width:100%;height:1px;background:#ccc;margin-top:1rem"></div>
+        <div class="row">
+            <a href="javascript:void(0)" class="small-12 columns" style="color:#ff6600;font-size: 1.6rem;line-height:3;display:block;border-right:1px solid #ccc">
+                去设置
+            </a>
+        </div>
+    </div>
+    <!---背景框--->
+    <div class="reveal-modal" id="mt" style="display:none">
+    </div>
+    <!--银行维护-->
+    <article id="notice-alert" class="_pop poplayer fund-poplayer text-center notice-alert display-none">
+        <article class="poplayer-content text-center">
+            <p class="notice-alert-title" id="notice-alert-title"></p>
+            <p id="notice-alert-content"></p>
+        </article>
+        <article class="okbtn row" id="notice-ok">
+            <div class="left small-12">
+                <span class="fpbutton">确定</span>
+            </div>
+        </article>
+    </article>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js?v=2015"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/fanba/myindex.js?v=20160925"></script>
+</body>
+</html>

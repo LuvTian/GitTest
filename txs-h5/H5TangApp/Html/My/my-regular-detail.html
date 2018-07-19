@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link href="/css/timedeposit.css" rel="stylesheet" />
+</head>
+<body class="timeDeposit-info">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport">
+            
+            <div class="top-mod">
+                <div class="row1">
+                    期望年化收益
+                </div>
+                <div class="row4">
+                    <z id="product-rate">0.00</z><span class="s">% <span class="sml" id="product-rate-rateactivite" style="display:none;"></span></span>
+                </div>
+
+                <div class="row2">
+                    <div class="da1 wxicon"></div>
+                    <div class="ar"></div>
+                    <div class="da2 wxicon"></div>
+                </div>
+
+                <div class="row3">
+                    <div id="startInterestDay">0000-00-00 起息</div>
+                    <div>投资期限<z id="intvestTime">&nbsp;&nbsp;</z>天</div>
+                </div>
+            </div>
+
+            <div class="info_list_jl" style="display:none"><span class="m1"></span><span class="m2"><b class="wxicon icon-right-arrow"></b></span></div>
+
+            <ul class="info_list">
+                <li id="productDetail"><span>产品详情</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></li>
+                <li id="productIntroduce"><span>项目介绍</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></li>
+                <li id="investDetail"><span>投资详情</span><span class="m1"><s id="investMoney"></s>元<b class="wxicon icon-right-arrow"></b></span></li>
+                <li id="contractDocument"><span>法律文件</span><span class="m1"><b class="wxicon icon-right-arrow"></b></span></li>
+                <li id="repayPlane"><span>还款计划</span><span class="m1"><z id="repayPlanetxt">按月付息 到期还本</z> <b class="wxicon icon-right-arrow"></b></span></li>
+                <li id="investRecord"><span>投资记录</span><span class="m1"> <z id="bidCount"></z> <b class="wxicon icon-right-arrow"></b></span></li>
+            </ul>
+                
+            </ul><br /><br />
+            <p class="check_tips" id="check_tips_question" style="display:none;"><span class="check_tips_question">？</span> 查看转让说明</p>
+            <p class="btmpro line-het12" onclick="window.location.href='/Html/picc.html'"><span class="wxicon icon-safety"></span>账户资金防盗安全由新浪支付和太平财险共同保障</p>
+        </article>
+    </section>
+    <a id="redeemed" class="timeDeposit_sh_btn1" href="javascript:;" style="display:none;background: rgb(212, 212, 212);">已赎回</a>
+    <a id="calledAway" class="timeDeposit_sh_btn" href="javascript:;" style="display:none;">提前赎回</a>
+    <a id="transfer" class="timeDeposit_sh_btn" href="javascript:;" style="display:none;">转让</a>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/my-regular-detail.js"></script>
+        </body>
+        </html>

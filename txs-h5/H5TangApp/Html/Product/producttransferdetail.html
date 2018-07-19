@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>转让产品详情</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/relize.css">
+    <style>
+    </style>
+</head>
+<body class="investment">
+    <section class="content">
+        <article class="viewport">
+            <div class="productinfo-header">
+                <p class="text-center gray font12">转让后历史年化 </p>
+                <p class="text-center y-income"><z id="transferrate"></z><span>%</span></p>
+                <div id="container" style="width:98%;margin:auto"></div>
+
+            </div>
+            <div class="bg-white bb az_padding_top0 az_padding_bottom0">
+                <div class="small-4 left text-center">
+                    <h3 class="gray fz-115">剩余期限</h3>
+                    <p class="col-444 fz-12 pt-half1 az_padding_top0"><z id="remainingday"></z>天</p>
+                </div>
+                <div class="small-4 left text-center">
+                    <h3 class="gray fz-115">原始本金</h3>
+                    <p class="col-444 fz-12 pt-half1 az_padding_top0"><z id="remainingprice"></z>元</p>
+                </div>
+                <div class="small-4 left text-center">
+                    <h3 class="gray fz-115">剩余利息</h3>
+                    <p class="col-444 fz-12 pt-half1 az_padding_top0"><z id="remaininginterest"></z>元</p>
+                </div>
+            </div>
+            <div class="bg-white az_padding_top0 az_padding_bottom0">
+                <div class="small-6 left text-center bb pad-bot-1">
+                    <h3 class="gray fz-115 br">到期时间</h3>
+                    <p class="col-444 fz-12 br"><z id="endtime"></z></p>
+                </div>
+                <div class="small-6 left text-center bb pad-bot-1">
+                    <h3 class="gray fz-115" id="interest-text">已产生利息</h3>
+                    <p class="col-444 fz-12" id="interest">568元</p>
+                </div>
+            </div>
+            <div class="bg-white text-center">
+                <h2 class="p-t13">转让金额 <span id="transferamount"></span>元 <span class="check_tips_question">？</span></h2>
+                <h4 class="p-t12" id="dowmhtml"> <span id="countdown"></span>后过期</h4>
+            </div>
+            <p class="check-productinfo" id="oldproductinfo">查看原产品详情 </p>
+            <p style="text-align: center;margin-top: -1rem;margin-bottom: 5rem;color: #b9b9b9;font-size:1.2rem;">网贷有风险，出借需谨慎</p>
+            <br><br>
+            
+        </article>
+    </section>
+    <a class="pro-info-pay_btn" href="javascript:void(0);" id="product-buy">立即投资</a>
+    <a class="pro-info-pay_btn" href="javascript:void(0);" id="btn-withdraw" style="display:none">立即撤回</a>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/highcharts.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/producttransferdetail.js"></script>
+    <!--<script data-main="/js/pagejs/require.config.js" src="/js/vendor/require.js"></script>
+    <script>
+        require(['./product/producttransferdetail']);
+    </script>-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>撤回成功</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <style type="text/css">
+        .investment .icon {
+            font-size: 4rem;
+            color: #fd6260;
+            padding: 2rem;
+        }
+
+            .investment .icon:before {
+                content: "\e669";
+            }
+
+        .investment .chehui-success {
+            font-size: 1.74rem;
+        }
+
+        .investment .fontsize {
+            font-size: 1.33rem;
+            background-color: #fff;
+            overflow: auto;
+        }
+
+            .investment .fontsize .text-center {
+                padding: 3rem 0 2rem 0;
+            }
+
+            .investment .fontsize .text-right {
+                color: #9C9C9C;
+            }
+
+        .investment .border-bottom {
+            border-bottom: 1px solid #E4E4E4;
+            overflow: auto;
+            padding: 1rem 1rem;
+        }
+
+        .investment .sure {
+            font-size: 1.62rem;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            height: 4rem;
+            line-height: 4rem;
+            color: #fff;
+            width: 100%;
+            background-color: #CF3629;
+        }
+    </style>
+</head>
+<body class="investment">
+    <section class="content">
+        <article class="viewport">
+            <div class="fontsize">
+                <div class="text-center">
+                    <div class="wxicon icon"></div>
+                    <p class="chehui-success">撤回成功</p>
+                </div>
+                <div class="border-bottom">
+                    <div class="small-6 left">产品名称</div>
+                    <div class="small-6 left text-right" id="product-title">*****期</div>
+
+                </div>
+                <div class="border-bottom">
+                    <div class="small-6 left">转让金额</div>
+                    <div class="small-6 left text-right" id="transfer-amount">0.00</div>
+                </div>
+            </div>
+            <a href=" javascript:void(0);" class="sure" id="ok-btn">确定</a>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/transferwithdrawok.js"></script>
+</body>
+</html>

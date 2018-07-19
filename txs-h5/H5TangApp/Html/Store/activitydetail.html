@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奖品详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    
+    <div id="awardpage">
+        <div class="exhibit">
+            <img src="" alt="" id="couponimagelarge">
+            <p class="tips az-clearfix">
+                <!--<img src="" class="az-left" id="storecategory2">-->
+                <span class="az-left" id="name"></span>
+                <span class="az-right">价值&nbsp;&nbsp;<span class="font-2" id="couponprice"></span><span class="font-3">元</span></span>
+            </p>
+            <p class="tips2">
+                已出<span id="validcount"></span> 件/剩余<span id="residuecount"></span>件
+            </p>
+            <p class="tips3"><span id="couponoverview"></span></p>
+        </div>
+
+        <h4 class="bt">赞助商家</h4>
+        <div class="shop-list az-clearfix" id="commercial">
+            <div class="row">
+                <div class="small-4 columns az-center">
+                    <img id="storeimg" src="" alt="">
+                </div>
+                <div class="small-8 columns az-padding0">
+                    <p class="tit">
+                        <a id="storecategory"></a>
+                        <span id="storename"></span>
+                    </p>
+                    <p class="tip" id="storedescshort"></p>
+                    <p class="tips2" id="storephone"></p>
+
+                    <p class="tips3"><span id="distance"></span>m</p>
+                    <p class="tips4">共<span id="storecouponcount"></span>个福利<i class="wxicon icon-right-arrow"></i></p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h4>奖品介绍</h4>
+        <p class="interduce" id="activitydetail"></p>
+
+        <h4>领取方式</h4>
+        <p class="interduce margin-b-2" id="lingquinfo">
+            <!--1.快递送货上门<br />
+            2.中奖后在“我的福利”中查看中奖信息。<br />
+            3.奖品由商家发放，实物奖品用户需填写收货地址，如
+            因地址不详或地址有误导致奖品无法送达，商家概不
+            负责。<br />
+            4.配送范围：仅限上海、北京、广州、深圳地区<br />
+            5.配送时间：中奖后五个工作日内发货，发货后3-7个
+            工作日可收到货<br />
+            6.此活动最终解释权归唐小僧理财所有。-->
+        </p>
+    </div>
+
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/activitydetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>手机登录/注册</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/finances.css" />
+
+
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="inputyzmpage" id="yzmpage">
+
+        <div class="logimgbox az-center">
+            <img src="/css/img2.0/logo1.png" alt="">
+        </div>
+        <p class="tips">验证码已发送到 <span id="phnoe"></span>手机号</p>
+
+        <div class="row az-center">
+
+            <div class="item">
+                <input id="txtYZM" type="tel" maxlength="6" pattern="[0-9]*" placeholder="请输入短信验证码" />
+                <button class="" id="getYZM">获取验证码</button>
+            </div>
+            <div class="item margin-t-1" id="imgyzmdiv" style="display:none">
+                <input id="txtImgYZM" type="tel" pattern="[a-zA-Z0-9]{4}" maxlength="4" placeholder="请输入验证码(点击可刷新)" />
+                <span class="yzimg">
+                    <img id="imgYZM" src="" />
+                </span>
+            </div>
+            <div class="item margin-t-1">
+                <input 
+                    id="txtInvitedBy" 
+                    type="text" 
+                    onblur="this.value=this.value.replace(/[^0-9a-zA-Z]/gi,'')" 
+                    onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z]/gi,'')"  
+                    maxlength="15" 
+                    pattern="[a-zA-Z0-9]*" 
+                    placeholder="请输入推荐码,可选" />
+            </div>
+        </div>
+        <p class="az-agree">点击"注册"意味着同意<a href="/html/anonymous/register-protocol.html"><span>《唐小僧注册与隐私协议》</span></a>、
+            <a href="/html/anonymous/moneybox-xy.html"><span>《存钱罐服务协议》</span></a>、
+            <a href="/html/product/contract/htffund.html" class="font-col-469af3">《汇添富基金管理股份有限公司电子交易直销前置式自助前台服务协议》</a>、
+            <a href="/html/product/contract/txsp2pbangkacontract.html" class="font-col-469af3">《银行卡绑定签约服务协议》</a>
+            <!-- <a href="/Html/Product/contract/risk-tip.html" class="font-col-469af3">《风险提示书》</a>、
+            <a href="/Html/Product/contract/investor-announcement.html" class="font-col-469af3">《合格投资人声明》</a> -->
+        </p>
+        <a href="javascript:void(0);" id="registerSubmit" class="btn2 az-center">注册</a>
+        <p class="tips2">
+            <span></span>唐小僧不会在任何地方泄漏您的手机号
+        </p>
+     </div>
+        <a class="safety az-center pos-mr-3" href="/Html/picc.html"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</a>
+        <!--<i class="az-icon icon-safe"></i>账户资金防盗安全由新浪支付和太平财险共同保障-->
+
+
+
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/anonymous/register.js"></script>
+</body>
+</html>

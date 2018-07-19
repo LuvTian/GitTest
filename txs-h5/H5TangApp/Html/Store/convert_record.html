@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+	<title>兑换记录</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/points.css">
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+</script>
+</head>
+<body>
+	<div class="view" id="move_up">
+		<ul class="welfare_tab JS_tab">
+			<li><span class="tab_current">小僧精选</span></li>
+			<li><span>小僧礼券</span></li>
+		</ul>
+		
+		<div class="welfare_content">
+			
+		<!--小僧精选-->
+			<div class="welfare_choice">
+		<!--<div class="item">
+			<p class="title"><span>订单号:3874375394034</span><span class="fr red">待发放</span></p>
+			<content>
+				<p class="img vartur_img financial">
+					<span class="ii-first"><i class="amount">500</i>元</span>
+					<span>理财金</span>
+				</p>
+				<div class="text-warp">
+					<p class="text-top">唐小僧500元理财金</p>
+					<p class="text-middle">起投金额1000元</p>
+					<p class="text-bottom"><i class="amount">3000</i> <i class="unit">糖果</i><span class="fr">有效期至2017.03.05</span></p>
+				</div>
+			</content>
+		</div>
+		<div class="item">
+			<p class="title"><span>订单号:3874375394034</span><span class="fr red grap">已完成</span></p>
+			<content>
+				<p class="img cinema_ticket">
+					<span class="ii-first"><i class="amount">500</i>元</span>
+					<span>理财金</span>
+				</p>
+				<div class="text-warp">
+					<p class="text-top">唐小僧500元理财金</p>
+					<p class="text-middle">起投金额1000元</p>
+					<p class="text-bottom"><i class="amount">3000</i> <i class="unit">糖果</i><span class="fr visi-hiddle">有效期至2017.03.05</span></p>
+				</div>
+			</content>
+		</div>
+		<div class="item">
+			<p class="title"><span>订单号:3874375394034</span><span class="fr red grap">已完成</span></p>
+			<content>
+				<p class="img">
+					<span class="ii-first"><i class="amount">500</i>元</span>
+					<span>理财金</span>
+				</p>
+				<div class="img phy_img">
+					<img src="/css/img2.0/pointImg/prize-dome.png"/>
+				</div>
+				<div class="text-warp">
+					<p class="text-top">唐小僧500元理财金啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+					<p class="text-middle visi-hiddle">起投金额1000元</p>
+					<p class="text-bottom"><i class="amount">3000</i> <i class="unit">糖果</i><span class="fr">有效期至2017.03.05</span></p>
+					<i class="label_icon delivered"></i>
+				</div>
+			</content>
+		</div>-->
+				<!-- <div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div>
+				<div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_failed">交易失败</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div>
+				<div class="choice_list choice_list_record">
+				    <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+				    <div class="order_content cls">
+				    	<img src="/css/img2.0/pointImg/product.png" class="list_pic">
+						<div class="intro">
+							<p class="intro_title">施华蔻 8金纯盈精油洗发水200ml</p>
+							<p class="intro_content"><span class="point_color">3000</span>唐果</p>
+							<p class="intro_content">市场参考价： 158.00 元</p>
+						</div>
+				    </div>
+				</div> -->
+				<!--没有记录-->
+				<div class="no_record">
+					<img src="/css/img2.0/pointImg/no_record_pic.png">
+					<p>暂无兑换记录哦，快去兑换吧</p>
+				</div>
+			</div>
+			<script type="test/html" id="welfare_choice">
+				<% if (list.length > 0) {%>
+					<% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					%>
+<a href="/html/store/exchange_detaile.html?orderNo=<%=item.orderNo%>&category=physical" style="display:block;">
+					<div class="item">
+			<p class="title"><span>订单号:<%=item.orderNo%></span></p>
+			<content>
+				<div></div>
+				<div class="img phy_img">
+					<img src=<%= item.imgUrl==""?"/css/img2.0/pointImg/default_pic.png":item.imgUrl%> />
+				</div>
+				<div class="text-warp">
+					<p class="text-top"><%=item.itemName%></p>
+					<p class="text-middle">市场价格：<%=item.marketPrice%>元</p>
+					<p class="text-bottom"><i class="amount"><%=item.pointAmount%></i> <i class="unit">唐果</i></p>
+					<%if(item.orderStatus=="VERIFY_NOT_PASS"){%>
+						<i class="label_icon failed_delivered"></i>
+						<%}else{%>
+					<% if(item.deliveryStatus=="FINISHED") {%>
+						<i class="label_icon delivered"></i><% }else if(item.deliveryStatus=="UNFINISHED") {%>
+						<i class="label_icon un_delivered"></i><%}}%>
+				</div>
+			</content>
+		</div>
+		</a>
+					<%}%>
+				<% }%>
+			</script>
+		<!--小僧福利-->
+			<div class="welfare_profit welfare_record" style="display:none;">
+		 	   <!-- <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_success_out">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+				<div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_success_inner">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+			   <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_failed">交易失败</li></ul></div>
+			   	   <div class="profit_list deal_failed_bg">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div>
+			   <div class="choice_list_record">
+			      <div class="order_deal"><ul class="cls"><li class="order_code">订单编号:<span>387437539403489358</span></li><li class="deal_status deal_success">交易成功</li></ul></div>
+			   	   <div class="profit_list deal_overdue_bg">
+						<span class="profit_money">20元</span>
+						<div class="profit_intro">
+							<p class="profit_title">蜘蛛网电影抵扣券</p>
+							<p class="profit_dec"><%=item.itemVirtualDesc1%></p>
+	                        <div class="profit_content cls"><p><span class="point_color">3000</span>唐果</p><p>有效期至2017.03.05</p></div>
+						</div>
+				   </div>
+			   </div> orderStatus交易成功还是失败,deliveryStatus已发放未发放 -->
+               <!--没有记录-->
+				<div class="no_record">
+					<img src="/css/img2.0/pointImg/no_record_pic.png">
+					<p>暂无兑换记录哦，快去兑换吧</p>
+				</div>
+			</div>
+			<script type="test/html" id="welfare_profit">
+					<% if (list.length > 0) {%>
+                       <% for (var i = 0; i <list.length; i++){
+                       var item = list[i];
+					   %>
+					   <a href="/html/store/exchange_detaile.html?orderNo=<%=item.orderNo%>&category=virtual" style="display:block;">
+					   <div class="item">
+			<p class="title"><span>订单号:<%=item.orderNo%></span>
+			<span class="fr red"><% if (item.orderStatus == "COMPLETE") {%>
+	                          	交易成功
+	                          <% }else if (item.orderStatus == "SYSTEM_DELETE"){%>
+	                          	交易失败
+							  <%}else if (item.orderStatus =="VERIFY_NOT_PASS"){%>
+								未通过
+								<%}%>
+							</span></p>
+			<content>
+				<% if (item.itemType == "FINANCIAL"){%>
+				<p class="img vartur_img financial">
+							<%} else if (item.itemType == "INTEREST"){//代金券%>
+							<p class="img vartur_img interest">
+							<%} else if (item.itemType == "CINEMA_TICKET") {//电影票%>
+							  <p class="img vartur_img cinema_ticket">
+							<%} else if (item.itemType == "PHONE_TRAFFIC") {//流量%>
+								<p class="img vartur_img phone_traffic">
+							<%} else if (item.itemType == "COUPON") {//加息券%>
+							<p class="img vartur_img coupon">
+							<%} else if (item.itemType == "REFUELING_CARD") {//加油卡%>
+							<p class="img vartur_img refueling_card">
+							<%} else {//其他%>
+							<p class="img vartur_img other_coupon">
+							<%}%>
+				<span class="ii-first"><i class="amount"><%=item.itemVirtualAmount%></i><%=item.unit%></span>
+					<span><%=item.itemName%></span>
+				</p>
+				<div class="text-warp">
+					<p class="text-top"><%=item.itemName%></p>
+					<% 
+						var consumerNo=item.consumerNo;
+						var item_invote_money=item.itemVirtualDesc1;
+						if (consumerNo=="0" && item_invote_money!=""){
+							consumerNo=item_invote_money;
+						}else if(consumerNo=="0" && (item_invote_money==""||item_invote_money==null)){
+							consumerNo="";
+						}else{
+							consumerNo=consumerNo;
+						}%>
+					<p class="text-middle"><%=consumerNo%></p>
+					<p class="text-bottom"><i class="amount"><%=item.pointAmount%></i> <i class="unit">唐果</i><span class="fr"><%=item.itemVirtualDesc2%></span></p>
+				</div>
+			</content>
+		</div></a>
+					   <%}%>
+					<%}%>
+				</script>
+		</div>
+	</div>
+	<script src="/js/vendor/jquery.js" type="text/javascript"></script>
+	<script src="/js/vendor/template.js" type="text/javascript"></script>
+	<script src="/js/common.js" type="text/javascript"></script>
+	<script src="/js/pagejs/creditsMall/convert_record.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			
+		})
+	</script>
+</body>
+</html>

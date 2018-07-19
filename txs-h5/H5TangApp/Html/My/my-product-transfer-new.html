@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>变现产品</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my-product-transfer.css">
+</head>
+
+<body class="investment">
+    <div id="mainBody" style="padding-bottom: 2.5rem; ">
+        <div class="bg_title">
+            <div class="qw_bg">期望年化收益率</div>
+            <div class="tf_rate" id="transfer_rate">0.00%</div><span class="sml" id="product-rate-rateactivite" style="display:none;"></span>
+            <div class="acc-investing-strong"></div>
+            <div class="tf_transferlockday" id="transferhtml">转让锁定期0天后可转</div>
+        </div>
+        <div class="tf_background data-box1">
+            <div class="tf_small3 br2 bb">
+                <span class="tf_titlecss">剩余期限</span>
+                <p id="remainingday" class="tf_textcss">0天</p>
+            </div>
+            <div class="tf_small3 br2 bb">
+                <span class="tf_titlecss">本金</span>
+                <p id="remainingamount" class="tf_textcss">0.00</p>
+            </div>
+            <div class="tf_small3 bb">
+                <span class="tf_titlecss">剩余利息</span>
+                <p id="remaininginterest" class="tf_textcss">0.00元</p>
+            </div>
+        </div>
+        <div class="tf_background data-box1 nopadding-top">
+            <div class="tf_small2">
+                <span class="tf_titlecss br2">到期时间</span>
+                <p class="tf_textcss br2" id="enddate"></p>
+            </div>
+            <div class="tf_small2">
+                <span class="tf_titlecss" id="interest-text">已产生利息</span>
+                <p class="tf_textcss" id="interest">0.00元</p>
+            </div>
+        </div>
+        <div class="rateCanvasInit">
+            <div id="container" style="width:98%;margin:auto"></div>
+        </div>
+        <div class="data-box1 tf_background font-size">
+            <span class="left tcss">转让后年化收益率</span>
+            <span class="left tcss">转让金额</span>
+        </div>
+        <div class=" tf_background relative">
+            <div class="box-b">
+                <img src="/css/img2.0/change.png" alt="" class="change_p">
+                <input type="tel" class="br2 input_css colorff7a04" maxlength="6" id="transferrate" onkeyup="this.value=this.value.replace(/[^\d.]/g, '')"><span class="r_css">%</span>
+                <input type="tel" class="input_css color666666" maxlength="9" id="transfer_money" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">
+                <span class="y_css">元</span>
+            </div>
+        </div>
+        <div class="data-box1 tf_background font-size">
+            <span class="left tcss2">可设范围<span id="minrate">4%</span>~<span id="maxrate">14%</span></span>
+            <span class="left tcss2">范围<span id="mintransferamount">0</span>~<span id="maxtransferamount">0</span></span>
+        </div>
+        <div class="tf_background margin-top">
+            <div class="data-box1 bb">
+                <div class="left tt">手续费</div>
+                <div class="tttext right" id="penalty">0.00元</div>
+            </div>
+            <div class="data-box1">
+                <div class="left tt">到手金额</div>
+                <div class="tttext right" id="dealamount">0.00元</div>
+            </div>
+        </div>
+
+        <p class="">
+            <span id="checkbox" class="check-box">
+                            <!-- <img src="/css/img2.0/criterion-choose.jpg"  alt="" class="criterion-pic"> -->
+                        </span>
+            <z class="yes">同意
+                <z class="xy" id="zqxieyi">《资产权益转让及受让协议》</z>
+            </z>
+        </p>
+    </div>
+    <a class="tf_btn" id="btn-transfer">确认转让</a>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/highcharts.js"></script>
+    <script src="/js/pagejs/my/myproducttransfer-new.js"></script>
+</body>
+
+</html>

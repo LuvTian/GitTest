@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>会员中心</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="/css/newbase.css">
+    <link rel="stylesheet" href="/css/member_center.css">
+    <script src="/js/vendor/fontsize.js"></script>
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div class="view">
+        <div class="center_head">
+            <img src="/css/img2.0/member_level/level0.png" class="level_icon" />
+            <div class="progress_bar">
+                <div class="default_bar por_bar"><span></span><span></span><span></span><span></span></div>
+                <div class="por_bar current_bar bar_length"></div>
+                <!--<span class="default_bar por_bar"></span>
+                <span class="por_bar current_bar bar_length"></span>-->
+                <span class="level_name"><i class="levelname0">普通</i><i class="levelname1">青铜</i><i class="levelname2">白银</i><i class="levelname3">黄金</i><i class="levelname4">铂金</i></span>
+            </div>
+            <div class="add_level JS_uplevel"><span>如何升级</span><img src="/css/img2.0/member_level/question.png" class="ask_icon" /></div>
+        </div>
+        <div class="my_privilege">
+            <div class="privilege_title">
+                <span class="my_pri">我的特权</span>
+                <a href="#" class="all_privilege">全部会员特权<i class="arrow"></i></a>
+            </div>
+            <div class="my_list">
+                <!-- <div class="privilege_list cls">
+                    <img src="/css/img2.0/member_level/icon.png" />
+                    <div class="privilege_content">
+                        <div>
+                            <p class="gift_value">20元代金券</p>
+                            <p class="gift_name">首升礼</p>
+                        </div>
+                        <div class="gift_status">待发放</div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="normal">
+                <img src="/css/img2.0/member_level/wait.png" class="normal_wait" />
+                <p class="normal_tip">施主，小僧一直在等您升级</p>
+                <div class="normal_btn JS_up">我要升级</div>
+            </div>
+        </div>
+        <div class="bottom JS_up">我要升级</div>
+        <div class="bottom JS_invote JS_my_invest" style="display:none;">我要投资</div>
+    </div>
+
+    <!--升级提示框-->
+    <div class="mask mask_win"></div>
+    <div class="member_win">
+        <div class="win_content">
+            <p class="win_text">恭喜施主荣升<span>XX</span>会员</p>
+            <img src="/css/img2.0/member_level/win_icon1.png" class="privilege_one" />
+            <div class="privilege_two">唐果</div>
+            <div class="privilege_three privilege_three_txt" style="display:none;">理财金100</div>
+            <div class="privilege_three privilege_three_pic"><img src="/css/img2.0/member_level/win_icon7.png" /></div>
+            <div class="privilege_forth">代金券</div>
+            <div class="privilege_five privilege_five_txt" style="display:none;">加息券1%</div>
+            <div class="privilege_five privilege_five_pic"><img src="/css/img2.0/member_level/win_icon9.png" /></div>
+            <img src="/css/img2.0/member_level/win_icon6.png" class="privilege_six" />
+            <div class="share_btn JS_share">去炫耀</div>
+        </div>
+        <div class="close JS_close"><img src="/css/img2.0/member_level/win_close.png" /></div>
+    </div>
+    <!--引导页-->
+    <div class="mask mask_lead"></div>
+    <div class="lead_page JS_lead">
+        <div class="add_level lead_level">如何升级<img src="/css/img2.0/member_level/question_gray.png" class="ask_icon" /></div>
+        <img src="/css/img2.0/member_level/lead_pic.png" class="lead_pic" />
+        <div class="close_lead JS_close_lead"></div>
+    </div>
+    <!--引导分享-->
+    <div class="mask mask_share"></div>
+    <div class="guide_layer"></div>
+    <div class="tip_img"><img src="/css/img2.0/img/tips.png" /></div>
+    <!--我要升级弹窗-->
+    <div class="mask mask_up"></div>
+    <div class="up_win">
+        <img src="/css/img2.0/member_level/up_close.png" class="up_cose JS_close" />
+        <p class="up_title">如何升级</p>
+        <ul class="up_content">
+            <!--<li>升级至青铜会员还需投资：<span class="up_money">100</span>元</li>
+            <li>升级至白银会员还需投资：<span class="up_money">100</span>元</li>
+            <li>升级至黄金会员还需投资：<span class="up_money">100</span>元</li>
+            <li>升级至铂金会员还需投资：<span class="up_money">100</span>元</li>-->
+        </ul>
+        <div class="normal_btn up_btn JS_invote_immed">立即投资</div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/member_level/member_center.js"></script>
+</body>
+
+</html>

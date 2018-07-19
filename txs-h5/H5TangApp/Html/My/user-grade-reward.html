@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<title>我的奖励</title>
+<link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+
+<body class="bg-gray">
+    <section class="content">
+        <article class="viewport myreward">
+        	<!--<article class="myreward-nav text-center" data-tab>
+                <div class="small-4 left active"><a href="#panel1" id="referralfloweeadwardtitle">推荐好友奖励</a></div>
+                <div class="small-4 left"><a href="#panel2" id="referraladwardstitle">好友投资奖励</a></div>
+                <div class="small-4 left"><a href="#panel3" id="levelplusadwardstitle">收益奖励</a></div>
+            </article>-->
+            <article class="display-none active" id="panel1">
+                <p class="myreward-addup"><img src="/css/img2.0/jiangli-icon.png">您已获得现金奖励：<span class="red" id="adwardssummary"></span>元</p>
+                <article class="myreward-list-title bg-white text-center">
+                    <div class="small-3">手机号</div>
+                    <div class="small-3">奖励金额</div>
+                    <div class="small-3">奖励时间</div>
+                    <div class="small-3">奖励来源</div>
+                </article>
+                <div id="referralfloweeadwardlist"></div>
+                <div class="ondata text-center" id="moneyloaddata"></div>
+            </article>
+            <a href="javascript:void(0);" class="user-grade-button" id="invitelink"><img src="/css/img2.0/invite-button.png" class="img-responsive"></a>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jquery.qrcode.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/user-grade-reward.js"></script>
+    <script type="text/javascript">
+	$(document).foundation();
+	</script>
+</body>
+</html>

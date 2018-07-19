@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>僧财宝</title>
+    <!-- 开发备注：
+        僧财宝不需要银行公告,
+        李怀刚说，未登录时僧财宝看不到
+    -->
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/account-balance.css">
+</head>
+
+<body>
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="nominheight product-info">
+        <!-- 未投资/未登录 -->
+        <div class="info-head nolog" id="uninvert">
+            <div class="line1">
+                <p>历史七日年化</p>
+                <p class="info-num info-rate col-highlight-1"><z class="js_rate">0.00</z><i>%</i></p>
+            </div>
+            <div class="line2">
+                <p>万份收益(元)</p>
+                <p class="info-num col-highlight-2"><z class="js_ttprofit">0.0000</z></p>
+            </div>
+        </div>
+        <div class="info-head hide logged" id="inverted">
+            <div class="line1">
+                <p>投资金额(元)</p>
+                <p class="info-num col-highlight-1" id="acc-investing-amount">0.00</p>
+            </div>
+            <div class="line2">
+                <p>昨日收益(元)</p>
+                <p class="info-num col-highlight-1" id="yesterday">0.00</p>
+            </div>
+            <div class="line3">
+                <ul>
+                    <li class="br">
+                        <p>累计收益(元)</p>
+                        <p id="total" class="col-highlight-2">00.00</p>
+                    </li>
+                    <li class="br">
+                        <p>万份收益(元)</p>
+                        <p class="col-highlight-2"><z class="js_ttprofit">0.0000</z></p>
+                    </li>
+                    <li>
+                        <p>历史七日年化(%)</p>
+                        <p class="col-highlight-2"><z class="js_rate">0.00</z></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-rule">
+            <div>
+                <h3>收益规则</h3>
+                <p>交易日（股市交易市场开放时间）15 点前转入，下一交易日开始计算收益（遇双休、节假日顺延）。</p>
+            </div>
+            <div>
+                <h3>回款规则</h3>
+                <p>交易日当天15:00 前转出，不享受当日收益；交易日当天15:00 后转出，则享受当日收益。</p>
+            </div>
+        </div>
+        <div class="product-recom" id="product-recom">
+            <!-- <h2>收益升级</h2>
+            <div class="line bb">
+                <div class="col col1">
+                    <h3>6.40<i>%</i>~7.30<i>%</i></h3>
+                    <p>期望年化收益</p>
+                </div>
+                <div class="col col2 item2">
+                    <p>短期理财新选解释说明</p>
+                    <p>短期理财新选解释说明</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col col1">
+                    <h3>6.40<i>%</i>~7.30<i>%</i></h3>
+                    <p>期望年化收益</p>
+                </div>
+                <div class="col col2 item1">
+                    <p>短期理财新选解释说明</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="pull-refresh">
+            <svg t="1502875835649" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4465" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M139.7376 547.9552l356.3776 356.032c10.688 10.6752 28.0384 10.6752 38.7008 0 2.0736-2.0736 3.6224-4.4416 4.9024-6.9184l350.9504-350.6048c10.6944-10.688 10.6944-28.0128 0-38.6752-10.6752-10.6688-28.0128-10.6688-38.7008 0l-309.4016 309.0944L542.5664 145.8048c0-15.0976-12.2368-27.3408-27.36-27.3408s-27.3728 12.2432-27.3728 27.3408l0 672.544-309.376-309.0688c-10.6944-10.688-28.0448-10.688-38.7072 0C129.0432 519.9424 129.0432 537.2608 139.7376 547.9552z"
+                    p-id="4466" fill="#C7C7C7">
+                </path>
+            </svg>
+            点击查看详情
+        </div>
+        <div class="paddbottom"></div>
+        
+    </div>
+    <div class="product-info hide h100 maxwidth720" id="product-intro-warp">
+        <div class="product-intro minh100-1">
+            <ul class="page-nav" id="product-intro-tab">
+                <li data-translatex="0.65" data-linkage=".con1" class="active">僧财宝介绍</li>
+                <li data-translatex="6" data-linkage=".con2">收益计算</li>
+                <li data-translatex="11.4" data-linkage=".con3">免责声明</li>
+                <p></p>
+            </ul>
+            <div class="content con1">
+                <h4>1、僧财宝的昨日收益是什么意思?</h4>
+                <p>
+                    僧财宝昨日收益指的是用户昨日实际到账的收益。以 1 万元为例子，日每万份净收益是 1.0431；用户拿到的是 1.04 元，剩余的 0.0031 元是计在用户在基金公司的账户上的，满 0.01 元时才给用户。
+                </p>
+                <h4>2、什么是“每万份收益”和“历史最近七日年化”?</h4>
+                <p>
+                    每万份收益是指每一万份基金份额在某一日所取得的基金净收益额。其计算方法为将每日每份额基金净收益乘以10000，具体公式为：每万份收益 =(当日基金净收益/当日基金份额总额)×10000；<br/> 历史最近七日年化是指货币基金最近七日的平均收益水平进行年化以后得出的数据。比如货币基金当天显示的七日年化收益率是2％，并且假设该货币基金在今后一年的收益情况都能维持前7日的水准不变，那么持有一年就可以得到2％的整体收益。当然，货币基金的每日收益情况都会随着基金经理的操作和货币市场利率的波动而不断变化，因此实际当中不太可能出现基金收益持续一年不变的情况。因此，七日年化收益率只能当作一个短期指标来看，通过它可以大概参考近期的盈利水平，但不能完全代表这只基金的实际年收益。
+
+                </p>
+                <h4>3、僧财宝可以直接购买其他理财产品嘛?</h4>
+                <p>
+                    可以， 僧财宝可以直接购买平台其他理财产品。
+                </p>
+                <h4>4、周末与节假日产生收益吗?</h4>
+                <p>
+                    用户转入僧财宝的资金在第二个工作日由基金公司进行份额确认，对已确认的份额，基金公司是会每天产生收益的。未确认的，不会产生收益。双休日及国家法定假期，基金公司不进行份额确认。
+                </p>
+
+            </div>
+            <div class="content con2 hide">
+                <h4>1、僧财宝转入收益如何计算？</h4>
+                <p>
+                    交易日（股市交易市场开放时间）15 点前转入，下一交易日开始计算收益（遇双休、节假日顺延）。
+                    <table class="table-agreement azzb-table azzb-table2 az-center">
+                        <tbody>
+                            <tr>
+                                <th colspan="2" rowspan="1" class="col1">购买时间</th>
+                                <th colspan="2" rowspan="1" class=" col2">开始计算收益时间</th>
+                                <th colspan="2" rowspan="1" class="th-tixian col3">首次显示收益时间</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="1">周一15:00~<br/>周二15:00前</td>
+                                <td colspan="2" rowspan="1">周三</td>
+                                <td colspan="2" rowspan="1">周四</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="1">周二15:00~<br/>周三15:00前</td>
+                                <td colspan="2" rowspan="1">周四</td>
+                                <td colspan="2" rowspan="1">周五</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="1">周三15:00~<br/>周四15:00前</td>
+                                <td colspan="2" rowspan="1">周五（可享受周六周日收益）</td>
+                                <td colspan="2" rowspan="1">下周一（显示周五周六周日三天收益）</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="1">周四15:00~<br/>周五15:00前</td>
+                                <td colspan="2" rowspan="1">下周一（不享受周六周日收益）</td>
+                                <td colspan="2" rowspan="1">下周二</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="1">周五15:00~<br/>下周一15:00前</td>
+                                <td colspan="2" rowspan="1">下周二</td>
+                                <td colspan="2" rowspan="1">下周三</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <h4>2、僧财宝转出收益如何计算?</h4>
+                <p>
+                    交易日当天15:00 前转出，则不享受交易日当天的收益；如果是交易日当天15:00 后转出，则享受交易日当天的收益。    
+                </p>
+            </div>
+            <div class="content con3 hide">
+                <p>
+                唐小僧作为信息服务平台，不保证任何金融产品的本金或收益安全。产品过往业绩不代表其未来表现，投资人须仔细阅读产品合同，了解产品收益与风险特征并自担投资风险。    
+                </p>
+                
+            </div>
+        </div>
+        <div class="wel_btm_com hide minh100-2">
+            <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">账户资金防盗安全由新浪支付和太平财险共同保障</span>
+            <p>网贷有风险 出借需谨慎</p>
+        </div>
+
+    </div>
+    <div class="navbar hide" id="btn-into-out">
+        <div style="font-size:1rem" class="footerBar_shadow"></div>
+        <span class="column-5 left" id="btn-out">转出</span>
+        <span class="column-5 left hl-btn" id="btn-into">转入</span>
+    </div>
+    <article id="notice-alert-bg" class="_alert_pop bg-black notice-alert-bg display-none"></article>
+
+    <div class="mask" style="z-index:999999;display:none;"></div>
+    <div class="q_fax">
+        <div class="q_content"> </div>
+        <div class="q_btn JS_qbtn">知道了，去看看</div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/account-balance.js"></script>
+</body>

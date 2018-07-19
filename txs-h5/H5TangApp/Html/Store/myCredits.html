@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>我的唐果</title>
+	<script>
+		; (function (doc, win) {
+			var maxWidth = 720;
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth < 320) clientWidth = 320;
+					if (clientWidth > maxWidth) clientWidth = maxWidth;
+					fontSize = 20 * (clientWidth / 320);
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+					//如果是pc访问
+					if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+						fontSize = 20 * maxWidth / 320;
+					}
+					docEl.style.fontSize = fontSize + 'px';
+					var dpi = window.devicePixelRatio;
+					var viewport = document.querySelector('meta[name="viewport"]');
+					docEl.setAttribute('data-dpi', dpi);
+					var scale = 1 / dpi;
+				};
+			if (!doc.addEventListener) return;
+			recalc();
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+	<link rel="stylesheet" type="text/css" href="/css/creditsMall/myCredits.css">
+</head>
+<body>
+	<div id="mainBody">
+		<section id="currentCreditsContainer">
+			<div class="title">剩余唐果<i class="wenhao"><a href="/html/store/jifenshuoming/index.html"></a></i></div>
+			<div class="creditsNum"></div>
+		</section>
+		<section id="creditsChangeHistoryContainer" style="display: none;">
+			<div id="creditsChangeHistoryPanel">
+				<div class="title">唐果明细 <a href="/html/store/index.html" class="link_exchange">立即兑换</a></div>
+				<ul id="creditsChangeRecords"></ul>
+				<div id="creditsChangeHistoryStatus">上拉加载。。。</div>
+			</div>
+		</section>
+		<section id="noneCreditsChangeHistory">
+			<img src="/css/img2.0/pointImg/no_record_pic.png" width="70%">
+			<p>无唐果记录</p>
+		</section>
+	</div>
+	<script type="text/javascript" src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/pagejs/creditsMall/iscroll-probe.js"></script>
+    <script type="text/javascript" src="/js/pagejs/creditsMall/myCredits.js"></script>
+    <script type="text/javascript">
+    	document.body.addEventListener("touchmove",function(e){e.preventDefault();return false;})
+
+
+		
+
+    	/*document.getElementById("creditsChangeHistoryPanel").addEventListener("touchmove",function(e){e.stopPropagation()})
+    	var view = document.getElementById("creditsChangeHistoryPanel");
+		var flag = 0;
+		var startPointY=0;
+		var wHeight=$(window).height();
+		var maxTranslateHeight=wHeight*0.1	;
+		view.addEventListener("touchstart", function(e) {
+			if (Math.abs($("#creditsChangeHistoryPanel").position().top)+$("#creditsChangeHistoryContainer").height() >= $("#creditsChangeHistoryPanel").height()-3) {
+				flag = 1;
+				startPointY=e.targetTouches[0].clientY;
+			}
+			// console.log(flag);
+		})
+		view.addEventListener("touchmove", function(e) {
+			// console.log(flag);
+			if (flag == 1) {
+				var translateHeight=-Math.min(Math.abs(e.targetTouches[0].clientY-startPointY),maxTranslateHeight);
+				$(view).css({"transform":"translateY("+translateHeight+"px)",transition:""});
+				// console.log(e.targetTouches[0].clientY);
+			}
+		})
+		view.addEventListener("touchend", function(e) {
+			console.log("touchend")
+			if (flag == 2) {
+				
+				console.log("加载")
+
+			}
+			if(flag==1){
+				var view = document.getElementById("creditsChangeHistoryPanel");
+				$(view).css({"transform":"translateY(0)","transition":"transform 300ms"});
+			}
+			flag=0;
+		})*/
+    </script>
+</body>
+</html>

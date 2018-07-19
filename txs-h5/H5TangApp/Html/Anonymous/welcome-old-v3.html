@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>首页</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="/css/base.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <!--<link rel="stylesheet" type="text/css" href="/css/product/productlist.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/product/welcome.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="nominheight">
+        <!--头部banner-->
+        <div class="headheight" style="max-height:11.5rem;min-height: 10rem;">
+            <div class="headbn com_bg" style="display:none">
+                <script type="text/template" id="litpl">
+                    <li class="headbnitem wel_head" onclick="javascript:{0}">
+                        <img data-src="{1}" src="/css/img2.0/imgload-index.gif" />
+                    </li>
+                </script>
+                <script type="text/template" id="itemtpl">
+                    <div class="headspitem {0}"></div>
+                </script>
+                <ul class="headbnlist">
+                    <!--<li class="headbnitem wel_head">
+                        <img src="/css/img2.0/index_demo.png" />
+                    </li>
+                    <li class="headbnitem wel_head">
+                        <img src="http://madisonzillion.oss-cn-hangzhou.aliyuncs.com/844447171989360640.jpg" />
+                    </li>
+                    <li class="headbnitem wel_head">
+                        <img src="http://madisonzillion.oss-cn-hangzhou.aliyuncs.com/708252273360384000.jpg" />
+                    </li>
+                    -->
+                </ul>
+                <div class="headsp" style="display:none">
+                    <!--<div class="headspitem cur"></div>
+                <div class="headspitem"></div>
+                <div class="headspitem"></div>-->
+                </div>
+            </div>
+            <div class="wel_head_login" style="display:none">
+                <div class="wel_head_circle wel_head_qd">签</div>
+                <div class="wel_head_circle wel_head_yq">邀</div>
+                <div class="wel_head_cont" onclick="javascript:window.location.href='/html/Anonymous/description-earnings.html'">
+                    <div class="wel_head_title">昨日收益(元)
+                        <span class="wel_head_eye" id="eyes"></span>
+                    </div>
+                    <div class="wel_head_money">0.00</div>
+                    <div class="wel_head_arrow"></div>
+                    <div class="wel_head_ul">
+                        <div class="wel_head_item"><span>总资产(元)</span>
+                            <div class="wel_zc">0.00</div>
+                        </div>
+                        <div class="wel_head_line"></div>
+                        <div class="wel_head_item"><span>昨日收益率</span>
+                            <div class="wel_syl">0.00%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wel_invested wel_login">投资金额(元)
+            <span class="wel_inve_span">0.00</span>
+        </div>
+        <!--中间内容-->
+        <div class="pcontent">
+            <ul class="wel_ul com_bg">
+                <li class="wel_li wel_zzs" data-href="/Html/Product/incremental-productdetail.html?detailname=周周僧">
+                    <div class="wel_title">周周僧
+                        <span class="wel_rate wel_rate_zzs">0.00%</span>
+                        <div class="wel_noinvated wel_login wel_nomoney wel_zzs_sign">未投资</div>
+                        <div class="wel_noinvated wel_login" style="display:none">昨日收益</div>
+                    </div>
+                    <div class="wel_smdesc wel_nologin">长存短取&nbsp;&nbsp;收益递增</div>
+                    <div class="wel_smdesc wel_login wel_payed" style="display:none">
+                        <span class="wel_tmr_zzs">0.00</span>
+                        <div class="wel_tmr_add wel_tmr_zzsadd">+0.00</div>
+                    </div>
+                </li>
+                <li class="wel_li wel_scb">
+                    <div class="wel_title">僧财宝
+                        <span class="wel_rate wel_rate_scb">0.00%</span>
+                        <div class="wel_noinvated wel_login wel_nomoney wel_scb_sign">未投资</div>
+                        <div class="wel_noinvated wel_login" style="display:none">昨日收益</div>
+                    </div>
+                    <div class="wel_smdesc wel_nologin">期限灵活&nbsp;&nbsp;灵活赎回</div>
+                    <div class="wel_smdesc wel_login wel_payed" style="display:none">
+                        <span class="wel_tmr_scb">0.00</span>
+                        <div class="wel_tmr_add wel_tmr_scbadd">+0.00</div>
+                    </div>
+                </li>
+                <li class="wel_li wel_zzb" onclick="javascript:window.location.href='/html/product/index-demand.html'">
+                    <div class="wel_title">至尊宝
+                        <span class="wel_rate wel_rate_zzb">0.00%</span>
+                        <div class="wel_noinvated wel_login wel_nomoney">未投资</div>
+                        <div class="wel_noinvated wel_login" style="display:none">昨日收益</div>
+                    </div>
+                    <div class="wel_smdesc wel_nologin">期限灵活&nbsp;&nbsp;灵活赎回</div>
+                    <div class="wel_smdesc wel_login wel_payed" style="display:none">
+                        <span class="wel_tmr_zzb">0.00</span>
+                        <div class="wel_tmr_add wel_tmr_zzbadd">+0.00</div>
+                    </div>
+                </li>
+                <li class="wel_li wel_dq" style="display:none" data-href="/Html/Product/productfixedlist.html">
+                    <div class="wel_title">定期
+                        <span class="wel_rate wel_rate_dq">0.00%</span>
+                        <div class="wel_noinvated wel_login wel_nomoney">未投资</div>
+                        <div class="wel_noinvated wel_login" style="display:none">昨日收益</div>
+                    </div>
+                    <div class="wel_smdesc wel_nologin">产品丰富&nbsp;&nbsp;自由选择</div>
+                    <div class="wel_smdesc wel_login wel_payed" style="display:none">
+                        <span class="wel_tmr_dq">0.00</span>
+                        <div class="wel_tmr_add wel_tmr_dqadd">+0.00</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="com_bg wel_more">
+                <span class="wel_more_span">我要更多推荐产品</span>
+            </div>
+        </div>
+        <div class="data-box" id="announcementmessage" style="display:none">
+            <div class="data-box1">
+                <h1 id="messagetitle"></h1>
+                <z id="MessageContent"></z>
+                <ul>
+                    <li>唐小僧</li>
+                    <li id="created"></li>
+                </ul>
+            </div>
+            <div class="data-box2" id="readmessage">我知道了</div>
+        </div>
+        <div class="reveal-modal" id="mt" style="display:none"></div>
+        <!--<div style="width: 100%;height: 100%;background: #000;opacity: .5;position: fixed;top: 0;z-index: 20;overflow: hidden;"></div>
+        <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;top:50%;  -webkit-transform: translate(-50%,-50%);  transform: translate(-50%,-50%);">
+            <h1 style="font-size: 0.68rem;padding:.4rem;">闪电飞机立刻接受对方</h1>
+            <h3 style="font-size:.6rem;text-align:left;padding:.15rem .6rem;">阿斯蒂芬</h3>
+            <p style="text-indent: 1rem;text-align: left;font-size: .5rem;padding:0rem .6rem;color:#979797;">阿斯蒂芬金坷垃是大家疯狂拉升就；东方阿萨德；副驾驶的风景</p>
+            <p style="text-indent: 1rem;text-align: left;font-size: .5rem;padding:0rem .6rem;color:#979797;">阿斯蒂芬大师傅阿萨德发水电费阿斯蒂芬阿斯蒂芬三端发</p>
+            <h3 style="font-size:.6rem;text-align:left;padding:.25rem .6rem;">大师傅阿斯蒂芬大师傅</h3>
+            <p style="text-indent: 1rem;text-align: left;font-size: .5rem;padding:.15rem .6rem;color:#979797;">大师傅奥德赛阿萨德</p>
+            <p style="text-align: left;font-size: .5rem;padding:.3rem .6rem;color:#979797;">阿萨德大师傅法定收费<a href="" style="color:#65A8F3;">阿萨德阿斯蒂芬阿斯蒂芬阿斯蒂芬阿萨德</a></p>
+            <div style="width:100%;height:1px;background:#ccc;margin-top:.1rem"></div>
+            <a id="gotosetting" href="javascript:void(0);" style="color:#c54846;font-size: .6rem;line-height:3;">阿斯蒂芬ADS发生地方阿萨德</a>
+        </div>-->
+        <!--<div style="width: 100%;height: 100%;background: #000;opacity: .5;position: fixed;top: 0;z-index: 20;overflow: hidden;"></div>
+        <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 2200;width: 85%;left: 50%;top:50%;  -webkit-transform: translate(-50%,-50%);  transform: translate(-50%,-50%);"
+            class="setsinapaypassword">
+            <h1 style="font-size: .8rem;padding:.5rem;font-weight:600;">啊阿三的肌肤拉客司机的</h1>
+            <p style="text-indent: 1rem;text-align: left;font-size: .7rem;padding:.5rem .6rem;color:#979797;">阿斯蒂芬金坷垃是大家疯狂拉升就</p>
+            <p style="text-indent: 1rem;text-align: left;font-size: .7rem;padding:.5rem .6rem;color:#979797;border-bottom: 1px solid #ccc;">撒旦法发生大幅</p>
+            <div>
+                <a id="gotosetting" href="javascript:void(0)" style="color:#C54846;font-size: .8rem;line-height:3;display:block;font-weight:600;">说的方法的</a>
+            </div>
+        </div>-->
+    </div>
+    <!--底部信息说明-->
+    <div class="wel_btm_info" onclick="window.location.href = '/html/anonymous/about-index.html'">
+        <ul>
+            <li>
+                <div class="wel_btm_xp" style="display:inline-block;"></div>
+                <span style="display:inline-block;">严格甄选<br/>优质产品</span></li>
+            <li>
+                <div class="wel_btm_xp xp2" style="display:inline-block;"></div>
+                <span style="display:inline-block;">十层风控<br/>十道审核</span></li>
+            <li>
+                <div class="wel_btm_xp xp3" style="display:inline-block;"></div>
+                <span style="display:inline-block;">贴心服务<br/>便捷操作</span></li>
+        </ul>
+    </div>
+    <!--底部通用说明-->
+    <div class="wel_btm_com">
+        <span class="wel_btm_comspan" onclick="window.location.href='/Html/picc.html'">
+            账户资金防盗安全由新浪支付和太平财险共同保障
+            </span>
+        <p>网贷有风险 出借需谨慎</p>
+    </div>
+    <script src="/js/appendButtonBar.js"></script>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/vendor/flipsnap.js"></script>
+    <script src="/js/pagejs/anonymous/welcome.js"></script>
+</body>
+
+</html>

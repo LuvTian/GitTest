@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>自动转入</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160325001">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <section class="content">
+        <article class="viewport transferred">
+            <div class="bg-white  oh">
+                <div class="small-10 left">自动转入</div>
+                <div class="small-2 right text-right">
+                    <fieldset class="switch round" tabindex="0">
+                        <input id="exampleCheckboxSwitch4" type="checkbox" style="display:none;">
+                        <label id="auto-switch"></label>
+                    </fieldset>
+                </div>
+            </div>
+            <p class="gray"><span class="display-block"><span id="basic">账户余额</span>将在每日凌晨自动转入至尊宝</span>查看<a href="/Html/Product/contract/zzb-automatic-transfer.html">《资金自动转入服务协议》</a></p>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/automatic-on.js"></script>
+    <script>
+        $(function(){
+            $.sengcaibaobtntext(function(d){
+                $("#basic").html(d[2]);
+            })
+        })
+    </script>
+</body>
+</html>

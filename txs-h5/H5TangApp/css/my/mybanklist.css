@@ -1,0 +1,357 @@
+#mybankList>li {
+    padding: .512rem .64rem;
+    position: relative;
+    margin: .512rem .64rem 0;
+    background: #fff;
+    border-radius: .256rem;
+    -webkit-box-shadow: 0 .085333rem .170667rem 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 .085333rem .170667rem 0 rgba(0, 0, 0, 0.10);
+}
+
+.bankInfo {
+    position: relative;
+    padding-bottom: .512rem;
+}
+
+.bankInfo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.bankIcon {
+    width: 1.792rem;
+    /* height: 1.792rem; */
+    float: left;
+    margin-right: .384rem;
+}
+
+.bankName {
+    font-size: .597333rem;
+    color: #333333;
+    margin-bottom: .426667rem;
+    padding-top: .128rem;
+    line-height: 1;
+}
+
+.bankCardInfo {
+    font-size: .512rem;
+    color: #999999;
+    line-height: 1;
+}
+
+.bankLimitInfo {
+    padding-top: .384rem;
+    width: 11rem;
+}
+
+.bankLimitInfo li {
+    font-size: .469333rem;
+    color: #999;
+}
+
+.untied {
+    font-size: .597333rem !important;
+    color: #F25D50;
+    position: absolute;
+    background: transparent;
+    right: .64rem;
+    top: 50%;
+    margin-top: -.3rem;
+    padding: 0;
+}
+
+.untied:disabled {
+    color: #ccc;
+}
+
+.noTiedCard {
+    padding: 1.706667rem 0 1.706667rem 3.584rem !important;
+    line-height: 1;
+}
+
+.noTiedCard .tips {
+    font-size: .597333rem;
+    color: #333333;
+    margin-bottom: .426667rem;
+}
+
+.noTiedCard .subTips {
+    font-size: .512rem;
+    color: #999999;
+}
+
+.yellow {
+    color: #FF7A04;
+}
+
+
+/*new password*/
+
+.fpbutton {
+    font-size: .75555rem;
+    color: #e31908;
+    display: inline-block;
+    padding: .444rem 0;
+}
+
+.password-value span {
+    font-size: .8888rem;
+    float: left;
+    line-height: 1.7777rem;
+    display: inline-block;
+    margin-bottom: 0;
+    height: 1.7777rem;
+    width: 16.666%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background: #f6f6f6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.keyboard a {
+    text-align: center;
+}
+
+.passok {
+    margin-left: -1px;
+}
+
+.password-pop .fund-poplayer {
+    bottom: 48%;
+    left: 10%;
+    position: fixed;
+    z-index: 989;
+}
+
+.password-pop {
+    background: #fff;
+    color: #888888;
+}
+
+.password-pop .tit {
+    padding: .4444rem;
+    color: #444444;
+    font-size: .677777rem;
+    text-align: center;
+}
+
+.password-pop .paslist {
+    padding: .5444rem;
+    color: #979797;
+}
+
+.password-pop .paslist li {
+    overflow: hidden;
+    padding: .4444rem 0;
+    font-size: .577777rem;
+    border-top: 1px solid #e4e4e4;
+}
+
+.password-pop .paslist li .l {
+    float: left;
+}
+
+.password-pop .paslist li .col1 {
+    color: #469af3;
+}
+
+.password-pop .paslist li .r {
+    color: #c34949;
+    float: right;
+    position: relative;
+    font-size: .57777rem
+}
+
+.password-pop .pasipt {
+    display: -webkit-box;
+    color: #888888;
+    border: 1px solid #e8e8e8;
+    border-width: 1px 1px 0 0;
+}
+
+.password-pop .pasipt input {
+    margin-bottom: 0;
+    height: 1.7777rem;
+    width: 16.666%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    border-width: 0 0 1px 1px;
+    background: #f6f6f6;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 27.7777rem;
+    width: 100%;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.keyboard {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.keyboard a {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    background: #f7f7f7;
+    font-size: 1.4222rem;
+    color: #444;
+    font-weight: 300;
+    padding: .2222rem 0;
+}
+
+.keyboard .wxbg {
+    background: #e2e7ed;
+    color: #444;
+}
+
+.wxicon {
+    font-family: 'iconfont';
+    position: relative;
+    top: 0;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: .4444rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-refresh:before {
+    content: "\e649";
+}
+
+.icon-revocat:before {
+    content: "\e62b";
+}
+
+.hide {
+    display: none;
+}
+
+#qjsYzmTip1 {
+    font-size: .682667rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: .682667rem;
+}
+
+#qjsYzmTip2 {
+    font-size: .597333rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 1.024rem;
+}
+
+#gjsYzmTip2,#p2pYzmTip2 {
+    font-size: .597333rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 1.024rem;
+}
+
+#iptYzmContainer {
+    position: relative;
+}
+
+#iptYzmContainer button {
+    position: absolute;
+    width: 3.456rem;
+    height: .938667rem;
+    padding-left: .512rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: .512rem !important;
+    color: #FF4949;
+    background: transparent;
+    right: 10%;
+    top: 14%;
+    border-left: 1px solid #ccc;
+}
+
+#iptYzmContainer button:disabled {
+    color: #999999;
+}
+
+#qjsYzm {
+    border: 1px solid #B9B9B9;
+    border-radius: .128rem;
+    padding: 0 .256rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1 !important;
+    height: 1.28rem;
+    width: 80%;
+    font-size: .512rem !important;
+}
+
+#iptYzmContainer input[type=text] {
+    border: 1px solid #B9B9B9;
+    border-radius: .128rem;
+    padding: 0 .256rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1 !important;
+    height: 1.28rem;
+    width: 80%;
+    font-size: .512rem !important;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(/css/iconfont.ttf) format('truetype');
+}
+
+i.addCardIco {
+    position: absolute;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    width: 1.024rem;
+    top: 1.962667rem;
+    left: 1.28rem;
+    color: #e7e7e7;
+    line-height: 1;
+    font-size: 1.024rem;
+}
+
+i.addCardIco:before {
+    font-family: iconfont;
+    content: '\e62a';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.left {
+    color: #333333;
+}
+
+.right {
+    color: #999999!important;
+}
+
+.right_red {
+    color: #ff4949!important;
+}

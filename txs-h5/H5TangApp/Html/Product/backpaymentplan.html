@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--产品名称-->
+    <title class="title"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/product/backpaymentplan.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="nominheight">
+        <header>
+            <div class="title_income">
+                <p class="title_w">回款计划</p>
+                <p class="title_p"></p>
+            </div>
+            <div class="income_m">
+                <div class="lable_l fl">
+                    <p class="lable_income">投资本金(元)</p>
+                     <p class="lable_money" id="corpus"></p> 
+                </div>
+                <div class="jiantou">
+                </div>
+                <div class="lable_r fr">
+                    <p class="lable_income">预计可得总收益(元)</p>
+                     <p class="lable_money" id="interest_price"></p> 
+                </div>
+            </div>
+        </header>
+        <section>
+              <div class="list" style="display:none">
+                <span class="t_l interest">回款时间</span>
+                <span class="t_c interest">月还本金</span>
+                <span class="t_r interest">月还利息</span>
+            </div>
+            <ul class="interest_list" style="display:none">
+                 <!-- <li>
+                    <span class="interest t_l">2017-08-24</span>
+                    <span class="interest t_c">0.00</span>
+                    <span class="interest t_r">100.00</span>
+                </li>  -->
+            </ul>  
+              <div class="list_add" style="display:none">
+                <span class="t_l interest_add">回款时间</span>
+                <span class="t_c interest_add">月还本金</span>
+                <span class="t_r interest_add">月还利息</span>
+                <span class="t_r interest_add">加息</span>
+            </div>
+            <ul class="interest_list_add" style="display:none">
+                 <!-- <li>
+                    <span class="interest_add t_l">2017-08-24</span>
+                    <span class="interest_add t_c">10.00</span>
+                    <span class="interest_add t_r">100.00</span>
+                    <span class="interest_add t_r">0.12</span>
+                </li>  -->
+            </ul>  
+        </section>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/product/backpaymentplan.js"></script> 
+</body>
+</html>

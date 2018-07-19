@@ -1,0 +1,36 @@
+.az-showmasker-Text, #az-showmasker-TextLocation {
+    width: 90%;
+    background: #fff;
+    position: fixed;
+    left: 6%;
+    top: 27%;
+    z-index: 999999999;
+    border-radius: .5em;
+    text-align: center;
+    font-size: 0.64rem;
+}
+.az-showmasker-Text p span:first-child{
+    font-size: .853333rem;
+    color: #333;
+    font-weight: bold;
+}
+.az-showmasker-Text a{
+    display: block;    margin-top: 0rem;color: #333;font-size: .682667rem;
+    text-decoration: none;
+}
+.az-showmasker-Text p span:nth-child(2){
+    color: #666;font-size: .682667rem;
+}
+.az-showmasker-Text .col-g, #az-showmasker-TextLocation .col-g {
+    width:10.325333rem;background: #FFC754 ;color: #8D4C00 ;
+    font-size: .768rem;margin:0 auto 1.194667rem;border-radius: 1rem;
+}
+.az-showmasker-Text .row {
+    border-top: 0!important;
+}
+.writeaddress{
+    font-weight: bold;
+    font-size: .5rem!important;
+    text-decoration: underline!important;
+    padding-top: .5rem;
+}

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>摇一摇</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+</head>
+<body class="bg-2e3b">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="rock" class="wrap">
+        <div class="bgrockbox az-center">
+            <a href="javascript:;" title=""><span class="rule font-size-7">查看规则</span></a>
+            <img src="/css/img2.0/rock-roll.jpg" alt="">
+            <div class="rockwritebox">
+                <img src="/css/img2.0/rock01.jpg" alt="">
+            </div>
+            <div class="hand">
+                <img id="statusGIF" src="/css/img2.0/rock03.gif" alt="">
+            </div>
+        </div>
+        <div class="flag az-center">
+            <img id="statusJPG" src="/css/img2.0/rock-flage.jpg" alt="">
+            <a href="javascript:;" id="rockwinner" class="font-size-7">
+                查看中奖名单
+                <i class="wxicon icon-right-arrow"></i>
+            </a>
+
+            <br />
+            <!--<a id="testclisk">测试 摇一摇</a>-->
+            <div class="chance font-size-7" id="choujiangcount" style="visibility: hidden">
+                今天还有<span class="color-e8ab00" id="surplustime"></span>次免费机会
+            </div>
+        </div>
+
+        <a href="javascript:;" id="commercialHref" title="">
+            <p class="shop az-clearfix">
+                <span class="az-left" id="commercialName"></span>
+                <i class="wxicon icon-right-arrow az-right"></i>
+            </p>
+        </a>
+
+        <div class="shop-list az-clearfix">
+            <p class="commer">商户提供的福利</p>
+            <div id="prizelist">
+
+            </div>
+            <p class="ondata az-text-center" id="loadmore"></p>
+            <!--<button href="#" id="loadmore" class="button small expand" style=" background-color:#f6ecec; color:#ff6a00; font-size:10px;">加载更多</button>-->
+            <img src="/css/img2.0/rock02.png" class="bord" alt="">
+        </div>
+    
+        <div class="mask" style="display:none"></div>
+        <!-- 分享 -->
+        <div class="showshare" style="display:none" id="enjoydiv">
+            <img src="/css/img2.0/share.png" alt="">
+        </div>
+        <!-- 中奖 -->
+        <div class="capacity1 az-center" style="display:none">
+            <h3>恭喜您中奖啦!</h3>
+            <img src="" id="WinningImg" alt="" />
+            <div id="img-templates"></div>
+            <span id="WinningName"></span>
+            <h4 id="WinningPrice"></h4>
+            <div class="row">
+                <div class="small-5 columns az-padding0 mar-l-1"><a id="Receive" style="color:white;" href="javascript:;">低调领取</a></div>
+                <div class="small-5 columns az-padding0 mar-r-1" id="enjoy">炫耀一下</div>
+            </div>
+            <!--<i class="az-icon icon-turnoff2"></i>-->
+        </div>
+
+        <div class="capacity2 az-center" style="display:none">
+            <h3>很遗憾没有中奖</h3>
+            <a href="javascript:;" title="" class="az-center" id="rockagain" style="color:white;">再摇一次</a>
+            <a href="javascript:;" title="" class="az-center" id="otherwelfare" style="color:white;">查看其它福利</a>
+            <!--<i class="az-icon icon-turnoff2"></i>-->
+        </div>
+        <div class="capacity3 az-center" style="display:none">
+            <h3>每日分享奖励</h3>
+            <div class="row">
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-p1"></i>
+                    <span class="fontw">第一次</span>
+                </div>
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-p2"></i>
+                    <span class="fontw">第二次</span>
+                </div>
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-p3"></i>
+                    <span class="fontw">第三次</span>
+                </div>
+            </div>
+            <div class="row margin-t">
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-wx"></i>
+                    <span class="fonts-9">微信好友</span>
+                </div>
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-pyq"></i>
+                    <span class="fonts-9">朋友圈</span>
+                </div>
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-wb"></i>
+                    <span class="fonts-9">微博</span>
+                </div>
+            </div>
+            <i class="az-icon icon-turnoff2"></i>
+        </div>
+
+        <div class="capacity4 az-center" style="display:none">
+            <div class="row padding-6">
+                <div class="small-4 columns az-padding0 border-r">
+                    <i class="az-icon icon-wx"></i>
+                    <span class="fonts-9">微信好友</span>
+                </div>
+                <div class="small-4 columns az-padding0 border-r">
+                    <i class="az-icon icon-pyq"></i>
+                    <span class="fonts-9">朋友圈</span>
+                </div>
+                <div class="small-4 columns az-padding0">
+                    <i class="az-icon icon-wb"></i>
+                    <span class="fonts-9">微博</span>
+                </div>
+            </div>
+            <p class="cancel">取消</p>
+        </div>
+
+        <div class="capacity5 az-center" style="display:none">
+            <h3>活动规则</h3>
+            <ol id="yaojuhuirule" style="display:none;">
+                <li>每个用户每天均有三次免费摇取精品福利的机会。</li>
+                <li>参与摇钜惠活动，即有机会获得当前奖品。</li>
+                <li>所获奖品可在“我的福利”中查看。</li>
+                <li>每个用户每次消费仅限使用一份福利。</li>
+                <li>奖品均有兑奖截止日期，请用户及时领取或到店自提、消费，逾期自动作废则不能使用。快递邮寄方式领取奖品，用户可在“我的福利”中提交收货地址，逾期自动放弃领奖。</li>
+                <li>此活动的最终解释权归唐小僧理财所有。</li>
+            </ol>
+            <ol id="shagnhurule" style="display:none;">
+                <li>每个用户每天均有三次免费摇取商户福利的机会。</li>
+                <li>参与商户福利活动，即有机会获得商户提供的任一奖品。</li>
+                <li>所获奖品可在“我的福利”中查看。</li>
+                <li>每个用户每次消费仅限使用一份福利。</li>
+                <li>奖品均有兑奖截止日期，请用户及时领取或到店自提、消费，逾期自动作废则不能使用。快递邮寄方式领取奖品，用户可在“我的福利”中提交收货地址，逾期自动放弃领奖。</li>
+                <li>此活动的最终解释权归唐小僧理财所有。</li>
+            </ol>
+            <i class="az-icon icon-turnoff2"></i>
+        </div>
+
+    </div>
+
+    <div style=" display:none;">
+        <audio style=" display:none;" id="musicBox" preload="metadata" controls src="/css/audio/rockmp3.mp3"></audio>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/rock.js"></script>
+
+
+</body>
+</html>

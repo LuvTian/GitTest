@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <link href="/css/bank-notice.css" rel="stylesheet" />
+</head>
+<body class="bg-gray">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="rechargepage">
+        <div class="bg-white bb">
+            <div class="small-6 fl">账户余额</div>
+            <div class="small-6 fl tr gray-font"><z id="user-basic-balance"></z>元</div>
+        </div>
+        <div class="bg-white bb" id="user-deposit">
+            <div class="small-6 fl line-h-3">充值金额</div>
+            <div class="small-6 fl">
+                <div class="item">
+                    <input type="tel" value=""
+                           onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');"
+                           class="input-text b-width0" id="user-deposit-amount" />
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white bb display-none" id="user-deposit-first-amount">
+            <div class="small-6 fl">验证银行卡</div>
+            <div class="small-6 fl tr gray-font">5元</div>
+        </div>
+
+        <div class="bg-white">
+            <div class="small-9 fl">借记卡(<z id="user-card-name"></z>)</div>
+            <div class="small-3 fl tr gray-font" id="user-card-code"></div>
+        </div>
+        <div class="techarge-title gray-font display-none" id="user-deposit-firstdesc">
+            首次绑卡后需要充值5元验证银行卡，充值成功后可以 随时提现
+        </div>
+        <!--<div class="bg-white mat-1rem">
+            <div class="small-6 fl">银行预留手机号</div>
+            <div class="small-6 fl tr gray-font" id="user-card-phone"></div>
+        </div>-->
+        <div class="fillet-btn margin-b0"><a id="user-deposit-btn" href="javascript:void(0)" class="button expand az-padding0">充值</a></div>
+        <div class="bg-white">
+            <div class="small-6 fl">支持银行及限额</div>
+            <a href="/Html/PayCenter/bank-limitation.html" class="small-6 fl tr gray-font"><span class="wxicon icon-right-arrow"></span></a>
+        </div>
+    </div>
+    <div class="inputyzmpage display-none" id="user-deposit-advance">
+        <div class="logimgbox az-center">
+            <img src="/css/img2.0/logo1.png" alt="">
+        </div>
+        <p class="tips">充值验证码已发送到 <span id="user-card-phone-text"></span>手机号</p>
+        <div class="row az-center">
+            <div class="item">
+                <input id="user-deposit-code" type="tel" maxlength="6" pattern="[0-9]*" placeholder="请输入短信验证码">
+                <button class="" id="user-deposit-getcode">获取验证码</button>
+            </div>
+        </div>
+        <a href="javascript:deposit_advance()" id="user-deposit-advance-next" class="btn2 az-center">下一步</a>
+
+        <a class="safety az-center" href="/Html/picc.html"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</a>
+    </div>
+
+    <div id="rechargesuccess" class="display-none">
+        <div class="tips bb">
+            <div class="imgbox az-center">
+                <img src="/css/img2.0/logo1.png" alt="">
+            </div>
+            <h3>充值提交完成<br />预计10分钟内到账</h3>
+            <h6 class="gray-font">充值金额：<z id="user-deposit-amount-text"></z>元</h6>
+        </div>
+        <div class="bg-white mt">
+            <div class="small-6 fl">银行卡(<z id="user-bank-name-text"></z>)</div>
+            <div class="small-6 fl tr gray-font" id="user-card-code-text"></div>
+        </div>
+        <div class="fillet-btn"><a href="javascript:void(0);" id="user-deposit-success" class="button expand az-padding0">确定</a></div>
+        <!-- <div class="fillet-btn"><a href="/html/my/" class="button expand az-padding0">确定</a></div> -->
+    </div>
+
+    <!--银行维护-->
+    <article id="txs-model" class="txs-model" style="display:none">
+        <img class="model-close js-model-close" src="/css/img2.0/close.png" />
+        <article class="model-header">
+            <p class="model-title"></p>
+            <p class="model-content"></p>
+        </article>
+        <article class="model-img">
+            <img src="/css/img2.0/notice-1.png" />
+        </article>
+        <article class="btn-double" style="display:none">
+            <div class="model-btn">
+                <div class="cancel js-model-close">
+                    <span class="fpbutton">取消</span>
+                </div>
+                <div class="btnok chance-bank">
+                    <span class="fpbutton">换张卡</span>
+                </div>
+            </div>
+        </article>
+        <article class="model-btn btn-signle" style="display:none">
+            <div class="btnok oneline js-model-close">
+                <span class="fpbutton">好的，我知道了</span>
+            </div>
+        </article>
+    </article>
+    <article id="txs-model-bg" class="txs-model-bg" style="display:none"></article>
+
+    
+    <div class="reveal-modal" id="mt" style="display:none"></div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script src="/js/pagejs/fanba/user-deposit.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>合格投资人认证</title>
+    <script src="/js/vendor/fontsize.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/newCommon.css">
+    <link rel="stylesheet" type="text/css" href="/css/my/passinvestor.css">
+</head>
+
+<body onselectstart="return false">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <div id="mainBody" class="">
+
+        <!--主体部分-->
+        <div class="accreditation_remind">
+            <p class="strong_text">为了更好地为投资人服务，请完成问卷调查</p>
+            <p class="sub_text" id="mark_p2p">投资人问卷、网贷风险测评分别用于投资定期和网贷产品的资格认证</p>
+        </div>
+        <div class="accreditation_list">
+            <ul class="test_list">
+                    <a href="/html/my/risk-assess.html"><li>
+                    <span class="strong_title">投资人问卷</span><span class="sub_result" id="accreditationhtml">您的投资风格为平衡型</span><i></i>
+                </li></a>
+                <a  href="javascript:void(0)" onclick="risk_url('8')" class="p2p_test"><li><!--href="/zdhtml/p2p-risk-assess.html"-->
+                    <span class="strong_title">网贷风险测评</span><span class="sub_result" id="p2p_result">立即测评</span><i></i>
+                </li></a>
+            </ul>
+        </div>
+        <p class="protocol">为了您的利益，请认真阅读并同意以下协议</p>
+        <div class="accreditation_list">
+                <ul class="test_list">
+                        <a href="/html/my/risk-tip.html"> <li>
+                        <span class="strong_title">风险提示书</span><span class="sub_result risk-tip">已同意</span><i></i>
+                    </li></a>
+                    <a href="/html/my/investor-announcement.html"><li>
+                        <span class="strong_title">合格投资人声明</span><span class="sub_result investor-announcement">已同意</span><i></i>
+                    </li></a>
+                </ul>
+            </div>
+    </div>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/my/passinvestorlist.js"></script>
+</body>
+
+</html>

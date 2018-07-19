@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>借记卡绑定</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <link href="/css/bank-notice.css" rel="stylesheet" />
+    <style type="text/css">
+        select {
+            margin:0;
+        }
+    </style>
+</head>
+<body class="bg-gray bg-default">
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div class="bankcardpage">
+        <!-- <div class="icon-bar three-up">
+            <div class="item">
+                <i class="font-c-fb1">1</i>
+                <label class="font-c-fb2">设置交易密码</label>
+                <span class="link font-c-fb1"></span>
+            </div>
+
+            <div class="item">
+                <i class="font-c-fb1">2</i>
+                <label class="font-c-fb2">实名认证</label>
+                <span class="link font-c-fb1"></span>
+            </div>
+            <div class="item">
+                <i class="font-c-fb1">3</i>
+                <label class="font-c-fb2">绑定银行卡</label>
+            </div>
+        </div> -->
+        <div class="registration-steps">
+        </div>
+        <div class="row bankchoose az-clearfix bb mt22">
+            <div class="small-5 columns az-text-left">
+                选择银行
+            </div>
+            <div class="small-7 columns colname">
+                <select id="bankList">
+                    <option value="-1">请选择银行</option>
+                </select>
+                <p class="az-text-right" id="selectBank">
+                    <span id="bankInfo">请选择银行</span>
+                    <i class="wxicon icon-right-arrow az-right"></i>
+                </p>
+            </div>
+        </div>
+        <div class="row cardnumber az-clearfix">
+            <div class="small-4 columns">
+                借记卡卡号
+            </div>
+            <div class="small-8 columns">
+                <input id="BankCard" maxlength="19" pattern="[0-9]*" type="tel" value="" class="input-text b-width0">
+            </div>
+        </div>
+
+        <div class="row bankchoose az-clearfix mt bb selectProvinceCity">
+            <div class="small-5 columns az-text-left">
+                选择开户行省份
+            </div>
+            <div class="small-7 columns colname">
+                <select id="ProvinceList" class="prov"></select>
+                <p class="az-text-right">
+                    <span id="ProvinceInfo">请选择省份</span>
+                    <i class="wxicon icon-right-arrow az-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <div class="row bankchoose az-clearfix selectProvinceCity">
+            <div class="small-5 columns az-text-left">
+                选择开户行城市
+            </div>
+            <div class="small-7 columns colname">
+                <select id="CityList" class="city"></select>
+                <p class="az-text-right">
+                    <span id="CityInfo">请选择城市</span>
+                    <i class="wxicon icon-right-arrow az-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <div class="row tel az-clearfix mt bb">
+            <div class="small-4 columns">
+                手机号码
+            </div>
+            <div class="small-8 columns">
+                <input id="Phone" maxlength="11" type="tel" value="" placeholder="银行预留手机号码" class="input-text b-width0">
+            </div>
+        </div>
+        <div class="row YZM az-clearfix">
+            <div class="small-4 columns">验证码</div>
+            <div class="small-8 columns">
+                <input id="input-sinacode" placeholder="验证码" maxlength="6" type="tel" class="input-text b-width0">
+                <input type="hidden" value="" id="hid-tranId">
+            </div>
+            <div class="small-3 columns">
+                <button class="button postfix fontsize-100" id="btn-getbankcode">获取</button>
+                <!--<span class="button postfix"><a id="getyzm">获取验证码</a></span>-->
+            </div>
+        </div>
+        <div class="fillet-btn az-center"><a id="btn-ok" href="javascript:void(0)" class="mt-2rem button az-padding0">确定</a></div>
+        <a href="/html/anonymous/" class="other az-center">先去逛逛</a>
+        <a class="safety az-center po-hmt2" href="/Html/picc.html"><span class="wxicon icon-safety"></span> 账户资金防盗安全由新浪支付和太平财险共同保障</a>
+    </div>
+    <div style="width: 100%;height: 100%;background: #000;opacity: .5;position: fixed;top: 0;z-index: 20;overflow: hidden;display:none"></div>
+    <div style="background: #fff;border-radius: 5px;text-align: center;position: fixed;z-index: 22;width: 85%;left: 50%;margin-left: -42%;top:23%;display:none">
+        <h1 style="font-size: 1.8rem;padding:1rem;">激活账户</h1>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem;">请设置新浪自支付密码，激活存钱罐账户。</p>
+        <p style="text-indent: 2.5rem;text-align: left;font-size: 1.4rem;padding:.5rem 1rem 2rem;border-bottom: 1px solid #ccc;">账户激活后才能进行“<span class="depositbtntext">充值</span>、投资”等资金交易。</p>
+        <a href="javascript:void(0);"style="color:#2aa8fd;font-size: 1.6rem;line-height:3;">去设置</a>
+    </div>
+    <!--银行维护-->
+    <article id="txs-model" class="txs-model" style="display:none">
+        <img class="model-close js-model-close" src="/css/img2.0/close.png" />
+        <article class="model-header">
+            <p class="model-title"></p>
+            <p class="model-content"></p>
+        </article>
+        <article class="model-img">
+            <img src="/css/img2.0/notice-1.png" />
+        </article>
+        <article class="btn-double" style="display:none">
+            <div class="model-btn">
+                <div class="cancel js-model-close">
+                    <span class="fpbutton">继续绑</span>
+                </div>
+                <div class="btnok js-model-close">
+                    <span class="fpbutton">换张卡</span>
+                </div>
+            </div>
+        </article>
+        <article class="model-btn btn-signle" style="display:none">
+            <div class="btnok oneline js-model-close">
+                <span class="fpbutton">好的，我知道了</span>
+            </div>
+        </article>
+    </article>
+    <article id="txs-model-bg" class="txs-model-bg" style="display:none"></article>
+    <script type="text/javascript" src="/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/jquery.cityselect.js"></script>
+    <script type="text/javascript" src="/js/utils/notice.js"></script>
+    <script type="text/javascript" src="/js/pagejs/my/regist-step3.js"></script>
+</body>
+</html>

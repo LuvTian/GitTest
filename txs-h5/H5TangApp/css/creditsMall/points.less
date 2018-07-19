@@ -1,0 +1,1346 @@
+@bg_gray:#F6F6F6;
+@color_red:#F43F3F;
+@color_3:#333333;
+@color_6:#666666;
+@color_9:#999999;
+.fontSize(@size){
+	font-size: @size;
+}
+.bgColor(@color){
+	background-color: @color;
+}
+.cls:after{
+	display: block;
+	content: '';
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+body{.bgColor(@bg_gray);    font-family: "微软雅黑",sans-serif;}
+.view{
+	width: 100%;
+	// height: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	padding-bottom: 2.1rem;
+    position: relative;
+    // height: 28.458667rem;
+    // overflow-y: scroll;
+	.welfare_tab{
+		display: flex;
+		-webkit-display:flex;
+		display: -webkit-box;
+		.bgColor(#fff);
+		border-top: 1px solid @bg_gray;
+		margin-bottom: 0.469333rem;
+		li{
+			flex:1;
+			-webkit-flex:1;
+			moz-box-flex: 1.0;
+            -webkit-box-flex: 1.0;
+            box-flex: 1.0;
+			.fontSize(0.682667rem);
+			color: @color_3;
+			text-align: center;
+			
+			span{
+                  width: 3.968rem;
+                  line-height:1.706667rem;
+                  display: inline-block;
+                  &.tab_current{
+						color:@color_red;
+						border-bottom: 1px solid @color_red;
+					}
+				}
+		}
+	}
+
+    .list_a{
+        display: block;
+    }
+    .choice_list{
+    	.bgColor(#fff);
+    	padding: 0.554667rem 0.853333rem;
+    	margin-bottom: 0.512rem;
+        position: relative;
+    	// >img{
+    		
+    	// }
+    	.intro{margin-left: 6.241333rem;position: relative;}
+    	.intro_title{
+    		.fontSize(0.597333rem);
+    		color: @color_3;
+    		margin-bottom: 0.468rem;
+    		line-height: 1.5;
+            height: 1.7rem;
+			width: 7.5rem;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+    	}
+    	.point_color{
+    		color: @color_red;
+    	}
+    	.intro_content{
+    		.fontSize(0.512rem);
+    		color: @color_9;
+    		margin-bottom: 0.326667rem;
+    	}
+    	
+    }
+    .change_icon{
+    		width: 1.450667rem;
+    		height: 1.450667rem;
+    		position: absolute;
+    		bottom: .2rem;
+    		right: .4rem;
+    		img{width: 100%;border: none;}
+    	}
+    .choice_list .change_icon{
+        bottom: .9rem;
+        right: .6rem;
+    }
+        .exchange{z-index: 9999;}
+    // .profit_list{
+    // 	width: 14.634667rem;
+    // 	height: 5.077333rem;
+    // 	// background-color: #fff;
+    // 	margin: 0 auto 0.512rem auto;
+    // 	position: relative;
+    	
+    	
+    // 	.change_icon{
+    // 		bottom:0.384rem;
+    // 	    right: 0.597333rem;
+    // 	}
+    // }
+    // .out_bg_movie{
+    // 	background:url("/css/img2.0/pointImg/movie.png") 7.936rem 1.92rem no-repeat,
+    // 	           url("/css/img2.0/pointImg/ticket_out_bg.png") 0 0 no-repeat;
+    // 	background-size: 3.925333rem 3.157333rem, contain;
+    // }
+    // .out_bg_coupon{
+    //     background:url("/css/img2.0/pointImg/coupon.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_out_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem, contain;
+    // }
+    // .out_bg_data{
+    //     background:url("/css/img2.0/pointImg/data.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_out_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem, contain;
+    // }
+    // .out_bg_voucher{
+    //     background:url("/css/img2.0/pointImg/voucher.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_out_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem, contain;
+    // }
+    // .out_bg_fund{
+    //     background:url("/css/img2.0/pointImg/fund.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_out_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem, contain;
+    // }
+    // .inner_bg_data{
+    // 	background:url("/css/img2.0/pointImg/data.png") 7.936rem 1.92rem no-repeat,
+    // 	           url("/css/img2.0/pointImg/ticket_inner_bg.png") 0 0 no-repeat;
+    // 	background-size: 3.925333rem 3.157333rem,contain;
+    // }
+    // .inner_bg_movie{
+    //     background:url("/css/img2.0/pointImg/movie.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_inner_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem,contain;
+    // }
+    // .inner_bg_coupon{
+    //     background:url("/css/img2.0/pointImg/coupon.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_inner_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem,contain;
+    // }
+    // .inner_bg_voucher{
+    //     background:url("/css/img2.0/pointImg/voucher.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_inner_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem,contain;
+    // }
+    // .inner_bg_fund{
+    //     background:url("/css/img2.0/pointImg/fund.png") 7.936rem 1.92rem no-repeat,
+    //                url("/css/img2.0/pointImg/ticket_inner_bg.png") 0 0 no-repeat;
+    //     background-size: 3.925333rem 3.157333rem,contain;
+    // }
+
+    .profit_money{
+    	.fontSize(1.024rem);
+    	color: #fff;
+    	float: left;
+    	margin: 1.548rem 0 1.548rem;
+       text-align: center;
+       width: 4.224rem;
+    }
+    .point_color{
+    	color: @color_red;
+    	margin-right: .2rem;
+    }
+    .profit_intro{
+    	margin-left: 6.016rem;
+    	
+    }
+    .profit_title{
+    	.fontSize(0.682667rem);
+    	color: @color_3;
+    	padding-top: .537333rem;
+        height: auto;
+    }
+    .profit_content{
+    	.fontSize(0.512rem);
+    	color: #2a2a2a;
+    	padding-top: .934667rem;
+    	padding-right: 0.853333rem;
+    }
+    .choice_list .list_pic{border: 1px solid #E5E5E5;
+    	    float: left;
+    		width: 5.461333rem;
+    		height: 3.925333rem;}
+
+    //精选详情
+    .product_pic{
+    	width: 100%;
+    	height: 11.477333rem;
+    	padding-bottom: 0.213333rem;
+    	background-color: #fff;
+    	margin: 0 auto;
+    	text-align: center;
+		position: relative;
+    	.big_pic{
+    		width: 16.042667rem;
+            height: 11.477333rem;
+            max-width: 100%;
+    	}
+		.share_icon{
+			position: absolute;
+			right: .64rem;
+			top: .64rem;
+			width: 1.28rem;
+			height: 1.28rem;
+			background: #333333 url("../img2.0/pointImg/share_icon.png") no-repeat;
+			background-size: cover;
+			border-radius: 50% 50%;
+			opacity: .6;
+			display: none;
+		}
+		.share_icon_v{
+			right:0;
+			top: .74rem;
+		}
+    }
+    .product_intro{
+    	margin-top: 0.298667rem;
+		    margin-bottom: .725333rem;
+    	background-color: #fff;
+    	padding:0.512rem 0 0.682667rem 0.512rem;
+    	.product_title{
+    		.fontSize(0.682667rem);
+    	    color: @color_3;
+    	    margin-bottom: 0.426667rem;
+    	}
+    	.product_price{
+    		.fontSize(0.597333rem);
+    	    color: @color_6;
+    	    span{
+    	    	color: #151515;
+    	    }
+    	}
+
+    }
+    .exchange_note{
+    	margin-top:.512rem;
+        margin-bottom: .213333rem;
+    	background-color: #fff;
+    	padding:0.512rem 0;
+    	strong{
+    		.fontSize(0.597333rem);
+    	    color: @color_3;
+    	    margin-bottom: 0.512rem;
+    	    display: block;
+			padding: 0 .64rem;
+			position: relative;
+			padding-bottom: .682667rem;
+			&:after{
+				display: block;
+				content: '';
+				height: 1px;
+				width: 100%;
+				border-bottom:1px solid #eee;
+				transform: scaleY(.5);
+				-webkit-transform:scaleY(.5);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+    	}
+    	>div{
+    		.fontSize(0.597333rem);
+    	    color: @color_6;
+    	    line-height: 1.5;
+			padding: 0 .64rem;
+    	    span{
+    	    	float: left;
+    	    }
+    	    // p{
+    	    // 	margin-left: 1rem;
+    	    // }
+    	}
+    }
+    .pull_view{
+    	text-align: center;
+    	.fontSize(0.512rem);
+    	color: @color_9;
+    	padding: 0.298667rem 0;
+        // margin-bottom: 2rem;
+    }
+    .pic_detail{
+    	width: 16.0rem;
+    	margin: 0 auto;
+    	text-align: center;
+    	background-color: #fff;
+    	display: none;
+    	img{
+    		width: 100%;
+            display: block;
+    	}
+    }
+    .exchange_point{
+    	position: fixed;
+    	bottom: 0;
+    	width: 100%;
+    	max-width: 720px;
+    	background-color: #fafafa;
+    	margin: 0 auto;
+    	span{
+    		display: inline-block;
+    		height: 2.090667rem;
+    		line-height: 2.090667rem;
+            .price_red{
+            	color:@color_red; 
+            }
+    	}
+    	span:first-child{
+    		.fontSize(.682667rem);
+    	     color: @color_9;
+    	     width: 58%;
+    	     float: left;
+    	     padding-left: 0.426667rem;
+    	     box-sizing: border-box;
+    	}
+    	span:last-child{
+    		.fontSize(0.768rem);
+    	     color: #fff;
+    	     background-color: #999;
+    	     width:42%;
+    	     text-align: center;
+    	     &.exchange_btn{
+    			background-color: @color_red;
+    		}
+            &.sellOut_btn{
+                background-color: #999;
+            }
+    	}
+    }
+    //福利详情
+    .profit_bgcolor{
+    	background-image:-webkit-linear-gradient(top,#FF734E,#F43F3F);
+        background-image: -moz-linear-gradient(top,#FF734E,#F43F3F);
+        background-image: -o-linear-gradient(top,#FF734E,#F43F3F);
+        padding-bottom: 0.853333rem;
+    }
+    .profit_pic{
+    	background:url('/css/img2.0/pointImg/welfare_bg_detail.png') no-repeat center 1.1rem;
+    	background-size: contain;
+    	width: 14.634667rem;
+    	height:5.077333rem;
+    	margin: 0 auto 0;
+    	padding-top: 1.1rem;
+    	position: relative;
+    	text-align: left;
+    	.profit_pic_small{
+    		position: absolute;
+    		top: .1rem;
+    		left: 6.314667rem;
+    		width: 2.005333rem;
+    		height: 2.005333rem;
+            border-radius: 100% 100%;
+
+    	}
+    }
+    .profit_bg_movie{
+        background:url("/css/img2.0/pointImg/movie.png") 8.936rem 3rem no-repeat,
+                   url("/css/img2.0/pointImg/welfare_bg_detail.png") no-repeat center 1.1rem;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*代金券INTEREST*/
+    .profit_bg_coupon{
+        background:url("/css/img2.0/pointImg/coupon.png") 8.936rem 3rem no-repeat,
+                   url("/css/img2.0/pointImg/welfare_bg_detail.png") no-repeat center 1.1rem;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*流量PHONE_TRAFFIC*/
+    .profit_bg_data{
+        background:url("/css/img2.0/pointImg/data.png") 8.936rem 3rem no-repeat,
+                   url("/css/img2.0/pointImg/welfare_bg_detail.png") no-repeat center 1.1rem;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+     /*加息券COUPON*/
+    .profit_bg_voucher{
+        background:url("/css/img2.0/pointImg/voucher.png") 8.936rem 3rem no-repeat,
+                   url("/css/img2.0/pointImg/welfare_bg_detail.png") no-repeat center 1.1rem;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    /*理财金FINANCIAL*/
+    .profit_bg_fund{
+        background:url("/css/img2.0/pointImg/fund.png") 8.936rem 3rem no-repeat,
+                   url("/css/img2.0/pointImg/welfare_bg_detail.png") no-repeat center 1.1rem;
+        background-size: 3.925333rem 3.157333rem, contain;
+    }
+    
+    .profit_price{
+    	.fontSize(1.024rem);
+    	 color: @color_red;
+    	 margin: 1.066667rem 0 1rem 0.682667rem;
+    }
+    .detail_title{
+    	.fontSize(0.597333rem);
+    	 color: @color_3;
+    	 margin-left: 0.682667rem;
+    }
+    .profit_rule{
+    	margin: 0;
+    }
+    .profit_note{
+    	margin: 0;
+    }
+    .border{
+    	display: inline-block;
+	    height: 1px;
+	    width: 100%;
+	    background-color: #e5e5e5;
+    }
+    //兑换记录
+    .order_deal{
+    	margin: 0 0 0 0.682667rem;
+    	padding: 0 0.682667rem 0.512rem 0;
+    	.fontSize(0.512rem);
+    	border-bottom: 1px dotted #e5e5e5;
+    	li{
+    		
+    	}
+    	.order_code{
+    		color:@color_6;
+    		float: left;
+    	}
+    	.deal_status{
+    		
+    		float: right;
+    	}
+    	.deal_success{
+    		color:#F64A42;
+    	}
+    	.deal_failed{
+    		color:@color_6;
+    	}
+    }
+    .choice_list_record{
+    	padding:.554667rem 0 0;
+    }
+    .order_content{
+    	padding: .554667rem .853333rem;
+		position: relative;
+		.label_icon{
+			display: block;
+			width:2.474667rem;
+			height:2.504rem;
+			position: absolute;
+			right: -.853333rem;
+            top: -.64rem;
+			
+		}
+		.delivered{
+background: url("../img2.0/pointImg/delivered.png") no-repeat;
+			background-size: cover;
+		}
+		.un_delivered{
+background: url("../img2.0/pointImg/un_delivered.png") no-repeat;
+			background-size: cover;
+		}
+    }
+    .no_record{
+    	padding: 4.650667rem 0 4.266667rem 0;
+    	text-align: center;
+        display: none;
+    	img{
+    		width: 6.4rem;
+    		height: 6.4rem;
+    	}
+    	p{
+    		.fontSize(0.682667rem);
+    	    color: @color_9;
+    	    margin-top: 1.298667rem;
+    	}
+    }
+
+    .unsend_success_out{
+    	background:url("/css/img2.0/pointImg/trade_out.png") 0 0 no-repeat;
+    	background-size:cover;
+    }
+    .unsend_success_inner{
+    	background:url("/css/img2.0/pointImg/trade_inner.png") 0 0 no-repeat;
+    	background-size:cover;
+    }
+    .send_success_out{
+        background:url("/css/img2.0/pointImg/trade_out.png") 0 0 no-repeat;
+        background-size:cover;
+    }
+    .send_success_inner{
+        background:url("/css/img2.0/pointImg/trade_inner.png") 0 0 no-repeat;
+        background-size:cover;
+    }
+    .deal_failed_bg{
+    	background:url("/css/img2.0/pointImg/trade_failed.png") 0 0 no-repeat;
+    	background-size:cover;
+    }
+    .deal_overdue_bg{
+    	background:url("/css/img2.0/pointImg/trade_overdue.png") 0 0 no-repeat;
+    	background-size:covern;
+    }
+
+
+    // .unsend_success_out{
+    //     background:url("/css/img2.0/pointImg/icon_x1.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_out.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem, contain;
+    // }
+    // .unsend_success_inner{
+    //     background:url("/css/img2.0/pointImg/icon_x1.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_inner.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem,contain;
+    // }
+    // .send_success_out{
+    //     background:url("/css/img2.0/pointImg/icon_x2.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_out.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem, contain;
+    // }
+    // .send_success_inner{
+    //     background:url("/css/img2.0/pointImg/icon_x2.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_inner.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem,contain;
+    // }
+    // .deal_failed_bg{
+    //     background:url("/css/img2.0/pointImg/icon_x1.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_failed.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem, contain;
+    // }
+    // .deal_overdue_bg{
+    //     background:url("/css/img2.0/pointImg/icon_x3.png") right top no-repeat,
+    //                url("/css/img2.0/pointImg/trade_overdue.png") 0 0 no-repeat;
+    //     background-size: 2.517333rem 2.517333rem,contain;
+    // }
+    .welfare_record {
+    	.order_deal{
+    	border-bottom: none;
+	    }
+	    .profit_list{
+	    	width: 14.677333rem;
+            height:4.181333rem;
+          margin: 0 .682667rem;
+	    }
+	    .profit_title{
+	    	    padding-top: 0.453333rem;
+                padding-right: 1.706667rem ;
+	    }
+	    .profit_content{
+	    	padding-top: .406667rem;
+	    }
+        .profit_dec{
+            font-size: 0.512rem;
+            color: #999;
+            margin-top: 0.341333rem;
+            line-height: 1.5;
+            height: .9rem;
+        }
+        .profit_intro{
+                margin-left: 5.016rem;
+        }
+	}
+	.profit_content{
+		color: @color_9;
+		p:first-child{
+			float: left;
+		}
+		p:last-child{
+			float: right;
+		}
+	}
+	.more_product{
+		.fontSize(0.512rem);
+    	color: @color_9;
+    	text-align: center;
+    	margin-bottom: 0.725333rem;
+        margin-top: .554667rem;
+	}
+	.new_tab{
+    border-bottom: 1px solid #eee;
+	margin-bottom: 0;
+	}
+	.welfare_tab li span.tab_current{
+		    border-bottom: 2px solid #F43F3F;
+	}
+
+//小改版样式
+	.new_content{
+		background-color: #fff;
+	}
+	.list_a{
+		display: block;
+		padding: .64rem .64rem 0 .64rem;
+		width: 50%;
+		box-sizing: border-box;
+		border-bottom: 1px solid #eee;
+		border-right: 1px solid #eee;
+		float: left;
+	}
+	.list_a:nth-child(2n){
+		border-right: 0px solid #eee;
+	}
+	.detail_pic{
+position: relative;
+width: 6.741333rem;
+height:6.741333rem;
+
+img{
+	width: 6.741333rem;
+height:6.741333rem;
+}
+
+	}
+	.vatur_pic{
+padding-top: 1.237333rem;
+height: auto;
+img{
+	width: 6.741333rem;
+	height: 4.266667rem;
+}
+	}
+	.product_desc{
+		.fontSize(.597333rem);
+    	color: @color_3;
+		margin-top: .298667rem;
+	}
+	.physical_title{
+height: 1.7rem;
+overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+	}
+	.candy_number{
+		margin-top: .298667rem;
+		margin-bottom: .64rem;
+		display: flex;
+		display: -webkit-flex;
+		span{
+			flex: 1;
+			-webkit-flex:1;
+		}
+		span:first-child{
+			font-size:.512rem;
+color:#666666;
+		}
+		span:last-child{
+			text-align: right;
+			font-size:.426667rem;
+color:#999999;
+		}
+		.point_num{
+			font-size:.597333rem;
+           color:#ff4949;
+		}
+	}
+	.label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 160%;
+	transform: scale(0.5);
+	   -webkit-transform: scale(.5);
+	transform-origin: left top;
+	-webkit-transform-origin: left top;
+	span{
+		display: inline-block;
+		border-radius:1px;
+		font-size: .682666rem;
+		padding: 0.1rem 0.170666rem;
+	}
+	.label_one{
+		background-image:linear-gradient(#ff734e,#ff3f3f) ;
+		color: #fff;
+		margin-right: .4rem;
+	}
+	.label_two{
+border: 1px solid #ff7a04;
+color:#ff7a04 ;
+	}
+}
+.vatur_desc{
+	margin-top: 1.521333rem;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.type_vatur{
+	position: absolute;
+	top: 2.3rem;
+	left: 1.024rem;
+	color: #fff;
+	.vatur_money{
+		font-size: 1.109333rem;
+	}
+	.vatur_unit{
+		font-size: .597333rem;
+	}
+	.vatur_name{
+		font-size: .512rem;
+		margin-top: -.213333rem;
+		overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 5rem;
+	}
+}
+}
+
+
+
+.connectiontimeout{
+		display: none;
+	}
+	.item{
+		font-family: Arial,sans-serif;
+		margin-top: 0.512rem;
+		font-size: 0.512rem;
+		color:#999999;
+		background-color: #fff;
+	}
+	.item .title{
+		// border-bottom: 1px solid #e7e7e7;
+		padding: 0.3rem .6rem;
+		position: relative;
+		&:after{
+			display: block;
+			content:'';
+			height: 1px;
+			width: 100%;
+			border-bottom: 1px solid #e7e7e7;
+			transform: scaleY(.5);
+			-webkit-transform: scaleY(.5);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.fr{
+		float: right;
+	}
+	.red{
+		color: #ff4949;
+	}
+
+	.grap{
+		color: #b9b9b9;
+	}
+	.visi-hiddle{
+		visibility: hidden;
+	}
+
+	content{
+		display: block;
+		overflow: hidden;
+		padding: 0 0 0 0.64rem;
+		position: relative;
+	}
+	
+	content .img{
+		
+		max-width: 26%;
+		color: #fff;
+		font-size: 0.384rem;
+		display: block;
+		float:left;
+		
+	}
+	content .phy_img{
+		margin-top:.4rem;
+		height: 3.413333rem;
+		width: 3.413333rem;
+		padding: 0;
+		img{
+			height: 3.413333rem;
+		width: 3.413333rem;
+		}
+	}
+	content .vartur_img{
+height: 2.176rem;
+		width: 3.413333rem;
+		margin: 1.024rem 0;
+	}
+	/*理财金*/
+	.financial{
+background-image: url(/css/img2.0/pointImg/licaijin.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*代金券*/
+	.interest{
+background-image: url(/css/img2.0/pointImg/daijinquan.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*电影票*/
+	.cinema_ticket{
+background-image: url(/css/img2.0/pointImg/ticket.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*流量*/
+	.phone_traffic{
+background-image: url(/css/img2.0/pointImg/liuliangquan.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*加息券*/
+	.coupon{
+background-image: url(/css/img2.0/pointImg/jiaxiquan.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*加油卡*/
+	.refueling_card{
+background-image: url(/css/img2.0/pointImg/jiayouka.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	/*其他券*/
+	.other_coupon{
+background-image: url(/css/img2.0/pointImg/others.png);
+background-repeat: no-repeat;
+		background-size: contain;
+	}
+	content div.text-warp{
+		display: block;
+		float: right;
+		width: 74%;
+		padding: 0.64rem 0 .341333rem 0;
+	}
+	content div.text-warp p{
+		/* display: inline-block; */
+		height: .75rem;
+	}
+	content p.img i.amount{
+		font-size: 0.5973333333333334rem;
+	}
+	content p.img span{
+		display: block;
+		line-height: 100%;
+		padding-left: .5rem;
+		font-size: .384rem;
+		
+	}
+	content p.img span.ii-first{
+		padding-bottom: .2rem;
+		padding-top: .75rem;
+		
+	}
+
+	content div.text-warp .text-top{
+		font-size:0.5973333333333334rem;
+		color:#333333;
+		max-width:8.917333rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		
+	}
+	content div.text-warp .text-middle{
+		padding-top:0.2986666666666667rem;
+	}
+	content div.text-warp .text-bottom{
+		padding-top:0.3rem;
+		padding-right: .64rem;
+		margin-top: .5rem;
+		line-height: 100%;
+		border-top: 1px dashed #e5e5e5;
+	}
+	content div.text-warp i.amount{
+		font-size:0.5973333333333334rem;
+		color:#ff4949;
+	}
+	content div.text-warp i.unit{
+		font-size:0.512rem;
+		color:#666666;
+	}
+.label_icon {
+    display: block;
+    width: 2.474667rem;
+    height: 2.504rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.un_delivered {
+    background: url(/css/img2.0/pointImg/un_delivered.png) no-repeat;
+    background-size: cover;
+}
+.delivered {
+  background: url("/css/img2.0/pointImg/delivered.png") no-repeat;
+  background-size: cover;
+}
+header{
+		background-color: #fff;
+		font-family:Arial,sans-serif;
+		
+	}
+	header .bb{
+		/* height:3px; background-image:linear-gradient(to right,#f0f0f0,#d0d0d0,#f0f0f0) */
+		background-image: url(/css/img2.0/pointImg/c-detail-bi.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 8px;
+		width: 100%;
+	}
+	header .prize-banner{
+		position: relative;
+		width: 100%;
+		height:13.653333333333334rem;
+		background-image: url(/css/img2.0/pointImg/prize-default.png);
+		background-repeat: no-repeat;
+    	background-position: 50% 50%;
+	}
+	header .prize-banner img{
+		width: 11.434666666666667rem;
+		height: 11.434666666666667rem;
+		display: block;
+		margin: 0 auto;
+	}
+	header .prize-desc{
+		padding: .64rem;
+		overflow: hidden;
+	}
+	header .prize-desc p{
+		display: inline-block;
+		line-height: 100%;
+	}
+	header .prize-desc .share{
+		float: right;
+	}
+	header .prize-desc p.title{
+		min-height: 1.3653333333333333rem;
+		width: 13rem;
+		font-size:0.5973333333333334rem;
+		color:#333333;
+		letter-spacing:-0.016213333333333333rem;
+		line-height:0.7rem;
+		padding-right: .5rem;
+		// border-right: 1px solid #e5e5e5;
+		border-right: 0px solid #e5e5e5;
+	}
+	header .prize-desc .share img{
+		width: .725333rem;
+		height: .896rem;
+	}
+	header .prize-desc span.share-text{
+		font-size:0.4266666666666667rem;
+		color:#999999;
+		letter-spacing:-0.38px;
+		line-height:0.4266666666666667rem;
+	}
+	header .prize-desc i{
+		line-height: 100%;
+		vertical-align: bottom;
+	}
+	header .prize-desc i.price{
+		font-size:0.768rem;
+		color:#ff4949;
+		letter-spacing:0;
+		text-align:left;
+		margin-right: .2rem;
+		line-height: 80%;
+	}
+	header .prize-desc i.tg{
+		font-size:0.5rem;
+		color:#333333;
+		letter-spacing:0;
+		text-align:left;
+		margin-right: .2rem;
+	}
+	header .prize-desc i.mj{
+		background-image: linear-gradient(-135deg, #ff9c00 0%, #ff8323 100%);
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #fff;
+		background-size: contain;
+		border-radius: 2px;
+		padding: 3px 1.5px 1.5px;
+		margin-right: .1rem;
+	}
+	header .prize-desc i.mz,.mz{
+		background-image:linear-gradient(-135deg, #ff734e 0%, #ff3f3f 100%);
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #fff;
+		background-size: contain;
+		border-radius: 2px;
+		padding: 3px 1.5px 1.5px;
+		margin-right: .1rem;
+	}
+	header .prize-desc i.limit{
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.8;
+		color: #ff7a04;
+		background-size: contain;
+		border: 1px solid #ff7a04;
+		padding: 1.3px 1.3px .8px;;
+		margin-right: .1rem;
+	}
+	header .prize-desc .stock{
+		width: 100%;
+		display: block;
+		
+		font-size:0.512rem;
+		color:#999999;
+	}
+	header .prize-desc .stock span{
+		box-sizing: border-box;
+		margin-top: .4rem;
+	}
+	.stock{
+		float:left;
+	}
+	.fl{
+		display: inline-block;
+		width: 49%;
+	}
+	.fr{
+		display: inline-block;		
+		width: 49%;
+		text-align: right;
+	}
+	.p-banner{
+		position: relative;
+		color: #fff;
+		font-size: 0.5973333333333334rem;
+	}
+	.p-banner .p-bg{
+		/* background-image: url(/css/img2.0/pointImg/ticket_big.jpg);
+		background-size:contain; */
+		height: 8.533333333333333rem;
+		width: 100%;
+		display: block;
+	}
+	.p-banner img.logo{
+		position: absolute;
+		display: block;
+		height: 1.92rem;
+		width: 1.92rem;
+		top: 1.7067rem;
+		left: 2.304rem;
+	}
+	.p-banner .desc{
+		position: absolute;
+		top: 5.8rem;
+		left: 2.304rem;
+	}
+	.p-banner .price{
+		font-size: 1.536rem;
+		position: absolute;
+		top: 3.7067rem;
+		left: 2.304rem;
+	}
+	.p-banner .price .unit{
+		font-size: 0.6826666666666666rem;
+	}
+	
+	header .prize-desc{
+		background-color: #fff;
+		padding: .64rem;
+		overflow: hidden;
+	}
+	header .prize-desc .desc-list{
+		width: 13rem;
+		border-right: 1px solid #e5e5e5;
+	}
+	header .prize-desc span{
+		display: block;
+		margin-top: .4rem;
+		font-size: 0.512rem;
+    	color: #999999;
+	}
+	header .prize-desc p{
+		display: inline-block;
+		line-height: 100%;
+	}
+	header .prize-desc .share{
+		float: right;
+	}
+	header .prize-desc .share img{
+		width: 0.64rem;
+		height: 0.64rem;
+	}
+	header .prize-desc span.share-text{
+		font-size:0.4266666666666667rem;
+		color:#999999;
+		letter-spacing:-0.38px;
+		line-height:0.4266666666666667rem;
+	}
+	header .prize-desc i{
+		line-height: 100%;
+		vertical-align: bottom;
+	}
+	header .prize-desc i.price{
+		font-size:0.768rem;
+		color:#ff4949;
+		letter-spacing:0;
+		text-align:left;
+		margin-right: .2rem;
+		line-height: 80%;
+	}
+	header .prize-desc i.tg{
+		font-size:0.5rem;
+		color:#333333;
+		letter-spacing:0;
+		text-align:left;
+		margin-right: .2rem;
+	}
+	header .prize-desc i.mj{
+		background-image: linear-gradient(-135deg, #ff9c00 0%, #ff8323 100%);
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #fff;
+		background-size: contain;
+		border-radius: 2px;
+		padding: 3px 1.5px 1.5px;
+		margin-right: .1rem;
+	}
+	header .prize-desc i.mz{
+		background-image:linear-gradient(-135deg, #ff734e 0%, #ff3f3f 100%);
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #fff;
+		background-size: contain;
+		border-radius: 2px;
+		padding: 3px 1.5px 1.5px;
+		margin-right: .1rem;
+	}
+	header .prize-desc i.limit{
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #ff7a04;
+		background-size: contain;
+		border: 1px solid #ff7a04;
+		padding: 1.3px 1.3px .8px;;
+		margin-right: .1rem;
+	}
+	.bb{
+		/* height:3px; background-image:linear-gradient(to right,#f0f0f0,#d0d0d0,#f0f0f0) */
+		background-image: url(/css/img2.0/pointImg/c-detail-bi.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 6px;
+		width: 100%;
+	}
+
+	.fl{
+		display: inline-block;
+		width: 49%;
+		float: left;
+	}
+	.fr{
+		display: inline-block;		
+		width: 49%;
+		text-align: right;
+	}
+	header .prize-desc .J_share{
+		display: none;
+	}
+	.discount{
+		background-color: #BB86FF;
+		display: inline-block;
+		background-repeat: no-repeat;
+		font-size: 0.4266666666666667rem;
+		color: #fff;
+		background-size: contain;
+		border-radius: 2px;
+		padding: 3px 1.5px 1.5px;
+		margin-right: .1rem;
+	}
+	.title_font{
+		font-size: .597333rem;
+		color: #333333;
+		padding: .128rem 0 .64rem .64rem;
+		position: relative;
+		margin-bottom: .512rem;
+		&:after{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			content: '';
+			width: 100%;
+			border-bottom: 1px solid #eee;
+			transform: scaleY(.5);
+			-webkit-transform: scaleY(.5);
+		}
+	}
+	.mark_font{
+		font-size: .512rem;
+color: #666;
+margin-left: .128rem;
+	}
+	.discount_list li{
+		width: 50%;
+		float: left;
+		font-size: .512rem;
+		color:#666;
+	}
+	.discount_num{
+		color: #FF4949;
+	}
+	.only_member{
+		display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 0.4266666666666667rem;
+    color: #D2A55B;
+    background-size: contain;
+    border: 1px solid #D2A55B;
+    padding: 1.3px 1.3px .8px;
+    margin-right: .1rem;
+	}
+	.for_member{
+		font-size: .512rem;
+		color:#666;
+	}
+	.favourable_checkbox{
+		position: absolute;
+		top:.113333rem;
+		right:.64rem;
+	}
+	.favourable_checkbox input{
+		width: .768rem;
+    height: .768rem;
+	}
+	.check_box {
+    border: 1px solid #b9b9b9;
+    top:0;
+    right: .108rem;
+    background: #fff;
+    border-radius: 2px;
+	width: .768rem;
+    height: .768rem;
+	display: inline-block;
+    position: absolute;
+	}
+	.to_top{
+		position: fixed;
+		right: .64rem;
+		bottom: 3.413333rem;
+		display: none;
+		img{
+			width:2.133333rem ;
+			height:2.133333rem ;
+		}
+	}
+	.choose_check {
+		background: #fff url("../img2.0/pointImg/choose.png") no-repeat center center;
+	}
+	.question_markt{
+		display: inline-block;
+		width: .597333rem;
+		height: .597333rem;
+		background: url("../img2.0/pointImg/question_markt.png") no-repeat center center;
+		background-size: 100% 100%;
+		vertical-align: middle;
+		margin-left: .256rem;
+	}
+	.no_mask{
+		display: none;
+	}
+	.activity_rule{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 12.074667rem;
+		margin: 0 auto;
+		z-index: 1000;
+		transform: translate(-50%,-50%) scale(0);
+		-webkit-transform: translate(-50%,-50%) scale(0);
+		
+	}
+	.activity_sacle{
+		transform: translate(-50%,-50%) scale(1);
+		-webkit-transform: translate(-50%,-50%) scale(1);
+	}
+	.rule_content{
+		background-color: #fff;
+		border-radius: .384rem;
+		padding: 1.024rem .938667rem .853333rem;
+		box-sizing: border-box;
+	}
+	.activity_title{
+		font-size: .682667rem;
+		color: #333;
+		font-weight: 500;
+		line-height: .938667rem;
+		text-align: center;
+		margin-bottom: .512rem;
+	}
+	.rule_list li{
+		font-size: .597333rem;
+		color: #666;
+		margin-bottom: .341333rem;
+	}
+	.rule_list li div{
+		margin-top: .341333rem;
+	}
+	.icon_circle{
+		width: 4px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: #666;
+		display: inline-block;
+		vertical-align:middle;
+		margin-right: .256rem;
+		float:left;
+		margin-top: .3rem;
+	}
+	.rule_list li p{
+		float: left;
+		width: 90%
+	}
+	.close_win{
+		margin-top: 1.536rem;
+		text-align: center;
+	}
+	.close_win img{
+		width: 1.28rem;
+		height: 1.28rem;
+	}

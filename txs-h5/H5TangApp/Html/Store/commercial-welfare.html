@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商户福利</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/finances.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=258f03b2831c8603200544a8205bdb85&s=2"></script>
+
+</head>
+<body>
+    <div id="all-body-div-preloader"><div id="all-body-div-status"></div></div>
+    <div id="com-welfarepage">
+        <div class="menu az-clearfix">
+            <ul class="list-all">
+                <a href="javascript:void(0)" id="AllCategory" title="">
+                    <li class="az-left op1" style=" height:43px;overflow-y:hidden;">
+                        <!-- <p>全部分类</p> -->
+                        <p>
+                            全部分类<i class="wxicon icon-down-arrow"></i>
+                        </p>
+                    </li>
+                </a>
+                <a href="javascript:void(0)" id="AutoCategory" title="">
+                    <li class="az-left op2" style=" height:43px;overflow-y:hidden;">
+                        <!-- <p style=" height:43px;">
+                            离我最近
+                        </p> -->
+                        <p>
+                            离我最近<i class="wxicon icon-down-arrow"></i>
+                        </p>
+                    </li>
+                </a>
+            </ul>
+            <ul class="list" id="Category" style="display:none">
+                <li class="Category_all" onclick="ChildrenClick(null, false)"><span class="wxicon icon-allkinds"></span>全部分类</li>
+            </ul>
+            <ul class="list-auto" id="AutoCategoryDetail" style="display:none">
+                <li onclick="AutoCategory(1)" style="color: rgb(236, 81, 63);background-color: rgb(255, 255, 255);">离我最近</li>
+                <li onclick="AutoCategory(2)">人气最高</li>
+
+            </ul>
+            <div id="Childrenlist">
+
+            </div>
+        </div>
+        <div id="welfaredata">
+
+        </div>
+        <p class="ondata az-text-center" id="loadmore"></p>
+
+    </div>
+    <div class="mask az-hidden"></div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pagejs/store/commercial-welfare.js"></script>
+    <script>
+
+    </script>
+
+</body>
+</html>

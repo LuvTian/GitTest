@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>收益说明</title>
+    <link rel="stylesheet" type="text/css" href="/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?20160321010">
+</head>
+
+<body class="bg-gray">
+    <div id="all-body-div-preloader">
+        <div id="all-body-div-status"></div>
+    </div>
+    <section class="content">
+        <article class="viewport dewrap">
+            <article class="bg-white mb8">
+                <h2 class="bb">昨日收益</h2>
+                <p class="nsig">昨日收益包括<span class="ishiddengjs">赣金所产品的昨日收益、</span><span class="ishiddenqjs">侨金所产品的昨日收益、</span>网贷产品的昨日收益、至尊宝和僧财宝的昨日收益、定期产品昨日产生的收益、周周僧昨日产生的收益、月月僧昨日产生的收益、季季僧昨日产生的收益以及昨日收到的平台奖励等。
+                </p>
+                <p class="sig" style="display:none">昨日收益包括至尊宝和僧财宝的昨日收益、定期产品昨日产生的收益、周周僧昨日产生的收益、月月僧昨日产生的收益、季季僧昨日产生的收益以及昨日收到的平台奖励等。</p>
+                <span class="ishiddengjs"><p class="wxicon icon-circle">赣金所产品昨日收益根据您持有的赣金所产品本金与年化收益率估算出昨日收益。</p></span>
+                <span class="ishiddenqjs"><p class="wxicon icon-circle">侨金所产品昨日收益根据您持有的侨金所产品本金与年化收益率估算出昨日收益。</p></span>
+                <p class="wxicon icon-circle">网贷产品昨日收益根据您持有的网贷产品本金与年化收益率估算出昨日收益。</p>
+                <p class="wxicon icon-circle">至尊宝昨日收益计算公式：(至尊宝确认金额/10000)*每万份收益。</p>
+                <p class="wxicon icon-circle spscb" style="display:none">僧财宝昨日收益计算公式：(僧财宝确认金额/10000)*每万份收益。</p>
+                <p class="wxicon icon-circle">定期产品昨日收益根据您持有的定期产品本金与年化收益率估算出昨日收益。</p>
+                <p class="wxicon icon-circle">周周僧产品昨日收益根据您持有的周周僧产品本金与阶梯型年化收益率估算出昨日收益。</p>
+                <p class="wxicon icon-circle">月月僧产品昨日收益根据您持有的月月僧产品本金与阶梯型年化收益率估算出昨日收益。</p>
+                <p class="wxicon icon-circle">季季僧产品昨日收益根据您持有的季季僧产品本金与阶梯型年化收益率估算出昨日收益。</p>
+
+
+            </article>
+            <article class="bg-white mb8">
+                <h2 class="bb">总资产</h2>
+                <p class="nsig">总资产=<span class="ishiddengjs">赣金所产品总金额+</span><span class="ishiddenqjs">侨金所产品总金额+</span>网贷产品总金额+至尊宝金额+僧财宝金额+定期产品总金额+周周僧产品总金额+月月僧产品总金额+季季僧产品总金额</p>
+                <p class="sig" style="display:none">总资产=至尊宝金额+僧财宝金额+定期产品总金额+周周僧产品总金额+月月僧产品总金额+季季僧产品总金额</p>
+                <!--<p>总资产= <span class="basic">账户余额</span>+至尊宝金额+定期产品总金额+周周僧金额</p>-->
+            </article>
+            <article class="bg-white">
+                <h2 class="bb">昨日收益率</h2>
+                <p>昨日收益率 = 昨日收益 * 365/(<span class="ishiddengjs">赣金所在投+</span><span class="ishiddenqjs">侨金所在投+</span>网贷在投+至尊宝在投<span class="spscb" style="display:none">+僧财宝在投</span>+定期在投+周周僧在投+月月僧在投+季季僧在投) * 100%</p>
+            </article>
+        </article>
+    </section>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script>
+        $(function() {
+            var apptype = $.getQueryStringByName('type');
+            // ios设备访问，判断是否需要隐藏‘侨金所’相关信息
+            if (apptype == 'ios') {
+                $.AkmiiAjaxPost("/StoreServices.svc/Anonymous/earningsdesc/ioshiddenjysinfo", {
+                    "platform": "ios"
+                }, true).then(function(data) {
+                    if (data.result) {
+                        if (data.ishiddenqjs) {
+                            // ishiddenqjs为true将‘侨金所’相关节点删除
+                            $(".ishiddenqjs").remove();
+                        }
+                        if(data.ishiddengjs){
+                            // ishiddengjs为true将‘赣金所’相关节点删除
+                            $(".ishiddengjs").remove();
+                        }
+                    }
+                });
+            };
+
+            $("#all-body-div-status").fadeOut();
+            $("#all-body-div-preloader").delay(350).fadeOut("slow");
+            setTimeout(function() {
+                $(".mymove2").removeClass("mymove2");
+            }, 3000);
+            $.sengcaibaobtntext(function(d, usr) {
+                $(".basic").html(d[2]);
+                if (usr.issignmoneyboxandhtffund) {
+                    $(".spscb").show();
+                    // $(".sig").show();
+                    // $(".nsig").hide();
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
